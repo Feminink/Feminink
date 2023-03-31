@@ -7,6 +7,8 @@ import "./LoginComponent.scss";
 import { useDispatch, useSelector } from "react-redux";
 // IMPORT API CALL DO LOGIN
 import { doLogin } from "../../store/auth/actions";
+// IMPORT LINK
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const LoginComponent = () => {
@@ -47,6 +49,9 @@ const LoginComponent = () => {
       <button className="loginButton" onClick={onClickLogin}>
         Login
       </button>
+      <h3>
+        Not a member yet? <Link to="/registration">Register now</Link>
+      </h3>
     </div>
   );
 };

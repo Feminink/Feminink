@@ -4,6 +4,7 @@ import Multi from "./pages/Multi/Multi";
 import About from "./pages/About/About";
 import Profile from "./pages/Profile/Profile";
 import Login from "./pages/Login/Login";
+import Registration from "./pages/Registration/Registration";
 import NotFound from "./pages/NotFound/NotFound";
 // IMPORT REACT ROUTER
 import { Route, Routes, Navigate } from "react-router-dom";
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/profile" element={<Profile />}></Route>
           <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/registration" element={<Registration />}></Route>
           <Route exact path="*" element={<NotFound />}></Route>
         </Routes>
       </main>
