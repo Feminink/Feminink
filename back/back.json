@@ -1,1 +1,97 @@
-// CONSTRUCCIÖN DEL JSON CON VARIOS ENDPOINTS
+
+
+{
+    "inspiration": [
+        { 
+        "past": [ 
+        {
+            "id": 1,
+            "name": "Maud Wagner",
+            "date": "1877",
+            "city":"Kansas, EEUU",
+            "image": "./assets/images/Maud-wagner.jpeg",
+            "designs": [
+                {
+   
+                }
+            ], 
+            "data": "Maud, siendo una adolescente consiguió escaparse de casa para unirse al circo, para sobrevivir a la pobreza de su familia. Conoció a Gus Wagner. que sería su marido y le enseñaría a tatuar. Maud alcanzó la fama como la primera artista del tatuaje femenina conocida en todo el mundo. ",
+            "style-tattoo": "tradicional"
+        
+        },
+        {
+            "id": 2,
+            "name": "Jessie Knight",
+            "date": "1904",
+            "city":"Croydon, Londres",
+            "image": "./assets/images/Jessie-Knight.jpeg",
+            "designs": [{
+
+            }],
+            "data": "Su padre Leonard, era capitán de la marina, tatuador y francotirador, mientras que su madre era poeta e ilustradora. Recibió un disparo en el hombro durante un terrible accidente mientras trabajaba así que viró hacia el mundo del tatuaje. Sus tatuajes estaban obteniendo una reputación estelar, y en 1955 Jessie ganó el segundo lugar en el Champion Tattoo Artist of all England. Jessie abrió sus propias tiendas de tatuajes, primero en la ciudad portuaria de Portsmouth y luego en Aldershot.",
+            "style-tattoo": "color, mano alzada, tradicional"
+        },
+        {
+            "id": 3,
+            "name": "Millie Hull",
+            "date": "1896",
+            "city":"Nueva York",
+            "image": "./assets/images/Millie-Hull.jpeg",
+            "designs": [{
+
+            }],
+            "data": "Millie, que abandonó la escuela a los 13 años, uniéndose al mundo del circo y comenzó a trabajar como bailarina exótica. Tatuó su cuerpo como recomendación de un tatuador, para que ganase más dinero (se sintió obligada a hacerlo). Sin embargo, esto empujó a Millie a abandonar el mundo del espectáculo y aprendió el oficio de tatuajes abriendo su propio salón de tatuajes, The Tattoo Emporium, en Bowery, en la parte trasera de una peluquería. ",
+            "style-tattoo": "tradicional, brillantes"
+        },
+        {
+            "id": 4,
+            "name": "Betty Broadbent",
+            "date": "1909",
+            "city":"Florida, EEUU",
+            "image": "",
+            "designs": [{
+
+            }],
+            "data": "Trabajó como la Dama Tatuada en los circos independientes que se encontraba. Cuando regresó a Estados Unidos, Betty volvió a trabajar como una atracción tatuada en el circo. Para esta temporada, se estableció como tatuadora ",
+            "style-tattoo": "tradicional"
+        },
+        {
+            "id": 5,
+            "name": "Artoria Gibbons/ Anna Mae Burlingston",
+            "date": "1893",
+            "city":"Wisconsin",
+            "image": "./assets/images/Artoria-Gibbons",
+            "designs": [{
+
+            }],
+             "data": "En la década de los 20 trabajó junto a su marido como tatuadora, además de que se convirtió en una atracción en circos ya que en aquella época era algo sumamente raro que una mujer contara con tantos tatuajes en todo su cuerpo.",
+             "style-tattoo": "tradicional"
+        }]},
+        { 
+        "present": [ 
+        {
+            "id": 1,
+            "name": "",
+            "date": "",
+            "city":"",
+            "image": "",
+            "designs": [{
+
+            }],
+            "data": "",
+            "style-tattoo": ""
+        },
+        {
+            "id": 2,
+            "name": "",
+            "date": "",
+            "city":"",
+            "image": "",
+            "designs": [{
+
+            }],
+            "data": "",
+            "style-tattoo": ""
+        }]}
+    ]
+}
