@@ -133,5 +133,45 @@
 
         
         ]}
-    ]
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Laura O", 
+            "username": "Laura WHATEVER",
+            "password": "randompwd",
+            "place": "Cerdeña", 
+            "image": ".",
+            "mail": "laurao@mail.com",
+            "description": ""
+        },
+        {
+            "id": 1,
+            "name": "Ignacio E", 
+            "username": "Ignacio WHATEVER",
+            "password": "randompwd1",
+            "place": "Puerto de Sta María", 
+            "image": ".",
+            "mail": "ignacio@mail.com",
+            "description": ""
+        },
+        {
+            "id": 1,
+            "name": "Miriam F", 
+            "username": "Miriam WHATEVER",
+            "password": "randompwd2",
+            "place": "Cädiz", 
+            "image": ".",
+            "mail": "miriamf@mail.com",
+            "description": ""
+        }
+    ], 
+    "gallery": [
+        {
+
+        }
+    ], 
+    "contac-us": [{
+
+    }]
 }
