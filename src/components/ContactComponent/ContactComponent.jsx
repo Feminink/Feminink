@@ -12,8 +12,8 @@ const ContactComponent = () => (
 
     <fieldset>
      <label>¿Tienes más de 18 años? </label>
-     <label>Sí</label>  <input type="checkbox" id="ageYes" ></input>
-     <label>No</label> <input type="checkbox" id="ageNo" ></input>
+       <input type="radio" id="ageYes" name="age" />Sí
+      <input type="radio" id="ageNo"   name="age" />No
     </fieldset>
 
     <fieldset>
@@ -32,13 +32,10 @@ const ContactComponent = () => (
     </fieldset>
   
     <fieldset>
-      <label>Diseño</label>
-      <input type="image" placeholder="Inserta una imagen" id="image" alt="" src=''></input> 
-    </fieldset>
-    <fieldset>
    <label>Diseño</label>
    <input type="color" placeholder="Gama cromática" id="color" ></input> 
- </fieldset>
+   <input type="color" placeholder="Gama cromática" id="color"  ></input> 
+  </fieldset>
    </form>
   </section>
 );

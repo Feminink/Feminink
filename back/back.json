@@ -134,7 +134,7 @@
         
         ]}
     ],
-    "users": [
+    "admins": [
         {
             "id": 1,
             "name": "Laura O", 
@@ -144,6 +144,7 @@
             "image": ".",
             "mail": "laurao@mail.com",
             "description": ""
+
         },
         {
             "id": 1,
@@ -173,5 +174,9 @@
     ], 
     "contac-us": [{
 
+    }], 
+
+    "users": [{
+    
     }]
 }
