@@ -1,0 +1,65 @@
+/* -- START FOOTERCOMPONENT STYLES -- */
+
+.footer {
+    background-color: beige;
+    
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+    }
+
+    &-nav__column {
+        width: calc(25% - 1em);
+    }
+
+    &-nav__h4 {
+        font-weight: bold;
+    }
+
+    &-nav__li {
+         margin: 1em 0;
+    }
+
+    &-nav__link  {
+        color: #8f8f8f;
+        font-weight: bold;
+
+        &:hover {
+            color: #000000;
+            text-decoration: underline;
+        }
+    }
+
+    &__section--info {
+        background-color: whitesmoke;
+    }
+
+    &__info-nav {
+        display: flex;
+        gap: 1em;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        height: 50px;
+    }
+}
+
+.legal {
+
+    &-nav__ul {
+        display: flex;
+        gap: 1em;
+    }
+
+    &-nav__link {
+        color: #006fb9;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* -- END FOOTERCOMPONENT STYLES -- */
