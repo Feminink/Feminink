@@ -9,10 +9,10 @@
             "name": "Maud Wagner",
             "date": "1877",
             "city":"Kansas, EEUU",
-            "image": ".src/assets/images/Maud-Wagner.jpeg",
+            "image": "./assets/images/Maud-Wagner.jpeg",
             "designs": [], 
             "data": "Maud, siendo una adolescente consiguió escaparse de casa para unirse al circo, para sobrevivir a la pobreza de su familia. Conoció a Gus Wagner. que sería su marido y le enseñaría a tatuar. Maud alcanzó la fama como la primera artista del tatuaje femenina conocida en todo el mundo. ",
-            "style-tattoo": ["tradicional"]
+            "style_tattoo": ["tradicional"]
         
         },
         {
@@ -20,82 +20,82 @@
             "name": "Jessie Knight",
             "date": "1904",
             "city":"Croydon, Londres",
-            "image": "./src/assets/images/Jessie-Knight.jpeg",
+            "image": "./assets/images/Jessie-Knight.jpeg",
             "designs": [],
             "data": "Su padre Leonard, era capitán de la marina, tatuador y francotirador, mientras que su madre era poeta e ilustradora. Recibió un disparo en el hombro durante un terrible accidente mientras trabajaba así que viró hacia el mundo del tatuaje. Sus tatuajes estaban obteniendo una reputación estelar, y en 1955 Jessie ganó el segundo lugar en el Champion Tattoo Artist of all England. Jessie abrió sus propias tiendas de tatuajes, primero en la ciudad portuaria de Portsmouth y luego en Aldershot.",
-            "style-tattoo": ["color", "a mano alzada", "tradicional"]
+            "style_tattoo": ["color, ", "a mano alzada, ", "tradicional"]
         },
         {
             "id": 3,
             "name": "Millie Hull",
             "date": "1896",
             "city":"Nueva York",
-            "image": "../src/assets/images/Millie-Hull.jpeg",
+            "image": "./assets/images/Millie-Hull.jpeg",
             "designs": [],
             "data": "Millie, que abandonó la escuela a los 13 años, uniéndose al mundo del circo y comenzó a trabajar como bailarina exótica. Tatuó su cuerpo como recomendación de un tatuador, para que ganase más dinero (se sintió obligada a hacerlo). Sin embargo, esto empujó a Millie a abandonar el mundo del espectáculo y aprendió el oficio de tatuajes abriendo su propio salón de tatuajes, The Tattoo Emporium, en Bowery, en la parte trasera de una peluquería. ",
-            "style-tattoo": ["tradicional", "brillantes"]
+            "style_tattoo": ["tradicional, ", "brillantes"]
         },
         {
             "id": 4,
             "name": "Betty Broadbent",
             "date": "1909",
             "city":"Florida, EEUU",
-            "image": "",
+            "image": "./assets/images/betty-broadbent.png",
             "designs": [],
             "data": "Trabajó como la Dama Tatuada en los circos independientes que se encontraba. Cuando regresó a Estados Unidos, Betty volvió a trabajar como una atracción tatuada en el circo. Para esta temporada, se estableció como tatuadora ",
-            "style-tattoo": ["tradicional"]
+            "style_tattoo": ["tradicional"]
         },
         {
             "id": 5,
             "name": "Artoria Gibbons/ Anna Mae Burlingston",
             "date": "1893",
             "city":"Wisconsin",
-            "image": "../src/assets/images/Artoria-Gibbons",
+            "image": "./assets/images/Artoria-Gibbons.png",
             "designs": [],
              "data": "En la década de los 20 trabajó junto a su marido como tatuadora, además de que se convirtió en una atracción en circos ya que en aquella época era algo sumamente raro que una mujer contara con tantos tatuajes en todo su cuerpo.",
-             "style-tattoo": ["tradicional"]
+             "style_tattoo": ["tradicional"]
         },
         {
             "id": 6,
             "name": "Whang-od",
             "date": "1917",
             "city":"Filipinas",
-            "image": "../src/assets.images/Whang-od.png",
+            "image": "./assets/images/Whang-od.png",
             "designs": ["./assets/images/arrows.jpeg", "./assets/images/arrows1.png", "./assets/images/arrows2.png"],
             "data": "Comenzó a tatuar a los quince años. Tradicionalmente, las mujeres no aprendían estas técnicas de tatuaje, pero su padre le enseñó al observar su potencial y su talento. Whang-od aplica el batok (el tatuaje tradicional hecho a mano) a los turistas que visitan Buscalan. Eso sí, no a todos: es ella la que elige a quién y qué tatuar, y no al revés, por mucho que los turistas hayan recorrido las 15 horas de trayecto que separan Buscalan Kalinga de Manila, la capital de Filipinas.",
-            "style-tattoo": ["batok"]
+            "style_tattoo": ["batok"]
         },
         {
             "id": 7,
             "name": "Trix",
             "date": "1990",
             "city":"Jerez Fra, Cádiz",
-            "image": "../src/assets/images/Trix.jpeg",
+            "image": "./assets/images/Trix.jpeg",
             "designs": [
                   "./assets/images/star-wars.jpeg", "./assets/images/joker.png", "./assets/images/face.png"
             ],
             "data": "https://www.instagram.com/trixtattoo/?hl=es",
-            "style-tattoo": ["surrealismo", "tradicional", "color"]
+            "style_tattoo": ["surrealismo, ", "tradicional ", "color"]
         },
         {
             "id": 8,
             "name": "Laura Egea",
             "date": "1988",
             "city":"Talavera, Toledo",
-            "image": "../src/assets/images/Laura-Egea.jpeg",
+            "image": "./assets/images/Laura-Egea.jpeg",
             "designs": [ "./assets/images/native.png", "./assets/images/et.png", "./assets/images/tigre.png"],
             "data": "https://www.instagram.com/lauraegea_tattoo/?hl=es",
-            "style-tattoo": ["realismo", "color"]
+            "style_tattoo": ["realismo, ", "color"]
         },
         {
             "id": 9,
             "name": "Debora Cherrys",
             "date": "1985",
             "city":"Madrid",
-            "image": "../src/assets.images/debora.png",
+            "image": "./assets/images/debora.png",
             "designs": ["./assets/images/neotrade.png", "./assets/images/armneotrade.png", "./assets/images/legneotrade.png" ],
             "data": "https://www.instagram.com/deboracherrys/",
-            "style-tattoo": ["neo-tradicional", "color"]
+            "style_tattoo": ["neo-tradicional, ", "color"]
         }
         ],
     

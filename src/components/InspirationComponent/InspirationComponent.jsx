@@ -24,13 +24,21 @@ const InspirationComponent = () => {
   }else {
 
   }
- return(  <section className="section__inspiration">
+ return(  <div className="div__inspiration">
  
  {inspiration.map((woman)=>{
   return (
-    <section>
-    <h1>{woman.name}</h1>
-    <img src={woman.image} alt={woman.name}></img>
+    <section className='div__inspiration__section'>
+    {/* <div className='div__img'>  */}
+    <img  className='div__img__img' src={woman.image} alt={woman.name}></img>
+    {/* </div> */}
+    <div className='div__detail'> 
+    <h1 className='div__inspiration__section__detail'>{woman.name}</h1>
+    <h3 className='div__inspiration__section__detail'>{woman.city}</h3>
+    <h3 className='div__inspiration__section__detail'>{woman.date}</h3>
+    <h3 className='div__inspiration__section__detail'>{woman.style_tattoo}</h3>
+    <h3 className='div__inspiration__section__detail'>{woman.data}</h3>
+    </div>
     {console.log(woman.image)}
     </section>
   )
@@ -38,7 +46,7 @@ const InspirationComponent = () => {
  
  
 
-         </section>)
+         </div>)
  };
 
 InspirationComponent.propTypes = {};
