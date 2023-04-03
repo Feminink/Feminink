@@ -36,7 +36,8 @@ export default function AuthReducer(state = initialState, action) {
       break;
     case DO_LOGOUT_OK:
       state = { ...state, user: {} };
-      break;
+      break
+      
     default:
       break;
   }

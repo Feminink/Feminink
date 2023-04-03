@@ -6,7 +6,7 @@ import Profile from "./pages/Profile/Profile";
 import Login from "./pages/Login/Login";
 import Registration from "./pages/Registration/Registration";
 import NotFound from "./pages/NotFound/NotFound";
-
+import Inspiration from "./pages/Inspiration/Inspiration";
 // IMPORT REACT ROUTER
 import { Route, Routes, Navigate } from "react-router-dom";
 
@@ -29,9 +29,14 @@ function App() {
             <Route exact path="/" element={<Home />}></Route>
             <Route exact path="/multi" element={<Multi />}></Route>
             <Route exact path="/about" element={<About />}></Route>
+            <Route exact path="/inspiration" element={<Inspiration />}></Route>
             <Route exact path="/profile" element={<Profile />}></Route>
             <Route exact path="/login" element={<Login />}></Route>
-            <Route exact path="/registration" element={<Registration />}></Route>
+            <Route
+              exact
+              path="/registration"
+              element={<Registration />}
+            ></Route>
             <Route exact path="*" element={<NotFound />}></Route>
           </Routes>
         </div>

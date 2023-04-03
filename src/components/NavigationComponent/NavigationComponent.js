@@ -27,6 +27,9 @@ const NavigationComponent = () => {
         <li className="nav-li">
           <Link to="/about">About</Link>
         </li>
+        <li className="nav-li">
+         <Link to="/inspiration">Our Inspiration</Link>
+        </li>
         {user && user.id ? (
           ""
         ) : (
