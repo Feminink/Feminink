@@ -63,9 +63,9 @@ export function doLogout() {
   return async (dispatch) => {
     try {
       dispatch(actionDoLogout());
-      dispatch(actionDoLoginOk());
+      dispatch(actionDoLogoutOk());
     } catch (error) {
-      dispatch(actionDoLoginFail(error));
+      dispatch(actionDoLogoutFail(error));
     }
   };
 }
