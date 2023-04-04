@@ -13,7 +13,6 @@ import { Route, Routes, Navigate } from "react-router-dom";
 // IMPORT COMPONENTS
 import HeaderComponent from "./layout/HeaderComponent/HeaderComponent";
 import FooterComponent from "./layout/FooterComponent/FooterComponent";
-import NavigationComponent from "./components/NavigationComponent/NavigationComponent";
 
 // IMPORT STYLES
 import "./App.scss";
@@ -22,7 +21,6 @@ function App() {
   return (
     <div className="App">
       <HeaderComponent></HeaderComponent>
-      <NavigationComponent></NavigationComponent>
       <main className="main">
         <div className="main-container container">
           <Routes>

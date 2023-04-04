@@ -1,9 +1,12 @@
 import React from "react";
+
+// IMPORT LOGO
 import circus from '../../assets/images/circus.png'
+
 const Home = () => {
-  return <div>
-    {/* <img src={circus} style={{width: "150px"}} alt={circus} className="img__logo"></img> */}
-  </div>;
+  return (
+    <h1>Home Page</h1>
+  )
 };
 
 export default Home;

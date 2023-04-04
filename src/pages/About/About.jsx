@@ -2,9 +2,12 @@ import React from "react";
 // IMPORT COMPONENT
 import ContactComponent from '../../components/ContactComponent/ContactComponent';
 const About = () => {
-  return <div>
-    <ContactComponent></ContactComponent>
-  </div>;
+  return (
+    <>
+      <h1>About Page</h1>
+      <ContactComponent></ContactComponent>
+    </>
+  )
 };
 
 export default About;
