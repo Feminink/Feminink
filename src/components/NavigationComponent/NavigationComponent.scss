@@ -2,20 +2,29 @@
 
 .header {
     background-color: black;
-
+  
     &__logo {
         height: 50px;
     }
-
+  
     &__show-menu {
-    	height: 22px;
-       	display: flex;
-    	flex-direction: column;
-    	justify-content: space-around;
-    	align-items: center;
-    	cursor: pointer;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+  
+        .show-menu__bar {
+            display: block;
+            height: 4px;
+            width: 24px;
+            background-color: white;
+            border-radius: 2px;
+            transition: all 0.3s ease-out;
+        }
     }
-
+  
     &__main-nav {
         display: none;
         position: absolute;
@@ -23,70 +32,63 @@
         left: 0;
         width: 40%;
         background-color: whitesmoke;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-out;
     }
 }
-
-.show-menu__bar {
-    display: block;
-    height: 4px;
-    width: 24px;
-    background-color: white;
-    border-radius: 2px;
-    transition: all 0.3s ease-out;
-}
-
-.main-nav {
-
+  
+  .main-nav {
     &__ul {
-        text-align: center;
+      text-align: center;
     }
-
+  
     &__li {
-        padding: 2em 0;
-        cursor: pointer;
-
-        &:hover {
-            background-color: lightgoldenrodyellow;
-        }
-
-        &--login:hover {
-            background-color: lightgreen;
-        }
-
-        &--logout:hover {
-            background-color: lightcoral;
-        }
+      padding: 2em 0;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: lightgoldenrodyellow;
+      }
+  
+      &--login:hover {
+        background-color: lightgreen;
+      }
+  
+      &--logout:hover {
+        background-color: lightcoral;
+      }
     }
-
+  
     &__link {
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: black;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: black;
     }
 }
-
+  
 body.menu-open {
 
     .header__main-nav {
         display: block;
+        transform: translateX(0);
     }
-
+  
     .show-menu__bar {
-        
+
         &:nth-child(2) {
             width: 0;
-    	    height: 0;
+            height: 0;
         }
-
+  
         &:first-child {
             transform: translateY(7px) rotate(45deg);
         }
-
-        &:last-child  {
+  
+        &:last-child {
             transform: translateY(-7px) rotate(-45deg);
         }
     }
 }
-  
-  /* -- END NAVIGATION STYLES -- */
+    
+/* -- END NAVIGATION STYLES -- */

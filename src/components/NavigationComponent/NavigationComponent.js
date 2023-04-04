@@ -1,41 +1,37 @@
 import React, { useState } from 'react';
 
-// IMPORT LINK
-import { Link } from "react-router-dom";
+// IMPORT LINK REACT ROUTER
+import { Link } from 'react-router-dom';
 
-// IMPORT USE SELECTOR
+// IMPORT REDUX
 import { useDispatch, useSelector } from "react-redux";
 
-// IMPORT API CALL DO LOGOUT
+// IMPORT LOGOUT FUNCTION
 import { doLogout } from "../../store/auth/actions";
-
-// IMPORT STYLES
-import "./NavigationComponent.scss";
 
 // IMPORT FONTAWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightFromBracket, faUser, faArrowRightToBracket, faHouse, faImages, faUserGroup } from '@fortawesome/free-solid-svg-icons';
 
-
+// IMPORT STYLES
+import "./NavigationComponent.scss";
 
 import PropTypes from "prop-types";
 
 const NavigationComponent = () => {
-  
+
   const { user } = useSelector((state) => state.AuthReducer);
-
   const [menuOpen, setMenuOpen] = useState(false);
-
   const dispatch = useDispatch();
 
-  // TOGGLE FUNCTION
+  // IMPORT TOGGLE FUNCTION
   function toggleMenu() {
     const body = document.querySelector('body');
     body.classList.toggle('menu-open');
     setMenuOpen(!menuOpen);
   }
 
-  // LOGOUT FUNCTION
+  // IMPORT TOGGLE + LOGOUT FUNCTION
   function onClickLogout() {
     toggleMenu();
     dispatch(doLogout());
@@ -43,12 +39,12 @@ const NavigationComponent = () => {
 
   return (
     <>
-      <div class="header__show-menu" onClick={toggleMenu}>
+      <div className={`header__show-menu ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
 				<i className="show-menu__bar"></i>
 				<i className="show-menu__bar"></i>
 				<i className="show-menu__bar"></i>
 			</div>
-      <nav className="header__main-nav nav">
+      <nav className={`header__main-nav nav ${menuOpen ? 'open' : ''}`}>
         <ul className="main-nav__ul ul">
           <li className="main-nav__li li">
             <Link className="main-nav__link link" onClick={toggleMenu} to="/">
