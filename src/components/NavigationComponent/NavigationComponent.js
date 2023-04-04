@@ -48,7 +48,7 @@ const NavigationComponent = () => {
         <ul className="main-nav__ul ul">
           <li className="main-nav__li li">
             <Link className="main-nav__link link" onClick={toggleMenu} to="/">
-              <FontAwesomeIcon icon={faHouse} size="xs" /> Home
+              <FontAwesomeIcon icon={faHouse} size="xs" /> Home 
             </Link>
           </li>
           <li className="main-nav__li li">
@@ -58,7 +58,7 @@ const NavigationComponent = () => {
           </li>
           <li className="main-nav__li li">
             <Link className="main-nav__link link" onClick={toggleMenu} to="/about">
-            <FontAwesomeIcon icon={faUserGroup} size="xs" /> About
+            <FontAwesomeIcon icon={faUserGroup} size="xs" /> About 
             </Link>
           </li>
           {user && user.id ? ("") : (<li className="main-nav__li main-nav__li--login li"><Link className="main-nav__link link" onClick={toggleMenu} to="/login"><FontAwesomeIcon icon={faArrowRightToBracket} size="xs"/> Login</Link></li>)}

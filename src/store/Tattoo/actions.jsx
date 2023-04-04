@@ -1,11 +1,16 @@
 import axios from 'axios';
 
 import {
-    GET_INSPIRATION, GET_INSPIRATION_OK, GET_INSPIRATION_FAIL
+    GET_INSPIRATION, GET_INSPIRATION_OK, GET_INSPIRATION_FAIL,
+    DO_CONTACT, DO_CONTACT_FAIL, DO_CONTACT_OK
 } from './actionTypes';
 
 
-const backInspiration = "http://localhost:3000/inspiration"
+const backInspiration = "http://localhost:3000/inspiration";
+const backContact = "http://localhost:3000/contact";
+
+
+// FUNCIÖN PARA OBTENER DATA DE JSON: WOMEN
 export function actionGetInspiration(){
     return{
         type: GET_INSPIRATION
@@ -34,6 +39,38 @@ export function getInspiration(){
             console.log(res.data, "respuesta de action")
         } catch (error) {
             dispatch(actionGetInspirationFail)
+        }
+    }
+}
+// FUNCIÖN PARA POSTEAR DATA EN JSON: CONTACT
+export function actionDoContact(contactForm){
+    return{
+        type: DO_CONTACT,
+        payload:contactForm
+    }
+}
+export function actionDoContactOk(mail){
+    return{
+        type: DO_CONTACT_OK,
+        payload: mail
+    }
+}
+export function actionDoContactFail(error){
+    return{
+        type: DO_CONTACT_FAIL,
+        payload: error
+    }
+}
+
+export function doContact(userContactForm){
+    return async (dispatch)=>{
+        try {
+            dispatch(actionDoContact(userContactForm))
+            const res = await axios.post(backContact, userContactForm)
+            console.log(res, "res")
+            dispatch(actionDoContactOk(res.data))
+        } catch (error) {
+            dispatch(actionDoContactFail(error))
         }
     }
 }

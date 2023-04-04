@@ -1,44 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import  './ContactComponent.scss';
 
-const ContactComponent = () => (
-  <section className="section__form">
+//IMPORT USESELECTOR
+import { useDispatch, useSelector } from 'react-redux';
+
+//IMPORT FUNCIÖN DOCONTACT
+import {doContact} from '../../store/Tattoo/actions'
+
+const ContactComponent = () => { 
+
+const {form} = useSelector((state)=> state.TattooReducer);
+  
+//CREO ESTADOS PARA SETEAR VALOR DEL FORMULARIO
+const [ name, setName] = useState("");
+const [ age, setAge] = useState("");
+const [ description, setDescription] = useState("");
+const [ artist , setArtist] = useState("");
+const [ design, setDesign] = useState("");
+
+const dispatch = useDispatch();
+
+const tryToContact = () =>{
+  dispatch(doContact({username: name, age: age, description: description, artist: artist, design: design}))
+}
+
+ return(  <section className="section__form">
    <form className='form'>
     <fieldset>
       <label>Nombre</label>
-      <input type="text" placeholder="Dinos cómo te llamas" id="name"></input>
+      <input value={name} onChange={(e)=> setName(e.target.value)} type="text" placeholder="Dinos cómo te llamas" id="name"></input>
     </fieldset>
 
     <fieldset>
      <label>¿Tienes más de 18 años? </label>
-       <input type="radio" id="ageYes" name="age" />Sí
-      <input type="radio" id="ageNo"   name="age" />No
+       <input value={age} onChange={(e)=> setAge(e.target.value)} type="radio" id="ageYes" name="age" />Sí
+      <input value={age} onChange={(e)=> setAge(e.target.value)} type="radio" id="ageNo"   name="age" />No
     </fieldset>
 
     <fieldset>
       <label>Descripción</label>
-      <textarea type="text" placeholder="Breve descripción del tatuaje" id="description" required="required" ></textarea>
+      <textarea value={description} onChange={(e)=> setDescription(e.target.value)} type="text" placeholder="Breve descripción del tatuaje" id="description" required="required" ></textarea>
     </fieldset>
 
     <fieldset>
       <label>Diseño</label>
-      <select type="image" placeholder="Inserta una imagen" id="image" alt="" src=''>
+      <select  value={artist} onChange={(e)=> setArtist(e.target.value)} name="artist" >
       {/* AQUÍ UNA VARIABLE CON CADA UNO DE LOS NOMBRES DE LOS USERS */}
         <option> Laura</option>
         <option> Ignacio</option>
-        <option>Miriam </option>
+        <option> Miriam </option>
       </select> 
     </fieldset>
   
     <fieldset>
    <label>Diseño</label>
-   <input type="color" placeholder="Gama cromática" id="color" ></input> 
-   <input type="color" placeholder="Gama cromática" id="color"  ></input> 
+   <input value={design} onChange={(e)=> setDesign(e.target.value)} type="color" placeholder="Gama cromática" id="color" ></input> 
   </fieldset>
+  <input className='form__submit' onClick={tryToContact} type="submit"/>
+  
    </form>
-  </section>
-);
+  </section>)
+};
 
 ContactComponent.propTypes = {};
 
