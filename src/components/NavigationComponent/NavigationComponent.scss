@@ -1,1 +1,92 @@
-.NavigationComponent {}
+/* -- START NAVIGATION STYLES -- */
+
+.header {
+    background-color: black;
+
+    &__logo {
+        height: 50px;
+    }
+
+    &__show-menu {
+    	height: 22px;
+       	display: flex;
+    	flex-direction: column;
+    	justify-content: space-around;
+    	align-items: center;
+    	cursor: pointer;
+    }
+
+    &__main-nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        background-color: whitesmoke;
+    }
+}
+
+.show-menu__bar {
+    display: block;
+    height: 4px;
+    width: 24px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-out;
+}
+
+.main-nav {
+
+    &__ul {
+        text-align: center;
+    }
+
+    &__li {
+        padding: 2em 0;
+        cursor: pointer;
+
+        &:hover {
+            background-color: lightgoldenrodyellow;
+        }
+
+        &--login:hover {
+            background-color: lightgreen;
+        }
+
+        &--logout:hover {
+            background-color: lightcoral;
+        }
+    }
+
+    &__link {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: black;
+    }
+}
+
+body.menu-open {
+
+    .header__main-nav {
+        display: block;
+    }
+
+    .show-menu__bar {
+        
+        &:nth-child(2) {
+            width: 0;
+    	    height: 0;
+        }
+
+        &:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        &:last-child  {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    }
+}
+  
+  /* -- END NAVIGATION STYLES -- */
