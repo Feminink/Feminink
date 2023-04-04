@@ -11,7 +11,7 @@
             "city":"Kansas, EEUU",
             "image": "./assets/images/Maud-Wagner.jpeg",
             "designs": [], 
-            "data": "Maud, siendo una adolescente consiguió escaparse de casa para unirse al circo, para sobrevivir a la pobreza de su familia. Conoció a Gus Wagner. que sería su marido y le enseñaría a tatuar. Maud alcanzó la fama como la primera artista del tatuaje femenina conocida en todo el mundo. ",
+            "data": "Maud, siendo una adolescente consiguió escaparse de casa para unirse al circo, para sobrevivir a la pobreza de su familia. Conoció a Gus Wagner. que sería su marido y le enseñaría a tatuar. Maud alcanzó la fama como la primera artista del tatuaje femenina conocida en todo el mundo. Paralelamente, Maud también se tatuaba a sí misma y, junto con los que le realizaba su marido, pronto convirtió su cuerpo en una atracción. Stevens recorrió el país exhibiéndose en los espectáculos de freaks y consiguió romper el estigma que rodeaba a las mujeres que intervenían sus cuerpos con colores y sombras.",
             "style_tattoo": ["tradicional"]
         
         },
@@ -22,7 +22,7 @@
             "city":"Croydon, Londres",
             "image": "./assets/images/Jessie-Knight.jpeg",
             "designs": [],
-            "data": "Su padre Leonard, era capitán de la marina, tatuador y francotirador, mientras que su madre era poeta e ilustradora. Recibió un disparo en el hombro durante un terrible accidente mientras trabajaba así que viró hacia el mundo del tatuaje. Sus tatuajes estaban obteniendo una reputación estelar, y en 1955 Jessie ganó el segundo lugar en el Champion Tattoo Artist of all England. Jessie abrió sus propias tiendas de tatuajes, primero en la ciudad portuaria de Portsmouth y luego en Aldershot.",
+            "data": "Su padre Leonard, era capitán de la marina, tatuador y francotirador, mientras que su madre era poeta e ilustradora. Recibió un disparo en el hombro durante un terrible accidente mientras trabajaba así que viró hacia el mundo del tatuaje. Sus tatuajes estaban obteniendo una reputación estelar, y en 1955 Jessie ganó el segundo lugar en el Champion Tattoo Artist of all England. Jessie abrió sus propias tiendas de tatuajes, primero en la ciudad portuaria de Portsmouth y luego en Aldershot.Su trabajo fue incluido en una exposición en el Museo Marítimo Nacional de Cornualles, de marzo de 2017 a enero de 2018, que muestra una historia del tatuaje británico.",
             "style_tattoo": ["color, ", "a mano alzada, ", "tradicional"]
         },
         {
@@ -32,7 +32,7 @@
             "city":"Nueva York",
             "image": "./assets/images/Millie-Hull.jpeg",
             "designs": [],
-            "data": "Millie, que abandonó la escuela a los 13 años, uniéndose al mundo del circo y comenzó a trabajar como bailarina exótica. Tatuó su cuerpo como recomendación de un tatuador, para que ganase más dinero (se sintió obligada a hacerlo). Sin embargo, esto empujó a Millie a abandonar el mundo del espectáculo y aprendió el oficio de tatuajes abriendo su propio salón de tatuajes, The Tattoo Emporium, en Bowery, en la parte trasera de una peluquería. ",
+            "data": "Millie, que abandonó la escuela a los 13 años, uniéndose al mundo del circo y comenzó a trabajar como bailarina exótica. Tatuó su cuerpo como recomendación de un tatuador, para que ganase más dinero (se sintió obligada a hacerlo). Sin embargo, esto empujó a Millie a abandonar el mundo del espectáculo y aprendió el oficio de tatuajes abriendo su propio salón de tatuajes, The Tattoo Emporium, en Bowery, en la parte trasera de una peluquería. El hecho de que Millie tuviera su propio negocio fue un logro increíble pues se categorizó para siempre como una de las más resaltantes mujeres tatuadoras a lo largo de la historia. En ese momento, el tatuaje estaba totalmente dominado por los hombres. ",
             "style_tattoo": ["tradicional, ", "brillantes"]
         },
         {
@@ -42,7 +42,7 @@
             "city":"Florida, EEUU",
             "image": "./assets/images/betty-broadbent.png",
             "designs": [],
-            "data": "Trabajó como la Dama Tatuada en los circos independientes que se encontraba. Cuando regresó a Estados Unidos, Betty volvió a trabajar como una atracción tatuada en el circo. Para esta temporada, se estableció como tatuadora ",
+            "data": "Conocida como La Venus Tatuada. Trabajó como la Dama Tatuada en los circos independientes que se encontraba. Cuando regresó a Estados Unidos, Betty volvió a trabajar como una atracción tatuada en el circo. Para esta temporada, se estableció como tatuadora. Además de exhibir su arte, Broadbent trabajaba como tatuadora. Trabajó en tiendas de todo el país, incluidos espacios ubicados en Montreal, San Francisco y Nueva York. En 1937 comienza a trabajar a nivel internacional. Pasó un tiempo trabajando para circos independientes tanto en Nueva Zelanda como en Australia.​ La revista Pix publicó sus diseños, y recientemente la Biblioteca Estatal de Nuevas Gales del Sur en Australia ha digitalizado y publicado más de 9.000 negativos de la publicación, entre los que se encuentran algunos de Broadbent.​ ",
             "style_tattoo": ["tradicional"]
         },
         {
@@ -52,7 +52,7 @@
             "city":"Wisconsin",
             "image": "./assets/images/Artoria-Gibbons.png",
             "designs": [],
-             "data": "En la década de los 20 trabajó junto a su marido como tatuadora, además de que se convirtió en una atracción en circos ya que en aquella época era algo sumamente raro que una mujer contara con tantos tatuajes en todo su cuerpo.",
+             "data": "Su nombre real era Anna Mae Burlingston y nació en 1893 en el seno de una familia sumamente pobre. Cuando trabajó como sirvienta conoció al que más tarde se convirtió en su esposo Charles (Red) Gibbons, un reconocido artista tatuador. Fue él quien le tatuó todo su cuerpo con motivos religiosos debido a que era una mujer muy devota. En la década de los 20 trabajó junto a su marido como tatuadora, además de que se convirtió en una atracción en circos ya que en aquella época era algo sumamente raro que una mujer contara con tantos tatuajes en todo su cuerpo.",
              "style_tattoo": ["tradicional"]
         },
         {
@@ -62,40 +62,8 @@
             "city":"Filipinas",
             "image": "./assets/images/Whang-od.png",
             "designs": ["./assets/images/arrows.jpeg", "./assets/images/arrows1.png", "./assets/images/arrows2.png"],
-            "data": "Comenzó a tatuar a los quince años. Tradicionalmente, las mujeres no aprendían estas técnicas de tatuaje, pero su padre le enseñó al observar su potencial y su talento. Whang-od aplica el batok (el tatuaje tradicional hecho a mano) a los turistas que visitan Buscalan. Eso sí, no a todos: es ella la que elige a quién y qué tatuar, y no al revés, por mucho que los turistas hayan recorrido las 15 horas de trayecto que separan Buscalan Kalinga de Manila, la capital de Filipinas.",
+            "data": "Comenzó a tatuar a los quince años. Tradicionalmente, las mujeres no aprendían estas técnicas de tatuaje, pero su padre le enseñó al observar su potencial y su talento. Whang Od emplea la técnica del golpeteo manual llamado «batok». Consiste en penetrar la piel con una espira de calamansi, (cítrico filipino), que se adhiere en el extremo de un palo de ese mismo árbol. En un cuenco, prepara un mejunje hecho de carbón vegetal espesado con patata dulce, agua y azúcar. La tinta penetra a través del rápido y repetido golpeteo de la rama con un palo de bambú. Aunque son muchos los turistas que visitan Buscalan para tatuarse, es ella la que elige a quién y qué tatuar, y no al revés, por mucho que los turistas hayan recorrido las 15 horas de trayecto que separan Buscalan Kalinga de Manila, la capital de Filipinas.",
             "style_tattoo": ["batok"]
-        },
-        {
-            "id": 7,
-            "name": "Trix",
-            "date": "1990",
-            "city":"Jerez Fra, Cádiz",
-            "image": "./assets/images/Trix.jpeg",
-            "designs": [
-                  "./assets/images/star-wars.jpeg", "./assets/images/joker.png", "./assets/images/face.png"
-            ],
-            "data": "https://www.instagram.com/trixtattoo/?hl=es",
-            "style_tattoo": ["surrealismo, ", "tradicional ", "color"]
-        },
-        {
-            "id": 8,
-            "name": "Laura Egea",
-            "date": "1988",
-            "city":"Talavera, Toledo",
-            "image": "./assets/images/Laura-Egea.jpeg",
-            "designs": [ "./assets/images/native.png", "./assets/images/et.png", "./assets/images/tigre.png"],
-            "data": "https://www.instagram.com/lauraegea_tattoo/?hl=es",
-            "style_tattoo": ["realismo, ", "color"]
-        },
-        {
-            "id": 9,
-            "name": "Debora Cherrys",
-            "date": "1985",
-            "city":"Madrid",
-            "image": "./assets/images/debora.png",
-            "designs": ["./assets/images/neotrade.png", "./assets/images/armneotrade.png", "./assets/images/legneotrade.png" ],
-            "data": "https://www.instagram.com/deboracherrys/",
-            "style_tattoo": ["neo-tradicional, ", "color"]
         }
         ],
     
