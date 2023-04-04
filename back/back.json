@@ -23,7 +23,7 @@
             "image": "./assets/images/Jessie-Knight.jpeg",
             "designs": [],
             "data": "Su padre Leonard, era capitán de la marina, tatuador y francotirador, mientras que su madre era poeta e ilustradora. Recibió un disparo en el hombro durante un terrible accidente mientras trabajaba así que viró hacia el mundo del tatuaje. Sus tatuajes estaban obteniendo una reputación estelar, y en 1955 Jessie ganó el segundo lugar en el Champion Tattoo Artist of all England. Jessie abrió sus propias tiendas de tatuajes, primero en la ciudad portuaria de Portsmouth y luego en Aldershot.Su trabajo fue incluido en una exposición en el Museo Marítimo Nacional de Cornualles, de marzo de 2017 a enero de 2018, que muestra una historia del tatuaje británico.",
-            "style_tattoo": ["color, ", "a mano alzada, ", "tradicional"]
+            "style_tattoo": ["color", "a mano alzada", "tradicional"]
         },
         {
             "id": 3,
@@ -33,7 +33,7 @@
             "image": "./assets/images/Millie-Hull.jpeg",
             "designs": [],
             "data": "Millie, que abandonó la escuela a los 13 años, uniéndose al mundo del circo y comenzó a trabajar como bailarina exótica. Tatuó su cuerpo como recomendación de un tatuador, para que ganase más dinero (se sintió obligada a hacerlo). Sin embargo, esto empujó a Millie a abandonar el mundo del espectáculo y aprendió el oficio de tatuajes abriendo su propio salón de tatuajes, The Tattoo Emporium, en Bowery, en la parte trasera de una peluquería. El hecho de que Millie tuviera su propio negocio fue un logro increíble pues se categorizó para siempre como una de las más resaltantes mujeres tatuadoras a lo largo de la historia. En ese momento, el tatuaje estaba totalmente dominado por los hombres. ",
-            "style_tattoo": ["tradicional, ", "brillantes"]
+            "style_tattoo": ["tradicional", "brillante"]
         },
         {
             "id": 4,

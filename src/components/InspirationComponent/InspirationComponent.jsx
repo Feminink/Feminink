@@ -52,7 +52,7 @@ const InspirationComponent = () => {
     <h1 className='div__inspiration__section__detail'>{woman.name}</h1>
     <h3 className='div__inspiration__section__detail'>{woman.city}</h3>
     <h3 className='div__inspiration__section__detail'>{woman.date}</h3>
-    <h3 className='div__inspiration__section__detail'>{woman.style_tattoo}</h3>
+    <h3 className='div__inspiration__section__detail'>{woman.style_tattoo.join(", ").toUpperCase()}</h3>
     </div>
     </div>
     <div className='div__detail__data'> 
