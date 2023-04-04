@@ -10,7 +10,7 @@ const GalleryComponent = () => {
   );
 
   useEffect(() => {
-    dispatch(getGallery);
+    dispatch(getGallery());
   }, []);
 
   if (loadingGallery) {
@@ -24,6 +24,7 @@ const GalleryComponent = () => {
     <div className="cards-container">
       <p>Gallery</p>
       {gallery.map((gallerya) => {
+        console.log(gallerya);
         return (
           <div>
             <img src={gallerya.image} alt={gallerya.alt} />

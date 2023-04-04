@@ -24,11 +24,10 @@ export function actionGetGalleryFail(error) {
 export function getGallery() {
   return async (dispatch) => {
     dispatch(actionGetGallery());
-
     try {
       const response = await axios.get(backGallery);
-      dispatch(actionGetGalleryOk(response));
-      console.log(response, "respuesta de action");
+      dispatch(actionGetGalleryOk(response.data));
+      console.log(response.data, "respuesta de action");
     } catch (error) {
       dispatch(actionGetGalleryFail);
     }
