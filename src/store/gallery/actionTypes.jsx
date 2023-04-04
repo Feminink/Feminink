@@ -1,0 +1,3 @@
+export const GET_GALLERY = "GET_GALLERY";
+export const GET_GALLERY_OK = "GET_GALLERY_OK";
+export const GET_GALLERY_FAIL = "GET_GALLERY_FAIL";
