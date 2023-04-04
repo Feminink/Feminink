@@ -1,0 +1,97 @@
+.div__inspiration{
+  
+     display:flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     padding: 1%;
+    &__wrapper{
+       
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+
+    }
+    &__section{
+        
+         display:flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+         gap: 1em;
+         padding: 2%;
+         justify-content: flex-start;
+         width: 50%;
+        &__detail{
+           
+            display: flex;
+           
+            
+            &:hover{
+                transform: perspective(150px) rotateX(45deg);
+            }
+           
+        }
+        
+    }
+}
+.div__img{
+
+    display: flex;
+   
+    height: max-content;
+    &__img{
+        width: 400px;
+       height: 400px;
+       object-fit: cover;
+       overflow: hidden;
+       filter: grayscale(100%);
+       transition: transform 0.3s;
+       
+       &:hover {
+          transform: scale(1.1);
+       }
+}
+
+}
+.div__detail{
+     display:flex;
+     padding: 2%;
+     flex-direction: column;
+     width: 50%;
+     height: 400px;
+     background-color: rgb(246, 240, 212); 
+   
+  
+     &__data{
+         display:flex;
+        text-align: justify;
+        
+        &__h4{
+            width: 70%;
+        }
+        &__h4:hover{
+            display: none;
+        }
+        &__h4:hover ~ #hide{
+            display: block;
+       }
+    
+}
+}
+
+
+#hide{
+      display: none;
+      padding: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
