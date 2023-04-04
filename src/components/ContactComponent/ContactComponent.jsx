@@ -21,17 +21,17 @@ const [ design, setDesign] = useState("");
 
 const dispatch = useDispatch();
 
-const tryToContact = () =>{
-  dispatch(doContact({username: name, age: age, description: description, artist: artist, design: design}))
+const tryToContact = (e) =>{
+  dispatch(doContact(e))
 }
-
+console.log(name, artist, description)
  return(  <section className="section__form">
    <form className='form'>
     <fieldset>
       <label>Nombre</label>
       <input value={name} onChange={(e)=> setName(e.target.value)} type="text" placeholder="Dinos cómo te llamas" id="name"></input>
     </fieldset>
-
+{/* // EL CAMPO AGE COGE AMBOS VALORES, CAMBIAR Y TIENE QUE SER BOOLEANO */}
     <fieldset>
      <label>¿Tienes más de 18 años? </label>
        <input value={age} onChange={(e)=> setAge(e.target.value)} type="radio" id="ageYes" name="age" />Sí
@@ -53,11 +53,11 @@ const tryToContact = () =>{
       </select> 
     </fieldset>
   
-    <fieldset>
-   <label>Diseño</label>
-   <input value={design} onChange={(e)=> setDesign(e.target.value)} type="color" placeholder="Gama cromática" id="color" ></input> 
-  </fieldset>
-  <input className='form__submit' onClick={tryToContact} type="submit"/>
+    {/* <fieldset> */}
+   {/* <label>Diseño</label> */}
+   {/* <input value={design} onChange={(e)=> setDesign(e.target.value)} type="color" placeholder="Gama cromática" id="color" ></input>  */}
+  {/* </fieldset> */}
+  <input className='form__submit' onClick={()=> tryToContact()} type="submit"/>
   
    </form>
   </section>)

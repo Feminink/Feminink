@@ -5,7 +5,7 @@ import {
 
 const firstState = {
     inspiration: [],
-    loadginInspiration: false,
+    loadingInspiration: false,
     form: {},
     loadingForm: false,
     error: {
@@ -17,13 +17,13 @@ export default function TattooReducer(state = firstState, action){
     switch(action.type){
 
         case GET_INSPIRATION:
-        state = {...state, loadginInspiration:true}
+        state = {...state, loadingInspiration:true}
         break
         case GET_INSPIRATION_OK:
-        state = {...state, loadginInspiration: false, inspiration: action.payload}
+        state = {...state, loadingInspiration: false, inspiration: action.payload}
         break 
         case GET_INSPIRATION_FAIL:
-        state = {...state, loadginInspiration:false, error: {message: action.payload}}
+        state = {...state, loadingInspiration:false, error: {message: action.payload}}
         break
 
         case DO_CONTACT:

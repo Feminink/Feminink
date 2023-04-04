@@ -64,11 +64,12 @@ export function actionDoContactFail(error){
 
 export function doContact(userContactForm){
     return async (dispatch)=>{
+        dispatch(actionDoContact(userContactForm))
         try {
-            dispatch(actionDoContact(userContactForm))
-            const res = await axios.post(backContact, userContactForm)
+            const res = await axios.post("http://localhost:3000/contact", userContactForm)
             console.log(res, "res")
             dispatch(actionDoContactOk(res.data))
+            console.log(res.data, "res.data")
         } catch (error) {
             dispatch(actionDoContactFail(error))
         }
