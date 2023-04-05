@@ -26,7 +26,7 @@ function App() {
         <div className="main-container container">
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
-            <Route exact path="/multi" element={<Multi />}></Route>
+            <Route exact path="/gallery" element={<Multi />}></Route>
             <Route exact path="/about" element={<About />}></Route>
             <Route exact path="/inspiration" element={<Inspiration />}></Route>
             <Route exact path="/profile" element={<Profile />}></Route>
