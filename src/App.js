@@ -1,13 +1,14 @@
 // IMPORT PAGES
 import Home from "./pages/Home/Home";
-import Multi from "./pages/Gallery/Gallery";
 import About from "./pages/About/About";
 import Profile from "./pages/Profile/Profile";
 import Login from "./pages/Login/Login";
 import Registration from "./pages/Registration/Registration";
 import NotFound from "./pages/NotFound/NotFound";
 import Inspiration from "./pages/Inspiration/Inspiration";
-import Contact from './pages/Contact/Contact';
+import Contact from "./pages/Contact/Contact";
+import Gallery from "./pages/Gallery/Gallery";
+
 // IMPORT REACT ROUTER
 import { Route, Routes, Navigate } from "react-router-dom";
 
@@ -26,12 +27,12 @@ function App() {
         <div className="main-container container">
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
-            <Route exact path="/gallery" element={<Multi />}></Route>
+            <Route exact path="/gallery" element={<Gallery />}></Route>
             <Route exact path="/about" element={<About />}></Route>
             <Route exact path="/inspiration" element={<Inspiration />}></Route>
             <Route exact path="/profile" element={<Profile />}></Route>
             <Route exact path="/login" element={<Login />}></Route>
-            <Route exact path="/contact" element={<Contact/>}></Route>
+            <Route exact path="/contact" element={<Contact />}></Route>
             <Route
               exact
               path="/registration"
