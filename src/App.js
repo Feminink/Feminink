@@ -7,6 +7,7 @@ import Login from "./pages/Login/Login";
 import Registration from "./pages/Registration/Registration";
 import NotFound from "./pages/NotFound/NotFound";
 import Inspiration from "./pages/Inspiration/Inspiration";
+import Contact from './pages/Contact/Contact';
 // IMPORT REACT ROUTER
 import { Route, Routes, Navigate } from "react-router-dom";
 
@@ -30,6 +31,7 @@ function App() {
             <Route exact path="/inspiration" element={<Inspiration />}></Route>
             <Route exact path="/profile" element={<Profile />}></Route>
             <Route exact path="/login" element={<Login />}></Route>
+            <Route exact path="/contact" element={<Contact/>}></Route>
             <Route
               exact
               path="/registration"
