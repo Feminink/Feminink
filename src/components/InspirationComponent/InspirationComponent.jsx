@@ -43,7 +43,7 @@ const InspirationComponent = () => {
 
  {inspiration.map((woman)=>{
   return ( 
-    <section className='div__inspiration__section'>
+    <section key={woman.id} className='div__inspiration__section'>
     <div className='div__inspiration__wrapper'> 
     <div className='div__img'> 
       <img  className='div__img__img' src={woman.image} alt={woman.name}></img>

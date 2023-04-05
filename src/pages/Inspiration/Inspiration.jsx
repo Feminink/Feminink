@@ -1,5 +1,7 @@
 import React from 'react'
 import InspirationComponent from '../../components/InspirationComponent/InspirationComponent'
+import ContactComponent from '../../components/ContactComponent/ContactComponent';
+
 import machine from '../../assets/images/machine.png'
 import rose from '../../assets/images/rose.png'
 
@@ -19,7 +21,7 @@ const Inspiration = () => {
    </div>
    
       <InspirationComponent></InspirationComponent>
-   
+    
    
    
    

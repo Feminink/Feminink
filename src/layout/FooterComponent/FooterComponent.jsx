@@ -50,7 +50,7 @@ const FooterComponent = () => {
             </div>
             <div className="footer-nav__column">
               <h4 className="footer-nav__h4 h4">Footer Heading 3</h4>
-              <ul class="footer-nav__ul">
+              <ul className="footer-nav__ul">
                 <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 1</Link></li>
                 <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 2</Link></li>
                 <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 3</Link></li>
@@ -67,7 +67,7 @@ const FooterComponent = () => {
             <div className="footer__copyright">
               <p className="footer-copyright__p p">© {getCurrentYear()} Feminink. All Rights Reserved</p>
             </div>
-            <ul class="legal-nav__ul ul">
+            <ul className="legal-nav__ul ul">
               <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Cookies</Link></li>
               <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Aviso legal</Link></li>
               <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Política de privacidad</Link></li>
