@@ -22,14 +22,14 @@ const [name, setName] = useState("");
 const [description, setDescription] = useState("");
 const [email, setEmail] = useState("");
 const [color, setColor] = useState("#000000");
-const [artist, setArtist] = useState("");
+ const [artist, setArtist] = useState("");
 
 useEffect(()=>{
   dispatch(getArtists())
 },[])
 
 const sendForm = () =>{
-  dispatch(doContact({name: name, description: description}))
+  dispatch(doContact({name: name, description: description, email: email, color: color, artist: artist}))
 }
 
 if (loadingArtists){
@@ -37,45 +37,41 @@ if (loadingArtists){
     <p> "Loading"</p>
   )
 }else{
-       return(<div className='div__contact'>
-          <form>
-            <fieldset>
+       return(<section className='section__login section'>
+          <form className='form'> 
+            <fieldset className="form__container" >
               <label>Nombre </label>
-              <input type="text" value={name} onChange={(e)=>setName(e.target.value)} required></input>
+              <input type="text" defaultValue={name} onChange={(e)=>setName(e.target.value)} required></input>
             </fieldset>
 
-            <fieldset>
+            <fieldset className="form__container">
               <label>Email </label>
-              <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} required></input>
-            </fieldset>
+              <input type="email" defaultValue={email} onChange={(e)=>setEmail(e.target.value)} required></input>
+              </fieldset>
   
-            <fieldset>
+            <fieldset className="form__container">
                <label>Descripción del tatuaje </label>
-               <textarea type="text" value={description} onChange={(e)=>setDescription(e.target.value)} required></textarea>
+               <textarea type="text" defaultValue={description} onChange={(e)=>setDescription(e.target.value)} required></textarea>
             </fieldset>
 
-            <fieldset>
-                <label>Artista </label>
-                <select type="text" value={artist}  required>
-                {artists?.map((artist) =>{
-                 
-             return(   
-                        <option onChange={(e)=>setArtist(e.target)} key={artist.id} value={artist} >{artist.name}</option>
-                      
-                        )
-                     
-                })} 
+            <fieldset className="form__container">
+                  <label>Artista</label>
+                     <select value={artist} onChange={(e) => setArtist(e.target.value)} required>
+                        {artists?.map((artist) => {
+                            return (
+                              <option key={artist.id} value={artist.name}> {artist.name} </option>);
+                          })}
                   </select>
             </fieldset>
 
-            <fieldset>
+            <fieldset className="form__container">
                <label>Color base </label>
-               <input type="color" value={color} onChange={(e)=>setColor(e.target.value)} required></input>
+               <input type="color" defaultValue={color} onChange={(e)=>setColor(e.target.value)} required></input>
             </fieldset>
 
           </form>
           <button type="button" onClick={sendForm}> Enviar </button>
-       </div>)
+       </section>)
 
 }  }
 ContactComponent.propTypes = {};
