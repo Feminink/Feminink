@@ -12,7 +12,7 @@ const ContactComponent = () => {
 
 const dispatch = useDispatch();
 
-const [artists, loadingArtists] = useSelector((state)=>state.TattooReducer);
+const {artists, loadingArtists} = useSelector((state)=>state.TattooReducer);
 // const {form} = useSelector((state)=>state.TattooReducer);
 
 //CREO ESTADOS PARA SETEAR VALORES DE LOS INPUTS
@@ -51,6 +51,7 @@ if (loadingArtists){
             <fieldset>
                 <label>Artista </label>
                 {artists?.map((artist) =>{
+                  console.log(artists, "artists")
 
              return(     <select type="text" value={artist.name}  required>
                         <option  >artistas</option>
