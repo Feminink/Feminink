@@ -1,6 +1,7 @@
 import {
     GET_INSPIRATION, GET_INSPIRATION_OK, GET_INSPIRATION_FAIL,
-    DO_CONTACT, DO_CONTACT_OK, DO_CONTACT_FAIL
+    DO_CONTACT, DO_CONTACT_OK, DO_CONTACT_FAIL,
+    GET_ARTISTS, GET_ARTISTS_OK, GET_ARTISTS_FAIL
 } from './actionTypes';
 
 const firstState = {
@@ -8,6 +9,8 @@ const firstState = {
     loadingInspiration: false,
     form: {},
     loadingForm: false,
+    artists: [],
+    loadingArtists:false,
     error: {
         message: "",
       },
@@ -34,6 +37,16 @@ export default function TattooReducer(state = firstState, action){
         break
         case DO_CONTACT_FAIL:
         state = {...state, loadingForm: false, form: {}, error: {message: action.payload}}
+        break
+
+        case GET_ARTISTS:
+        state = {...state, loadingArtists:true}
+        break
+        case GET_ARTISTS_OK:
+        state = {...state, loadingArtists:false, artists: action.payload} 
+        break
+        case GET_ARTISTS_FAIL:
+        state = {...state, loadingArtists:false, artists:[], error: {message:action.payload}}
         break
         
         default:
