@@ -11,9 +11,9 @@ import { useDispatch, useSelector } from 'react-redux';
 const ContactComponent = () => { 
 
 const dispatch = useDispatch();
-//HAY QUE PERMITIR QUE NOS CONTACTEN SIN ESTAR REGISTRADO?
 
-const {form} = useSelector((state)=>state.TattooReducer);
+const [artists, loadingArtists] = useSelector((state)=>state.TattooReducer);
+// const {form} = useSelector((state)=>state.TattooReducer);
 
 //CREO ESTADOS PARA SETEAR VALORES DE LOS INPUTS
 const [name, setName] = useState("");
@@ -26,8 +26,11 @@ const sendForm = () =>{
   dispatch(doContact({name: name, description: description}))
 }
 
-
-
+if (loadingArtists){
+  return (
+    <p> "Loading"</p>
+  )
+}else{
        return(<div className='div__contact'>
           <form>
             <fieldset>
@@ -45,15 +48,18 @@ const sendForm = () =>{
                <textarea type="text" value={description} onChange={(e)=>setDescription(e.target.value)} required></textarea>
             </fieldset>
 
-            {/* <fieldset> */}
-                {/* <label>Artista </label> */}
-                {/* <select type="text" value={artist} onChange={(e)=>setArtist(e.target.value)} required> */}
-                {/* <option  >artistas</option> */}
-                {/* <option value={artist} >Nacho</option> */}
-                {/* <option value={artist} >Laura</option> */}
-                {/* <option value={artist} >Miriam</option> */}
-                {/* </select> */}
-            {/* </fieldset> */}
+            <fieldset>
+                <label>Artista </label>
+                {artists?.map((artist) =>{
+
+             return(     <select type="text" value={artist.name}  required>
+                        <option  >artistas</option>
+                        <option value={artist} >{artist.name}</option>
+                        <option value={artist} >{artist.name}</option>
+                        <option value={artist} >{artist.name}</option>
+                        </select>)
+                })}
+            </fieldset>
 
             <fieldset>
                <label>Color base </label>
@@ -64,7 +70,7 @@ const sendForm = () =>{
           <button type="button" onClick={sendForm}> Enviar </button>
        </div>)
 
-            }
+}  }
 ContactComponent.propTypes = {};
 
 ContactComponent.defaultProps = {};
