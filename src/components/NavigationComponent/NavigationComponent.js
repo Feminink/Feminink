@@ -11,7 +11,7 @@ import { doLogout } from "../../store/auth/actions";
 
 // IMPORT FONTAWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightFromBracket, faUser, faArrowRightToBracket, faHouse, faImages, faUserGroup } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightFromBracket, faUser, faArrowRightToBracket, faHouse, faImages, faUserGroup, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 // IMPORT STYLES
 import "./NavigationComponent.scss";
@@ -59,6 +59,11 @@ const NavigationComponent = () => {
           <li className="main-nav__li li">
             <Link className="main-nav__link link" onClick={toggleMenu} to="/about">
             <FontAwesomeIcon icon={faUserGroup} size="xs" /> About 
+            </Link>
+          </li>
+          <li className="main-nav__li li">
+            <Link className="main-nav__link link" onClick={toggleMenu} to="/contact">
+            <FontAwesomeIcon icon={faEnvelope} size="xs" /> Contact
             </Link>
           </li>
           {user && user.id ? ("") : (<li className="main-nav__li main-nav__li--login li"><Link className="main-nav__link link" onClick={toggleMenu} to="/login"><FontAwesomeIcon icon={faArrowRightToBracket} size="xs"/> Login</Link></li>)}
