@@ -5,10 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 
 const GalleryComponent = () => {
   const dispatch = useDispatch();
-  
+
   const { gallery, loadingGallery } = useSelector(
     (state) => state.GalleryReducer
   );
+  console.log("helo");
 
   useEffect(() => {
     dispatch(getGallery());
