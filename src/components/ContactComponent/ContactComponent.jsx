@@ -22,7 +22,7 @@ const [name, setName] = useState("");
 const [description, setDescription] = useState("");
 const [email, setEmail] = useState("");
 const [color, setColor] = useState("#000000");
-const [artist, setArtist] = useState("artists");
+const [artist, setArtist] = useState("");
 
 useEffect(()=>{
   dispatch(getArtists())
@@ -56,11 +56,12 @@ if (loadingArtists){
 
             <fieldset>
                 <label>Artista </label>
-                <select type="text" value={artist.name} onChange={(e)=>setArtist(e.target.value)} required>
+                <select type="text" value={artist}  required>
                 {artists?.map((artist) =>{
                  
              return(   
-                        <option key={artist.id} value={artist} >{artist.name}</option>
+                        <option onChange={(e)=>setArtist(e.target)} key={artist.id} value={artist} >{artist.name}</option>
+                      
                         )
                      
                 })} 
