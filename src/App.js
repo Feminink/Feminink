@@ -1,6 +1,6 @@
 // IMPORT PAGES
 import Home from "./pages/Home/Home";
-import Multi from "./pages/Multi/Multi";
+import Multi from "./pages/Gallery/Gallery";
 import About from "./pages/About/About";
 import Profile from "./pages/Profile/Profile";
 import Login from "./pages/Login/Login";

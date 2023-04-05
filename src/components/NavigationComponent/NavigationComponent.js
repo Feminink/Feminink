@@ -53,7 +53,7 @@ const NavigationComponent = () => {
           </li>
           <li className="main-nav__li li">
             <Link className="main-nav__link link" onClick={toggleMenu} to="/multi">
-              <FontAwesomeIcon icon={faImages} size="xs" /> Multi
+              <FontAwesomeIcon icon={faImages} size="xs" /> Gallery
             </Link>
           </li>
           <li className="main-nav__li li">

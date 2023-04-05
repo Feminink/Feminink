@@ -92,7 +92,7 @@
       "description": ""
     },
     {
-      "id": 1,
+      "id": 2,
       "name": "Ignacio E",
       "username": "Ignacio WHATEVER",
       "password": "randompwd1",
@@ -102,7 +102,7 @@
       "description": ""
     },
     {
-      "id": 1,
+      "id": 3,
       "name": "Miriam F",
       "username": "Miriam WHATEVER",
       "password": "randompwd2",
@@ -112,7 +112,68 @@
       "description": ""
     }
   ],
-  "gallery": [],
+  "gallery": [
+    {
+        "id": "1",
+        "image": "./assets/images/gallery/pexels-photo-428320.webp",
+        "title": "Vulpix tattoo",
+        "artist": "",
+        "model": "Tatiana",
+        "style": "New school style",
+        "alt": "Tattoed woman wearing blue top",
+        "description": ""
+    },
+    {
+        "id": "2",
+        "image":"./assets/images/gallery/pexels-photo-1848657.jpeg",
+        "title": "Tattoo in the making",
+        "artist": "",
+        "model": "Unknown",
+        "style": "Blackwork style",
+        "alt": "Tattooer at work",
+        "description": ""
+    },
+    {
+        "id": "3",
+        "image": "./assets/images/gallery/pexels-photo-955938.jpeg",
+        "title": "Geometrical flower",
+        "artist": "",
+        "model": "Sonia",
+        "style": "Dotwork style",
+        "alt": "Tattooed woman in yellow top",
+        "description": ""
+    },
+    {
+        "id": "4",
+        "image": "./assets/images/gallery/pexels-photo-2183131.webp",
+        "title": "Japanese dragon tattoo",
+        "artist": "",
+        "model": "Unknown",
+        "style": "Japanese traditional style",
+        "alt": "Japanese dragon tattoo",
+        "description": ""
+    },
+    {
+        "id": "5",
+        "image": "./assets/images/gallery/pexels-photo-3657562.jpeg",
+        "title": "Tattoo in the making",
+        "artist": "",
+        "model": "Unknown",
+        "style": "Watercolor style",
+        "alt": "Tattoer at work",
+        "description": ""
+    },
+    {
+        "id": "6",
+        "image": "./assets/images/gallery/pexels-photo-2478956.jpeg",
+        "title": "Geometric tattoo",
+        "artist": "",
+        "model": "Unknown",
+        "style": "Geometric style",
+        "alternate-text": "Geometric tattoo on arm",
+        "description": ""
+    }
+  ],
   "contact": [
   ],
   "users": [
