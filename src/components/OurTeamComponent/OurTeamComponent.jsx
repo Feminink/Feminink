@@ -37,6 +37,7 @@ const OurTeamComponent = () => {
                 <h4>Name: {member.name}</h4>
                 <h4>Artist: {member.username}</h4>
                 <h4>Description: {member.model}</h4>
+                <h4>No tatuo: {member.noway}</h4>
                 <hr />
               </div>
             </li>

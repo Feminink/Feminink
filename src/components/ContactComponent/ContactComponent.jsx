@@ -40,7 +40,7 @@ if (loadingArtists){
     <p> "Loading"</p>
   )
 }else{
-       return(<section className='section__login section'>
+       return(<section className='section__login section container'>
           <form className='form'> 
             <fieldset className="form__container" >
               <label>Nombre </label>
