@@ -11,7 +11,7 @@ import { doContact } from '../../store/Tattoo/actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 //IMPORT HOOK FORMIK
-
+import { useFormik } from 'formik';
 
 const ContactComponent = () => { 
 
@@ -81,6 +81,7 @@ if (loadingArtists){
 }else{
        return(<section className='section__login section'>
           <form className='form'> 
+          <h1>Formulario de contacto: </h1>
             <fieldset className="form__container" >
               <label>Nombre </label>
               <input name="name" type="text" defaultValue={userDataForm.name} onChange={handleChange} placeholder= "Escribe tu nombre" ></input>
@@ -88,7 +89,7 @@ if (loadingArtists){
 
             <fieldset className="form__container">
               <label>Email </label>
-              <input name="email" type="email" defaultValue={userDataForm.email} onChange={handleChange} placeholder= "Email de contacto" required></input>
+              <input name="email" type="email" defaultValue={userDataForm.email} onChange={handleChange} placeholder= "Email de contacto" required={}></input>
               </fieldset>
   
             <fieldset className="form__container">
