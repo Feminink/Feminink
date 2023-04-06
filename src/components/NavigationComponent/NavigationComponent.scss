@@ -71,6 +71,7 @@ body.menu-open {
     .header__main-nav {
         display: block;
         transform: translateX(0);
+        z-index: 2;
     }
   
     .show-menu__bar {

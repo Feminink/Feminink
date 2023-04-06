@@ -1,0 +1,10 @@
+.ourteam {
+    &__ul {
+        display: flex;
+        gap: 2em;  
+    }
+
+    &__li {
+        width: calc(33.33% - 2em);
+    }
+}
