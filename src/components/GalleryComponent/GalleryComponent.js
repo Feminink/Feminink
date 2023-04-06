@@ -5,11 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 
 const GalleryComponent = () => {
   const dispatch = useDispatch();
+  const imgUrl = "assets/images/gallery";
 
   const { gallery, loadingGallery } = useSelector(
     (state) => state.GalleryReducer
   );
-  console.log("helo");
 
   useEffect(() => {
     dispatch(getGallery());
@@ -23,8 +23,8 @@ const GalleryComponent = () => {
     );
   }
   return (
+    <div className="container">
     <div className="cards-container container">
-      <p>Gallery</p>
       {gallery.map((gallerya) => {
         console.log(gallerya);
         return (
