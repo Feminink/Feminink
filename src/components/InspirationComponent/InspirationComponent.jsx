@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import './InspirationComponent.scss';
 import { useDispatch, useSelector } from 'react-redux';
 //importo la función que dispara las acciones
-import { getInspiration } from '../../store/Tattoo/actions';
+import { getInfo } from "../../store/info/actions";
 
-import { Link } from 'react-router-dom';
 
 //IMPORT FONTAWESOME 
 
@@ -20,16 +19,18 @@ const InspirationComponent = () => {
 
   // TRAIDO USESELECTOR PARA LO QUE ME INTERESA DEL FIRSTSTATE
 
-  const {inspiration, loadingInspiration} = useSelector((state)=>state.TattooReducer)
+  const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
 
 
   // USEEFFECT PARA DISPARAR LA ACCIÖN QUE OBTIENE A LAS MUJERES DE INSPIRACIÖN
 
-  useEffect(()=>{
-    dispatch(getInspiration())
-  },[])
+  useEffect(() => {
+    dispatch(getInfo());
+  }, []);
+  
+  
 
-  if (loadingInspiration){
+  if (loadingInfo){
     return (
       <p>"Loading...</p>
     )
@@ -41,7 +42,7 @@ const InspirationComponent = () => {
 
 
 
- {inspiration.map((woman)=>{
+ {info && info.inspiration && info.inspiration.map((woman)=>{
   return ( 
     <section key={woman.id} className='div__inspiration__section'>
     <div className='div__inspiration__wrapper'> 
