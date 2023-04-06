@@ -23,13 +23,13 @@ const GalleryComponent = () => {
     );
   }
   return (
-    <div className="cards-container">
+    <div className="container">
       <p>Gallery</p>
       {gallery.map((gallerya) => {
         console.log(gallerya);
         return (
           <div>
-            <img src={gallerya.image} alt={gallerya.alt} />
+            <img src={require(`${gallerya.image}`)} alt={gallerya.alt} />
             <div className="card__details">
               <h4>Title: {gallerya.title}</h4>
               <h4>Artist: {gallerya.artist}</h4>
