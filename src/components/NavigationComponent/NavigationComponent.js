@@ -67,6 +67,7 @@ const NavigationComponent = () => {
             </Link>
           </li>
           {user && user.id ? ("") : (<li className="main-nav__li main-nav__li--login li"><Link className="main-nav__link link" onClick={toggleMenu} to="/login"><FontAwesomeIcon icon={faArrowRightToBracket} size="xs"/> Login</Link></li>)}
+          {user && user.id ? ("") : (<li className="main-nav__li main-nav__li--signup li"><Link className="main-nav__link link" onClick={toggleMenu} to="/signup"><FontAwesomeIcon icon={faArrowRightToBracket} size="xs"/> Sign Up</Link></li>)}
           {user && user.id ? (<li className="main-nav__li li"><Link className="main-nav__link link" onClick={toggleMenu} to="/profile"><FontAwesomeIcon icon={faUser} size="xs" /> Profile</Link></li>) : ("")}
           {user && user.id ? (<li className="main-nav__li main-nav__li--logout li"><Link className="main-nav__link link" to="/" onClick={onClickLogout}><FontAwesomeIcon icon={faArrowRightFromBracket} size="xs" /> Logout</Link></li>) : ("")}
         </ul>

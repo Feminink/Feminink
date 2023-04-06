@@ -1,190 +1,229 @@
 {
-  "inspiration": [
-    {
-      "id": 1,
-      "name": "Maud Wagner",
-      "date": "1877",
-      "city": "Kansas, EEUU",
-      "image": "./assets/images/Maud-Wagner.jpeg",
-      "designs": [],
-      "data": "Maud, siendo una adolescente consiguió escaparse de casa para unirse al circo, para sobrevivir a la pobreza de su familia. Conoció a Gus Wagner. que sería su marido y le enseñaría a tatuar. Maud alcanzó la fama como la primera artista del tatuaje femenina conocida en todo el mundo. Paralelamente, Maud también se tatuaba a sí misma y, junto con los que le realizaba su marido, pronto convirtió su cuerpo en una atracción. Stevens recorrió el país exhibiéndose en los espectáculos de freaks y consiguió romper el estigma que rodeaba a las mujeres que intervenían sus cuerpos con colores y sombras.",
-      "style_tattoo": [
-        "tradicional"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Jessie Knight",
-      "date": "1904",
-      "city": "Croydon, Londres",
-      "image": "./assets/images/Jessie-Knight.jpeg",
-      "designs": [],
-      "data": "Su padre Leonard, era capitán de la marina, tatuador y francotirador, mientras que su madre era poeta e ilustradora. Recibió un disparo en el hombro durante un terrible accidente mientras trabajaba así que viró hacia el mundo del tatuaje. Sus tatuajes estaban obteniendo una reputación estelar, y en 1955 Jessie ganó el segundo lugar en el Champion Tattoo Artist of all England. Jessie abrió sus propias tiendas de tatuajes, primero en la ciudad portuaria de Portsmouth y luego en Aldershot.Su trabajo fue incluido en una exposición en el Museo Marítimo Nacional de Cornualles, de marzo de 2017 a enero de 2018, que muestra una historia del tatuaje británico.",
-      "style_tattoo": [
-        "color",
-        "a mano alzada",
-        "tradicional"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Millie Hull",
-      "date": "1896",
-      "city": "Nueva York",
-      "image": "./assets/images/Millie-Hull.jpeg",
-      "designs": [],
-      "data": "Millie, que abandonó la escuela a los 13 años, uniéndose al mundo del circo y comenzó a trabajar como bailarina exótica. Tatuó su cuerpo como recomendación de un tatuador, para que ganase más dinero (se sintió obligada a hacerlo). Sin embargo, esto empujó a Millie a abandonar el mundo del espectáculo y aprendió el oficio de tatuajes abriendo su propio salón de tatuajes, The Tattoo Emporium, en Bowery, en la parte trasera de una peluquería. El hecho de que Millie tuviera su propio negocio fue un logro increíble pues se categorizó para siempre como una de las más resaltantes mujeres tatuadoras a lo largo de la historia. En ese momento, el tatuaje estaba totalmente dominado por los hombres. ",
-      "style_tattoo": [
-        "tradicional",
-        "brillante"
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Betty Broadbent",
-      "date": "1909",
-      "city": "Florida, EEUU",
-      "image": "./assets/images/betty-broadbent.png",
-      "designs": [],
-      "data": "Conocida como La Venus Tatuada. Trabajó como la Dama Tatuada en los circos independientes que se encontraba. Cuando regresó a Estados Unidos, Betty volvió a trabajar como una atracción tatuada en el circo. Para esta temporada, se estableció como tatuadora. Además de exhibir su arte, Broadbent trabajaba como tatuadora. Trabajó en tiendas de todo el país, incluidos espacios ubicados en Montreal, San Francisco y Nueva York. En 1937 comienza a trabajar a nivel internacional. Pasó un tiempo trabajando para circos independientes tanto en Nueva Zelanda como en Australia.​ La revista Pix publicó sus diseños, y recientemente la Biblioteca Estatal de Nuevas Gales del Sur en Australia ha digitalizado y publicado más de 9.000 negativos de la publicación, entre los que se encuentran algunos de Broadbent.​ ",
-      "style_tattoo": [
-        "tradicional"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Artoria Gibbons/ Anna Mae Burlingston",
-      "date": "1893",
-      "city": "Wisconsin",
-      "image": "./assets/images/Artoria-Gibbons.png",
-      "designs": [],
-      "data": "Su nombre real era Anna Mae Burlingston y nació en 1893 en el seno de una familia sumamente pobre. Cuando trabajó como sirvienta conoció al que más tarde se convirtió en su esposo Charles (Red) Gibbons, un reconocido artista tatuador. Fue él quien le tatuó todo su cuerpo con motivos religiosos debido a que era una mujer muy devota. En la década de los 20 trabajó junto a su marido como tatuadora, además de que se convirtió en una atracción en circos ya que en aquella época era algo sumamente raro que una mujer contara con tantos tatuajes en todo su cuerpo.",
-      "style_tattoo": [
-        "tradicional"
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Whang-od",
-      "date": "1917",
-      "city": "Filipinas",
-      "image": "./assets/images/Whang-od.png",
-      "designs": [
-        "./assets/images/arrows.jpeg",
-        "./assets/images/arrows1.png",
-        "./assets/images/arrows2.png"
-      ],
-      "data": "Comenzó a tatuar a los quince años. Tradicionalmente, las mujeres no aprendían estas técnicas de tatuaje, pero su padre le enseñó al observar su potencial y su talento. Whang Od emplea la técnica del golpeteo manual llamado «batok». Consiste en penetrar la piel con una espira de calamansi, (cítrico filipino), que se adhiere en el extremo de un palo de ese mismo árbol. En un cuenco, prepara un mejunje hecho de carbón vegetal espesado con patata dulce, agua y azúcar. La tinta penetra a través del rápido y repetido golpeteo de la rama con un palo de bambú. Aunque son muchos los turistas que visitan Buscalan para tatuarse, es ella la que elige a quién y qué tatuar, y no al revés, por mucho que los turistas hayan recorrido las 15 horas de trayecto que separan Buscalan Kalinga de Manila, la capital de Filipinas.",
-      "style_tattoo": [
-        "batok"
-      ]
-    }
-  ],
-  "admins": [
-    {
-      "id": 1,
-      "name": "Laura O",
-      "username": "Laura WHATEVER",
-      "password": "randompwd",
-      "place": "Cerdeña",
-      "image": ".",
-      "mail": "laurao@mail.com",
-      "description": ""
-    },
-    {
-      "id": 2,
-      "name": "Ignacio E",
-      "username": "Ignacio WHATEVER",
-      "password": "randompwd1",
-      "place": "Puerto de Sta María",
-      "image": ".",
-      "mail": "ignacio@mail.com",
-      "description": ""
-    },
-    {
-      "id": 3,
-      "name": "Miriam F",
-      "username": "Miriam WHATEVER",
-      "password": "randompwd2",
-      "place": "Cädiz",
-      "image": ".",
-      "mail": "miriamf@mail.com",
-      "description": ""
-    }
-  ],
-  "gallery": [
-    {
-        "id": "1",
-        "image": "./assets/images/gallery/pexels-photo-428320.webp",
-        "title": "Vulpix tattoo",
-        "artist": "",
-        "model": "Tatiana",
-        "style": "New school style",
-        "alt": "Tattoed woman wearing blue top",
-        "description": ""
-    },
-    {
-        "id": "2",
-        "image":"./assets/images/gallery/pexels-photo-1848657.jpeg",
-        "title": "Tattoo in the making",
-        "artist": "",
-        "model": "Unknown",
-        "style": "Blackwork style",
-        "alt": "Tattooer at work",
-        "description": ""
-    },
-    {
-        "id": "3",
-        "image": "./assets/images/gallery/pexels-photo-955938.jpeg",
-        "title": "Geometrical flower",
-        "artist": "",
-        "model": "Sonia",
-        "style": "Dotwork style",
-        "alt": "Tattooed woman in yellow top",
-        "description": ""
-    },
-    {
-        "id": "4",
-        "image": "./assets/images/gallery/pexels-photo-2183131.webp",
-        "title": "Japanese dragon tattoo",
-        "artist": "",
-        "model": "Unknown",
-        "style": "Japanese traditional style",
-        "alt": "Japanese dragon tattoo",
-        "description": ""
-    },
-    {
-        "id": "5",
-        "image": "./assets/images/gallery/pexels-photo-3657562.jpeg",
-        "title": "Tattoo in the making",
-        "artist": "",
-        "model": "Unknown",
-        "style": "Watercolor style",
-        "alt": "Tattoer at work",
-        "description": ""
-    },
-    {
-        "id": "6",
-        "image": "./assets/images/gallery/pexels-photo-2478956.jpeg",
-        "title": "Geometric tattoo",
-        "artist": "",
-        "model": "Unknown",
-        "style": "Geometric style",
-        "alternate-text": "Geometric tattoo on arm",
-        "description": ""
-    }
-  ],
-  "contact": [
-    {
-      "name": "",
-      "description": "",
-      "id": 1
-    },
-    {
-      "name": "",
-      "description": "",
-      "id": 2
-    }
-  ],
-  "users": []
+  "results": {
+    "inspiration": [
+      {
+        "id": 1,
+        "name": "Maud Wagner",
+        "date": "1877",
+        "city": "Kansas, EEUU",
+        "image": "./assets/images/Maud-Wagner.jpeg",
+        "designs": [],
+        "data": "Maud, siendo una adolescente consiguió escaparse de casa para unirse al circo, para sobrevivir a la pobreza de su familia. Conoció a Gus Wagner. que sería su marido y le enseñaría a tatuar. Maud alcanzó la fama como la primera artista del tatuaje femenina conocida en todo el mundo. Paralelamente, Maud también se tatuaba a sí misma y, junto con los que le realizaba su marido, pronto convirtió su cuerpo en una atracción. Stevens recorrió el país exhibiéndose en los espectáculos de freaks y consiguió romper el estigma que rodeaba a las mujeres que intervenían sus cuerpos con colores y sombras.",
+        "style_tattoo": [
+          "tradicional"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Jessie Knight",
+        "date": "1904",
+        "city": "Croydon, Londres",
+        "image": "./assets/images/Jessie-Knight.jpeg",
+        "designs": [],
+        "data": "Su padre Leonard, era capitán de la marina, tatuador y francotirador, mientras que su madre era poeta e ilustradora. Recibió un disparo en el hombro durante un terrible accidente mientras trabajaba así que viró hacia el mundo del tatuaje. Sus tatuajes estaban obteniendo una reputación estelar, y en 1955 Jessie ganó el segundo lugar en el Champion Tattoo Artist of all England. Jessie abrió sus propias tiendas de tatuajes, primero en la ciudad portuaria de Portsmouth y luego en Aldershot.Su trabajo fue incluido en una exposición en el Museo Marítimo Nacional de Cornualles, de marzo de 2017 a enero de 2018, que muestra una historia del tatuaje británico.",
+        "style_tattoo": [
+          "color",
+          "a mano alzada",
+          "tradicional"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Millie Hull",
+        "date": "1896",
+        "city": "Nueva York",
+        "image": "./assets/images/Millie-Hull.jpeg",
+        "designs": [],
+        "data": "Millie, que abandonó la escuela a los 13 años, uniéndose al mundo del circo y comenzó a trabajar como bailarina exótica. Tatuó su cuerpo como recomendación de un tatuador, para que ganase más dinero (se sintió obligada a hacerlo). Sin embargo, esto empujó a Millie a abandonar el mundo del espectáculo y aprendió el oficio de tatuajes abriendo su propio salón de tatuajes, The Tattoo Emporium, en Bowery, en la parte trasera de una peluquería. El hecho de que Millie tuviera su propio negocio fue un logro increíble pues se categorizó para siempre como una de las más resaltantes mujeres tatuadoras a lo largo de la historia. En ese momento, el tatuaje estaba totalmente dominado por los hombres. ",
+        "style_tattoo": [
+          "tradicional",
+          "brillante"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Betty Broadbent",
+        "date": "1909",
+        "city": "Florida, EEUU",
+        "image": "./assets/images/betty-broadbent.png",
+        "designs": [],
+        "data": "Conocida como La Venus Tatuada. Trabajó como la Dama Tatuada en los circos independientes que se encontraba. Cuando regresó a Estados Unidos, Betty volvió a trabajar como una atracción tatuada en el circo. Para esta temporada, se estableció como tatuadora. Además de exhibir su arte, Broadbent trabajaba como tatuadora. Trabajó en tiendas de todo el país, incluidos espacios ubicados en Montreal, San Francisco y Nueva York. En 1937 comienza a trabajar a nivel internacional. Pasó un tiempo trabajando para circos independientes tanto en Nueva Zelanda como en Australia.​ La revista Pix publicó sus diseños, y recientemente la Biblioteca Estatal de Nuevas Gales del Sur en Australia ha digitalizado y publicado más de 9.000 negativos de la publicación, entre los que se encuentran algunos de Broadbent.​ ",
+        "style_tattoo": [
+          "tradicional"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Artoria Gibbons/ Anna Mae Burlingston",
+        "date": "1893",
+        "city": "Wisconsin",
+        "image": "./assets/images/Artoria-Gibbons.png",
+        "designs": [],
+        "data": "Su nombre real era Anna Mae Burlingston y nació en 1893 en el seno de una familia sumamente pobre. Cuando trabajó como sirvienta conoció al que más tarde se convirtió en su esposo Charles (Red) Gibbons, un reconocido artista tatuador. Fue él quien le tatuó todo su cuerpo con motivos religiosos debido a que era una mujer muy devota. En la década de los 20 trabajó junto a su marido como tatuadora, además de que se convirtió en una atracción en circos ya que en aquella época era algo sumamente raro que una mujer contara con tantos tatuajes en todo su cuerpo.",
+        "style_tattoo": [
+          "tradicional"
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Whang-od",
+        "date": "1917",
+        "city": "Filipinas",
+        "image": "./assets/images/Whang-od.png",
+        "designs": [
+          "./assets/images/arrows.jpeg",
+          "./assets/images/arrows1.png",
+          "./assets/images/arrows2.png"
+        ],
+        "data": "Comenzó a tatuar a los quince años. Tradicionalmente, las mujeres no aprendían estas técnicas de tatuaje, pero su padre le enseñó al observar su potencial y su talento. Whang Od emplea la técnica del golpeteo manual llamado «batok». Consiste en penetrar la piel con una espira de calamansi, (cítrico filipino), que se adhiere en el extremo de un palo de ese mismo árbol. En un cuenco, prepara un mejunje hecho de carbón vegetal espesado con patata dulce, agua y azúcar. La tinta penetra a través del rápido y repetido golpeteo de la rama con un palo de bambú. Aunque son muchos los turistas que visitan Buscalan para tatuarse, es ella la que elige a quién y qué tatuar, y no al revés, por mucho que los turistas hayan recorrido las 15 horas de trayecto que separan Buscalan Kalinga de Manila, la capital de Filipinas.",
+        "style_tattoo": [
+          "batok"
+        ]
+      }
+    ],
+    "admins": [
+      {
+        "id": 1,
+        "name": "Laura O",
+        "username": "Laura WHATEVER",
+        "password": "randompwd",
+        "place": "Cerdeña",
+        "image": "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20190807_EVrjXunb5AoteIp.jpg",
+        "mail": "laurao@mail.com",
+        "description": "",
+        "noway": [
+          "Símbolo del infinito",
+          "Mariposas"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Ignacio E",
+        "username": "Ignacio WHATEVER",
+        "password": "randompwd1",
+        "place": "Puerto de Sta María",
+        "image": "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20190807_EVrjXunb5AoteIp.jpg",
+        "mail": "ignacio@mail.com",
+        "description": "",
+        "noway": [
+          "Campanilla",
+          "Tribales canis"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Miriam F",
+        "username": "Miriam WHATEVER",
+        "password": "randompwd2",
+        "place": "Cädiz",
+        "image": "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20190807_EVrjXunb5AoteIp.jpg",
+        "mail": "miriamf@mail.com",
+        "description": "",
+        "noway": [
+          "Delfines en el tobillo",
+          "Estrellitas"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+          "id": "1",
+          "image": "./assets/images/gallery/pexels-photo-428320.webp",
+          "title": "Vulpix tattoo",
+          "artist": "",
+          "model": "Tatiana",
+          "style": "New school style",
+          "alt": "Tattoed woman wearing blue top",
+          "description": ""
+      },
+      {
+          "id": "2",
+          "image":"./assets/images/gallery/pexels-photo-1848657.jpeg",
+          "title": "Tattoo in the making",
+          "artist": "",
+          "model": "Unknown",
+          "style": "Blackwork style",
+          "alt": "Tattooer at work",
+          "description": ""
+      },
+      {
+          "id": "3",
+          "image": "./assets/images/gallery/pexels-photo-955938.jpeg",
+          "title": "Geometrical flower",
+          "artist": "",
+          "model": "Sonia",
+          "style": "Dotwork style",
+          "alt": "Tattooed woman in yellow top",
+          "description": ""
+      },
+      {
+          "id": "4",
+          "image": "./assets/images/gallery/pexels-photo-2183131.webp",
+          "title": "Japanese dragon tattoo",
+          "artist": "",
+          "model": "Unknown",
+          "style": "Japanese traditional style",
+          "alt": "Japanese dragon tattoo",
+          "description": ""
+      },
+      {
+          "id": "5",
+          "image": "./assets/images/gallery/pexels-photo-3657562.jpeg",
+          "title": "Tattoo in the making",
+          "artist": "",
+          "model": "Unknown",
+          "style": "Watercolor style",
+          "alt": "Tattoer at work",
+          "description": ""
+      },
+      {
+          "id": "6",
+          "image": "./assets/images/gallery/pexels-photo-2478956.jpeg",
+          "title": "Geometric tattoo",
+          "artist": "",
+          "model": "Unknown",
+          "style": "Geometric style",
+          "alternate-text": "Geometric tattoo on arm",
+          "description": ""
+      }
+    ],
+    "contact": [
+      {
+        "name": "María Zambrano",
+        "description": "Hola chicos! Me encanta vuestro estudio y he pensado que necesito que me grabéis en la piel uno de vuestros trabajos artísticos. He pensado en algo abstracto ...la Verdad, por ejemplo.  De unos 5 cm en la muñeca izquierd",
+        "email": "Maríamalaga@yahoo.es",
+        "color": "#98dde2",
+        "artist": "Ignacio E",
+        "id": 1
+      },
+      {
+        "name": "Jean Paul",
+        "description": "Hola. Quiero hacerme un tatuaje en el pecho donde ponga: \"El infierno son los otros\". El color es lo de menos. El tamaño os lo dejo a vosotros.",
+        "email": "JuanPaSartre@lanausea.fr",
+        "color": "#ffffff",
+        "artist": "Miriam F",
+        "id": 2
+      },
+      {
+        "name": "Emily Dickinson",
+        "description": "Hey guys! Quisiera unos motivos botánicos en los pies, porque siempre me ha gustado caminar sobre la hierba. Me hace sentir realmente libre. Unas caparidáceas, quizá?",
+        "email": "Edickinson@flowes.com",
+        "color": "#cf4ee9",
+        "artist": "Laura O",
+        "id": 3
+      }
+    ],
+    "users": [
+      {
+        "firstname": "",
+        "lastname": "",
+        "email": "",
+        "telephone": "",
+        "birthday": "",
+        "order": [
+          "mensaje1"
+        ]
+      }
+    ]
+  }
 }
