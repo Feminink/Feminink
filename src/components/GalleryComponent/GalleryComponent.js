@@ -29,7 +29,7 @@ const GalleryComponent = () => {
         console.log(gallerya);
         return (
           <div>
-            <img src={require(gallerya.image)} alt={gallerya.alt} />
+            <img src={gallerya.image} alt={gallerya.alt} />
             <div className="card__details">
               <h4>Title: {gallerya.title}</h4>
               <h4>Artist: {gallerya.artist}</h4>
