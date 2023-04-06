@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <HeaderComponent></HeaderComponent>
       <main className="main">
-        <div className="main-container container">
+        <div className="main-container">
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
             <Route exact path="/gallery" element={<Gallery />}></Route>

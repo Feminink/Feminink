@@ -25,7 +25,7 @@ const LoginComponent = () => {
     return <Navigate to="/profile" replace></Navigate>;
   }
   return (
-    <div>
+    <div className="container">
       <form>
         <fieldset>
           <label>Username</label>
