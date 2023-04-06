@@ -9,14 +9,14 @@ const firstState = {
 }
 
 export default function InfoReducer(state = firstState, action){
-    switch(action.type){
+    switch(action.type) {
         // CASE GET_INFO
         case GET_INFO:
-        state = {...state, loadingInfo:true}
+        state = {...state, loadingInfo: true}
         break
         // CASE GET_INFO_OK
         case GET_INFO_OK:
-        state = {...state, loadingInfo: false, Info: action.payload}
+        state = {...state, loadingInfo: false, info: action.payload}
         break 
         // CASE GET_INFO_FAIL
         case GET_INFO_FAIL:

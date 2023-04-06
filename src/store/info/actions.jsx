@@ -6,35 +6,35 @@ const backInfo = "http://localhost:3000/results";
 
 // FUNCION ACTIONGETOURTEAM
 export function actionGetInfo(){
-    return{
+    return {
         type: GET_INFO
     }
 }
 
-export function actionGeInfoOk(info){
-    return{
+export function actionGetInfoOk(info){
+    return {
         type: GET_INFO_OK,
         payload: info
     }
 }
 
-export function actionGeInfoFail(error){
-    return{
+export function actionGetInfoFail(error){
+    return {
         type: GET_INFO_FAIL,
         payload: error
     }
 }
 
-// FUNCTION GET INFO
-export function getInfo(){
-    return async (dispatch) =>{
+// FUNCTION GETINFO
+export function getInfo() {
+    return async (dispatch) => {
         try {
             dispatch(actionGetInfo());
             const res = await axios.get(backInfo)
-            dispatch(actionGeInfoOk(res.data))
+            dispatch(actionGetInfoOk(res.data))
             console.log(res.data, "respuesta de action")
         } catch (error) {
-            dispatch(actionGeInfoFail)
+            dispatch(actionGetInfoFail)
         }
     }
 }

@@ -17,13 +17,13 @@ const GalleryComponent = () => {
 
   if (loadingGallery) {
     return (
-      <div>
+      <div className="container">
         <h2>Loading...</h2>
       </div>
     );
   }
   return (
-    <div className="cards-container">
+    <div className="cards-container container">
       <p>Gallery</p>
       {gallery.map((gallerya) => {
         console.log(gallerya);
