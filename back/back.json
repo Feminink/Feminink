@@ -176,30 +176,35 @@
   ],
   "contact": [
     {
-      "name": "María Zambrano",
-      "description": "Hola chicos! Me encanta vuestro estudio y he pensado que necesito que me grabéis en la piel uno de vuestros trabajos artísticos. He pensado en algo abstracto ...la Verdad, por ejemplo.  De unos 5 cm en la muñeca izquierda. Muchas gracias!",
-      "email": "Maríamalaga@yahoo.es",
-      "color": "#98dde2",
-      "artist": "",
+      "userDataForm": {
+        "name": "María Zambrano",
+        "description": "Hola chicos! Me encanta vuestro estudio y he pensado que necesito que me grabéis en la piel uno de vuestros trabajos artísticos. He pensado en algo abstracto ...la Verdad, por ejemplo.  De unos 5 cm en la muñeca izquierda. Muchas gracias!",
+        "email": "Maríamalaga@yahoo.es",
+        "color": "#98dde2",
+        "artist": "Ignacio E"
+      },
       "id": 1
     },
     {
-      "name": "Jean Paul",
-      "description": "Hola. Quiero hacerme un tatuaje en el pecho donde ponga: \"El infierno son los otros\". El color es lo de menos. El tamaño os lo dejo a vosotros.",
-      "email": "JuanPaSartre@lanausea.fr",
-      "color": "#ffffff",
-      "artist": "",
+      "userDataForm": {
+        "name": "Jean Paul",
+        "description": "Hola. Quiero hacerme un tatuaje en el pecho donde ponga: \"El infierno son los otros\". El color es lo de menos. El tamaño os lo dejo a vosotros.",
+        "email": "JuanPaSartre@lanausea.fr",
+        "color": "#ffffff",
+        "artist": ""
+      },
       "id": 2
     },
     {
-      "name": "Emily Dickinson",
-      "description": "Hey guys! Quisiera unos motivos botánicos en los pies, porque siempre me ha gustado caminar sobre la hierba. Me hace sentir realmente libre. Unas caparidáceas, quizá?",
-      "email": "Edickinson@flowes.com",
-      "color": "#cf4ee9",
-      "artist": "Laura O",
+      "userDataForm": {
+        "name": "Emily Dickinson",
+        "description": "Hey guys! Quisiera unos motivos botánicos en los pies, porque siempre me ha gustado caminar sobre la hierba. Me hace sentir realmente libre. Unas caparidáceas, quizá?",
+        "email": "Edickinson@flowes.com",
+        "color": "#cf4ee9",
+        "artist": "Laura O"
+      },
       "id": 3
     }
- 
   ],
   "users": []
 }
