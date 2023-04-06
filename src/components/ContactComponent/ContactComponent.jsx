@@ -22,7 +22,10 @@ const [name, setName] = useState("");
 const [description, setDescription] = useState("");
 const [email, setEmail] = useState("");
 const [color, setColor] = useState("#000000");
- const [artist, setArtist] = useState("");
+const [artist, setArtist] = useState("");
+
+// COMPILAR TODOS LOS ESTADOS DENTRO DE UNO Y USAR SETSTATE
+// const [userForm, setUserForm] = useState({ name: "", email: "", color: "", artists: "artist", description: ""});
 
 useEffect(()=>{
   dispatch(getArtists())
@@ -41,7 +44,7 @@ if (loadingArtists){
           <form className='form'> 
             <fieldset className="form__container" >
               <label>Nombre </label>
-              <input type="text" defaultValue={name} onChange={(e)=>setName(e.target.value)} required></input>
+              <input type="text" defaultValue={name} onChange={(e)=>setName(e.target.value)}  ></input>
             </fieldset>
 
             <fieldset className="form__container">
@@ -59,6 +62,7 @@ if (loadingArtists){
                      <select value={artist} onChange={(e) => setArtist(e.target.value)} required>
                         {artists?.map((artist) => {
                             return (
+                              
                               <option key={artist.id} value={artist.name}> {artist.name} </option>);
                           })}
                   </select>
