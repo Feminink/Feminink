@@ -5,11 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 
 const GalleryComponent = () => {
   const dispatch = useDispatch();
+  const imgUrl = "assets/images/gallery";
 
   const { gallery, loadingGallery } = useSelector(
     (state) => state.GalleryReducer
   );
-  console.log("helo");
 
   useEffect(() => {
     dispatch(getGallery());
@@ -29,7 +29,7 @@ const GalleryComponent = () => {
         console.log(gallerya);
         return (
           <div>
-            <img src={require(`${gallerya.image}`)} alt={gallerya.alt} />
+            <img src={require(gallerya.image)} alt={gallerya.alt} />
             <div className="card__details">
               <h4>Title: {gallerya.title}</h4>
               <h4>Artist: {gallerya.artist}</h4>
