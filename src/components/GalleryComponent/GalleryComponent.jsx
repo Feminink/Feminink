@@ -1,21 +1,20 @@
 import React, { useEffect } from "react";
-import { getGallery } from "../../store/gallery/actions";
+import { getInfo } from "../../store/info/actions";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 
 const GalleryComponent = () => {
   const dispatch = useDispatch();
-  const imgUrl = "assets/images/gallery";
 
-  const { gallery, loadingGallery } = useSelector(
-    (state) => state.GalleryReducer
-  );
+  const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
 
   useEffect(() => {
-    dispatch(getGallery());
+    dispatch(getInfo());
   }, []);
 
-  if (loadingGallery) {
+  console.log(info);
+
+  if (loadingInfo) {
     return (
       <div className="container">
         <h2>Loading...</h2>
@@ -23,23 +22,26 @@ const GalleryComponent = () => {
     );
   }
   return (
-    <div className="container">
+    <section className="container">
+      <h2>Gallery</h2>
       <div className="cards-container container">
-        {gallery.map((gallerya) => {
-          console.log(gallerya);
-          return (
-            <div>
-              <img src={gallerya.image} alt={gallerya.alt} />
-              <div className="card__details">
-                <h4>Title: {gallerya.title}</h4>
-                <h4>Artist: {gallerya.artist}</h4>
-                <h4>Model: {gallerya.model}</h4>
+        {info &&
+          info.gallery &&
+          info.gallery.map((gallerya) => {
+            console.log(gallerya);
+            return (
+              <div>
+                <img src={gallerya.image} alt={gallerya.alt} />
+                <div className="card__details">
+                  <h4>Title: {gallerya.title}</h4>
+                  <h4>Artist: {gallerya.artist}</h4>
+                  <h4>Model: {gallerya.model}</h4>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
-    </div>
+    </section>
   );
 };
 
