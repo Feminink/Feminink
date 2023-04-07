@@ -215,8 +215,8 @@
     ],
     "users": [
       {
-        "firstname": "",
-        "lastname": "",
+        "name": "",
+        "surnname": "",
         "email": "",
         "telephone": "",
         "birthday": "",

@@ -41,6 +41,8 @@ const RegistrationComponent = () => {
     initialValues: {
       name: "",
       surname: "",
+      birthday: "",
+      telephone: "",
       email: "",
       password: "",
       repassword: "",
@@ -80,11 +82,23 @@ const RegistrationComponent = () => {
             <div className="error">{formik.errors.surname}</div>
           ) : null}
           <input
+            id="birthday"
+            name="birthday"
+            type="date"
+            placeholder="Date of birth"
+            value={formik.values.birthday}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.touched.birthday && formik.errors.birthday ? (
+            <div className="error">{formik.errors.birthday}</div>
+          ) : null}
+          <input
             id="email"
             name="email"
             type="email"
             placeholder="Email address"
-            value={formik.values.email}
+            value={formik.values}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
