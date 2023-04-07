@@ -42,8 +42,8 @@ const RegistrationComponent = () => {
       name: "",
       surname: "",
       birthday: "",
-      telephone: "",
       email: "",
+      telephone: "",
       password: "",
       repassword: "",
     },
@@ -98,12 +98,24 @@ const RegistrationComponent = () => {
             name="email"
             type="email"
             placeholder="Email address"
-            value={formik.values}
+            value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
           {formik.touched.email && formik.errors.email ? (
             <div className="error">{formik.errors.email}</div>
+          ) : null}
+          <input
+            id="telephone"
+            name="telephone"
+            type="telephone"
+            placeholder="Telephone"
+            value={formik.values.telephone}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.touched.telephone && formik.errors.telephone ? (
+            <div className="error">{formik.errors.telephone}</div>
           ) : null}
           <input
             id="password"
