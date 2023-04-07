@@ -1,83 +1,119 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import PropTypes from 'prop-types';
 import  './ContactComponent.scss';
 
-import { getArtists } from '../../store/Tattoo/actions';
+import {getInfo} from '../../store/info/actions'
 
 // IMPORT FUNCIÖN DE CONTACTAR 
 import { doContact } from '../../store/Tattoo/actions';
+
 //IMPORT HOOKS
 import { useDispatch, useSelector } from 'react-redux';
 
+//IMPORT HOOK FORMIK
+import { useFormik } from 'formik';
 
 const ContactComponent = () => { 
 
+  useEffect(()=>{
+    dispatch(getInfo())
+  },[])
+  
+  const sendForm = () =>{
+    dispatch(doContact())
+  }
+  const {info, loadinginfo} = useSelector((state)=> state.InfoReducer)
 const dispatch = useDispatch();
 
-const {artists, loadingArtists} = useSelector((state)=>state.TattooReducer);
-// const {form} = useSelector((state)=>state.TattooReducer);
-
-//CREO ESTADOS PARA SETEAR VALORES DE LOS INPUTS
-const [name, setName] = useState("");
-const [description, setDescription] = useState("");
-const [email, setEmail] = useState("");
-const [color, setColor] = useState("#000000");
-const [artist, setArtist] = useState("");
-
-// COMPILAR TODOS LOS ESTADOS DENTRO DE UNO Y USAR SETSTATE
-// const [userForm, setUserForm] = useState({ name: "", email: "", color: "", artists: "artist", description: ""});
-
-useEffect(()=>{
-  dispatch(getArtists())
-},[])
-
-const sendForm = () =>{
-  dispatch(doContact({name: name, description: description, email: email, color: color, artist: artist}))
-}
-
-if (loadingArtists){
-  return (
-    <p> "Loading"</p>
-  )
-}else{
-       return(<section className='section__login section container'>
-          <form className='form'> 
-            <fieldset className="form__container" >
-              <label>Nombre </label>
-              <input type="text" defaultValue={name} onChange={(e)=>setName(e.target.value)}  ></input>
-            </fieldset>
-
-            <fieldset className="form__container">
-              <label>Email </label>
-              <input type="email" defaultValue={email} onChange={(e)=>setEmail(e.target.value)} required></input>
-              </fieldset>
+  function validate (values) {
+    const errors = {};
   
-            <fieldset className="form__container">
-               <label>Descripción del tatuaje </label>
-               <textarea type="text" defaultValue={description} onChange={(e)=>setDescription(e.target.value)} required></textarea>
-            </fieldset>
+    if (!values.email) {
+      errors.email = "Required";
+    } else if (values.email.length < 4) {
+      errors.email = "Must be 5 characters or more";
+    }
+  
+    if (!values.name) {
+      errors.password = "Required";
+    } else if (values.password.length < 8) {
+      errors.password = "Must be 8 characters or more";
+    } else if (values.password === "12345678") {
+      errors.password = "Must not be 12345678 !!!";
+    }
+  
+    if (!values.description) {
+      errors.repassword = "Required";
+    } else if (values.repassword.length < 50) {
+      errors.repassword = "Máximo 50 caracteres";
+    }
+    return errors;
+    
+  }
 
-            <fieldset className="form__container">
-                  <label>Artista</label>
-                     <select value={artist} onChange={(e) => setArtist(e.target.value)} required>
-                        {artists?.map((artist) => {
-                            return (
-                              
-                              <option key={artist.id} value={artist.name}> {artist.name} </option>);
-                          })}
-                  </select>
-            </fieldset>
+  const formik = useFormik({
+    initial: {
+     name: "",
+     email: "",
+     color: "",
+     description: "",
+     artist: "",
+   },validate,
+ 
+     onSubmit: (values)=>{
+                 alert(JSON.stringify(values, null, 2));
+               },
+             });
+ if(loadinginfo){
+  return(
+    <p>"Loading..."</p>
+  )
+ }
+        return(
+        <section className='section__login section'>
+           <form onSubmit={formik.handleSubmit} className='form'> 
+           <h1>Formulario de contacto: </h1>
+             <fieldset className="form__container" >
+               <label>Nombre </label>
+               <input name="name" type="text" value={formik.values.name} onChange={formik.handleChange} placeholder= "Escribe tu nombre" required></input>
+             </fieldset>
+ 
+             <fieldset className="form__container">
+               <label>Email </label>
+               <input name="email" type="email" value={formik.values.email} onChange={formik.handleChange} placeholder= "Email de contacto" required></input>
+               {formik.touched.email && formik.errors.email ? (
+                     <div className="error">{formik.errors.email}</div>
+                   ) : null}
+               </fieldset>
+   
+             <fieldset className="form__container">
+                <label>Descripción del tatuaje </label>
+                <textarea  name="description" type="text" value={formik.values.description} onChange={formik.handleChange} placeholder= "Breve descripción del diseño" required></textarea>
+             </fieldset>
+ 
+             <fieldset className="form__container">
+                   <label>Artista</label>
+                      <select name="artist" value={formik.values.artist} onChange={formik.handleChange} required>
+                         {info && info.artists?.map((artist) => {
+                             return (
+                               
+                               <option name="artist" key={artist.id} value={formik.values.artist}> {artist.name} </option>);
+                           })}
+                   </select>
+             </fieldset>
+ 
+             <fieldset className="form__container">
+                <label>Color base </label>
+                <input name="color" type="color" value={formik.values.color} onChange={formik.handleChange} required></input>
+             </fieldset>
+ 
+           </form>
+           <button type="submit" onClick={sendForm}> Enviar </button>
+        </section>)
+ 
+  
+};
 
-            <fieldset className="form__container">
-               <label>Color base </label>
-               <input type="color" defaultValue={color} onChange={(e)=>setColor(e.target.value)} required></input>
-            </fieldset>
-
-          </form>
-          <button type="button" onClick={sendForm}> Enviar </button>
-       </section>)
-
-}  }
 ContactComponent.propTypes = {};
 
 ContactComponent.defaultProps = {};
