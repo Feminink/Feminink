@@ -1,47 +1,15 @@
 import axios from 'axios';
+import Messages from '../../pages/Messages/Messages';
 
 import {
-    GET_INSPIRATION, GET_INSPIRATION_OK, GET_INSPIRATION_FAIL,
+    
     DO_CONTACT, DO_CONTACT_FAIL, DO_CONTACT_OK,
-    GET_ARTISTS, GET_ARTISTS_OK,GET_ARTISTS_FAIL
+    GET_MESSAGES, GET_MESSAGES_OK, GET_MESSAGES_FAIL
 } from './actionTypes';
 
 
-const backInspiration = "http://localhost:3000/inspiration";
 const backContact = "http://localhost:3000/contact";
-const backAdmin = "http://localhost:3000/admins";
 
-// FUNCIÖN PARA OBTENER DATA DE JSON: WOMEN
-export function actionGetInspiration(){
-    return{
-        type: GET_INSPIRATION
-        
-    }
-}
-export function actionGetInspirationOk(inspiration){
-    return{
-        type: GET_INSPIRATION_OK,
-        payload: inspiration
-    }
-}
-export function actionGetInspirationFail(error){
-    return{
-        type: GET_INSPIRATION_FAIL,
-        payload: error
-    }
-}
-
-export function getInspiration(){
-    return async (dispatch) =>{
-        try {
-            dispatch(actionGetInspiration());
-            const res = await axios.get(backInspiration)
-            dispatch(actionGetInspirationOk(res.data))
-        } catch (error) {
-            dispatch(actionGetInspirationFail)
-        }
-    }
-}
 // FUNCIÖN PARA POSTEAR DATA EN JSON: CONTACT
 export function actionDoContact(contactForm){
     return{
@@ -64,46 +32,46 @@ export function actionDoContactFail(error){
 
 export function doContact(userContactForm){
     return async (dispatch)=>{
+        dispatch(actionDoContact(userContactForm))
         try {
-            dispatch(actionDoContact(userContactForm))
+            
             const res = await axios.post(backContact, userContactForm)
-            // console.log(res, "res")
             dispatch(actionDoContactOk(res.data))
-            // console.log(res.data, "res.data")
         } catch (error) {
             dispatch(actionDoContactFail(error))
         }
     }
 }
 
-export function actionGetArtists(){
+//FUNCIÖN PARA OBTENER LOS MENSAJES DE CONTACTO
+export function actionGetMessages(){
     return{
-        type: GET_ARTISTS
+        type: GET_MESSAGES
        
     }
 }
-export function actionGetArtistsOk(artist){
+export function actionGetMessagesOk(messages){
     return{
-        type:GET_ARTISTS_OK,
-        payload:artist
+        type: GET_MESSAGES_OK,
+        payload: messages
     }
 }
-export function actionGetArtistsfail(error){
+export function actionGetMessagesFail(error){
     return{
-        type:GET_ARTISTS_FAIL,
-        payload:error
+        type: GET_MESSAGES_FAIL,
+        payload: error
     }
 }
 
-export function getArtists(){
+export function getMessages(){
     return async (dispatch)=>{
-        dispatch(actionGetArtists)
+        dispatch(actionGetMessages())
         try {
-            const response = await axios.get(backAdmin)
-            dispatch(actionGetArtistsOk(response.data))
-            console.log(response.data, "response.data")
+           const response = await axios.get(backContact)
+           dispatch(actionGetMessagesOk(response.data))
+            
         } catch (error) {
-            dispatch(actionGetArtistsfail(error))
+            dispatch(actionGetMessagesFail(error))
         }
     }
 }

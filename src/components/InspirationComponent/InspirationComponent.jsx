@@ -38,10 +38,6 @@ const InspirationComponent = () => {
 
   }
  return(  <div className="div__inspiration">
-
-
-
-
  {info && info.inspiration && info.inspiration.map((woman)=>{
   return ( 
     <section key={woman.id} className='div__inspiration__section'>

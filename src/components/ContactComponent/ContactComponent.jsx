@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import  './ContactComponent.scss';
 
-import { getArtists } from '../../store/Tattoo/actions';
+import { getInfo } from "../../store/info/actions";
 
 // IMPORT FUNCIÖN DE CONTACTAR 
 import { doContact } from '../../store/Tattoo/actions';
@@ -13,9 +13,8 @@ import { useDispatch, useSelector } from 'react-redux';
 const ContactComponent = () => { 
 
 const dispatch = useDispatch();
+const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
 
-const {artists, loadingArtists} = useSelector((state)=>state.TattooReducer);
-// const {form} = useSelector((state)=>state.TattooReducer);
 
 //CREO ESTADOS PARA SETEAR VALORES DE LOS INPUTS
 const [name, setName] = useState("");
@@ -24,18 +23,16 @@ const [email, setEmail] = useState("");
 const [color, setColor] = useState("#000000");
 const [artist, setArtist] = useState("");
 
-// COMPILAR TODOS LOS ESTADOS DENTRO DE UNO Y USAR SETSTATE
-// const [userForm, setUserForm] = useState({ name: "", email: "", color: "", artists: "artist", description: ""});
 
 useEffect(()=>{
-  dispatch(getArtists())
+  dispatch(getInfo())
 },[])
 
 const sendForm = () =>{
   dispatch(doContact({name: name, description: description, email: email, color: color, artist: artist}))
 }
 
-if (loadingArtists){
+if (loadingInfo){
   return (
     <p> "Loading"</p>
   )
@@ -60,7 +57,7 @@ if (loadingArtists){
             <fieldset className="form__container">
                   <label>Artista</label>
                      <select value={artist} onChange={(e) => setArtist(e.target.value)} required>
-                        {artists?.map((artist) => {
+                        {info && info.admins?.map((artist) => {
                             return (
                               
                               <option key={artist.id} value={artist.name}> {artist.name} </option>);
