@@ -24,20 +24,21 @@ const GalleryComponent = () => {
   }
   return (
     <div className="container">
-    <div className="cards-container container">
-      {gallery.map((gallerya) => {
-        console.log(gallerya);
-        return (
-          <div>
-            <img src={gallerya.image} alt={gallerya.alt} />
-            <div className="card__details">
-              <h4>Title: {gallerya.title}</h4>
-              <h4>Artist: {gallerya.artist}</h4>
-              <h4>Model: {gallerya.model}</h4>
+      <div className="cards-container container">
+        {gallery.map((gallerya) => {
+          console.log(gallerya);
+          return (
+            <div>
+              <img src={gallerya.image} alt={gallerya.alt} />
+              <div className="card__details">
+                <h4>Title: {gallerya.title}</h4>
+                <h4>Artist: {gallerya.artist}</h4>
+                <h4>Model: {gallerya.model}</h4>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };
