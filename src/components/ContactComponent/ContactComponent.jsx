@@ -14,6 +14,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useFormik } from 'formik';
 
 const ContactComponent = () => { 
+
   useEffect(()=>{
     dispatch(getArtists())
   },[])
@@ -24,59 +25,51 @@ const ContactComponent = () => {
   
 const dispatch = useDispatch();
 
-// const {artists, loadingArtists} = useSelector((state)=>state.TattooReducer);
-
-// USAR SETSTATE PARA RECOGER TODOS LOS NUEVOS VALORES DE LOS ESTADOS CON ESTA FUNCIÓN
-
-//  const handleChange  = (e) =>{
-  // const {name, value} = e.target;
-  // setUserDataForm({...userDataForm, [name]: value});
-//  };
-
-function validate (values) {
-  const errors = {};
-
-  if (!values.email) {
-    errors.email = "Required";
-  } else if (values.email.length < 4) {
-    errors.email = "Must be 5 characters or more";
+  function validate (values) {
+    const errors = {};
+  
+    if (!values.email) {
+      errors.email = "Required";
+    } else if (values.email.length < 4) {
+      errors.email = "Must be 5 characters or more";
+    }
+  
+    if (!values.name) {
+      errors.password = "Required";
+    } else if (values.password.length < 8) {
+      errors.password = "Must be 8 characters or more";
+    } else if (values.password === "12345678") {
+      errors.password = "Must not be 12345678 !!!";
+    }
+  
+    if (!values.description) {
+      errors.repassword = "Required";
+    } else if (values.repassword.length < 50) {
+      errors.repassword = "Máximo 50 caracteres";
+    }
+    return errors;
+    
   }
-
-  if (!values.name) {
-    errors.password = "Required";
-  } else if (values.password.length < 8) {
-    errors.password = "Must be 8 characters or more";
-  } else if (values.password === "12345678") {
-    errors.password = "Must not be 12345678 !!!";
-  }
-
-  if (!values.description) {
-    errors.repassword = "Required";
-  } else if (values.repassword.length < 50) {
-    errors.repassword = "Máximo 50 caracteres";
-  }
-
-  return errors;
-}};
+  
+};
 
 
-const formik = useFormik({ initial: {name: "", email: "", color: "", description: "", artist: ""},
-              onSubmit: (values)=>{
+const formik = useFormik({
+   initial: {
+    name: "",
+    email: "",
+    color: "",
+    description: "",
+    artist: "",
+  },
+
+    onSubmit: (values)=>{
                 alert(JSON.stringify(values, null, 2));
-              }
-});
+              },
+            });
 
-//AUNAR TODOS LOS ESTADOS EN UNO SOLO
-// const [userDataForm, setUserDataForm] = useState({ name: "", email: "", color: "", description: "", artist: ""});
-
-//VARIABLE QUE ALMACENA LOS MENSAJES SI SE PRODUCEN ERRORES
-
-if (loadingInfo){
-  return (
-    <p> "Loading"</p>
-  )
-}else{
-       return(<section className='section__login section'>
+       return(
+       <section className='section__login section'>
           <form onSubmit={formik.handleSubmit} className='form'> 
           <h1>Formulario de contacto: </h1>
             <fieldset className="form__container" >
@@ -117,7 +110,7 @@ if (loadingInfo){
           <button type="submit" onClick={sendForm}> Enviar </button>
        </section>)
 
-}  
+
 ContactComponent.propTypes = {};
 
 ContactComponent.defaultProps = {};
