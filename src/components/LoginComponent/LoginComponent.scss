@@ -1,1 +1,42 @@
-.LoginComponent {}
+.LoginComponent {
+
+    .flex{
+        display: flex;
+    }
+    
+    .card {
+        flex-wrap: wrap;
+        border: 1px dotted grey;
+        width: 100%;
+        margin: 1%;
+        padding: 1%;
+        &:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+      }
+    
+      .wrapper {
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align: left;
+        width: 50%;
+      }
+    
+      fieldset {
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        font-size: larger;
+    }
+    input {
+        background-color: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    
+    
+}

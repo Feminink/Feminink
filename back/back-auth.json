@@ -1,0 +1,51 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "name": "Laura O",
+      "username": "LauraW",
+      "password": "randompwd",
+      "mail": "laurao@mail.com"
+    },
+    {
+      "id": 2,
+      "name": "Ignacio E",
+      "username": "IgnacioW",
+      "password": "randompwd1",
+      "mail": "ignacio@mail.com"
+    },
+    {
+      "id": 3,
+      "name": "Miriam F",
+      "username": "MiriamW",
+      "password": "randompwd2",
+      "mail": "miriamf@mail.com"
+    },
+    {
+      "username": "LauraW",
+      "password": "randompwd",
+      "id": 4
+    },
+    {
+      "username": "LauraW",
+      "password": "randompwd",
+      "id": 5
+    },
+    {
+      "username": "LauraW",
+      "password": "randompwd",
+      "id": 6
+    },
+    {
+      "username": "LauraW",
+      "password": "randompwd",
+      "id": 7
+    },
+    {
+      "username": "LauraW",
+      "password": "randompwd",
+      "id": 8
+    }
+  ],
+  "users": []
+}

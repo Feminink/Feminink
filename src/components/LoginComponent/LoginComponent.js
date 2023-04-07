@@ -10,11 +10,13 @@ import { doLogin } from "../../store/auth/actions";
 // IMPORT LINK
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+// IMPORT STYLES
+import "./LoginComponent.scss";
 
 const LoginComponent = () => {
   const { user } = useSelector((state) => state.AuthReducer);
-  const [username, setUsername] = useState("hbingley1");
-  const [password, setPassword] = useState("CQutx25i8r");
+  const [username, setUsername] = useState("LauraW");
+  const [password, setPassword] = useState("randompwd");
   const dispatch = useDispatch();
 
   function onClickLogin() {
@@ -26,7 +28,7 @@ const LoginComponent = () => {
   }
   return (
     <div className="container">
-      <form>
+      <form className="form flex">
         <fieldset>
           <label>Username</label>
           <input
@@ -35,8 +37,6 @@ const LoginComponent = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           ></input>
-        </fieldset>
-        <fieldset>
           <label>Password</label>
           <input
             type="password"
