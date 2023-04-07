@@ -127,70 +127,68 @@
     ],
     "gallery": [
       {
-          "id": "1",
-          "image": "./assets/images/gallery/pexels-photo-4123910.webp",
-          "title": "Flower tattoo",
-          "artist": "Miriam F",
-          "model": "Tatiana",
-          "style": "New school style",
-          "alt": "Tattoed woman with red hair",
-          "description": ""
+        "id": "1",
+        "image": "./assets/images/gallery/pexels-photo-4123910.webp",
+        "title": "Flower tattoo",
+        "artist": "Miriam F",
+        "model": "Tatiana",
+        "style": "New school style",
+        "alt": "Tattoed woman with red hair",
+        "description": ""
       },
       {
-          "id": "2",
-          "image":"./assets/images/gallery/pexels-photo-3778028.jpeg",
-          "title": "Tattoo in the making",
-          "artist": "Laura O",
-          "model": "Unknown",
-          "style": "Blackwork style",
-          "alt": "Tattooer at work",
-          "description": ""
+        "id": "2",
+        "image": "./assets/images/gallery/pexels-photo-3778028.jpeg",
+        "title": "Tattoo in the making",
+        "artist": "Laura O",
+        "model": "Unknown",
+        "style": "Blackwork style",
+        "alt": "Tattooer at work",
+        "description": ""
       },
       {
-          "id": "3",
-          "image": "./assets/images/gallery/pexels-photo-1848657.webp",
-          "title": "Geometrical flower",
-          "artist": "Miriam F",
-          "model": "Sonia",
-          "style": "Dotwork style",
-          "alt": "Tattooed woman in yellow top",
-          "description": ""
+        "id": "3",
+        "image": "./assets/images/gallery/pexels-photo-1848657.webp",
+        "title": "Geometrical flower",
+        "artist": "Miriam F",
+        "model": "Sonia",
+        "style": "Dotwork style",
+        "alt": "Tattooed woman in yellow top",
+        "description": ""
       },
       {
-          "id": "4",
-          "image": "./assets/images/gallery/pexels-photo-2183131.webp",
-          "title": "Japanese dragon tattoo",
-          "artist": "Ignacio E",
-          "model": "Unknown",
-          "style": "Japanese traditional style",
-          "alt": "Japanese dragon tattoo",
-          "description": ""
+        "id": "4",
+        "image": "./assets/images/gallery/pexels-photo-2183131.webp",
+        "title": "Japanese dragon tattoo",
+        "artist": "Ignacio E",
+        "model": "Unknown",
+        "style": "Japanese traditional style",
+        "alt": "Japanese dragon tattoo",
+        "description": ""
       },
       {
-          "id": "5",
-          "image": "./assets/images/gallery/pexels-photo-3657562.jpeg",
-          "title": "Tattoo in the making",
-          "artist": "Laura O",
-          "model": "Unknown",
-          "style": "Watercolor style",
-          "alt": "Tattoer at work",
-          "description": ""
+        "id": "5",
+        "image": "./assets/images/gallery/pexels-photo-3657562.jpeg",
+        "title": "Tattoo in the making",
+        "artist": "Laura O",
+        "model": "Unknown",
+        "style": "Watercolor style",
+        "alt": "Tattoer at work",
+        "description": ""
       },
       {
-          "id": "6",
-          "image": "./assets/images/gallery/pexels-photo-1784272.webp",
-          "title": "Nature tattoo",
-          "artist": "Miriam F",
-          "model": "Unknown",
-          "style": "Nature style",
-          "alternate-text": "Nature tattoo on arm",
-          "description": ""
+        "id": "6",
+        "image": "./assets/images/gallery/pexels-photo-1784272.webp",
+        "title": "Nature tattoo",
+        "artist": "Miriam F",
+        "model": "Unknown",
+        "style": "Nature style",
+        "alternate-text": "Nature tattoo on arm",
+        "description": ""
       }
     ],
-   
-    "users": [
-    ]
-  }, 
+    "users": []
+  },
   "contact": [
     {
       "name": "María Zambrano",
