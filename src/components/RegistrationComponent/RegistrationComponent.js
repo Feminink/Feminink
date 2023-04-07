@@ -4,29 +4,46 @@ import "./RegistrationComponent.scss";
 // IMPORTS FROM FORMIK
 import { useFormik } from "formik";
 // IMPORTS FROM REACT-REDUX
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // IMPORT FROM STORE
-import { getInfo } from "../../store/info/actions";
+import { getUsers } from "../../store/gallery/actions";
 import { doRegistration } from "../../store/gallery/actions";
 
 const RegistrationComponent = () => {
+  const { user } = useSelector((state) => state.GalleryReducer);
   const dispatch = useDispatch();
 
   const sendRegistration = () => {
-    dispatch(
-      doRegistration({
-        name: formik.values.name,
-        surname: formik.values.surname,
-        birthday: formik.values.birthday,
-        email: formik.values.email,
-        password: formik.values.password,
-        repassword: formik.values.repassword,
-      })
-    );
+    if (
+      formik.values.name &&
+      formik.values.email &&
+      user !== formik.values.email &&
+      formik.values.birthday &&
+      formik.values.password &&
+      formik.values.repassword
+    ) {
+      dispatch(
+        doRegistration({
+          name: formik.values.name,
+          surname: formik.values.surname,
+          birthday: formik.values.birthday,
+          email: formik.values.email,
+          password: formik.values.password,
+          repassword: formik.values.repassword,
+        })
+      );
+    }
   };
 
   const validate = (values) => {
-    const errors = {};
+    const errors = {
+      name: "",
+      surname: "",
+      birthday: "",
+      email: "",
+      password: "",
+      repassword: "",
+    };
 
     // ERROR NAME
     if (!values.name) {
@@ -40,14 +57,18 @@ const RegistrationComponent = () => {
     if (!values.birthday) {
       errors.birthday = "Please select your date of birth";
     }
+
     // ERROR EMAIL
     if (!values.email) {
-      errors.email = "Insert an email address";
+      errors.email = "Required";
     } else if (
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
     ) {
       errors.email = "Invalid email address";
+    } else if (user === formik.values.email) {
+      errors.email = "Email is already in use";
     }
+
     // ERROR PASSWORD
     if (!values.password) {
       errors.password = "Required";
@@ -56,10 +77,9 @@ const RegistrationComponent = () => {
     } else if (values.password === "12345678") {
       errors.password = "Cannot be 12345678 !!!";
     }
+
     // ERROR REPEAT-PASSWORD
-    if (!values.repassword) {
-      errors.repassword = "Required";
-    } else if (values.repassword !== values.password) {
+    if (values.repassword !== values.password) {
       errors.repassword = "Passwords must match";
     }
     return errors;
@@ -90,9 +110,10 @@ const RegistrationComponent = () => {
             name="name"
             type="text"
             placeholder="Name"
-            value={formik.values.surname}
+            value={formik.values.name}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            required
           />
           {formik.touched.name && formik.errors.name ? (
             <div className="error">{formik.errors.name}</div>
@@ -107,6 +128,7 @@ const RegistrationComponent = () => {
             value={formik.values.surname}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            required
           />
           {formik.touched.surname && formik.errors.surname ? (
             <div className="error">{formik.errors.surname}</div>
@@ -120,6 +142,7 @@ const RegistrationComponent = () => {
             value={formik.values.birthday}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            required
           />
           {formik.touched.birthday && formik.errors.birthday ? (
             <div className="error">{formik.errors.birthday}</div>
@@ -133,6 +156,7 @@ const RegistrationComponent = () => {
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            required
           />
           {formik.touched.email && formik.errors.email ? (
             <div className="error">{formik.errors.email}</div>
@@ -146,6 +170,7 @@ const RegistrationComponent = () => {
             value={formik.values.password}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            required
           />
           {formik.touched.password && formik.errors.password ? (
             <div className="error">{formik.errors.password}</div>
@@ -159,6 +184,7 @@ const RegistrationComponent = () => {
             value={formik.values.repassword}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            required
           />
           {formik.touched.repassword && formik.errors.repassword ? (
             <div className="error">{formik.errors.repassword}</div>

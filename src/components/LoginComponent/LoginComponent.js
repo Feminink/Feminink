@@ -50,7 +50,7 @@ const LoginComponent = () => {
         Login
       </button>
       <h3>
-        Not a member yet? <Link to="/registration">Register now</Link>
+        Not a member yet? <Link to="/signup">Register now</Link>
       </h3>
     </div>
   );
