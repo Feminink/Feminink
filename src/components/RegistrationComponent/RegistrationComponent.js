@@ -1,22 +1,16 @@
-import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // IMPORT STYLES
 import "./RegistrationComponent.scss";
 // IMPORTS FROM FORMIK
 import { useFormik } from "formik";
 // IMPORTS FROM REACT-REDUX
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 // IMPORT FROM STORE
 import { getInfo } from "../../store/info/actions";
 import { doRegistration } from "../../store/gallery/actions";
 
 const RegistrationComponent = () => {
   const dispatch = useDispatch();
-  const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
-
-  useEffect(() => {
-    dispatch(getInfo());
-  }, []);
 
   const sendRegistration = () => {
     dispatch(
@@ -34,18 +28,19 @@ const RegistrationComponent = () => {
   const validate = (values) => {
     const errors = {};
 
+    // ERROR NAME
     if (!values.name) {
       errors.name = "You should add at least one character";
     }
-
+    // ERROR SURNAME
     if (!values.surname) {
       errors.surname = "You should add at least one character";
     }
-
+    // ERROR BIRTHDAY
     if (!values.birthday) {
-      errors.name = "Please select your date of birth";
+      errors.birthday = "Please select your date of birth";
     }
-
+    // ERROR EMAIL
     if (!values.email) {
       errors.email = "Insert an email address";
     } else if (
@@ -53,7 +48,7 @@ const RegistrationComponent = () => {
     ) {
       errors.email = "Invalid email address";
     }
-
+    // ERROR PASSWORD
     if (!values.password) {
       errors.password = "Required";
     } else if (values.password.length < 9) {
@@ -61,7 +56,7 @@ const RegistrationComponent = () => {
     } else if (values.password === "12345678") {
       errors.password = "Cannot be 12345678 !!!";
     }
-
+    // ERROR REPEAT-PASSWORD
     if (!values.repassword) {
       errors.repassword = "Required";
     } else if (values.repassword !== values.password) {
@@ -87,8 +82,9 @@ const RegistrationComponent = () => {
   return (
     <div className="container flex bg">
       <h1>Register:</h1>
-      <form className="form flex" onSubmit={formik.handleSubmit}>
+      <form className="form flex" onSubmit={formik.handleSubmit} noValidate>
         <fieldset className="container flex">
+          <label>Name</label>
           <input
             id="name"
             name="name"
@@ -101,6 +97,8 @@ const RegistrationComponent = () => {
           {formik.touched.name && formik.errors.name ? (
             <div className="error">{formik.errors.name}</div>
           ) : null}
+          <label>Surname</label>
+
           <input
             id="surname"
             name="surname"
@@ -113,6 +111,7 @@ const RegistrationComponent = () => {
           {formik.touched.surname && formik.errors.surname ? (
             <div className="error">{formik.errors.surname}</div>
           ) : null}
+          <label>Date of birth</label>
           <input
             id="birthday"
             name="birthday"
@@ -125,6 +124,7 @@ const RegistrationComponent = () => {
           {formik.touched.birthday && formik.errors.birthday ? (
             <div className="error">{formik.errors.birthday}</div>
           ) : null}
+          <label>Email</label>
           <input
             id="email"
             name="email"
@@ -137,6 +137,7 @@ const RegistrationComponent = () => {
           {formik.touched.email && formik.errors.email ? (
             <div className="error">{formik.errors.email}</div>
           ) : null}
+          <label>Password</label>
           <input
             id="password"
             name="password"
@@ -149,6 +150,7 @@ const RegistrationComponent = () => {
           {formik.touched.password && formik.errors.password ? (
             <div className="error">{formik.errors.password}</div>
           ) : null}
+          <label>Repeat password</label>
           <input
             id="repassword"
             name="repassword"
@@ -162,7 +164,7 @@ const RegistrationComponent = () => {
             <div className="error">{formik.errors.repassword}</div>
           ) : null}
         </fieldset>
-        <button type="submit" onSubmit={sendRegistration}>
+        <button type="submit" onClick={sendRegistration}>
           Submit
         </button>
       </form>

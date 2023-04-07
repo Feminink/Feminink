@@ -67,9 +67,9 @@ export function doRegistration(registrationForm) {
     try {
       dispatch(actionDoRegistration(registrationForm));
       const response = await axios.post(backUsers, registrationForm);
-      // console.log(res, "res")
+      console.log(response, "res");
       dispatch(actionDoRegistrationOk(response.data));
-      // console.log(res.data, "res.data")
+      console.log(response.data, "res.data");
     } catch (error) {
       dispatch(actionDoRegistrationFail(error));
     }
