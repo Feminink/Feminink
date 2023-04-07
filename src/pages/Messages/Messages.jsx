@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
+import { Link } from 'react-router-dom'
 import {getMessages} from '../../store/Tattoo/actions'
 import  './Messages.scss'
 
@@ -14,8 +14,9 @@ const {messages, loadingMessages} = useSelector((state)=> state.TattooReducer);
 
 const [isShown, setIsShown] = useState("false");
 
-const handleToggle = () =>{
+const handleToggle = (e) =>{
  setIsShown(!isShown);
+ console.log(e)
 
 };
 
@@ -37,14 +38,14 @@ if (loadingMessages){
     {messages.map((message)=>{
         return (
           
-            <div className='section__messages__div'> 
+       <div key={message.id} className='section__messages__div'> 
            
             <h2>De: {message.name}</h2>
             <h3>Para: {message.artist}</h3>
             <h3 className={`h3__hidden${isShown?  "" : "hidden"}`} > {message.email}</h3>
             <h3 className={`h3__hidden${isShown?  "" : "hidden"}`} > {message.description}</h3>
             <h3  className={`h3__hidden${isShown?  "" : "hidden"}`} style={{color: message.color}}> <FontAwesomeIcon icon={faPalette} /> {message.color} </h3>
-            <button className="button" onClick={handleToggle} >Leer</button>
+            <Link to={`/message/${message.id}`}> <button className="button" onClick={handleToggle} >Leer</button></Link> 
             </div>
            
         )

@@ -4,7 +4,7 @@ import Messages from '../../pages/Messages/Messages';
 import {
     
     DO_CONTACT, DO_CONTACT_FAIL, DO_CONTACT_OK,
-    GET_MESSAGES, GET_MESSAGES_OK, GET_MESSAGES_FAIL
+    GET_MESSAGES, GET_MESSAGES_OK, GET_MESSAGES_FAIL, GET_SINGLE_MESSAGE, GET_SINGLE_MESSAGE_OK, GET_SINGLE_MESSAGE_FAIL
 } from './actionTypes';
 
 
@@ -72,6 +72,39 @@ export function getMessages(){
             
         } catch (error) {
             dispatch(actionGetMessagesFail(error))
+        }
+    }
+}
+
+export function actionGetSingleMessage(messageId){
+    return{
+        type: GET_SINGLE_MESSAGE,
+        payload: messageId
+        
+    }
+}
+export function actionGetSingleMessageOk(message){
+    return{
+        type: GET_SINGLE_MESSAGE_OK ,
+        payload: message
+    }
+}
+export function actionGetSingleMessageFail(error){
+    return{
+        type:  GET_SINGLE_MESSAGE_FAIL,
+        pauload: error
+    }
+}
+
+export function getSingleMessage(messageId){
+    return async (dispatch)=> {
+        dispatch(actionGetSingleMessage(messageId))
+        try {
+            const response = await axios.get(`${backContact}/${messageId}`)
+            console.log(response.data, "response")
+            dispatch(actionGetSingleMessageOk(response.data))
+        } catch (error) {
+            dispatch(actionGetSingleMessageFail(error))
         }
     }
 }

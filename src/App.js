@@ -9,6 +9,7 @@ import Inspiration from "./pages/Inspiration/Inspiration";
 import Contact from "./pages/Contact/Contact";
 import Gallery from "./pages/Gallery/Gallery";
 import Messages from './pages/Messages/Messages'
+import Message from "./pages/Message/Message";
 // IMPORT REACT ROUTER
 import { Route, Routes, Navigate } from "react-router-dom";
 
@@ -35,6 +36,7 @@ function App() {
             <Route exact path="/contact" element={<Contact />}></Route>
             <Route exact path="/signup" element={<Registration />}></Route>
             <Route exact path="/messages" element={<Messages />}></Route>
+            <Route exact path="/messages/:id" element={<Message />}></Route>
             <Route exact path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
