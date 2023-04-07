@@ -127,120 +127,91 @@
     ],
     "gallery": [
       {
-          "id": "1",
-          "image": "./assets/images/gallery/pexels-photo-4123910.webp",
-          "title": "Flower tattoo",
-          "artist": "Miriam F",
-          "model": "Tatiana",
-          "style": "New school style",
-          "alt": "Tattoed woman with red hair",
-          "description": ""
+        "id": "1",
+        "image": "./assets/images/gallery/pexels-photo-4123910.webp",
+        "title": "Flower tattoo",
+        "artist": "Miriam F",
+        "model": "Tatiana",
+        "style": "New school style",
+        "alt": "Tattoed woman with red hair",
+        "description": ""
       },
       {
-          "id": "2",
-          "image":"./assets/images/gallery/pexels-photo-3778028.jpeg",
-          "title": "Tattoo in the making",
-          "artist": "Laura O",
-          "model": "Unknown",
-          "style": "Blackwork style",
-          "alt": "Tattooer at work",
-          "description": ""
+        "id": "2",
+        "image": "./assets/images/gallery/pexels-photo-3778028.jpeg",
+        "title": "Tattoo in the making",
+        "artist": "Laura O",
+        "model": "Unknown",
+        "style": "Blackwork style",
+        "alt": "Tattooer at work",
+        "description": ""
       },
       {
-          "id": "3",
-          "image": "./assets/images/gallery/pexels-photo-1848657.webp",
-          "title": "Geometrical flower",
-          "artist": "Miriam F",
-          "model": "Sonia",
-          "style": "Dotwork style",
-          "alt": "Tattooed woman in yellow top",
-          "description": ""
+        "id": "3",
+        "image": "./assets/images/gallery/pexels-photo-1848657.webp",
+        "title": "Geometrical flower",
+        "artist": "Miriam F",
+        "model": "Sonia",
+        "style": "Dotwork style",
+        "alt": "Tattooed woman in yellow top",
+        "description": ""
       },
       {
-          "id": "4",
-          "image": "./assets/images/gallery/pexels-photo-2183131.webp",
-          "title": "Japanese dragon tattoo",
-          "artist": "Ignacio E",
-          "model": "Unknown",
-          "style": "Japanese traditional style",
-          "alt": "Japanese dragon tattoo",
-          "description": ""
+        "id": "4",
+        "image": "./assets/images/gallery/pexels-photo-2183131.webp",
+        "title": "Japanese dragon tattoo",
+        "artist": "Ignacio E",
+        "model": "Unknown",
+        "style": "Japanese traditional style",
+        "alt": "Japanese dragon tattoo",
+        "description": ""
       },
       {
-          "id": "5",
-          "image": "./assets/images/gallery/pexels-photo-3657562.jpeg",
-          "title": "Tattoo in the making",
-          "artist": "Laura O",
-          "model": "Unknown",
-          "style": "Watercolor style",
-          "alt": "Tattoer at work",
-          "description": ""
+        "id": "5",
+        "image": "./assets/images/gallery/pexels-photo-3657562.jpeg",
+        "title": "Tattoo in the making",
+        "artist": "Laura O",
+        "model": "Unknown",
+        "style": "Watercolor style",
+        "alt": "Tattoer at work",
+        "description": ""
       },
       {
-          "id": "6",
-          "image": "./assets/images/gallery/pexels-photo-1784272.webp",
-          "title": "Nature tattoo",
-          "artist": "Miriam F",
-          "model": "Unknown",
-          "style": "Nature style",
-          "alternate-text": "Nature tattoo on arm",
-          "description": ""
+        "id": "6",
+        "image": "./assets/images/gallery/pexels-photo-1784272.webp",
+        "title": "Nature tattoo",
+        "artist": "Miriam F",
+        "model": "Unknown",
+        "style": "Nature style",
+        "alternate-text": "Nature tattoo on arm",
+        "description": ""
       }
-    ],
-   
-    "users": [
     ]
-  }, 
+  },
   "contact": [
     {
-      "userDataForm": {
-        "name": "María Zambrano",
-        "description": "Hola chicos! Me encanta vuestro estudio y he pensado que necesito que me grabéis en la piel uno de vuestros trabajos artísticos. He pensado en algo abstracto ...la Verdad, por ejemplo.  De unos 5 cm en la muñeca izquierda. Muchas gracias!",
-        "email": "Maríamalaga@yahoo.es",
-        "color": "#98dde2",
-        "artist": "Ignacio E"
-      },
+      "name": "María Zambrano",
+      "description": "Hola chicos! Me encanta vuestro estudio y he pensado que necesito que me grabéis en la piel uno de vuestros trabajos artísticos. He pensado en algo abstracto ...la Verdad, por ejemplo.  De unos 5 cm en la muñeca izquierda. Muchas gracias!",
+      "email": "Maríamalaga@yahoo.es",
+      "color": "#98dde2",
+      "artist": "Ignacio E",
       "id": 1
     },
     {
-      "userDataForm": {
-        "name": "Jean Paul",
-        "description": "Hola. Quiero hacerme un tatuaje en el pecho donde ponga: \"El infierno son los otros\". El color es lo de menos. El tamaño os lo dejo a vosotros.",
-        "email": "JuanPaSartre@lanausea.fr",
-        "color": "#ffffff",
-        "artist": ""
-      },
+      "name": "Jean Paul",
+      "description": "Hola. Quiero hacerme un tatuaje en el pecho donde ponga: \"El infierno son los otros\". El color es lo de menos. El tamaño os lo dejo a vosotros.",
+      "email": "JuanPaSartre@lanausea.fr",
+      "color": "#ffffff",
+      "artist": "",
       "id": 2
     },
     {
-      "userDataForm": {
-        "name": "Emily Dickinson",
-        "description": "Hey guys! Quisiera unos motivos botánicos en los pies, porque siempre me ha gustado caminar sobre la hierba. Me hace sentir realmente libre. Unas caparidáceas, quizá?",
-        "email": "Edickinson@flowes.com",
-        "color": "#cf4ee9",
-        "artist": "Laura O"
-      },
+      "name": "Jean Paul",
+      "description": "Hey guys! Quisiera unos motivos botánicos en los pies, porque siempre me ha gustado caminar sobre la hierba. Me hace sentir realmente libre. Unas caparidáceas, quizá?",
+      "email": "Edickinson@flowes.com",
+      "color": "#cf4ee9",
+      "artist": "Laura O",
       "id": 3
-    },
-    {
-      "userDataForm": {
-        "name": "",
-        "email": "ddd",
-        "color": "#c16c6c",
-        "description": "d",
-        "artist": "Ignacio E"
-      },
-      "id": 4
-    },
-    {
-      "userDataForm": {
-        "name": "",
-        "email": "",
-        "color": "#d23232",
-        "description": "eee",
-        "artist": ""
-      },
-      "id": 5
     }
   ],
   "users": []
