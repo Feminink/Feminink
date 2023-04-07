@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // IMPORT STYLES
 import "./RegistrationComponent.scss";
-// IMPORT FORMIK
+// IMPORTS FROM FORMIK
 import { useFormik } from "formik";
+// IMPORTS FROM REACT-REDUX
+import { useDispatch, useSelector } from "react-redux";
+// IMPORT FROM STORE
+import { getInfo } from "../../store/info/actions";
+import { doRegistration } from "../../store/gallery/actions";
 
 const RegistrationComponent = () => {
+  const dispatch = useDispatch();
+  const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
+
+  useEffect(() => {
+    dispatch(getInfo());
+  }, []);
+
+  const sendRegistration = () => {
+    dispatch(
+      doRegistration({
+        name: formik.values.name,
+        surname: formik.values.surname,
+        birthday: formik.values.birthday,
+        email: formik.values.email,
+        password: formik.values.password,
+        repassword: formik.values.repassword,
+      })
+    );
+  };
+
   const validate = (values) => {
     const errors = {};
 
@@ -17,8 +42,16 @@ const RegistrationComponent = () => {
       errors.surname = "You should add at least one character";
     }
 
+    if (!values.birthday) {
+      errors.name = "Please select your date of birth";
+    }
+
     if (!values.email) {
-      errors.email = "You should add at least one character";
+      errors.email = "Insert an email address";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+      errors.email = "Invalid email address";
     }
 
     if (!values.password) {
@@ -43,7 +76,6 @@ const RegistrationComponent = () => {
       surname: "",
       birthday: "",
       email: "",
-      telephone: "",
       password: "",
       repassword: "",
     },
@@ -62,7 +94,7 @@ const RegistrationComponent = () => {
             name="name"
             type="text"
             placeholder="Name"
-            value={formik.values.name}
+            value={formik.values.surname}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
@@ -106,18 +138,6 @@ const RegistrationComponent = () => {
             <div className="error">{formik.errors.email}</div>
           ) : null}
           <input
-            id="telephone"
-            name="telephone"
-            type="telephone"
-            placeholder="Telephone"
-            value={formik.values.telephone}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          {formik.touched.telephone && formik.errors.telephone ? (
-            <div className="error">{formik.errors.telephone}</div>
-          ) : null}
-          <input
             id="password"
             name="password"
             type="password"
@@ -142,7 +162,9 @@ const RegistrationComponent = () => {
             <div className="error">{formik.errors.repassword}</div>
           ) : null}
         </fieldset>
-        <button type="submit">Submit</button>
+        <button type="submit" onSubmit={sendRegistration}>
+          Submit
+        </button>
       </form>
     </div>
   );

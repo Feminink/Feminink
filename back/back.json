@@ -212,18 +212,9 @@
         "artist": "Laura O",
         "id": 3
       }
-    ],
-    "users": [
-      {
-        "name": "",
-        "surname": "",
-        "email": "",
-        "telephone": "",
-        "birthday": "",
-        "order": [
-          "mensaje1"
-        ]
-      }
     ]
-  }
+  },
+  "users": [
+    
+  ]
 }
