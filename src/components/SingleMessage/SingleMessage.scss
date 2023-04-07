@@ -1,0 +1,47 @@
+.div__single{
+
+    background-color: rgb(253, 253, 253);
+    width: 90%;
+    margin: 0 auto;
+    padding: 4%;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+   
+}
+.div__presentation{
+    display: flex;
+    text-align:left;
+    margin-bottom: 2%;
+    background-color: rgba(249, 191, 57, 0.794);
+    justify-content: center;
+   &__h1{
+    padding: 1% 0 1%;
+   
+
+   }
+}
+.div__img{
+    display:flex;
+     width: 20%;
+     justify-content: center;
+     margin: 5%;
+    &__image{
+        
+        max-width: 100%;
+        padding: 2%;
+        margin-left: 2%;
+         mix-blend-mode:multiply;
+    }
+   
+}
+.div__contact{
+    display:flex;
+    padding: 5%;
+
+}
+.link{
+    text-decoration: none;
+    color: black
+    
+}
