@@ -186,8 +186,9 @@
         "alternate-text": "Nature tattoo on arm",
         "description": ""
       }
-    ]
-  },
+
+    ],
+
   "contact": [
     {
       "name": "María Zambrano",
@@ -201,14 +202,17 @@
       "name": "Jean Paul",
       "description": "Hola. Quiero hacerme un tatuaje en el pecho donde ponga: \"El infierno son los otros\". El color es lo de menos. El tamaño os lo dejo a vosotros.",
       "email": "JuanPaSartre@lanausea.fr",
-      "color": "#ffffff",
-      "artist": "",
+
+      "color": "#65ee18",
+      "artist": "Miriam F",
+
+
       "id": 2
     },
     {
       "name": "Jean Paul",
       "description": "Hey guys! Quisiera unos motivos botánicos en los pies, porque siempre me ha gustado caminar sobre la hierba. Me hace sentir realmente libre. Unas caparidáceas, quizá?",
-      "email": "Edickinson@flowes.com",
+      "email": "Edickinson@flowers.com",
       "color": "#cf4ee9",
       "artist": "Laura O",
       "id": 3

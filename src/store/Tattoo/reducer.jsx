@@ -1,16 +1,15 @@
 import {
-    GET_INSPIRATION, GET_INSPIRATION_OK, GET_INSPIRATION_FAIL,
     DO_CONTACT, DO_CONTACT_OK, DO_CONTACT_FAIL,
-    GET_ARTISTS, GET_ARTISTS_OK, GET_ARTISTS_FAIL
+    GET_MESSAGES, GET_MESSAGES_OK, GET_MESSAGES_FAIL,
+    GET_SINGLE_MESSAGE, GET_SINGLE_MESSAGE_OK, GET_SINGLE_MESSAGE_FAIL
 } from './actionTypes';
 
 const firstState = {
-    inspiration: [],
-    loadingInspiration: false,
     form: {},
+    messages: [],
+    message: {},
+    loadingMessages: false,
     loadingForm: false,
-    artists: [],
-    loadingArtists:false,
     error: {
         message: "",
       },
@@ -19,15 +18,6 @@ const firstState = {
 export default function TattooReducer(state = firstState, action){
     switch(action.type){
 
-        case GET_INSPIRATION:
-        state = {...state, loadingInspiration:true}
-        break
-        case GET_INSPIRATION_OK:
-        state = {...state, loadingInspiration: false, inspiration: action.payload}
-        break 
-        case GET_INSPIRATION_FAIL:
-        state = {...state, loadingInspiration:false, error: {message: action.payload}}
-        break
 
         case DO_CONTACT:
         state = {...state, loadingForm:true} 
@@ -39,16 +29,29 @@ export default function TattooReducer(state = firstState, action){
         state = {...state, loadingForm: false, form: {}, error: {message: action.payload}}
         break
 
-        case GET_ARTISTS:
-        state = {...state, loadingArtists:true}
+        case GET_MESSAGES:
+        state = {...state, loadingMessages: true}
         break
-        case GET_ARTISTS_OK:
-        state = {...state, loadingArtists:false, artists: action.payload} 
+        case GET_MESSAGES_OK:
+        state = {...state, loadingMessages: false, messages: action.payload}
+        break   
+        case GET_MESSAGES_FAIL:
+        state = {...state, loadingMessages: true, messages: [], error: {message: action.payload}}
         break
-        case GET_ARTISTS_FAIL:
-        state = {...state, loadingArtists:false, artists:[], error: {message:action.payload}}
+
+    
+        case GET_SINGLE_MESSAGE: {
+        state = {...state, loadingMessages: true}
         break
-        
+        }
+        case GET_SINGLE_MESSAGE_OK: {
+        state = {...state, loadingMessages: false, message:action.payload}
+        break
+        }
+        case GET_SINGLE_MESSAGE_FAIL: {
+        state = {...state, loadingMessages: false, error: {message: action.payload}}
+        break
+        }
         default:
             break
 
