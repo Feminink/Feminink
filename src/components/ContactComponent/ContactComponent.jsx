@@ -15,7 +15,6 @@ import { useFormik } from 'formik';
 
 const ContactComponent = () => { 
   const dispatch = useDispatch();
-  const {info, loadinginfo} = useSelector((state)=> state.InfoReducer);
 
   useEffect(()=>{
     dispatch(getInfo())
@@ -24,6 +23,7 @@ const ContactComponent = () => {
   const sendForm = () =>{
     dispatch(doContact())
   }
+const {info, loadinginfo} = useSelector((state)=> state.InfoReducer)
 
 
   function validate (values) {
@@ -50,7 +50,7 @@ const ContactComponent = () => {
     }
     return errors;
     
-  }
+  };
 
   const formik = useFormik({
     initial: {
@@ -76,40 +76,40 @@ const ContactComponent = () => {
            <h1>Formulario de contacto: </h1>
              <fieldset className="form__container" >
                <label>Nombre </label>
-               <input name="name" type="text" value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder= "Escribe tu nombre" id="name" required></input>
+               <input name="name" type="text" value={formik.values.name} onChange={formik.handleChange} placeholder= "Escribe tu nombre" required></input>
              </fieldset>
  
              <fieldset className="form__container">
                <label>Email </label>
-               <input name="email" type="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder= "Email de contacto" id="email" required></input>
+               <input name="email" type="email" value={formik.values.email} onChange={formik.handleChange} placeholder= "Email de contacto" required></input>
                {formik.touched.email && formik.errors.email ? (
                      <div className="error">{formik.errors.email}</div>
                    ) : null}
-             </fieldset>
+               </fieldset>
    
              <fieldset className="form__container">
                 <label>Descripción del tatuaje </label>
-                <textarea  name="description" type="text" value={formik.values.description} onChange={formik.handleChange} onBlur={formik.handleBlur} id="description" placeholder= "Breve descripción del diseño" required></textarea>
+                <textarea  name="description" type="text" value={formik.values.description} onChange={formik.handleChange} placeholder= "Breve descripción del diseño" required></textarea>
              </fieldset>
  
              <fieldset className="form__container">
                    <label>Artista</label>
-                      <select name="artist" value={formik.values.artist} onChange={formik.handleChange} onBlur={formik.handleBlur} id="artist" required>
+                      <select name="artist" value={formik.values.artist} onChange={formik.handleChange} required>
                          {info && info.artists?.map((artist) => {
                              return (
                                
-                               <option name="artist" key={artist.id} value={formik.values.artist} onBlur={formik.handleBlur}> {artist.name} </option>);
+                               <option name="artist" key={artist.id} value={formik.values.artist}> {artist.name} </option>);
                            })}
                    </select>
              </fieldset>
  
              <fieldset className="form__container">
                 <label>Color base </label>
-                <input name="color" type="color" value={formik.values.color} onChange={formik.handleChange} onBlur={formik.handleBlur} id="color" required></input>
+                <input name="color" type="color" value={formik.values.color} onChange={formik.handleChange} required></input>
              </fieldset>
-             <button type="submit" onClick={sendForm}> Enviar </button>
  
            </form>
+           <button type="submit" onClick={sendForm}> Enviar </button>
         </section>)
  
   
