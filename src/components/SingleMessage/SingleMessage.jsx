@@ -26,7 +26,7 @@ const sentence1 = ", así que vas a hacerle uno muy cool a "
                         <h1 className='div__presentation__h1'>{sentence} {message.artist}{sentence1}{message.name}!</h1>
                      </div> 
                        <div className="div__single">
-                          <section key={message.id} className='section__messages__div'> 
+                          <section key={message.id} className='section__messages__div1'> 
                                <h2>De: {message.name}</h2>
                                <h3>Para: {message.artist}</h3>
                                <h3 className="" > {message.email}</h3>
