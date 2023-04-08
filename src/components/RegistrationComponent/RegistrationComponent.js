@@ -7,7 +7,10 @@ import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 // IMPORT FROM STORE
 import { getUsers } from "../../store/gallery/actions";
-import { doRegistration } from "../../store/gallery/actions";
+import { doRegistration, doRegistration2 } from "../../store/gallery/actions";
+import { Link, Navigate } from "react-router-dom";
+// IMPORT YUP
+import * as Yup from "yup";
 
 const RegistrationComponent = () => {
   const { user } = useSelector((state) => state.GalleryReducer);
@@ -16,9 +19,9 @@ const RegistrationComponent = () => {
   const sendRegistration = () => {
     if (
       formik.values.name &&
-      formik.values.email &&
-      user !== formik.values.email &&
+      formik.values.surname &&
       formik.values.birthday &&
+      formik.values.email &&
       formik.values.password &&
       formik.values.repassword
     ) {
@@ -60,19 +63,15 @@ const RegistrationComponent = () => {
 
     // ERROR EMAIL
     if (!values.email) {
-      errors.email = "Required";
+      errors.email = "Please select an email address";
     } else if (
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
     ) {
       errors.email = "Invalid email address";
-    } else if (user === formik.values.email) {
-      errors.email = "Email is already in use";
     }
 
     // ERROR PASSWORD
-    if (!values.password) {
-      errors.password = "Required";
-    } else if (values.password.length < 9) {
+    if (values.password.length < 9) {
       errors.password = "Must be 9 characters or more";
     } else if (values.password === "12345678") {
       errors.password = "Cannot be 12345678 !!!";
@@ -82,6 +81,7 @@ const RegistrationComponent = () => {
     if (values.repassword !== values.password) {
       errors.repassword = "Passwords must match";
     }
+
     return errors;
   };
 
@@ -102,7 +102,7 @@ const RegistrationComponent = () => {
   return (
     <div className="container flex bg">
       <h1>Register:</h1>
-      <form className="form flex" onSubmit={formik.handleSubmit} noValidate>
+      <form className="form flex" onSubmit={formik.handleSubmit}>
         <fieldset className="container flex">
           <label>Name</label>
           <input
@@ -190,6 +190,9 @@ const RegistrationComponent = () => {
             <div className="error">{formik.errors.repassword}</div>
           ) : null}
         </fieldset>
+        <p>
+          Already have an account? <Link to="/login ">Login here</Link>
+        </p>
         <button type="submit" onClick={sendRegistration}>
           Submit
         </button>

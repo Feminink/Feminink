@@ -49,9 +49,9 @@ const LoginComponent = () => {
       <button className="loginButton" onClick={onClickLogin}>
         Login
       </button>
-      <h3>
+      <p>
         Not a member yet? <Link to="/signup">Register now</Link>
-      </h3>
+      </p>
     </div>
   );
 };

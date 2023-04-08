@@ -13,6 +13,7 @@ import {
 
 const backGallery = "http://localhost:3000/gallery";
 const backUsers = "http://localhost:3000/users";
+const backAuth = "http://localhost:3000/users";
 
 export function actionGetGallery() {
   return {
@@ -65,11 +66,27 @@ export function actionDoRegistrationFail(error) {
   };
 }
 
+// FUNCTION TO POST NEW USER DETAILS TO BACK
 export function doRegistration(registrationForm) {
   return async (dispatch) => {
     try {
       dispatch(actionDoRegistration(registrationForm));
       const response = await axios.post(backUsers, registrationForm);
+      console.log(response, "res");
+      dispatch(actionDoRegistrationOk(response.data));
+      console.log(response.data, "res.data");
+    } catch (error) {
+      dispatch(actionDoRegistrationFail(error));
+    }
+  };
+}
+
+// FUNCTION TO POST NEW USER DETAILS TO BACK-AUTH
+export function doRegistration2(registrationForm) {
+  return async (dispatch) => {
+    try {
+      dispatch(actionDoRegistration(registrationForm));
+      const response = await axios.post(backAuth, registrationForm);
       console.log(response, "res");
       dispatch(actionDoRegistrationOk(response.data));
       console.log(response.data, "res.data");
