@@ -13,12 +13,12 @@ import PropTypes from "prop-types";
 
 const LoginComponent = () => {
   const { user } = useSelector((state) => state.AuthReducer);
-  const [username, setUsername] = useState("hbingley1");
+  const [email, setEmail] = useState("hbingley1");
   const [password, setPassword] = useState("CQutx25i8r");
   const dispatch = useDispatch();
 
   function onClickLogin() {
-    dispatch(doLogin({ username: username, password: password }));
+    dispatch(doLogin({ email: email, password: password }));
   }
 
   if (user && user.id) {
@@ -28,12 +28,12 @@ const LoginComponent = () => {
     <div className="container">
       <form>
         <fieldset>
-          <label>Username</label>
+          <label>Email</label>
           <input
-            type="text"
-            placeholder="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            type="email"
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           ></input>
         </fieldset>
         <fieldset>
@@ -49,9 +49,9 @@ const LoginComponent = () => {
       <button className="loginButton" onClick={onClickLogin}>
         Login
       </button>
-      <h3>
-        Not a member yet? <Link to="/registration">Register now</Link>
-      </h3>
+      <p>
+        Not a member yet? <Link to="/signup">Register now</Link>
+      </p>
     </div>
   );
 };

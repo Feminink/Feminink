@@ -1,0 +1,29 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "name": "Laura O",
+      "username": "LauraW",
+      "password": "randompwd",
+      "email": "laurao@mail.com"
+    },
+    {
+      "id": 2,
+      "name": "Ignacio E",
+      "username": "IgnacioW",
+      "password": "randompwd1",
+      "email": "ignacio@mail.com"
+    },
+    {
+      "id": 3,
+      "name": "Miriam F",
+      "username": "MiriamW",
+      "password": "randompwd2",
+      "email": "miriamf@mail.com"
+    }
+   
+  ],
+  "registered-users": [
+
+  ]
+}
