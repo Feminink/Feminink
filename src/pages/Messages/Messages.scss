@@ -1,26 +1,54 @@
 .section__messages{
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 90%;
     margin: 0 auto;
     gap: 2em;
     margin-top: 1%;
-   padding: 1%;
+    padding: 1%;
+    background-image: url(../../assets/images/tentaculo.jpeg);  
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+    background-position: 50%;
+    background-size: contain;
     &__div{
         display:flex;
-        width: 70%;
+        width: 80%;
         padding: 1%;
         flex-direction: column;
-        // border: 2px solid rgb(31, 31, 30);
         box-shadow: 0px 5px 5px  #abaaa4;
+        
+       &:hover{
+        opacity: 0.5;
+        scale: 1.05;
+        animation-name: move;
+        animation-duration: 1s;
+        
+       }
+       
         &__color{
             padding: 1%;
             display: none;
         }
     }
 }
-
-
+@keyframes move  {
+    from {background-color: rgba(255, 179, 0, 0.851);}
+    to {background-color: rgb(255, 255, 255);}
+  }
+.wrapper{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.counter{
+   padding: 2%;
+   margin-left: 4%;
+   
+    &__icon{
+        color:rgb(244, 175, 70)
+    }
+}
 .button{
     width: 10%;
     border-radius: 5px;
@@ -33,5 +61,11 @@
     display: none;
     &-hidden{
         display: block;
+    }
+}
+.div__image{
+    display:flex;
+    &__image{
+        mix-blend-mode: multiply;
     }
 }

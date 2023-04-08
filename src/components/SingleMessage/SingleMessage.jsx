@@ -11,34 +11,32 @@ import { faPalette} from '@fortawesome/free-solid-svg-icons';
 
 //IMPORT LINK
 import { Link } from 'react-router-dom';
-import feminink from '../../assets/images/feminink.png';
-
+import mermaidn from '../../assets/images/mermaidn.png'
 
 const SingleMessage = () => { 
 
   
 const {message}= useSelector((state)=>state.TattooReducer)
 
-const sentence = "Los tatuajes no se hacen solos"
-const sentence1 = ", así que vamos a hacerle uno muy cool a "
+const sentence = "Tus tatuajes molan un montón"
+const sentence1 = ", así que vas a hacerle uno muy cool a "
  return (  <> 
 
                      <div className='div__presentation'> 
                         <h1 className='div__presentation__h1'>{sentence} {message.artist}{sentence1}{message.name}!</h1>
                      </div> 
                        <div className="div__single">
-                          <section key={message.id} className='section__messages__div'> 
+                          <section key={message.id} className='section__messages__div1'> 
                                <h2>De: {message.name}</h2>
                                <h3>Para: {message.artist}</h3>
                                <h3 className="" > {message.email}</h3>
                                <h3 className="" > {message.description}</h3>
-                               <h3  className="" style={{color: message.color}}> <FontAwesomeIcon icon={faPalette} /> {message.color} </h3>
+                               <h3  className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h3>
                                <Link to="/messages">Volver</Link>
                           </section>
 
                        <div className='div__img'>
-                            <img src={feminink} className="div__img__image" alt="feminink"/>
-                            {/* <img className='div__img__image' src="https://cdn.dribbble.com/users/264162/screenshots/16408392/media/35832ee7e8b9f16b1d940fc3fb316b66.png?compress=1&resize=400x300" alt="mermaid"></img> */}
+                            <img src={mermaidn} className="div__img__image" alt="mermaid"/>
                        </div>
                      </div>
                      <div className='div__contact'>
