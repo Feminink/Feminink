@@ -1,25 +1,25 @@
-.ourteam {
+.gallery {
     
     &__ul {
         display: flex;
         justify-content: space-between;
-        flex-wrap: nowrap; 
+        flex-wrap: wrap;
         gap: 2em;
-
-        .ourteam__li {
+  
+        .gallery__li {
             display: block;
-            width: calc(33.33% - 2em);
+            width: calc(25% - 2em);
             position: relative;
-
+  
             .image-container {
                 position: relative;
-      
+  
                 img {
                     display: block;
                     width: 100%;
                     height: auto;
                 }
-      
+  
                 .overlay {
                     position: absolute;
                     bottom: 0;
@@ -30,7 +30,7 @@
                     width: 100%;
                     height: 0;
                     transition: .5s ease;
-      
+  
                     .text {
                         white-space: nowrap; 
                         color: white;
@@ -42,13 +42,13 @@
                         -ms-transform: translate(-50%, -50%);
                     }
                 }
-      
+  
                 &:hover .overlay {
                     height: 100%;
                 }
             }
-
-            .ourteam__details {
+  
+            .gallery__details {
                 padding: 5px;
                 background-color: black;
                 color: white;

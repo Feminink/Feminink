@@ -92,7 +92,7 @@
         "mail": "laurao@mail.com",
         "description": "",
         "noway": [
-          "Símbolo del infinito, ",
+          "Símbolo del infinito",
           "Mariposas"
         ]
       },
@@ -106,7 +106,7 @@
         "mail": "ignacio@mail.com",
         "description": "",
         "noway": [
-          "Campanillas, ",
+          "Campanillas",
           "Tribales canis"
         ]
       },
@@ -120,7 +120,7 @@
         "mail": "miriamf@mail.com",
         "description": "",
         "noway": [
-          "Delfines en el tobillo, ",
+          "Delfines en el tobillo",
           "Estrellitas"
         ]
       }
@@ -131,7 +131,7 @@
         "image": "./assets/images/gallery/pexels-photo-4123910.webp",
         "title": "Flower tattoo",
         "artist": "Miriam F",
-        "model": "Tatiana",
+        "model": "Tatiana Parker",
         "style": "New school style",
         "alt": "Tattoed woman with red hair",
         "description": ""
@@ -141,7 +141,7 @@
         "image": "./assets/images/gallery/pexels-photo-3778028.jpeg",
         "title": "Tattoo in the making",
         "artist": "Laura O",
-        "model": "Unknown",
+        "model": "Susana White",
         "style": "Blackwork style",
         "alt": "Tattooer at work",
         "description": ""
@@ -151,7 +151,7 @@
         "image": "./assets/images/gallery/pexels-photo-1848657.webp",
         "title": "Geometrical flower",
         "artist": "Miriam F",
-        "model": "Sonia",
+        "model": "Sonia García",
         "style": "Dotwork style",
         "alt": "Tattooed woman in yellow top",
         "description": ""
@@ -161,17 +161,17 @@
         "image": "./assets/images/gallery/pexels-photo-2183131.webp",
         "title": "Japanese dragon tattoo",
         "artist": "Ignacio E",
-        "model": "Unknown",
+        "model": "Shen Tao",
         "style": "Japanese traditional style",
         "alt": "Japanese dragon tattoo",
         "description": ""
       },
       {
         "id": "5",
-        "image": "./assets/images/gallery/pexels-photo-3657562.jpeg",
+        "image": "./assets/images/gallery/pexels-brett-sayles-2865412.webp",
         "title": "Tattoo in the making",
         "artist": "Laura O",
-        "model": "Unknown",
+        "model": "Laura Hawkins",
         "style": "Watercolor style",
         "alt": "Tattoer at work",
         "description": ""
@@ -181,9 +181,69 @@
         "image": "./assets/images/gallery/pexels-photo-1784272.webp",
         "title": "Nature tattoo",
         "artist": "Miriam F",
-        "model": "Unknown",
+        "model": "Peter Smith",
         "style": "Nature style",
         "alternate-text": "Nature tattoo on arm",
+        "description": ""
+      },
+      {
+        "id": "7",
+        "image": "./assets/images/gallery/pexels-cottonbro-studio-5320148.webp",
+        "title": "Oldschool rose tattoo",
+        "artist": "Laura O",
+        "model": "Bryan Fury",
+        "style": "Oldschool style",
+        "alt": "Tattooed man with rose tattoo",
+        "description": ""
+      },
+      {
+        "id": "8",
+        "image": "./assets/images/gallery/pexels-cottonbro-studio-5235789.webp",
+        "title": "Skull tattoo",
+        "artist": "Ignacio E",
+        "model": "Pedro González",
+        "style": "Black and grey style",
+        "alt": "Tattooed man with skull tattoo",
+        "description": ""
+      },
+      {
+        "id": "9",
+        "image": "./assets/images/gallery/pexels-spencer-selover-428320.webp",
+        "title": "Fox tattoo",
+        "artist": "Miriam F",
+        "model": "Karla Johnson",
+        "style": "Graffiti style",
+        "alt": "Tattooed woman with fox tattoo",
+        "description": ""
+      },
+      {
+        "id": "10",
+        "image": "./assets/images/gallery/pexels-vjapratama-1003842.webp",
+        "title": "Tattoo on the face",
+        "artist": "Laura O",
+        "model": "Pedro Méndez",
+        "style": "Gothic style",
+        "alt": "Tattooed man with gothic tattoo",
+        "description": ""
+      },
+      {
+        "id": "11",
+        "image": "./assets/images/gallery/pexels-matheus-ferrero-2123061.webp",
+        "title": "Realistic tattoo left arm",
+        "artist": "Miriam F",
+        "model": "Mac Miller",
+        "style": "Realistic tattoo",
+        "alt": "Tattooed man with realistic tattoo",
+        "description": ""
+      },
+      {
+        "id": "12",
+        "image": "./assets/images/gallery/pexels-photo-3657562.jpeg",
+        "title": "Tattoo in the making",
+        "artist": "Ignacio E",
+        "model": "Laura Judge",
+        "style": "Japanese traditional style",
+        "alt": "Tattooed woman with dragon tattoo",
         "description": ""
       }
 
