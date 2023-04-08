@@ -246,7 +246,6 @@
         "alt": "Tattooed woman with dragon tattoo",
         "description": ""
       }
-
     ]
   },
   "contact": [
@@ -262,11 +261,8 @@
       "name": "Jean Paul",
       "description": "Hola. Quiero hacerme un tatuaje en el pecho donde ponga: \"El infierno son los otros\". El color es lo de menos. El tamaño os lo dejo a vosotros.",
       "email": "JuanPaSartre@lanausea.fr",
-
       "color": "#65ee18",
       "artist": "Miriam F",
-
-
       "id": 2
     },
     {
