@@ -33,6 +33,11 @@ const RegistrationComponent = () => {
           email: formik.values.email,
           password: formik.values.password,
           repassword: formik.values.repassword,
+        }),
+        doRegistration2({
+          email: formik.values.email,
+          password: formik.values.password,
+          repassword: formik.values.repassword,
         })
       );
     }

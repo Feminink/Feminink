@@ -215,50 +215,6 @@
     ]
   },
   "users": [
-    {
-      "name": "Blabla",
-      "surname": "Blabla",
-      "birthday": "2023-04-22",
-      "email": "laura.origa@gmail.com",
-      "password": "helohelohelo",
-      "repassword": "helohelohelo",
-      "id": 1
-    },
-    {
-      "name": "Lau",
-      "surname": "Blabla",
-      "birthday": "2023-04-19",
-      "email": "laura.origa@gmail.com",
-      "password": "HELOHELOHELO",
-      "repassword": "HELOHELOHELO",
-      "id": 2
-    },
-    {
-      "name": "Lau",
-      "surname": "Blabla",
-      "birthday": "2023-04-19",
-      "email": "laura.origa@gmail.com",
-      "password": "HELOHELOHELO",
-      "repassword": "HELOHELOHELO",
-      "id": 3
-    },
-    {
-      "name": "Lau",
-      "surname": "Blabla",
-      "birthday": "2023-04-19",
-      "email": "laura.origa@gmail.com",
-      "password": "HELOHELOHELO",
-      "repassword": "HELOHELOHELO",
-      "id": 4
-    },
-    {
-      "name": "Lau",
-      "surname": "Blabla",
-      "birthday": "2023-04-12",
-      "email": "laura.origa@gmail.com",
-      "password": "the password",
-      "repassword": "the password",
-      "id": 5
-    }
+    
   ]
 }

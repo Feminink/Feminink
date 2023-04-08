@@ -13,7 +13,7 @@ import {
 
 const backGallery = "http://localhost:3000/gallery";
 const backUsers = "http://localhost:3000/users";
-const backAuth = "http://localhost:3000/users";
+const backAuth = "http://localhost:3000/registered-users";
 
 export function actionGetGallery() {
   return {
