@@ -51,7 +51,7 @@ if (loadingMessages){
    
     {messages.map((message)=>{
         return (
-              <div key={message.id} className='section__messages__div'> 
+              <div  key={message.id} className='section__messages__div'> 
                    <h2>De: {message.name}</h2>
                    <h3>Para: {message.artist}</h3>
                    <h3  className="h3__hidden" > {message.email}</h3>
