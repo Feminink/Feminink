@@ -20,7 +20,7 @@ const HeaderComponent = () => {
           <div className='header__logo'>
             <Link className='header-logo__link link' to='/'>
               <img src={logo} className='header__logo img' alt='logo'/>
-            </Link>
+            </Link>header__logo img
           </div>
           <NavigationComponent></NavigationComponent>
         </nav>

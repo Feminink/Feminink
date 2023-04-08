@@ -11,6 +11,7 @@ import { faPalette} from '@fortawesome/free-solid-svg-icons';
 
 //IMPORT LINK
 import { Link } from 'react-router-dom';
+import feminink from '../../assets/images/feminink.png';
 
 
 const SingleMessage = () => { 
@@ -36,7 +37,8 @@ const sentence1 = ", así que vamos a hacerle uno muy cool a "
                           </section>
 
                        <div className='div__img'>
-                            <img className='div__img__image' src="https://cdn.dribbble.com/users/264162/screenshots/16408392/media/35832ee7e8b9f16b1d940fc3fb316b66.png?compress=1&resize=400x300" alt="mermaid"></img>
+                            <img src={feminink} className="div__img__image" alt="feminink"/>
+                            {/* <img className='div__img__image' src="https://cdn.dribbble.com/users/264162/screenshots/16408392/media/35832ee7e8b9f16b1d940fc3fb316b66.png?compress=1&resize=400x300" alt="mermaid"></img> */}
                        </div>
                      </div>
                      <div className='div__contact'>
