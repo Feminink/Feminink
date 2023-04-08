@@ -7,15 +7,13 @@ import { useDispatch, useSelector } from "react-redux";
 import "./OurTeamComponent.scss";
 
 const OurTeamComponent = () => {
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
   const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
 
   useEffect(() => {
     dispatch(getInfo());
   }, []);
-
-  console.log(info);
 
   if (loadingInfo) {
     return (
@@ -32,13 +30,17 @@ const OurTeamComponent = () => {
         {info && info.admins && info.admins.map((member) => {
           return (
             <li className="ourteam__li li" key={member.id}>
-              <img src={member.image} alt={member.alt} />
-              <div className="card__details">
-                <h4>Name: {member.name}</h4>
-                <h4>Artist: {member.username}</h4>
-                <h4>Description: {member.model}</h4>
-                <h4>No tatuo: {member.noway}</h4>
-                <hr />
+              <div className="image-container">
+                <img src={member.image} alt={member.alt} />
+                <div className="overlay">
+                  <div className="text">
+                    <p>{member.name} / {member.username}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="ourteam__details">
+                <h5>Name: {member.name} / {member.username}</h5>
+                <h5>No tatuo: {member.noway[0]}, {member.noway[1]}</h5>
               </div>
             </li>
           );
