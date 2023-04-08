@@ -1,6 +1,6 @@
 .div__single{
 
-    background-color: rgb(253, 253, 253);
+    background-color: rgb(255, 255, 255);
     width: 90%;
     margin: 0 auto;
     padding: 4%;
@@ -8,16 +8,17 @@
     justify-content: center;
     flex-direction: row;
    
+
 }
 .div__presentation{
     display: flex;
-    text-align:left;
+    text-align:center;
     margin-bottom: 2%;
+    padding: 1%;
     background-color: rgba(249, 191, 57, 0.794);
     justify-content: center;
    &__h1{
     padding: 1% 0 1%;
-   
 
    }
 }
@@ -28,10 +29,13 @@
      margin: 5%;
     &__image{
         
-        max-width: 100%;
+        max-width: 80%;
+        overflow: hidden;
         padding: 2%;
-        margin-left: 2%;
-        //  mix-blend-mode:multiply;
+        right: 70%;
+        opacity: 0.9;
+        
+        
     }
    
 }
@@ -44,4 +48,9 @@
     text-decoration: none;
     color: black
     
+}
+.section__messages__div{
+    display:flex;
+    justify-content: center;
+    padding: 2%;
 }
