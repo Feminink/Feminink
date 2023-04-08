@@ -20,32 +20,8 @@
       "username": "MiriamW",
       "password": "randompwd2",
       "mail": "miriamf@mail.com"
-    },
-    {
-      "username": "LauraW",
-      "password": "randompwd",
-      "id": 4
-    },
-    {
-      "username": "LauraW",
-      "password": "randompwd",
-      "id": 5
-    },
-    {
-      "username": "LauraW",
-      "password": "randompwd",
-      "id": 6
-    },
-    {
-      "username": "LauraW",
-      "password": "randompwd",
-      "id": 7
-    },
-    {
-      "username": "LauraW",
-      "password": "randompwd",
-      "id": 8
     }
+   
   ],
   "users": []
 }
