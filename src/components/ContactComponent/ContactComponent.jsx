@@ -12,6 +12,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 //IMPORT HOOK FORMIK
 import { useFormik } from 'formik';
+
+
+
 const ContactComponent = () => {
 
   const dispatch = useDispatch();
@@ -43,7 +46,6 @@ const ContactComponent = () => {
 
   function validate(values) {
     const errors = {};
-
     // ERROR NAME
     if (!values.name) {
       errors.name = 'Required';
@@ -52,7 +54,6 @@ const ContactComponent = () => {
     } else if (values.name) {
       errors.name = `Wild ${values.name} for us`;
     }
-
     // ERROR EMAIL
     if (!values.email) {
       errors.email = 'Required';
@@ -61,7 +62,6 @@ const ContactComponent = () => {
     } 
       
     
-
     // ERROR DESCRIPTION
     if (!values.description) {
       errors.description = 'Required';
@@ -85,12 +85,17 @@ const ContactComponent = () => {
     },
   });
 
+
+
+
+
   if(loadinginfo){
     return(
       <p>"Loading..."</p>
     )
   }
         
+  
   return (
     <section className='section__login section container'>
    
@@ -133,14 +138,16 @@ const ContactComponent = () => {
                <span className='form__line'></span>
              </fieldset>
              <fieldset className="form__group">
-               <input   className='form__color' name="color" type="color" value={formik.values.color}  required></input>
-               <label className='form__label'>Color base </label>
-               <span className='form__line'></span>
+                <input   className='form__color' name="color" type="color" value={formik.values.color}  required></input>
+                <label className='form__label'>Color base </label>
+                <span className='form__line'></span>
              </fieldset>
-       <button className='form__submit' type="submit" onClick={sendForm} > Enviar </button>
-     </div>
 
-   </form>                  
+             <button className='form__submit' type="submit" onClick={sendForm} > Enviar </button>
+          </div>
+   </form>
+   
+
     </section>
   );
 };
