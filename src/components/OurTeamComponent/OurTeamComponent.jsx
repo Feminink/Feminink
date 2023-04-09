@@ -25,7 +25,7 @@ const OurTeamComponent = () => {
 
   return (
     <section className="section__ourteam container">
-      <h2>Our Team</h2>
+      <h2>Meet our tattoo artist</h2>
       <ul className="ourteam__ul ul">
         {info && info.admins && info.admins.map((member) => {
           return (
