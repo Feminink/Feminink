@@ -272,6 +272,14 @@
       "color": "#cf4ee9",
       "artist": "Laura O",
       "id": 3
+    },
+    {
+      "name": "dsss",
+      "email": "sss@mail.com",
+      "description": "sss",
+      "artist": "Ignacio E",
+      "color": "#fd3f3f",
+      "id": 4
     }
   ],
   "users": []
