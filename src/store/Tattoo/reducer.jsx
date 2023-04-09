@@ -1,7 +1,8 @@
 import {
     DO_CONTACT, DO_CONTACT_OK, DO_CONTACT_FAIL,
     GET_MESSAGES, GET_MESSAGES_OK, GET_MESSAGES_FAIL,
-    GET_SINGLE_MESSAGE, GET_SINGLE_MESSAGE_OK, GET_SINGLE_MESSAGE_FAIL
+    GET_SINGLE_MESSAGE, GET_SINGLE_MESSAGE_OK, GET_SINGLE_MESSAGE_FAIL,
+    DELETE_MESSAGE,DELETE_MESSAGE_OK, DELETE_MESSAGE_FAIL
 } from './actionTypes';
 
 const firstState = {
@@ -52,6 +53,21 @@ export default function TattooReducer(state = firstState, action){
         state = {...state, loadingMessages: false, error: {message: action.payload}}
         break
         }
+
+        
+        case DELETE_MESSAGE: {
+        state = {...state}
+        break
+        }
+        case DELETE_MESSAGE_OK: {
+        state = {...state, message: action.payload}
+        break
+        }
+        case DELETE_MESSAGE_FAIL: {
+        state = {...state, message: {}, error:{message: action.payload}}
+        break
+        }
+
         default:
             break
 

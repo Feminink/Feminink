@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import  './SingleMessage.scss';
 
 //IMPORT USESELECTOR
-import {useSelector } from 'react-redux';
+import {useDispatch, useSelector } from 'react-redux';
 
 //IMPORT FONTAWESEOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPalette} from '@fortawesome/free-solid-svg-icons';
+import { faPalette, faTrash} from '@fortawesome/free-solid-svg-icons';
+
+//IMPORT ACTION TO DELETE
+import { deleteMessage } from '../../store/Tattoo/actions';
 
 //IMPORT LINK
 import { Link } from 'react-router-dom';
@@ -15,11 +18,19 @@ import mermaidn from '../../assets/images/mermaidn.png'
 
 const SingleMessage = () => { 
 
-  
+ const dispatch = useDispatch(); 
 const {message}= useSelector((state)=>state.TattooReducer)
 
 const sentence = "Tus tatuajes molan un montón"
 const sentence1 = ", así que vas a hacerle uno muy cool a "
+
+
+const removeMessage = (message) =>{
+   dispatch(deleteMessage(message.id))
+  
+ }
+
+
  return (  <> 
 
                      <div className='div__presentation'> 
@@ -32,6 +43,8 @@ const sentence1 = ", así que vas a hacerle uno muy cool a "
                                <h3 className="" > {message.email}</h3>
                                <h3 className="" > {message.description}</h3>
                                <h3  className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h3>
+                             <Link to="/messages" ><button  onClick={(e)=>removeMessage(message)}  className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /></button></Link> 
+                               
                                <Link to="/messages">Volver</Link>
                           </section>
 
