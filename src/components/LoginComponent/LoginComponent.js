@@ -15,27 +15,27 @@ import "./LoginComponent.scss";
 
 const LoginComponent = () => {
   const { user } = useSelector((state) => state.AuthReducer);
-  const [username, setUsername] = useState("LauraW");
+  const [email, setEmail] = useState("laurao@mail.com");
   const [password, setPassword] = useState("randompwd");
   const dispatch = useDispatch();
 
   function onClickLogin() {
-    dispatch(doLogin({ username: username, password: password }));
+    dispatch(doLogin({ email: email, password: password }));
   }
 
   if (user && user.id) {
     return <Navigate to="/profile" replace></Navigate>;
   }
   return (
-    <div className="container">
+    <div className="container bg">
       <form className="form flex">
         <fieldset>
-          <label>Username</label>
+          <label>Email</label>
           <input
-            type="text"
-            placeholder="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            type="email"
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           ></input>
           <label>Password</label>
           <input
@@ -44,14 +44,14 @@ const LoginComponent = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></input>
+          <button className="loginButton" onClick={onClickLogin}>
+            Login
+          </button>
         </fieldset>
+        <p>
+          Not a member yet? <Link to="/registration">Register now</Link>
+        </p>
       </form>
-      <button className="loginButton" onClick={onClickLogin}>
-        Login
-      </button>
-      <h3>
-        Not a member yet? <Link to="/registration">Register now</Link>
-      </h3>
     </div>
   );
 };

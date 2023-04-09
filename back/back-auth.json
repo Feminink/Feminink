@@ -3,14 +3,12 @@
     {
       "id": 1,
       "name": "Laura O",
-      "username": "LauraW",
       "password": "randompwd",
       "mail": "laurao@mail.com"
     },
     {
       "id": 2,
       "name": "Ignacio E",
-      "username": "IgnacioW",
       "password": "randompwd1",
       "mail": "ignacio@mail.com"
     },
@@ -21,7 +19,6 @@
       "password": "randompwd2",
       "mail": "miriamf@mail.com"
     }
-   
   ],
   "users": []
 }
