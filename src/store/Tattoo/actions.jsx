@@ -39,6 +39,7 @@ export function doContact(userContactForm){
             
             const res = await axios.post(backContact, userContactForm)
             dispatch(actionDoContactOk(res.data))
+            console.log(res, res.data, "res.data")
         } catch (error) {
             dispatch(actionDoContactFail(error))
         }

@@ -12,8 +12,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 //IMPORT HOOK FORMIK
 import { useFormik } from 'formik';
-import { Formik } from 'formik';
 const ContactComponent = () => {
+
   const dispatch = useDispatch();
   const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
 
@@ -76,7 +76,7 @@ const ContactComponent = () => {
       name: '',
       email: '',
       description: '',
-      color: '',
+      color: '#000000',
       artist: '',
     },
     validate,
@@ -84,19 +84,6 @@ const ContactComponent = () => {
       alert(JSON.stringify(values, null, 2));
     },
   });
-  // <Formik
-      //  initialValues={{ name: '',
-                        // email: '',
-                        // description: '',
-                        // color: '',
-                        // artist: '',}}
-      //  onSubmit={(values, actions) => {
-        //  setTimeout(() => {
-          //  alert(JSON.stringify(values, null, 2));
-          //  actions.setSubmitting(false);
-        //  }, 1000);
-      //  }}
-    //  ></Formik>
 
   if(loadinginfo){
     return(
@@ -106,7 +93,7 @@ const ContactComponent = () => {
         
   return (
     <section className='section__login section container'>
-    {formik => ( 
+   
       <form onSubmit={formik.handleSubmit} className='form'> 
          <header className='form__title h2'> 
            <h2>Ponte en contacto con FemininK </h2>
@@ -150,62 +137,10 @@ const ContactComponent = () => {
                <label className='form__label'>Color base </label>
                <span className='form__line'></span>
              </fieldset>
-     <button className='form__submit' type="submit" onClick={sendForm} > Enviar </button>
+       <button className='form__submit' type="submit" onClick={sendForm} > Enviar </button>
      </div>
-   </form>
-    )}
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-  
-   
-   
-   
-   
-   
-   
-   
-   
-  
-   
-   
-   
-   
-   
-  
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
 
-   
-   
-  
-   
-   
-   
-   
-   
-  
-   
-   
-   
+   </form>                  
     </section>
   );
 };

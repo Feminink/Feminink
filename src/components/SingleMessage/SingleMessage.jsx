@@ -43,7 +43,7 @@ const removeMessage = (message) =>{
                                <h3 className="" > {message.email}</h3>
                                <h3 className="" > {message.description}</h3>
                                <h3  className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h3>
-                             <Link to="/messages" ><button  onClick={(e)=>removeMessage(message)}  className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /></button></Link> 
+                            <button  onClick={(e)=>removeMessage(message)}  className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /></button>
                                
                                <Link to="/messages">Volver</Link>
                           </section>
