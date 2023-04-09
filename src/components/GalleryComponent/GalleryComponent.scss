@@ -59,24 +59,6 @@
     }
 }
 
-.inspiration__details button {
-    border: none;
-    background-color: transparent;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-  
-.details-content.collapsed {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-  
-.details-content.expanded {
-    max-height: 100vh;
-    transition: max-height 0.5s ease-in;
-}
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 

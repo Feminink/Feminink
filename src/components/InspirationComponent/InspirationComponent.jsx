@@ -67,7 +67,7 @@ const InspirationComponent = () => {
                 </div>
                 <div className="inspiration__details">
                   <div className='button__container'>
-                    <span>More info</span>
+                    <span>Bio</span>
                     <button
                       onClick={() => toggleAccordion(woman.id)}
                       className="details-button"
@@ -75,6 +75,7 @@ const InspirationComponent = () => {
                       {accordionState[woman.id] ? <FontAwesomeIcon icon={faChevronDown} size="xs" style={{color: "#f8ca60",}} /> : <FontAwesomeIcon icon={faChevronRight} size="xs" style={{color: "#f8ca60",}} />}
                     </button>
                   </div>
+                  <hr/>
                   <div
                     className={`details-content ${
                       accordionState[woman.id] ? 'expanded' : 'collapsed'
