@@ -132,8 +132,8 @@ const ContactComponent = () => {
                <label className='form__label'>Artista</label>
                <span className='form__line'></span>
              </fieldset>
-             <fieldset className="form__group">
-               <input   className='form__color' name="color" type="color" value={formik.values.color}  required></input>
+             <fieldset className="form__color">
+               <input   className='' name="color" type="color" value={formik.values.color}  required></input>
                <label className='form__label'>Color base </label>
                <span className='form__line'></span>
              </fieldset>

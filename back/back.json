@@ -264,14 +264,6 @@
       "artist": "Miriam F",
       "color": "#0d0c0c",
       "id": 4
-    },
-    {
-      "name": "Hola",
-      "email": "marco@polo.com",
-      "description": "hola",
-      "artist": "Miriam F",
-      "color": "#000000",
-      "id": 5
     }
   ],
   "users": []

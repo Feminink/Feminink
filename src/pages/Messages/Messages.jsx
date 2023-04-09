@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 //IMPORT HOOKS
 import { useDispatch, useSelector } from 'react-redux'
@@ -48,7 +48,9 @@ if (loadingMessages){
                    <h3  className="h3__hidden" > {message.email}</h3>
                    <h3  className="h3__hidden" > {message.description}</h3>
                    <h3  className="h3__hidden" style={{color: message.color}}> <FontAwesomeIcon icon={faPalette} /> {message.color} </h3>
-                   <Link className='link' to={`/contact/${message.id}`}><h3> Leer</h3> </Link> 
+                   <Link  className='link' to={`/contact/${message.id}`}><h3>Leer</h3></Link>
+
+                   
               </div> 
         ) 
     })}

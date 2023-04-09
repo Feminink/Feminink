@@ -8,6 +8,10 @@
   text-align: center;
   border-radius: .5em;
   &__color{
+    display:flex;
+    justify-content: center;
+    position: relative;
+
   }
   
   &__title {
@@ -96,7 +100,7 @@ input[type=color]::-webkit-color-swatch {
 
 input[type=color]::-webkit-color-swatch-wrapper {
     
-    border-radius: 50%;
+     border-radius: 50%;
     padding: 0;
 }
 
