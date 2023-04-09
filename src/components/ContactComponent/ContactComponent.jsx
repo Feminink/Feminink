@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 //IMPORT HOOK FORMIK
 import { useFormik } from 'formik';
-
+import { Formik } from 'formik';
 const ContactComponent = () => {
   const dispatch = useDispatch();
   const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
@@ -47,10 +47,10 @@ const ContactComponent = () => {
     // ERROR NAME
     if (!values.name) {
       errors.name = 'Required';
-    } else if (values.name.length < 8) {
-      errors.name = 'Must be 8 characters or more';
-    } else if (values.name === '12345678') {
-      errors.name = 'Must not be 12345678 !!!';
+    } else if (values.name.length < 3) {
+      errors.name = 'Nombres de dos letras hay, pero pocos';
+    } else if (values.name) {
+      errors.name = `Wild ${values.name} for us`;
     }
 
     // ERROR EMAIL
@@ -58,7 +58,9 @@ const ContactComponent = () => {
       errors.email = 'Required';
     } else if (values.email.length < 5) {
       errors.email = 'Must be 5 characters or more';
-    }
+    } 
+      
+    
 
     // ERROR DESCRIPTION
     if (!values.description) {
@@ -82,6 +84,19 @@ const ContactComponent = () => {
       alert(JSON.stringify(values, null, 2));
     },
   });
+  // <Formik
+      //  initialValues={{ name: '',
+                        // email: '',
+                        // description: '',
+                        // color: '',
+                        // artist: '',}}
+      //  onSubmit={(values, actions) => {
+        //  setTimeout(() => {
+          //  alert(JSON.stringify(values, null, 2));
+          //  actions.setSubmitting(false);
+        //  }, 1000);
+      //  }}
+    //  ></Formik>
 
   if(loadinginfo){
     return(
@@ -91,44 +106,106 @@ const ContactComponent = () => {
         
   return (
     <section className='section__login section container'>
+    {formik => ( 
       <form onSubmit={formik.handleSubmit} className='form'> 
-        <h1>Formulario de contacto: </h1>
-        <fieldset className="form__container" >
-          <label>Nombre </label>
-          <input name="name" type="text" value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder= "Escribe tu nombre" required></input>
-        </fieldset>
+         <header className='form__title h2'> 
+           <h2>Ponte en contacto con FemininK </h2>
+         </header>
+         <div className='form__container'>
+            <fieldset className="form__group" >
+              <input className='form__input' name="name" type="text" value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder= " " required></input>
+              <label className='form__label'>Nombre </label>
+              {formik.touched.name && formik.errors.name ? (
+   <div className="error">{formik.errors.name}</div>
+ ) : null}
+              <span className='form__line'></span>
+            </fieldset>
+            <fieldset className="form__group">
+              <input  className='form__input' name="email" type="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder= " " required></input>
+              <label className='form__label'>Email </label>
+              {formik.touched.email && formik.errors.email ? (
+                <div className="error">{formik.errors.email}</div>
+              ) : null}
+              <span className='form__line'></span>
+            </fieldset>
+            <fieldset className="form__group">
+              <textarea className='form__input' name="description" type="text" value={formik.values.description} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder= " " required></textarea>
+              <label className='form__label'>Descripción del tatuaje </label>
+              <span className='form__line'></span>
+            </fieldset>
+             <fieldset className="form__group">
+               <select   className='form__input' name="artist" value={formik.values.artist} onChange={formik.handleChange} onBlur={formik.handleBlur} required>
+                 {info && info.admins?.map((member) => {
+                   return (
+                     <option  key={member.id} value={member.name}>{member.name}</option>
+                   );
+                 })}
+              
+               </select>
+               <label className='form__label'>Artista</label>
+               <span className='form__line'></span>
+             </fieldset>
+             <fieldset className="form__group">
+               <input   className='form__color' name="color" type="color" value={formik.values.color}  required></input>
+               <label className='form__label'>Color base </label>
+               <span className='form__line'></span>
+             </fieldset>
+     <button className='form__submit' type="submit" onClick={sendForm} > Enviar </button>
+     </div>
+   </form>
+    )}
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
   
-        <fieldset className="form__container">
-          <label>Email </label>
-          <input name="email" type="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder= "Email de contacto" required></input>
-          {formik.touched.email && formik.errors.email ? (
-            <div className="error">{formik.errors.email}</div>
-          ) : null}
-        </fieldset>
+   
+   
+   
+   
+   
+   
+   
+   
   
-        <fieldset className="form__container">
-          <label>Descripción del tatuaje </label>
-          <textarea name="description" type="text" value={formik.values.description} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder= "Breve descripción del diseño" required></textarea>
-        </fieldset>
+   
+   
+   
+   
+   
   
-        <fieldset className="form__container">
-          <label>Artista</label>
-          <select name="artist" value={formik.values.artist} onChange={formik.handleChange} onBlur={formik.handleBlur} required>
-            {info && info.admins?.map((member) => {
-              return (
-                <option key={member.id} value={member.name}>{member.name}</option>
-              );
-            })}
-          </select>
-        </fieldset>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
   
-        <fieldset className="form__container">
-          <label>Color base </label>
-          <input name="color" type="color" value={formik.values.color} onChange={formik.handleChange} required></input>
-        </fieldset>
+   
+   
+   
+   
+   
   
-        <button type="submit" onClick={sendForm}> Enviar </button>
-      </form>
+   
+   
+   
     </section>
   );
 };
