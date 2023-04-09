@@ -3,7 +3,7 @@ import { getInfo } from "../../store/info/actions";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 
-/* IMPORT STYLES */
+// IMPORT STYLES
 import "./OurTeamComponent.scss";
 
 const OurTeamComponent = () => {
@@ -25,7 +25,7 @@ const OurTeamComponent = () => {
 
   return (
     <section className="section__ourteam container">
-      <h2>Our Team</h2>
+      <h2>Meet our tattoo artist</h2>
       <ul className="ourteam__ul ul">
         {info && info.admins && info.admins.map((member) => {
           return (
@@ -34,12 +34,13 @@ const OurTeamComponent = () => {
                 <img src={member.image} alt={member.alt} />
                 <div className="overlay">
                   <div className="text">
-                    <p>{member.name} / {member.username}</p>
+                    <h3>{member.name} / {member.username}</h3>
+                    <p><b>Lugar: </b>{member.place}</p>
+                    <p><b>Email: </b>{member.mail}</p>
                   </div>
                 </div>
               </div>
               <div className="ourteam__details">
-                <h5>Name: {member.name} / {member.username}</h5>
                 <h5>No tatuo: {member.noway[0]}, {member.noway[1]}</h5>
               </div>
             </li>

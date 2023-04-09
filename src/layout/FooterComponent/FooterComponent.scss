@@ -32,7 +32,7 @@
     }
 
     &__section--info {
-        background-color: whitesmoke;
+        background-color: black;
     }
 
     &__info-nav {
@@ -44,6 +44,10 @@
     &__logo {
         height: 50px;
     }
+
+    &__copyright {
+        color: white;
+    }
 }
 
 .legal {
@@ -54,7 +58,7 @@
     }
 
     &-nav__link {
-        color: #006fb9;
+        color: rgb(248, 202, 96);
 
         &:hover {
             text-decoration: underline;

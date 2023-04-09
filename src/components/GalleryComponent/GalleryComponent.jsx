@@ -33,7 +33,8 @@ const GalleryComponent = () => {
                 <img src={gallerya.image} alt={gallerya.alt} />
                 <div className="overlay">
                   <div className="text">
-                    <p>{gallerya.title} - {gallerya.artist}</p>
+                    <h3>{gallerya.title}</h3>
+                    <p><b>Artist:</b> {gallerya.artist}</p>
                   </div>
                 </div>
               </div>

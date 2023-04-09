@@ -1,69 +1,96 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import './InspirationComponent.scss';
-import { useDispatch, useSelector } from 'react-redux';
-//importo la función que dispara las acciones
+
+// IMPORT GETINFO FUNCTION
 import { getInfo } from "../../store/info/actions";
 
+// IMPORT REDUX
+import { useDispatch, useSelector } from 'react-redux';
 
-//IMPORT FONTAWESOME 
+// IMPORT STYLES
+import './InspirationComponent.scss';
 
-// import {faAnchor}  from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// IMPORT FONTAWESOME
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const InspirationComponent = () => {
   
-  //  USEDISPATCH
-
+  const [accordionState, setAccordionState] = useState({});
   const dispatch = useDispatch();
-
-  // TRAIDO USESELECTOR PARA LO QUE ME INTERESA DEL FIRSTSTATE
-
   const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
-
-
-  // USEEFFECT PARA DISPARAR LA ACCIÖN QUE OBTIENE A LAS MUJERES DE INSPIRACIÖN
 
   useEffect(() => {
     dispatch(getInfo());
   }, []);
-  
-  
 
-  if (loadingInfo){
+  // TOGGLE FUNCTION
+  const toggleAccordion = (id) => {
+    setAccordionState((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
+  
+  if (loadingInfo) {
     return (
-      <p>"Loading...</p>
-    )
-  }else {
-
+      <div className="container">
+        <h2>Loading...</h2>
+      </div>
+    );
   }
- return(  <div className="div__inspiration">
- {info && info.inspiration && info.inspiration.map((woman)=>{
-  return ( 
-    <section key={woman.id} className='div__inspiration__section'>
-    <div className='div__inspiration__wrapper'> 
-    <div className='div__img'> 
-      <img  className='div__img__img' src={woman.image} alt={woman.name}></img>
-    </div>
-    <div className='div__detail'> 
-    <h1 className='div__inspiration__section__detail'>{woman.name}</h1>
-    <h3 className='div__inspiration__section__detail'>{woman.city}</h3>
-    <h3 className='div__inspiration__section__detail'>{woman.date}</h3>
-    <h3 className='div__inspiration__section__detail'>{woman.style_tattoo.join(", ").toUpperCase()}</h3>
-    </div>
-    </div>
-    <div className='div__detail__data'> 
-    <h4 className='div__detail__data__h4'>info</h4>
-    {/* <i><FontAwesomeIcon icon={faAnchor} /></i> */}
-      <h3 id="hide" >{woman.data}</h3>
-    </div>
-    </section>
-  
-  )
- })}
 
-         </div>)
- };
+  return (
+    <section className="div__inspiration">
+      <ul className="inspiration__ul ul">
+        {info &&
+          info.inspiration &&
+          info.inspiration.map((woman) => {
+            return (
+              <li className="inspiration__li li" key={woman.id}>
+                <div className="image-container">
+                  <img src={woman.image} alt={woman.name} />
+                  <div className="overlay">
+                    <div className="text">
+                      <h3>{woman.name}</h3>
+                      <p>
+                        <b>Lugar:</b> {woman.city}
+                      </p>
+                      <p>
+                        <b>Año:</b> {woman.date}
+                      </p>
+                      <p>
+                        <b>Estilo:</b> {woman.style_tattoo.join(', ')}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="inspiration__details">
+                  <div className='button__container'>
+                    <span className='details__bio span'>Leer bio</span>
+                    <button
+                      onClick={() => toggleAccordion(woman.id)}
+                      className="details-button"
+                    >
+                      {accordionState[woman.id] ? <FontAwesomeIcon icon={faChevronDown} size="sm" style={{color: "#f8ca60",}} /> : <FontAwesomeIcon icon={faChevronRight} size="sm" style={{color: "#f8ca60",}} />}
+                    </button>
+                  </div>
+                  <hr className='hr'/>
+                  <div
+                    className={`details-content ${
+                      accordionState[woman.id] ? 'expanded' : 'collapsed'
+                    }`}
+                  >
+                    <p>{woman.data}</p>
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+      </ul>
+    </section>
+  );
+};
 
 InspirationComponent.propTypes = {};
 

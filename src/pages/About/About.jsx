@@ -5,7 +5,6 @@ import Inspiration from "../Inspiration/Inspiration";
 const About = () => {
   return (
     <>
-      <h1>About Page</h1>
       <Inspiration></Inspiration>
     </>
   )

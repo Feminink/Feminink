@@ -16,10 +16,10 @@ import 'swiper/scss/pagination';
 const SlideshowComponent = () => {
   return (
     <section className='section__slideshow section'>
-      <Swiper style={{"--swiper-navigation-color": "#ff253a","--swiper-pagination-color": "#ff253a", "--swiper-scrollbar-drag-bg-color": "#ff253a"}}
+      <Swiper style={{"--swiper-navigation-color": "#f8ca60","--swiper-pagination-color": "#f8ca60", "--swiper-scrollbar-drag-bg-color": "#f8ca60"}}
         // install Swiper modules
         modules={[Navigation, Pagination, A11y, Autoplay]}
-        spaceBetween={25}
+        spaceBetween={0}
         slidesPerView={1}
         navigation
         autoplay={{delay: 5000, disableOnInteraction: false,}}

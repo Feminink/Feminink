@@ -13,7 +13,10 @@ import { useDispatch, useSelector } from 'react-redux';
 //IMPORT HOOK FORMIK
 import { useFormik } from 'formik';
 
+
+
 const ContactComponent = () => {
+
   const dispatch = useDispatch();
   const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
 
@@ -83,6 +86,9 @@ const ContactComponent = () => {
   });
 
 
+
+
+
   if(loadinginfo){
     return(
       <p>"Loading..."</p>
@@ -136,10 +142,12 @@ const ContactComponent = () => {
                 <label className='form__label'>Color base </label>
                 <span className='form__line'></span>
              </fieldset>
+
              <button className='form__submit' type="submit" onClick={sendForm} > Enviar </button>
           </div>
    </form>
    
+
     </section>
   );
 };
