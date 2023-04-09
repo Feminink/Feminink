@@ -82,7 +82,7 @@ const ContactComponent = () => {
     },
   });
 
-  
+
   if(loadinginfo){
     return(
       <p>"Loading..."</p>
@@ -132,12 +132,12 @@ const ContactComponent = () => {
                <span className='form__line'></span>
              </fieldset>
              <fieldset className="form__group">
-               <input   className='form__color' name="color" type="color" value={formik.values.color}  required></input>
-               <label className='form__label'>Color base </label>
-               <span className='form__line'></span>
+                <input   className='form__color' name="color" type="color" value={formik.values.color}  required></input>
+                <label className='form__label'>Color base </label>
+                <span className='form__line'></span>
              </fieldset>
              <button className='form__submit' type="submit" onClick={sendForm} > Enviar </button>
-     </div>
+          </div>
    </form>
    
     </section>
