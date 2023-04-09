@@ -76,7 +76,7 @@ const ContactComponent = () => {
       name: '',
       email: '',
       description: '',
-      color: '#000000',
+      color: '',
       artist: '',
     },
     validate,
