@@ -36,7 +36,7 @@ function App() {
             <Route exact path="/contact" element={<Contact />}></Route>
             <Route exact path="/signup" element={<Registration />}></Route>
             <Route exact path="/messages" element={<Messages />}></Route>
-            <Route exact path="/message/:id" element={<Message />}></Route>
+            <Route exact path="/contact/:id" element={<Message />}></Route>
             <Route exact path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
