@@ -46,7 +46,7 @@
    margin-left: 4%;
    
     &__icon{
-        color:rgb(244, 175, 70)
+        color:rgb(244, 175, 70);
     }
 }
 .button{
@@ -71,3 +71,11 @@
 }
 
 
+.read{
+    background-color: rgb(182, 243, 243);
+    padding: 1px
+}
+.notRead{
+    background-color: rgb(244, 175, 70);
+    padding: 1px
+}
