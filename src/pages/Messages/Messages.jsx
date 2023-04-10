@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { getMessages } from '../../store/Tattoo/actions'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPalette, faMessage } from '@fortawesome/free-solid-svg-icons';
+import { faPalette, faEnvelope, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
+
+import postal from '../../assets/images/postal.png'
 import './Messages.scss';
 
 const Messages = () => {
@@ -21,6 +23,26 @@ const Messages = () => {
         return storedIsRead;
   });
 
+
+
+ //ESTADO PARA EL NÚMERO DE MENSAJES QUE SE VAN A MOSTRAR
+ const [numMessagesToShow, setNumMessagesToShow] = useState(4);
+
+ //ESTADO PARA MOSTRAR MÄS O MENOS MENSAJES 
+ const [showMore, setShowMore] = useState(false);
+
+
+ //FUNCIÓN PARA CARGAR MÁS MENSAJES
+ const loadMoreMessages = () => {
+  if (showMore) {
+    setNumMessagesToShow(3);
+    setShowMore(false);
+  } else {
+    setNumMessagesToShow(6);
+    setShowMore(true);
+  }
+}
+
  //ESTA FUNCIÖN SIRVE PARA AÑADIR A LEIDOS O NO, SU ESTADO INICIAL ES FALSE, CUANDO SE HACE CLICK
  // SI EL ESTADO PREVIO ERA FALSE LO PASA A TRUE Y VICEVERSA
   const addRead = (message) => {
@@ -35,9 +57,6 @@ const Messages = () => {
   };
  
 
-  // const readMessages = messages.filter(message => message.isRead === true);
-  // readMessages.push(isRead);
-
 
   useEffect(() => {
     dispatch(getMessages());
@@ -50,36 +69,51 @@ const Messages = () => {
   } else {
     return (
       <>
-        <div> 
-          <h2 className='counter'> BANDEJA DE ENTRADA:  {messages.length} <FontAwesomeIcon icon={faMessage} className="counter__icon" /> </h2>
-          {/* <h2 className='counter'> MENSAJES NO LEÍDOS:{} <FontAwesomeIcon icon={faMessage} className="counter__icon" /> </h2> */}
+        <div className='div__postalBox'> 
+          <img  className='div__postalBox__img' src={postal}  alt="postalbox"></img>
+          <h2 className='counter'>   {messages.length} </h2>
        
         </div>
         <section className='section__messages'>
           <div className='wrapper'> 
-            {messages.map((message)=>{
+            {messages.slice(0, numMessagesToShow).map((message)=>{
               return (
                 <div key={message.id} className='section__messages__div'> 
-                  <div>
                     {isRead[message.id] ? (
-                      <h5 className='read' onClick={() => addRead(message)}>marcar como no leído</h5>
-                    ) : (
-                      <h5 className='notRead' onClick={() => addRead(message)}>marcar como leído</h5>
-                    )}
-                  </div>
-                  <h2>De: {message.name}</h2>
-                  <h3>Para: {message.artist}</h3>
-                  <h3 className="h3__hidden"> {message.email}</h3>
-                  <h3 className="h3__hidden"> {message.description}</h3>
-                  <h3 className="h3__hidden" style={{color: message.color}}>
-                    <FontAwesomeIcon icon={faPalette} /> {message.color}
-                  </h3>
-                  <Link onClick={() => addRead(message)} className='link' to={`/contact/${message.id}`} >
-                    <h3>Leer</h3>
-                  </Link> 
+                     <div className='read' onClick={() => addRead(message)}> 
+                        <h2>De: {message.name}</h2>
+                        <h3>Para: {message.artist}</h3>
+                        <h3 className="h3__hidden"> {message.email}</h3>
+                        <h3 className="h3__hidden"> {message.description}</h3>
+                        <h3 className="h3__hidden" style={{color: message.color}}>
+                          <FontAwesomeIcon icon={faPalette} /> {message.color}
+                        </h3>
+                        <Link onClick={() => addRead(message)} to={`/contact/${message.id}`} >
+                          <h3>Leído</h3>
+                        </Link> 
+                     <div> <FontAwesomeIcon icon={faEnvelopeOpen} /></div>
+                     </div>
+                     
+                   ) : (
+                    <div className='notRead' onClick={() => addRead(message)}> 
+                            <h2>De: {message.name}</h2>
+                            <h3>Para: {message.artist}</h3>
+                            <h3 className="h3__hidden"> {message.email}</h3>
+                            <h3 className="h3__hidden"> {message.description}</h3>
+                            <h3 className="h3__hidden" style={{color: message.color}}>
+                              <FontAwesomeIcon icon={faPalette} /> {message.color}
+                            </h3>
+                            <Link onClick={() => addRead(message)}  to={`/contact/${message.id}`} >
+                              <h3>Leer</h3>
+                            </Link> 
+                         <div><FontAwesomeIcon icon={faEnvelope} /> </div>
+                   </div>
+                   )}
                 </div> 
               ) 
             })}
+            <button className='load' onClick={loadMoreMessages}>{showMore ? 'Ver menos' : 'Ver más'}</button>
+
           </div>
         </section>
       </>
