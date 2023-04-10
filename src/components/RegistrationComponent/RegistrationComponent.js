@@ -105,16 +105,19 @@ const RegistrationComponent = () => {
     },
   });
   return (
-    <div className="container flex bg">
-      <h1>Register:</h1>
+    <div className="container flex">
       <form className="form flex" onSubmit={formik.handleSubmit}>
-        <fieldset className="container flex">
-          <label>Name</label>
+        <header className="form__title h2">
+          <h2>Register now</h2>
+        </header>
+        <fieldset className="form__group">
+          <label className="form__label">Name</label>
           <input
+            className="form__input"
             id="name"
             name="name"
             type="text"
-            placeholder="Name"
+            placeholder=" "
             value={formik.values.name}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -123,13 +126,13 @@ const RegistrationComponent = () => {
           {formik.touched.name && formik.errors.name ? (
             <div className="error">{formik.errors.name}</div>
           ) : null}
-          <label>Surname</label>
-
+          <label className="form__label">Surname</label>
           <input
+            className="form__input"
             id="surname"
             name="surname"
             type="text"
-            placeholder="Surname"
+            placeholder=" "
             value={formik.values.surname}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -138,12 +141,13 @@ const RegistrationComponent = () => {
           {formik.touched.surname && formik.errors.surname ? (
             <div className="error">{formik.errors.surname}</div>
           ) : null}
-          <label>Date of birth</label>
+          <label className="form__label">Date of birth</label>
           <input
+            className="form__input"
             id="birthday"
             name="birthday"
             type="date"
-            placeholder="Date of birth"
+            placeholder=" "
             value={formik.values.birthday}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -152,12 +156,13 @@ const RegistrationComponent = () => {
           {formik.touched.birthday && formik.errors.birthday ? (
             <div className="error">{formik.errors.birthday}</div>
           ) : null}
-          <label>Email</label>
+          <label className="form__label">Email</label>
           <input
+            className="form__input"
             id="email"
             name="email"
             type="email"
-            placeholder="Email address"
+            placeholder=" "
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -166,12 +171,13 @@ const RegistrationComponent = () => {
           {formik.touched.email && formik.errors.email ? (
             <div className="error">{formik.errors.email}</div>
           ) : null}
-          <label>Password</label>
+          <label className="form__label">Password</label>
           <input
+            className="form__input"
             id="password"
             name="password"
             type="password"
-            placeholder="Choose a password"
+            placeholder=" "
             value={formik.values.password}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -180,12 +186,13 @@ const RegistrationComponent = () => {
           {formik.touched.password && formik.errors.password ? (
             <div className="error">{formik.errors.password}</div>
           ) : null}
-          <label>Repeat password</label>
+          <label className="form__label">Repeat password</label>
           <input
+            className="form__input"
             id="repassword"
             name="repassword"
             type="password"
-            placeholder="Repeat password"
+            placeholder=" "
             value={formik.values.repassword}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -194,6 +201,7 @@ const RegistrationComponent = () => {
           {formik.touched.repassword && formik.errors.repassword ? (
             <div className="error">{formik.errors.repassword}</div>
           ) : null}
+          <span className="form__line"></span>
         </fieldset>
         <p>
           Already have an account? <Link to="/login ">Login here</Link>
