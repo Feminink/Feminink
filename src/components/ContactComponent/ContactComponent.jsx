@@ -76,7 +76,7 @@ const ContactComponent = () => {
       name: '',
       email: '',
       description: '',
-      color: '',
+      color: '#rrggbb',
       artist: '',
     },
     validate,
@@ -133,11 +133,11 @@ const ContactComponent = () => {
                <span className='form__line'></span>
              </fieldset>
              <fieldset className="form__color">
-               <input   className='' name="color" type="color" value={formik.values.color}  required></input>
+               <input   className='' name="color" type="color" value={formik.values.color} onChange={formik.handleChange} onBlur={formik.handleBlur} required></input>
                <label className='form__label'>Color base </label>
                <span className='form__line'></span>
              </fieldset>
-       <button className='form__submit' type="submit" onClick={sendForm} > Enviar </button>
+       <button className='form__submit' type="reset" onClick={sendForm} noValidate> Enviar </button>
      </div>
 
    </form>                  

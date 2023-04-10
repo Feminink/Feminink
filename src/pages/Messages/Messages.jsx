@@ -17,10 +17,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPalette, faMessage} from '@fortawesome/free-solid-svg-icons';
 
 const Messages = () => {
-
+const [leido, setLeido] = useState(false)
 const dispatch = useDispatch();
 const {messages, loadingMessages} = useSelector((state)=> state.TattooReducer);
 
+function cambio(e){
+  setLeido(!leido)
+}
 useEffect(()=>{
     dispatch(getMessages());
 
@@ -49,8 +52,7 @@ if (loadingMessages){
                    <h3  className="h3__hidden" > {message.description}</h3>
                    <h3  className="h3__hidden" style={{color: message.color}}> <FontAwesomeIcon icon={faPalette} /> {message.color} </h3>
                    <Link  className='link' to={`/contact/${message.id}`}><h3>Leer</h3></Link>
-
-                   
+                  {leido? (<span onClick={cambio} value={leido}>X</span>): (<span onClick={cambio} value={leido}>V</span>)}
               </div> 
         ) 
     })}
