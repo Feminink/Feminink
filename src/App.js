@@ -19,9 +19,19 @@ import FooterComponent from "./layout/FooterComponent/FooterComponent";
 
 // IMPORT STYLES
 import "./App.scss";
+import { useState } from "react";
+
+// 3. IMPORTO EL CONTEXTO 
+import { JwtContext } from './context/jwtContext';
+// 4. IMPORTO ARCHIVO
+// import { RequireAuth } from './components/LoginComponent/RequireAuth';
 
 function App() {
+  //2. IMPORTO ESTADOS QUE OBTENDRÁN EL TOKEN
+  const [jwt, setJwt] = useState(localStorage.getItem('token'));
   return (
+//ENVUELVO APP
+    <JwtContext.Provider value={{ jwt, setJwt }}>
     <div className="App">
       <HeaderComponent></HeaderComponent>
       <main className="main">
@@ -43,6 +53,7 @@ function App() {
       </main>
       <FooterComponent></FooterComponent>
     </div>
+    </JwtContext.Provider>
   );
 }
 

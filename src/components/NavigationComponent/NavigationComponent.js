@@ -33,6 +33,10 @@ const NavigationComponent = () => {
 
   // IMPORT TOGGLE + LOGOUT FUNCTION
   function onClickLogout() {
+
+    //HE METIDO LOCAL STORAGE AQUI
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     toggleMenu();
     dispatch(doLogout());
   }

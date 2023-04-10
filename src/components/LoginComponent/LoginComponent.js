@@ -1,24 +1,35 @@
 import PropTypes from "prop-types";
 // IMPORT NAVIGATE
 import { Navigate } from "react-router";
+
 // IMPORT USE STATE
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./LoginComponent.scss";
 // IMPORT USE SELECTOR, USE DISPATCH
 import { useDispatch, useSelector } from "react-redux";
 // IMPORT API CALL DO LOGIN
 import { doLogin } from "../../store/auth/actions";
 // IMPORT LINK
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // IMPORT FORMIK
 import { useFormik } from "formik";
 // IMPORT STYLES
 import "./LoginComponent.scss";
+//IMPORTO EL CONTEXTO Y API 
+import { JwtContext } from '../../context/jwtContext';
+import { API } from '../../services/api';
 
 const LoginComponent = () => {
+
+
   const { user } = useSelector((state) => state.AuthReducer);
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();  
+   
+
+//  6. TRAIGO EL CONTEXTO
+  const { setJwt } = useContext(JwtContext);
   // FUNCIÓN PARA SETEAR LOS ERRORES EN CADA INPUT
   const validate = (values) => {
     const errors = {
@@ -41,18 +52,18 @@ const LoginComponent = () => {
   };
 
   // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
-  function onClickLogin() {
-    if (
-      formik.values.email &&
-      user.email &&
-      formik.values.password &&
-      user.password
-    ) {
-      return dispatch(
-        doLogin({ email: formik.email, password: formik.password })
-      );
-    }
-  }
+  // function onClickLogin() {
+    // if (
+      // formik.values.email &&
+      // // user.email &&
+      // formik.values.password 
+      // // user.password
+    // ) {
+      // return dispatch(
+        // doLogin({ email: formik.email, password: formik.password })
+      // );
+    // }
+  // }
 
   const formik = useFormik({
     initialValues: {
@@ -62,6 +73,14 @@ const LoginComponent = () => {
     validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+      API.post('admins', values).then((res) => {
+        localStorage.setItem('token', res.data.token);
+        localStorage.setItem('user', res.data.admin.email);
+        setJwt(localStorage.getItem("token"));
+        navigate('/');
+        console.log(validate, "validate")
+        console.log(values, "values")
+      });
     },
   });
 
@@ -109,7 +128,7 @@ const LoginComponent = () => {
           Not a member yet? <Link to="/signup">Register now</Link>
         </p>
       </form>
-      <button form="loginForm" className="form__submit" onClick={onClickLogin}>
+      <button  type="submit" form="loginForm" className="form__submit" onClick={formik.onSubmit}>
         Login
       </button>
     </div>
