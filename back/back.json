@@ -282,12 +282,28 @@
       "id": 4
     },
     {
-      "name": "sdfdsfs",
-      "email": "dsfsfs@mail.com",
-      "description": "ffff",
-      "artist": "Miriam F",
-      "color": "#c93131",
+      "name": "dfsftswf",
+      "email": "dfsdfsdf@mail.com",
+      "description": "saerwefwefwe",
+      "artist": "Ignacio E",
+      "color": "#a33e3e",
       "id": 5
+    },
+    {
+      "name": "Mira Murati",
+      "email": "miramurati@mail.com",
+      "description": "Quiero una frase en el pecho donde ponga \"IA RULES\"",
+      "artist": "Laura O",
+      "color": "#151414",
+      "id": 6
+    },
+    {
+      "name": "Chimamanda Ngozi ",
+      "email": "Chimamanda@ngozi.com",
+      "description": "Hey! Buenísima iniciativa chicas! En esta ocasión quisiera tatuarme unos tribales canis en las pantorrilla, he pensando en Nacho E",
+      "artist": "Ignacio E",
+      "color": "#e6d1d1",
+      "id": 7
     }
   ],
   "users": []
