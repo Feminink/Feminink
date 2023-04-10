@@ -110,6 +110,7 @@ const RegistrationComponent = () => {
         id="registrationForm"
         className="form flex"
         onSubmit={formik.handleSubmit}
+        noValidate
       >
         <header className="form__title h2">
           <h2>Register now</h2>
