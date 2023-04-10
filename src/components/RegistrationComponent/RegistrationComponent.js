@@ -106,7 +106,11 @@ const RegistrationComponent = () => {
   });
   return (
     <div className="container flex">
-      <form className="form flex" onSubmit={formik.handleSubmit}>
+      <form
+        id="registrationForm"
+        className="form flex"
+        onSubmit={formik.handleSubmit}
+      >
         <header className="form__title h2">
           <h2>Register now</h2>
         </header>
@@ -206,7 +210,11 @@ const RegistrationComponent = () => {
         <p>
           Already have an account? <Link to="/login ">Login here</Link>
         </p>
-        <button type="submit" onClick={sendRegistration}>
+        <button
+          className="form__submit"
+          form="registrationForm"
+          onClick={sendRegistration}
+        >
           Submit
         </button>
       </form>
