@@ -19,17 +19,18 @@ const LoginComponent = () => {
   const { user } = useSelector((state) => state.AuthReducer);
   const dispatch = useDispatch();
 
+  // FUNCIÓN PARA SETEAR LOS ERRORES EN CADA INPUT
   const validate = (values) => {
     const errors = {
       email: "",
       password: "",
     };
-    if (!values.email) {
-      errors.email = "Required";
+    if (values.email !== user.email) {
+      errors.email = "Invalid email address";
     } else if (
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
     ) {
-      errors.email = "Invalid email address";
+      errors.email = "This is not an email address";
     }
 
     if (!values.password) {
@@ -41,8 +42,12 @@ const LoginComponent = () => {
     return errors;
   };
 
+  // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
   function onClickLogin() {
-    if (formik.values !== user || user.id) {
+    if (
+      (formik.values.email && formik.values.password) ===
+      (user.email && user.password)
+    ) {
       return dispatch(
         doLogin({ email: formik.email, password: formik.password })
       );
@@ -65,10 +70,16 @@ const LoginComponent = () => {
   }
   return (
     <div className="container bg">
-      <form className="form flex" onSubmit={formik.handleSubmit}>
-        <fieldset>
-          <label>Email</label>
+      <form
+        id="loginForm"
+        className="form flex"
+        onSubmit={formik.handleSubmit}
+        noValidate
+      >
+        <fieldset className="form__group">
+          <label className="form__label">Email</label>
           <input
+            className="form__input"
             id="email"
             type="email"
             placeholder="email"
@@ -79,8 +90,9 @@ const LoginComponent = () => {
           {formik.touched.email && formik.errors.email ? (
             <div className="error">{formik.errors.email}</div>
           ) : null}
-          <label>Password</label>
+          <label className="form__label">Password</label>
           <input
+            className="form__input"
             id="password"
             type="password"
             placeholder="password"
@@ -91,14 +103,15 @@ const LoginComponent = () => {
           {formik.touched.password && formik.errors.password ? (
             <div className="error">{formik.errors.password}</div>
           ) : null}
+          <span className="form__line"></span>
         </fieldset>
         <p>
           Not a member yet? <Link to="/registration">Register now</Link>
         </p>
-        <button type="submit" className="loginButton" onClick={onClickLogin}>
-          Login
-        </button>
       </form>
+      <button form="loginForm" className="loginButton" onClick={onClickLogin}>
+        Login
+      </button>
     </div>
   );
 };
