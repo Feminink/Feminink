@@ -108,7 +108,7 @@ const LoginComponent = () => {
           <span className="form__line"></span>
         </fieldset>
         <p>
-          Not a member yet? <Link to="/registration">Register now</Link>
+          Not a member yet? <Link to="/signup">Register now</Link>
         </p>
       </form>
       <button form="loginForm" className="loginButton" onClick={onClickLogin}>
