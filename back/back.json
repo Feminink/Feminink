@@ -220,7 +220,7 @@
       {
         "id": "3",
         "title": "Visit Us",
-        "information":  [
+        "information": [
           "4933 S 34th Ave",
           "Minneapolis, MN 55417"
         ]
@@ -300,6 +300,19 @@
         "Delfines en el tobillo",
         "Estrellitas"
       ]
+    },
+    {
+      "id": 4
+    },
+    {
+      "email": "laurao@mail.com",
+      "password": "randompwd",
+      "id": 5
+    },
+    {
+      "email": "laurao@mail.com",
+      "password": "randompwd",
+      "id": 6
     }
   ],
   "contact": [

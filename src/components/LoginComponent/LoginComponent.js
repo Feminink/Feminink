@@ -44,12 +44,12 @@ const LoginComponent = () => {
   function onClickLogin() {
     if (
       formik.values.email &&
-      user.email &&
-      formik.values.password &&
-      user.password
+      // user.email &&
+      formik.values.password 
+      // user.password
     ) {
       return dispatch(
-        doLogin({ email: formik.email, password: formik.password })
+        doLogin({ email: formik.values.email, password: formik.values.password })
       );
     }
   }
@@ -108,10 +108,13 @@ const LoginComponent = () => {
         <p>
           Not a member yet? <Link to="/signup">Register now</Link>
         </p>
+        <button type="submit" form="loginForm" className="form__submit" onClick={onClickLogin}>
+   Login
+ </button>
       </form>
-      <button form="loginForm" className="form__submit" onClick={onClickLogin}>
-        Login
-      </button>
+     
+     
+     
     </div>
   );
 };
