@@ -25,8 +25,8 @@ const LoginComponent = () => {
       email: "",
       password: "",
     };
-    if (values.email !== user.email) {
-      errors.email = "Invalid email address";
+    if (!values.email) {
+      errors.email = "Required";
     } else if (
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
     ) {
@@ -35,8 +35,6 @@ const LoginComponent = () => {
 
     if (!values.password) {
       errors.password = "Required";
-    } else if (values.password !== user.password) {
-      errors.password = "Invalid password";
     }
 
     return errors;
@@ -111,7 +109,7 @@ const LoginComponent = () => {
           Not a member yet? <Link to="/signup">Register now</Link>
         </p>
       </form>
-      <button form="loginForm" className="loginButton" onClick={onClickLogin}>
+      <button form="loginForm" className="form__submit" onClick={onClickLogin}>
         Login
       </button>
     </div>
