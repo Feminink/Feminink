@@ -16,7 +16,7 @@ import 'swiper/scss/pagination';
 const LastWorkComponent = () => {
     return (
         <section className='section__last-work section container'>
-            <h2>Last works</h2>
+          <h2>Last works</h2>
           <Swiper style={{"--swiper-navigation-color": "#f8ca60","--swiper-pagination-color": "#f8ca60", "--swiper-scrollbar-drag-bg-color": "#f8ca60"}}
             // install Swiper modules
             modules={[Navigation, Pagination, A11y, Autoplay]}
