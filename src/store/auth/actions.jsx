@@ -33,7 +33,7 @@ export function doLogin(userData) {
     try {
       dispatch(actionDoLogin(userData));
       const response = await axios.post(
-        "http://localhost:3000/admins",
+        "http://localhost:3000/users",
         userData
       );
       dispatch(actionDoLoginOk(response.data));
