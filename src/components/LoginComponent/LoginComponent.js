@@ -53,7 +53,9 @@ const LoginComponent = () => {
     },  
     },
 
-  );
+  
+  
+    );
 
   // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
   function onClickLogin() {
