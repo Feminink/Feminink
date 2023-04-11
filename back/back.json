@@ -373,5 +373,16 @@
       "id": 7
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "laurao@mail.com",
+      "password": "$2a$10$PbBmBSGJ6KdX9zv1PknknOhd535HBTkyGtwNsatAA0DNrkuNaKTZ2",
+      "name": "Laura",
+      "surname": "O",
+      "birthday": "01-06-1993",
+      "repassword": "randompwd",
+      "isAdmin": true,
+      "id": 1
+    }
+  ]
 }

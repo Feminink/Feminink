@@ -60,7 +60,7 @@ export default function GalleryReducer(state = initialState, action) {
       state = { ...state, loadingUsers: true };
       break;
     case GET_USERS_OK:
-      state = { ...state, loadingUsers: false, info: action.payload };
+      state = { ...state, loadingUsers: false, users: action.payload };
       break;
     case GET_USERS_FAIL:
       state = {
