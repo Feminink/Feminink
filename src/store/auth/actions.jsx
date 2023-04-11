@@ -32,8 +32,11 @@ export function doLogin(userData) {
   return async (dispatch) => {
     dispatch(actionDoLogin(userData));
     try {
-      const response = await axios.post("http://localhost:3000/login", userData);
-      console.log(userData, "userDat");
+
+      const response = await axios.post(
+        "http://localhost:3000/login",
+        userData
+      );
       dispatch(actionDoLoginOk(response.data));
       console.log(response.data, "response.data");
     } catch (error) {

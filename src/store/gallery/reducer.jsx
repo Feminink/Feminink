@@ -1,7 +1,5 @@
 import {
-  GET_GALLERY,
-  GET_GALLERY_OK,
-  GET_GALLERY_FAIL,
+
   DO_REGISTRATION,
   DO_REGISTRATION_OK,
   DO_REGISTRATION_FAIL,
@@ -11,8 +9,6 @@ import {
 } from "./actionTypes";
 
 const initialState = {
-  gallery: [],
-  loadingGallery: false,
   form: {},
   loadingForm: false,
   error: {
@@ -24,24 +20,6 @@ const initialState = {
 
 export default function GalleryReducer(state = initialState, action) {
   switch (action.type) {
-    case GET_GALLERY:
-      state = { ...state, loadingGallery: true };
-      break;
-    case GET_GALLERY_OK:
-      state = {
-        ...state,
-        loadingGallery: false,
-        gallery: action.payload,
-      };
-      break;
-    case GET_GALLERY_FAIL:
-      state = {
-        ...state,
-        loadingGallery: false,
-        gallery: [],
-        error: { message: action.payload },
-      };
-      break;
     case DO_REGISTRATION:
       state = { ...state, loadingForm: true };
       break;

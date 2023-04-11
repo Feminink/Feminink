@@ -16,8 +16,8 @@ import { useFormik } from "formik";
 import "./LoginComponent.scss";
 
 const LoginComponent = () => {
-  const { user } = useSelector((state) => state.GalleryReducer);
- 
+
+  const { user } = useSelector((state) => state.AuthReducer);
   const dispatch = useDispatch();
 
   // FUNCIÓN PARA SETEAR LOS ERRORES EN CADA INPUT
@@ -49,8 +49,10 @@ const LoginComponent = () => {
     validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
-      console.log(values, "values");
+
+    },  
     },
+
   });
 
   // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
@@ -68,7 +70,6 @@ const LoginComponent = () => {
   }
 
   if (user && user.id) {
-    
     return <Navigate to="/profile" replace></Navigate>;
   }
   return (
