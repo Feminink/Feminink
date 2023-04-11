@@ -7,7 +7,7 @@ import "./LoginComponent.scss";
 // IMPORT USE SELECTOR, USE DISPATCH
 import { useDispatch, useSelector } from "react-redux";
 // IMPORT API CALL DO LOGIN
-import { doLogin } from "../../store/auth/actions";
+import { doLogin, actionDoLoginOk } from "../../store/auth/actions";
 // IMPORT LINK
 import { Link } from "react-router-dom";
 // IMPORT FORMIK
@@ -50,6 +50,7 @@ const LoginComponent = () => {
         doLogin({ email: formik.values.email, password: formik.values.password })
       );
     }
+    
   }
 
   const formik = useFormik({
@@ -60,10 +61,10 @@ const LoginComponent = () => {
     validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
-    },
+    }, 
   });
 
-  if (user && user.id) {
+  if (user.id) {
     return <Navigate to="/profile" replace></Navigate>;
   }
   return (
@@ -110,9 +111,6 @@ const LoginComponent = () => {
    Login
  </button>
       </form>
-     
-     
-     
     </div>
   );
 };
