@@ -7,7 +7,7 @@ import "./LoginComponent.scss";
 // IMPORT USE SELECTOR, USE DISPATCH
 import { useDispatch, useSelector } from "react-redux";
 // IMPORT API CALL DO LOGIN
-import { doLogin, actionDoLoginOk } from "../../store/auth/actions";
+import { actionDoLoginOk, doLogin } from "../../store/auth/actions";
 // IMPORT LINK
 import { Link } from "react-router-dom";
 // IMPORT FORMIK
@@ -16,8 +16,8 @@ import { useFormik } from "formik";
 import "./LoginComponent.scss";
 
 const LoginComponent = () => {
+
   const { user } = useSelector((state) => state.AuthReducer);
-  console.log(user.user, "user.user")
   const dispatch = useDispatch();
 
   // FUNCIÓN PARA SETEAR LOS ERRORES EN CADA INPUT
@@ -41,18 +41,6 @@ const LoginComponent = () => {
     return errors;
   };
 
-  // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
-  function onClickLogin() {
-    if (
-      formik.values.email &&
-      formik.values.password 
-    ) {
-      return dispatch(
-        doLogin({ email: formik.values.email, password: formik.values.password })
-      );
-    }
-    
-  }
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -61,11 +49,27 @@ const LoginComponent = () => {
     validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
-    }, 
+
+    },  
+    },
+
   });
 
+  // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
+  function onClickLogin() {
+    if (formik.values.email && formik.values.password) {
+      return dispatch(
+        doLogin({
+          email: formik.values.email,
+          password: formik.values.password,
+        })
+        
+      );
+    }
+    <Navigate to="/profile" replace></Navigate>;
+  }
+
   if (user && user.id) {
-    console.log(user, "user down")
     return <Navigate to="/profile" replace></Navigate>;
   }
   return (
@@ -108,9 +112,14 @@ const LoginComponent = () => {
         <p>
           Not a member yet? <Link to="/signup">Register now</Link>
         </p>
-        <button type="submit" form="loginForm" className="form__submit" onClick={onClickLogin}>
-   Login
- </button>
+        <button
+          type="submit"
+          form="loginForm"
+          className="form__submit"
+          onClick={onClickLogin}
+        >
+          Login
+        </button>
       </form>
     </div>
   );
