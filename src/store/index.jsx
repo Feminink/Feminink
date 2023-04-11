@@ -12,4 +12,9 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(thunk))
 );
 
+store.subscribe(()=>{
+  const json = JSON.stringify(store.getState().AuthReducer.user)
+  localStorage.setItem("_user", json)
+})
+
 export default store;

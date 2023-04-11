@@ -17,6 +17,7 @@ import "./LoginComponent.scss";
 
 const LoginComponent = () => {
   const { user } = useSelector((state) => state.AuthReducer);
+  console.log(user.user, "user.user")
   const dispatch = useDispatch();
 
   // FUNCIÓN PARA SETEAR LOS ERRORES EN CADA INPUT
@@ -63,7 +64,8 @@ const LoginComponent = () => {
     }, 
   });
 
-  if (user.id) {
+  if (user && user.id) {
+    console.log(user, "user down")
     return <Navigate to="/profile" replace></Navigate>;
   }
   return (

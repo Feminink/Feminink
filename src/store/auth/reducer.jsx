@@ -7,10 +7,19 @@ import {
   DO_LOGOUT_OK,
 } from "./actionTypes";
 
+
+function saveUser(){
+  try {
+    return JSON.parse(localStorage.getItem("_user"))
+  } catch (error) {
+    return {}
+  }
+}
+
 const initialState = {
-  user: {},
-  loadingLogin: false,
-  error: {
+   user: saveUser(),
+   loadingLogin: false,
+   error: {
     message: "",
   },
 };
@@ -21,7 +30,7 @@ export default function AuthReducer(state = initialState, action) {
       state = { ...state, loadingLogin: true };
       break;
     case DO_LOGIN_OK:
-      state = { ...state, loadingLogin: false, user: action.payload };
+      state = { ...state, loadingLogin: false, user: action.payload.user };
       break;
     case DO_LOGIN_FAIL:
       state = {
