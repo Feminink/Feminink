@@ -5,10 +5,12 @@ import {
   DO_LOGIN_FAIL,
   DO_LOGOUT,
   DO_LOGOUT_OK,
+  DO_LOGOUT_FAIL,
 } from "./actionTypes";
 
 const initialState = {
   user: {},
+  token: null, // agregar campo para el token
   loadingLogin: false,
   error: {
     message: "",
@@ -21,13 +23,14 @@ export default function AuthReducer(state = initialState, action) {
       state = { ...state, loadingLogin: true };
       break;
     case DO_LOGIN_OK:
-      state = { ...state, loadingLogin: false, user: action.payload };
+      state = { ...state, loadingLogin: false, user: action.payload.user, token: action.payload.token };
       break;
     case DO_LOGIN_FAIL:
       state = {
         ...state,
         loadingLogin: false,
         user: {},
+        token: null,
         error: { message: action.payload },
       };
       break;
@@ -35,9 +38,14 @@ export default function AuthReducer(state = initialState, action) {
       state = { ...state };
       break;
     case DO_LOGOUT_OK:
-      state = { ...state, user: {} };
-      break
-      
+      state = { ...state, user: {}, token: null };
+      break;
+    case DO_LOGOUT_FAIL:
+      state = {
+        ...state,
+        error: { message: action.payload },
+      };
+      break;
     default:
       break;
   }

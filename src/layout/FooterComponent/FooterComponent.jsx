@@ -31,11 +31,10 @@ const FooterComponent = () => {
             <div className="footer-nav__column">
               <h4 className="footer-nav__h4 h4">Footer Heading 1</h4>
               <ul className="footer-nav__ul ul">
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 1</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 2</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 3</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 4</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 5</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Home</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Gallery</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">About</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Contact</Link></li>
               </ul>
             </div>
             <div className="footer-nav__column">
@@ -49,13 +48,13 @@ const FooterComponent = () => {
               </ul>
             </div>
             <div className="footer-nav__column">
-              <h4 className="footer-nav__h4 h4">Footer Heading 3</h4>
+              <h4 className="footer-nav__h4 h4">Follow Us</h4>
               <ul className="footer-nav__ul">
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 1</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 2</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 3</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 4</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 5</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Instagram</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Facebook</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Twitter</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Github</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">LinkedIn</Link></li>
               </ul>
             </div>
           </nav>
@@ -69,10 +68,10 @@ const FooterComponent = () => {
             </div>
             <ul className="legal-nav__ul ul">
               <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Cookies</Link></li>
-              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Aviso legal</Link></li>
-              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Política de privacidad</Link></li>
-              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Condiciones de Uso en RR.SS</Link></li>
-              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Política de Privacidad en RR.SS</Link></li>
+              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Legal notice</Link></li>
+              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Privacy policy</Link></li>
+              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Terms of use on social networks</Link></li>
+              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Privacy policy on social networks</Link></li>
             </ul>
           </nav>
         </div>

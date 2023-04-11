@@ -56,7 +56,7 @@ const TestimonialsComponent = () => {
               <div className="testimonials__info">
                 <img className="testimonials__image img" src={testimonial.image} alt={testimonial.alt}/>
                 <p className="testimonials__p p"><FontAwesomeIcon icon={faQuoteLeft} size="lg" /> {testimonial.text} <FontAwesomeIcon icon={faQuoteRight} size="lg" /></p>
-                <h4 className="testimonials__h4 h4">{testimonial.name}</h4>
+                <h3 className="testimonials__h3 h3">{testimonial.name}</h3>
               </div>
             </SwiperSlide>
           )

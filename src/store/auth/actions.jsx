@@ -1,5 +1,6 @@
 // IMPORT AXIOS
 import axios from "axios";
+
 // IMPORT ACTION TYPES
 import {
   DO_LOGIN,
@@ -13,21 +14,25 @@ import {
 export function actionDoLogin(loginData) {
   return {
     type: DO_LOGIN,
-    payload: loginData,
+    payload: loginData
   };
 }
-export function actionDoLoginOk(userDetails) {
+
+export function actionDoLoginOk(token) {
   return {
     type: DO_LOGIN_OK,
-    payload: userDetails,
+    payload: token
   };
 }
+
 export function actionDoLoginFail(error) {
   return {
     type: DO_LOGIN_FAIL,
-    payload: error,
+    payload: error
   };
 }
+
+// DOLOGIN FUNCTION
 export function doLogin(userData) {
   return async (dispatch) => {
     try {
@@ -48,24 +53,29 @@ export function actionDoLogout() {
     type: DO_LOGOUT,
   };
 }
+
 export function actionDoLogoutOk() {
   return {
     type: DO_LOGOUT_OK,
   };
 }
+
 export function actionDoLogoutFail(error) {
   return {
     type: DO_LOGOUT_FAIL,
     payload: error,
   };
 }
+
+// DOLOGOUT FUNCTION
 export function doLogout() {
   return async (dispatch) => {
     try {
       dispatch(actionDoLogout());
-      dispatch(actionDoLoginOk());
+      localStorage.removeItem("token");
+      dispatch(actionDoLogoutOk());
     } catch (error) {
-      dispatch(actionDoLoginFail(error));
+      dispatch(actionDoLogoutFail(error));
     }
   };
 }

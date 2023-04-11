@@ -89,7 +89,7 @@
         "password": "randompwd",
         "place": "Cerdeña",
         "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
-        "mail": "laurao@mail.com",
+        "email": "laurao@mail.com",
         "description": "",
         "noway": [
           "Símbolo del infinito",
@@ -103,7 +103,7 @@
         "password": "randompwd1",
         "place": "Puerto de Sta María",
         "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
-        "mail": "ignacio@mail.com",
+        "email": "ignacio@mail.com",
         "description": "",
         "noway": [
           "Campanillas",
@@ -117,7 +117,7 @@
         "password": "randompwd2",
         "place": "Cädiz",
         "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-        "mail": "miriamf@mail.com",
+        "email": "miriamf@mail.com",
         "description": "",
         "noway": [
           "Delfines en el tobillo",
@@ -251,7 +251,8 @@
       {
         "id": "1",
         "title": "Call The Shop",
-        "information": "(952) 999-2181"
+        "information": "(952) 999-2181",
+        "icon": "📞"
       },
       {
         "id": "2",
@@ -259,7 +260,8 @@
         "information": [
           "Mon-Sat: 12pm-8pm",
           "Sun: 12pm-6pm"
-        ]
+        ],
+        "icon": "📅"
       },
       {
         "id": "3",
@@ -267,25 +269,27 @@
         "information":  [
           "4933 S 34th Ave",
           "Minneapolis, MN 55417"
-        ]
+        ],
+        "icon": "🚀"
       },
       {
         "id": "4",
         "title": "Email Us",
-        "information": "nokomistattoo@gmail.com"
+        "information": "nokomistattoo@gmail.com",
+        "icon": "✉️"
       }
     ],
     "testimonials": [
       {
         "id": 1,
         "name": "Angelina Jolie",
-        "text": "Me encanta cómo los tatuajes pueden ser una expresión artística de la personalidad. He tenido varios tatuajes a lo largo de los años, y cada uno tiene un significado especial para mí.",
+        "text": "Me encanta cómo los tatuajes pueden ser una expresión artística de la personalidad. He tenido varios tatuajes a lo largo de los años, y cada uno tiene un significado especial para mí. Para mí, los tatuajes son una forma de contar mi historia.",
         "image": "./assets/images/testimonials/angelina_jolie.jpg"
       },
       {
         "id": 2,
         "name": "Rihanna",
-        "text": "¡Este estudio de tatuajes es increíble! Los artistas son muy talentosos y amables. Me ayudaron a crear un diseño personalizado y el resultado superó todas mis expectativas.",
+        "text": "¡Este estudio de tatuajes es increíble! Los artistas son muy talentosos y amables. Me ayudaron a crear un diseño personalizado y el resultado superó todas mis expectativas. Los tatuajes son una forma de expresión que me encanta explorar.",
         "image": "./assets/images/testimonials/rihanna.jpg"
       },
       {
@@ -299,6 +303,58 @@
         "name": "Kat Von D",
         "text": "Este estudio de tatuajes es realmente excepcional. Como una mujer tatuada, sé lo importante que es encontrar un estudio de tatuajes que ofrezca artistas talentosos, un ambiente cómodo y seguro, y una amplia variedad de diseños.",
         "image": "./assets/images/testimonials/kat_von_d.jpg"
+      }
+    ],
+    "last works": [
+      {
+        "id": 1,
+        "title": "Me encanta",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Me encanta",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Me encanta",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Me encanta",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Me encanta",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Me encanta",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
+      },
+      {
+        "id": 7,
+        "title": "Me encanta",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
+      },
+      {
+        "id": 8,
+        "title": "Me encanta",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
+      },
+      {
+        "id": 9,
+        "title": "Me encanta",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
+      },
+      {
+        "id": 10,
+        "title": "Me encanta",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
       }
     ]
   },
@@ -360,5 +416,20 @@
       "id": 7
     }
   ],
-  "users": []
+  "users": [
+    {
+      "id": 1,
+      "name": "Laura O",
+      "username": "Laura WHATEVER",
+      "password": "randompwd",
+      "place": "Cerdeña",
+      "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
+      "email": "laurao@mail.com",
+      "description": "",
+      "noway": [
+        "Símbolo del infinito",
+        "Mariposas"
+      ]
+    }
+  ]
 }
