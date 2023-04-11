@@ -377,7 +377,8 @@
       "birthday": "1985-04-08",
       "repassword": "contraseña2",
       "id": 5
-
+    },
+    { 
       "email": "laurao@mail.com",
       "password": "$2a$10$PbBmBSGJ6KdX9zv1PknknOhd535HBTkyGtwNsatAA0DNrkuNaKTZ2",
       "name": "Laura",
