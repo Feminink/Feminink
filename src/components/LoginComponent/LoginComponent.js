@@ -17,7 +17,7 @@ import "./LoginComponent.scss";
 
 const LoginComponent = () => {
   const { user } = useSelector((state) => state.GalleryReducer);
-  console.log(user, "userL");
+ 
   const dispatch = useDispatch();
 
   // FUNCIÓN PARA SETEAR LOS ERRORES EN CADA INPUT
@@ -49,7 +49,7 @@ const LoginComponent = () => {
     validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
-      console.log(user, "userL");
+      console.log(values, "values");
     },
   });
 
@@ -61,12 +61,14 @@ const LoginComponent = () => {
           email: formik.values.email,
           password: formik.values.password,
         })
+        
       );
     }
+    <Navigate to="/profile" replace></Navigate>;
   }
 
   if (user && user.id) {
-    console.log(user, "userL");
+    
     return <Navigate to="/profile" replace></Navigate>;
   }
   return (
