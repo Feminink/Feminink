@@ -52,7 +52,6 @@ const LoginComponent = () => {
     }
     
   }
-
   const formik = useFormik({
     initialValues: {
       email: "",
