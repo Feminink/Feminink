@@ -7,6 +7,7 @@ import { faPalette, faEnvelope, faEnvelopeOpen } from '@fortawesome/free-solid-s
 
 import postal from '../../assets/images/postal.png'
 import './Messages.scss';
+import { number } from 'yup';
 
 const Messages = () => {
 
@@ -38,7 +39,7 @@ const Messages = () => {
     setNumMessagesToShow(3);
     setShowMore(false);
   } else {
-    setNumMessagesToShow(6);
+    setNumMessagesToShow(numMessagesToShow + 5);
     setShowMore(true);
   }
 }
