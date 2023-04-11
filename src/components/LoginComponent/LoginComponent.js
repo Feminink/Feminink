@@ -7,7 +7,7 @@ import "./LoginComponent.scss";
 // IMPORT USE SELECTOR, USE DISPATCH
 import { useDispatch, useSelector } from "react-redux";
 // IMPORT API CALL DO LOGIN
-import { actionDoLoginOk, doLogin } from "../../store/auth/actions";
+import { doLogin } from "../../store/auth/actions";
 // IMPORT LINK
 import { Link } from "react-router-dom";
 // IMPORT FORMIK
@@ -52,11 +52,8 @@ const LoginComponent = () => {
 
     },  
     },
-
+    )
   
-  
-    );
-
   // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
   function onClickLogin() {
     if (formik.values.email && formik.values.password) {
@@ -68,7 +65,7 @@ const LoginComponent = () => {
         
       );
     }
-    <Navigate to="/profile" replace></Navigate>;
+   
   }
 
   if (user && user.id) {

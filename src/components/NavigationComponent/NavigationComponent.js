@@ -138,7 +138,7 @@ const NavigationComponent = () => {
           ) : (
             ""
           )}
-          {/* {user && user.id ? ( */}
+          {user && user.id ? (
           <li className="main-nav__li main-nav__li--logout li">
             <Link
               className="main-nav__link link"
@@ -149,7 +149,7 @@ const NavigationComponent = () => {
               Logout
             </Link>
           </li>
-          {/* ) : ("")} */}
+          ) : ("")}
         </ul>
       </nav>
     </>
