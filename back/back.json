@@ -258,63 +258,6 @@
       }
     ]
   },
-  "admins": [
-    {
-      "id": 1,
-      "name": "Laura O",
-      "username": "Laura WHATEVER",
-      "password": "randompwd",
-      "place": "Cerdeña",
-      "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
-      "email": "laurao@mail.com",
-      "description": "",
-      "noway": [
-        "Símbolo del infinito",
-        "Mariposas"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Ignacio E",
-      "username": "Ignacio WHATEVER",
-      "password": "randompwd1",
-      "place": "Puerto de Sta María",
-      "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
-      "email": "ignacio@mail.com",
-      "description": "",
-      "noway": [
-        "Campanillas",
-        "Tribales canis"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Miriam F",
-      "username": "Miriam WHATEVER",
-      "password": "randompwd2",
-      "place": "Cädiz",
-      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-      "email": "miriamf@mail.com",
-      "description": "",
-      "noway": [
-        "Delfines en el tobillo",
-        "Estrellitas"
-      ]
-    },
-    {
-      "id": 4
-    },
-    {
-      "email": "laurao@mail.com",
-      "password": "randompwd",
-      "id": 5
-    },
-    {
-      "email": "laurao@mail.com",
-      "password": "randompwd",
-      "id": 6
-    }
-  ],
   "contact": [
     {
       "name": "María Zambrano",
@@ -373,5 +316,66 @@
       "id": 7
     }
   ],
-  "users": []
+  "users": [
+    {
+      "id": 1,
+      "name": "Laura O",
+      "username": "Laura WHATEVER",
+      "password": "randompwd",
+      "place": "Cerdeña",
+      "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
+      "email": "laurao@mail.com",
+      "description": "",
+      "noway": [
+        "Símbolo del infinito",
+        "Mariposas"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ignacio E",
+      "username": "Ignacio WHATEVER",
+      "password": "randompwd1",
+      "place": "Puerto de Sta María",
+      "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
+      "email": "ignacio@mail.com",
+      "description": "",
+      "noway": [
+        "Campanillas",
+        "Tribales canis"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Miriam F",
+      "username": "Miriam WHATEVER",
+      "password": "randompwd2",
+      "place": "Cädiz",
+      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
+      "email": "miriamf@mail.com",
+      "description": "",
+      "noway": [
+        "Delfines en el tobillo",
+        "Estrellitas"
+      ]
+    },
+    {
+      "email": "miriamfr@mail.com",
+      "password": "$2a$10$E3XpZ.voylNvH/j0C2vE3O72zGkDgsOWkumajeWtFV8RLbcm2GTa6",
+      "name": "MiriamF",
+      "surname": "Ro",
+      "birthday": "1999-12-30",
+      "repassword": "contraseña",
+      "id": 4
+    },
+    {
+      "email": "lauraor@mail.com",
+      "password": "$2a$10$oL2RInJlW9bXiO8joduYyOdTyxtAmOt/UM7P9dcZuRxcGU3Oc1xWy",
+      "name": "Laura",
+      "surname": "Or",
+      "birthday": "1985-04-08",
+      "repassword": "contraseña2",
+      "id": 5
+    }
+  ]
 }

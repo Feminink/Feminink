@@ -44,9 +44,7 @@ const LoginComponent = () => {
   function onClickLogin() {
     if (
       formik.values.email &&
-      // user.email &&
       formik.values.password 
-      // user.password
     ) {
       return dispatch(
         doLogin({ email: formik.values.email, password: formik.values.password })
