@@ -27,20 +27,29 @@ const DetailComponent = () => {
     );
   }
   return (
-    <div className="container">
-      <div key={detail.id}>
+    <div className="section__gallery container center">
+      <div className="detail__container" key={detail.id}>
         <img src={detail.image} alt={detail.alt} />
-        <div>
-          <h3> {detail.title}</h3>
-          <h3>Model: {detail.model}</h3>
-          <h3>Style: {detail.style}</h3>
-          <h3>Artist: {detail.artist}</h3>
-          <h3>Description: {detail.description}</h3>
+        <h3> {detail.title}</h3>
+        <div className="gallery__details">
+          <p>
+            <b>Model:</b> <span>{detail.model}</span>
+          </p>
+          <p>
+            <b>Style: </b>
+            <span>{detail.style}</span>
+          </p>
+          <p>
+            <b>Artist: </b>
+            <span>{detail.artist}</span>
+          </p>
+          <p>
+            <b>Description:</b> <span>{detail.description}</span>
+          </p>
         </div>
       </div>
-
       <Link to="/gallery">
-        <button>Back to results</button>
+        <button className="button--back">Back to Gallery</button>
       </Link>
     </div>
   );

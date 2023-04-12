@@ -97,6 +97,9 @@ const GalleryComponent = () => {
                           <p>
                             <b>Artist:</b> {gallerya.artist}
                           </p>
+                          <p>
+                            <b>Style:</b> {gallerya.style}
+                          </p>
                         </div>
                       </div>
                     </Link>
