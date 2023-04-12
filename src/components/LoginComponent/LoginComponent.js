@@ -15,10 +15,8 @@ import { useFormik } from "formik";
 // IMPORT STYLES
 import "./LoginComponent.scss";
 
-// IMPORT LOGO
-import logo from '../../assets/images/header-logo.svg';
-
 const LoginComponent = () => {
+
   const { user } = useSelector((state) => state.AuthReducer);
   const dispatch = useDispatch();
 
@@ -28,8 +26,8 @@ const LoginComponent = () => {
       email: "",
       password: "",
     };
-    if (values.email !== user.email) {
-      errors.email = "Invalid email address";
+    if (!values.email) {
+      errors.email = "Required";
     } else if (
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
     ) {
@@ -38,26 +36,10 @@ const LoginComponent = () => {
 
     if (!values.password) {
       errors.password = "Required";
-    } else if (values.password !== user.password) {
-      errors.password = "Invalid password";
     }
 
     return errors;
   };
-
-  // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
-  function onClickLogin() {
-    if (
-      formik.values.email &&
-      user.email &&
-      formik.values.password &&
-      user.password
-    ) {
-      return dispatch(
-        doLogin({ email: formik.email, password: formik.password })
-      );
-    }
-  }
 
   const formik = useFormik({
     initialValues: {
@@ -67,13 +49,28 @@ const LoginComponent = () => {
     validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+
+    },  
     },
-  });
+    )
+  
+  // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
+  function onClickLogin() {
+    if (formik.values.email && formik.values.password) {
+      return dispatch(
+        doLogin({
+          email: formik.values.email,
+          password: formik.values.password,
+        })
+        
+      );
+    }
+   
+  }
 
   if (user && user.id) {
     return <Navigate to="/profile" replace></Navigate>;
   }
-
   return (
     <section className="section__login section">
       <div className="container">
@@ -121,7 +118,7 @@ const LoginComponent = () => {
       </div>
     </section>
   );
-};
+}
 LoginComponent.propTypes = {};
 
 LoginComponent.defaultProps = {};
