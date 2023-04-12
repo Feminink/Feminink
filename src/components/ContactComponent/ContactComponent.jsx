@@ -37,7 +37,8 @@ const ContactComponent = () => {
           description: formik.values.description,
           artist: formik.values.artist,
           color: formik.values.color,
-        })
+        }),
+
       );
     }
   };
@@ -57,7 +58,7 @@ const ContactComponent = () => {
       errors.email = 'Required';
     } else if (values.email.length < 5) {
       errors.email = 'Must be 5 characters or more';
-    } 
+    }
     // ERROR DESCRIPTION
     if (!values.description) {
       errors.description = 'Required';
@@ -78,6 +79,7 @@ const ContactComponent = () => {
     validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+
     },
   });
 
@@ -89,8 +91,8 @@ const ContactComponent = () => {
 
   return (
     <section className='section__contact section'>
-        <form onSubmit={formik.handleSubmit} className='form'> 
-          <header className='form__title h2'> 
+        <form onSubmit={formik.handleSubmit} className='form'>
+          <header className='form__title h2'>
             <h2>Ponte en contacto con FemininK </h2>
           </header>
           <div className='form__container'>
@@ -156,18 +158,20 @@ const ContactComponent = () => {
                <span className='form__line'></span>
             </div>
             <div className="form__group">
-                <input 
-                  onChange={formik.handleChange} 
+                <input
+                  onChange={formik.handleChange}
                   className='form__color'
                   name="color"
                   type="color"
                   onBlur={formik.handleBlur}
-                  value={formik.values.color} 
+                  value={formik.values.color}
                   required/>
                 <label className='form__label'>Color base</label>
                 <span className='form__line'></span>
             </div>
             <button className='form__submit' type="reset" onClick={sendForm} noValidate>Enviar</button>
+            {/* // CUSTOMIZAR */}
+            {doContact? ( <div className="ok">El mensaje se ha enviado con éxito</div>): ""}
           </div>
         </form>
     </section>
