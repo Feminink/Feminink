@@ -36,7 +36,7 @@ const OurTeamComponent = () => {
                   <div className="text">
                     <h3>{member.name} / {member.username}</h3>
                     <p><b>Lugar: </b>{member.place}</p>
-                    <p><b>Email: </b>{member.mail}</p>
+                    <p><b>Email: </b>{member.email}</p>
                   </div>
                 </div>
               </div>
