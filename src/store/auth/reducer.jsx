@@ -2,7 +2,6 @@
 import {
   DO_LOGIN,DO_LOGIN_OK,DO_LOGIN_FAIL,
   DO_LOGOUT,DO_LOGOUT_OK,
-  GET_SINGLE_USER, GET_SINGLE_USER_OK, GET_SINGLE_USER_FAIL
 } from "./actionTypes";
 
 
@@ -43,15 +42,6 @@ export default function AuthReducer(state = initialState, action) {
       state = { ...state, user: {} };
       break
 
-      case GET_SINGLE_USER:
-      state = {...state, loadingUser:true}
-      break
-      case GET_SINGLE_USER_OK: 
-      state = {...state, loadingUser: false, user: action.payload.user}
-      break
-      case GET_SINGLE_USER_FAIL:
-      state = {...state, loadingUser: false, user: {}, error: {message: action.payload}}
-      break
       
     default:
       break;

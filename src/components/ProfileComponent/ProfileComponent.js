@@ -1,14 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import  './ProfileComponent.scss';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import {getMessages} from '../../store/Tattoo/actions'
 
 const ProfileComponent = () => {
 
 
    const {user} = useSelector((state)=> state.AuthReducer)
-  
+   const {messages, loadingMessages} = useSelector((state)=>state.TattooReducer);
+   const dispatch = useDispatch()
+   
+   useEffect(() => {
+    dispatch(getMessages());
+  }, []);
+
+  if(loadingMessages){
+    return ( 
+    <p> "Loading..."</p>)
+  }else { 
 return ( 
+  <> 
   <div className="div__singleUser">
     <div>
     <h1>TUS DATOS </h1> 
@@ -23,9 +36,19 @@ return (
     <h2>{user.bio}</h2>
     </div>
   <div> 
-    <img src="https://media.istockphoto.com/id/1168110319/photo/tattooed-latina-smiling-outdoors-and-sitting-on-car-hood.jpg?s=612x612&w=0&k=20&c=v8Cyky_cXJk3MBBh_wi9lv0mPe6zmVhFJu3AHwnMJ_s=" alt={user.name}></img> 
+    <img src={user.image} alt={user.name}></img> 
     </div>
-  </div>)
+  </div>
+  
+  <section>
+{messages.map((message)=>{
+  return(
+    message.artist === user.name? <h1>{message.description}</h1> : ""
+  )
+})}
+  </section>
+  </>
+  )}
  };
 
 ProfileComponent.propTypes = {};
