@@ -84,7 +84,7 @@
     "gallery": [
       {
         "id": "1",
-        "image": "../assets/images/gallery/pexels-photo-4123910.webp",
+        "image": "./assets/images/gallery/pexels-photo-4123910.webp",
         "title": "Flower tattoo",
         "artist": "Miriam F",
         "model": "Tatiana Parker",

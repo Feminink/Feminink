@@ -13,7 +13,8 @@ import {
 
 const backGallery = "http://localhost:3000/gallery";
 const backUsers = "http://localhost:3000/users";
-const backAuth = "http://localhost:3000/registered-users";
+
+/* FUNCTION TO RENDER GALLERY */
 
 export function actionGetGallery() {
   return {
@@ -32,7 +33,6 @@ export function actionGetGalleryFail(error) {
     payload: error,
   };
 }
-
 export function getGallery() {
   return async (dispatch) => {
     dispatch(actionGetGallery());
@@ -46,6 +46,7 @@ export function getGallery() {
   };
 }
 
+/* FUNCTION TO RENDER SINGLE PAGE */
 export function actionGetDetail(detailId) {
   return {
     type: GET_DETAIL,
@@ -77,7 +78,7 @@ export function getDetail(detailId) {
   };
 }
 
-// TO POST REGISTRATION DETAILS IN BACK: USERS
+/* FUNCTION TO REGISTER NEW USER */
 export function actionDoRegistration(registrationForm) {
   return {
     type: DO_REGISTRATION,
@@ -96,8 +97,6 @@ export function actionDoRegistrationFail(error) {
     payload: error,
   };
 }
-
-// FUNCTION TO POST NEW USER DETAILS TO BACK
 export function doRegistration(registrationForm) {
   return async (dispatch) => {
     try {
