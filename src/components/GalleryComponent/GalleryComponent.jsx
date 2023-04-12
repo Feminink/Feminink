@@ -83,7 +83,7 @@ const GalleryComponent = () => {
             .filter((gallerya) => {
               return searchByStyle.toLowerCase() === ""
                 ? info.gallery
-                : gallerya.style.toLowerCase().includes(searchByStyle);
+                : gallerya.style.toLowerCase().startsWith(searchByStyle);
             })
             .map((gallerya) => {
               return (

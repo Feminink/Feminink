@@ -33,6 +33,7 @@ const DetailComponent = () => {
         <div>
           <h3> {detail.title}</h3>
           <h3>Model: {detail.model}</h3>
+          <h3>Style: {detail.style}</h3>
           <h3>Artist: {detail.artist}</h3>
           <h3>Description: {detail.description}</h3>
         </div>
