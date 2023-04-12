@@ -1,0 +1,20 @@
+/* -- START STUDIOINFOCOMPONENT STYLES -- */
+
+.section__studio-info {
+    background-color: rgb(248, 202, 96);
+}
+
+.studio-info {
+    
+    &__ul {
+        display: flex;
+        justify-content: space-around;
+        gap: 2em;
+    }
+
+    &__li {
+        text-align: center;
+    }
+}
+
+/* -- END STUDIOINFOCOMPONENT STYLES -- */

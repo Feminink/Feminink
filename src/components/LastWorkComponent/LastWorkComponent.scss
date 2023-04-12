@@ -1,0 +1,48 @@
+/* -- START LASTWORKSCOMPONENT STYLES -- */
+
+.section__last-works {
+    padding: 4em 0;
+}
+
+.last-works {
+
+    .image-container {
+        position: relative;
+      
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+      
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(248, 202, 96, 0.8);
+                overflow: hidden;
+                width: 100%;
+                height: 0;
+                transition: .5s ease;
+      
+            .text {
+                white-space: nowrap; 
+                color: black;
+                position: absolute;
+                overflow: hidden;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+            }
+        }
+      
+        &:hover .overlay {
+            height: 100%;
+        }
+     }
+
+}
+
+/* -- END LASTWORKSCOMPONENT STYLES -- */

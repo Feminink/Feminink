@@ -80,15 +80,19 @@ const NavigationComponent = () => {
               <FontAwesomeIcon icon={faUserGroup} size="xs" /> About
             </Link>
           </li>
-          <li className="main-nav__li li">
-            <Link
-              className="main-nav__link link"
-              onClick={toggleMenu}
-              to="/messages"
-            >
-              <FontAwesomeIcon icon={faMessage} size="xs" /> Messages
-            </Link>
-          </li>
+          {user && user.id ? (
+            <li className="main-nav__li li">
+              <Link
+                className="main-nav__link link"
+                onClick={toggleMenu}
+                to="/messages"
+              >
+                <FontAwesomeIcon icon={faMessage} size="xs" /> Messages
+              </Link>
+            </li>
+          ) : (
+            ""
+          )}
           <li className="main-nav__li li">
             <Link
               className="main-nav__link link"
@@ -138,7 +142,7 @@ const NavigationComponent = () => {
           ) : (
             ""
           )}
-          {/* {user && user.id ? ( */}
+          {user && user.id ? ( 
           <li className="main-nav__li main-nav__li--logout li">
             <Link
               className="main-nav__link link"
@@ -149,7 +153,7 @@ const NavigationComponent = () => {
               Logout
             </Link>
           </li>
-          {/* ) : ("")} */}
+         ) : ("")}
         </ul>
       </nav>
     </>

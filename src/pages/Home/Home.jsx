@@ -6,11 +6,13 @@ import SlideshowComponent from "../../components/SlideshowComponent/SlideshowCom
 import OurTeamComponent from "../../components/OurTeamComponent/OurTeamComponent";
 import LastWorkComponent from "../../components/LastWorkComponent/LastWorkComponent";
 import TestimonialsComponent from "../../components/TestimonialsComponent/TestimonialsComponent";
+import StudioInfoComponent from "../../components/StudioInfoComponent/StudioInfoComponent";
 
 const Home = () => {
   return (
     <>
     <SlideshowComponent></SlideshowComponent>
+    <StudioInfoComponent></StudioInfoComponent>
     <OurTeamComponent></OurTeamComponent>
     <TestimonialsComponent></TestimonialsComponent>
     <LastWorkComponent></LastWorkComponent>
