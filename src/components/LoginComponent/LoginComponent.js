@@ -18,8 +18,6 @@ import "./LoginComponent.scss";
 import logo from '../../assets/images/footer-logo.svg';
 
 
-// IMPORT LOGO
-import logo from '../../assets/images/header-logo.svg';
 
 const LoginComponent = () => {
   const { user } = useSelector((state) => state.AuthReducer);
