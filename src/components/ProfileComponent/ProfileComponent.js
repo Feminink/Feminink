@@ -41,11 +41,24 @@ return (
   </div>
   
   <section>
+  
 {messages.map((message)=>{
   return(
-    message.artist === user.name? <h1>{message.description}</h1> : ""
+    
+    message.artist === user.name? 
+    <div> 
+    {/* // LA LONGITUD DEL ARRAY AÚN NO LA HE SACADO */}
+    <h1>{user.name} tienes { message.artist.includes(user.name)? message.length : ""} mensajes nuevos!</h1>
+    <h1>De {message.name}</h1>
+    <h1>{message.description}</h1>
+    <h1>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h1>
+    </div>
+
+     : ""
   )
+  
 })}
+
   </section>
   </>
   )}
