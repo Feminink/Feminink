@@ -36,10 +36,10 @@ const Messages = () => {
  //FUNCIÓN PARA CARGAR MÁS MENSAJES
  const loadMoreMessages = () => {
   if (showMore) {
-    setNumMessagesToShow(3);
+    setNumMessagesToShow(4);
     setShowMore(false);
   } else {
-    setNumMessagesToShow(numMessagesToShow + 5);
+    setNumMessagesToShow(numMessagesToShow + 10);
     setShowMore(true);
   }
 }
