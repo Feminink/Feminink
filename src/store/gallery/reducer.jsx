@@ -1,11 +1,7 @@
 import {
-
   DO_REGISTRATION,
   DO_REGISTRATION_OK,
   DO_REGISTRATION_FAIL,
-  GET_USERS,
-  GET_USERS_OK,
-  GET_USERS_FAIL,
 } from "./actionTypes";
 
 const initialState = {
@@ -34,20 +30,6 @@ export default function GalleryReducer(state = initialState, action) {
         error: { message: action.payload },
       };
       break;
-    case GET_USERS:
-      state = { ...state, loadingUsers: true };
-      break;
-    case GET_USERS_OK:
-      state = { ...state, loadingUsers: false, users: action.payload };
-      break;
-    case GET_USERS_FAIL:
-      state = {
-        ...state,
-        loadingUsers: false,
-        error: { message: action.payload },
-      };
-      break;
-
     default:
       break;
   }

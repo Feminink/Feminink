@@ -1,8 +1,3 @@
-
 export const DO_REGISTRATION = "DO_REGISTRATION";
 export const DO_REGISTRATION_OK = "DO_REGISTRATION_OK";
 export const DO_REGISTRATION_FAIL = "DO_REGISTRATION_FAIL";
-
-export const GET_USERS = "GET_USERS";
-export const GET_USERS_OK = "GET_USERS_OK";
-export const GET_USERS_FAIL = "GET_USERS_FAIL";

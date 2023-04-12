@@ -81,11 +81,9 @@
         ]
       }
     ],
-    "about":
-      { 
-        "text": "Desde FeminInk queremos rescatar y poner en valor un trozo de la historia que rara vez sale a la luz, precisamente porque corresponde a las mujeres. Si hoy tenemos cabida en los estudios de tatuaje, en parte, se lo debemos a mujeres que se atrevieron a desafiar la norma en la que solo tenían espacio para ser contempladas en freakshows por llevar todo el cuerpo tatuado. El salto de estas mujeres, dos siglos atrás hacia un espacio masculinizado y desconocido supondrá la puerta de entrada de otras muchas que irán agrietando poco a poco algunas de las normas de género asociadas no solo a la estética de las mujeres, sino a su libertad de expresión. Gracias por ser nuestras referentas."
-      },
-
+    "about": {
+      "text": "Desde FeminInk queremos rescatar y poner en valor un trozo de la historia que rara vez sale a la luz, precisamente porque corresponde a las mujeres. Si hoy tenemos cabida en los estudios de tatuaje, en parte, se lo debemos a mujeres que se atrevieron a desafiar la norma en la que solo tenían espacio para ser contempladas en freakshows por llevar todo el cuerpo tatuado. El salto de estas mujeres, dos siglos atrás hacia un espacio masculinizado y desconocido supondrá la puerta de entrada de otras muchas que irán agrietando poco a poco algunas de las normas de género asociadas no solo a la estética de las mujeres, sino a su libertad de expresión. Gracias por ser nuestras referentas."
+    },
     "admins": [
       {
         "id": 1,
@@ -357,50 +355,6 @@
         "title": "Me encanta",
         "image": "./assets/images/testimonials/angelina_jolie.jpg"
       }
-    ],
-    "admins": [
-      {
-        "id": 1,
-        "name": "Laura O",
-        "username": "Laura WHATEVER",
-        "password": "randompwd",
-        "place": "Cerdeña",
-        "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
-        "email": "laurao@mail.com",
-        "description": "",
-        "noway": [
-          "Símbolo del infinito",
-          "Mariposas"
-        ]
-      },
-      {
-        "id": 2,
-        "name": "Ignacio E",
-        "username": "Ignacio WHATEVER",
-        "password": "randompwd1",
-        "place": "Puerto de Sta María",
-        "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
-        "email": "ignacio@mail.com",
-        "description": "",
-        "noway": [
-          "Campanillas",
-          "Tribales canis"
-        ]
-      },
-      {
-        "id": 3,
-        "name": "Miriam F",
-        "username": "Miriam WHATEVER",
-        "password": "randompwd2",
-        "place": "Cädiz",
-        "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-        "email": "miriamf@mail.com",
-        "description": "",
-        "noway": [
-          "Delfines en el tobillo",
-          "Estrellitas"
-        ]
-      }
     ]
   },
   "contact": [
@@ -471,6 +425,15 @@
       "birthday": "1988-02-15",
       "isAdmin": true,
       "id": 7
+    },
+    {
+      "email": "laura.origa@gmail.com",
+      "password": "$2a$10$oJMaCHRQFtVJzDCReUPcrur0NfAnyNKKHvBU/NniAiGb1ggYJXF4i",
+      "name": "Laura",
+      "surname": "Origa",
+      "birthday": "1993-06-01",
+      "repassword": "passwordo",
+      "id": 8
     }
   ]
 }

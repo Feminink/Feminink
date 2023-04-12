@@ -3,9 +3,6 @@ import {
   DO_REGISTRATION,
   DO_REGISTRATION_OK,
   DO_REGISTRATION_FAIL,
-  GET_USERS,
-  GET_USERS_OK,
-  GET_USERS_FAIL,
 } from "./actionTypes";
 
 const backUsers = "http://localhost:3000/users";
@@ -41,42 +38,6 @@ export function doRegistration(registrationForm) {
       console.log(response.data, "res.data");
     } catch (error) {
       dispatch(actionDoRegistrationFail(error));
-    }
-  };
-}
-
-
-// FUNCION ACTIONGETUSERS
-export function actionGetUsers() {
-  return {
-    type: GET_USERS,
-  };
-}
-
-export function actionGetUsersOk(users) {
-  return {
-    type: GET_USERS_OK,
-    payload: users,
-  };
-}
-
-export function actionGetUsersFail(error) {
-  return {
-    type: GET_USERS_FAIL,
-    payload: error,
-  };
-}
-
-// FUNCTION GETUSERS
-export function getUsers() {
-  return async (dispatch) => {
-    try {
-      dispatch(actionGetUsers());
-      const response = await axios.get(backUsers);
-      dispatch(actionGetUsersOk(response.data));
-      console.log(response.data, "respuesta de action");
-    } catch (error) {
-      dispatch(actionGetUsersFail);
     }
   };
 }
