@@ -81,6 +81,55 @@
         ]
       }
     ],
+    "about":
+      { 
+        "text": "Desde FeminInk queremos rescatar y poner en valor un trozo de la historia que rara vez sale a la luz, precisamente porque corresponde a las mujeres. Si hoy tenemos cabida en los estudios de tatuaje, en parte, se lo debemos a mujeres que se atrevieron a desafiar la norma en la que solo tenían espacio para ser contempladas en freakshows por llevar todo el cuerpo tatuado. El salto de estas mujeres, dos siglos atrás hacia un espacio masculinizado y desconocido supondrá la puerta de entrada de otras muchas que irán agrietando poco a poco algunas de las normas de género asociadas no solo a la estética de las mujeres, sino a su libertad de expresión. Gracias por ser nuestras referentas."
+      },
+
+    "admins": [
+      {
+        "id": 1,
+        "name": "Laura O",
+        "username": "Laura WHATEVER",
+        "password": "randompwd",
+        "place": "Cerdeña",
+        "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
+        "email": "laurao@mail.com",
+        "description": "",
+        "noway": [
+          "Símbolo del infinito",
+          "Mariposas"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Ignacio E",
+        "username": "Ignacio WHATEVER",
+        "password": "randompwd1",
+        "place": "Puerto de Sta María",
+        "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
+        "email": "ignacio@mail.com",
+        "description": "",
+        "noway": [
+          "Campanillas",
+          "Tribales canis"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Miriam F",
+        "username": "Miriam WHATEVER",
+        "password": "randompwd2",
+        "place": "Cädiz",
+        "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
+        "email": "miriamf@mail.com",
+        "description": "",
+        "noway": [
+          "Delfines en el tobillo",
+          "Estrellitas"
+        ]
+      }
+    ],
     "gallery": [
       {
         "id": "1",
@@ -388,14 +437,6 @@
       "id": 4
     },
     {
-      "name": "dfsftswf",
-      "email": "dfsdfsdf@mail.com",
-      "description": "saerwefwefwe",
-      "artist": "Ignacio E",
-      "color": "#a33e3e",
-      "id": 5
-    },
-    {
       "name": "Mira Murati",
       "email": "miramurati@mail.com",
       "description": "Quiero una frase en el pecho donde ponga \"IA RULES\"",
@@ -413,48 +454,6 @@
     }
   ],
   "users": [
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-    {
-      "id": 2,
-      "name": "Ignacio E",
-      "username": "Ignacio WHATEVER",
-      "password": "randompwd1",
-      "place": "Puerto de Sta María",
-      "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
-      "email": "ignacio@mail.com",
-      "description": "",
-      "noway": [
-        "Campanillas",
-        "Tribales canis"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Miriam F",
-      "username": "Miriam WHATEVER",
-      "password": "randompwd2",
-      "place": "Cädiz",
-      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-      "email": "miriamf@mail.com",
-      "description": "",
-      "noway": [
-        "Delfines en el tobillo",
-        "Estrellitas"
-      ]
-    },
     {
       "email": "miriamfr@mail.com",
       "password": "$2a$10$E3XpZ.voylNvH/j0C2vE3O72zGkDgsOWkumajeWtFV8RLbcm2GTa6",
@@ -465,23 +464,13 @@
       "id": 4
     },
     {
-      "email": "lauraor@mail.com",
-      "password": "$2a$10$oL2RInJlW9bXiO8joduYyOdTyxtAmOt/UM7P9dcZuRxcGU3Oc1xWy",
-      "name": "Laura",
-      "surname": "Or",
-      "birthday": "1985-04-08",
-      "repassword": "contraseña2",
-      "id": 5
-    },
-    { 
-      "email": "laurao@mail.com",
-      "password": "$2a$10$PbBmBSGJ6KdX9zv1PknknOhd535HBTkyGtwNsatAA0DNrkuNaKTZ2",
-      "name": "Laura",
-      "surname": "O",
-      "birthday": "01-06-1993",
-      "repassword": "randompwd",
+      "email": "ignacioe@mail.com",
+      "password": "$2a$10$.L677vfTanJejKSUN6pVGe5uscX7O5Yw4GcgLtDNwKQismkLRL1zq",
+      "name": "Ignacio",
+      "surname": "Erviti",
+      "birthday": "1988-02-15",
       "isAdmin": true,
-      "id": 6
+      "id": 7
     }
   ]
 }

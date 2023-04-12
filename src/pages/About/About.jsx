@@ -5,7 +5,10 @@ import Inspiration from "../Inspiration/Inspiration";
 const About = () => {
   return (
     <>
-      <Inspiration></Inspiration>
+    <div className="div__background">
+    <Inspiration></Inspiration>
+    </div>
+     
     </>
   )
 };
