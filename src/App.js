@@ -34,6 +34,7 @@ function App() {
             <Route exact path="/about" element={<About />}></Route>
             <Route exact path="/inspiration" element={<Inspiration />}></Route>
             <Route exact path="/profile" element={<Profile />}></Route>
+            {/* <Route exact path="/users/:id" element={<Profile />}></Route> */}
             <Route exact path="/login" element={<Login />}></Route>
             <Route exact path="/contact" element={<Contact />}></Route>
             <Route exact path="/signup" element={<Registration />}></Route>

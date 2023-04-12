@@ -14,6 +14,9 @@ import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 // IMPORT STYLES
 import "./LoginComponent.scss";
+//IMPORT LOGO
+import logo from '../../assets/images/footer-logo.svg';
+
 
 // IMPORT LOGO
 import logo from '../../assets/images/header-logo.svg';

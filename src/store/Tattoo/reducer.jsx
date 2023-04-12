@@ -41,32 +41,32 @@ export default function TattooReducer(state = firstState, action){
         break
 
     
-        case GET_SINGLE_MESSAGE: {
+        case GET_SINGLE_MESSAGE: 
         state = {...state, loadingMessages: true}
         break
-        }
-        case GET_SINGLE_MESSAGE_OK: {
+        
+        case GET_SINGLE_MESSAGE_OK: 
         state = {...state, loadingMessages: false, message:action.payload}
         break
-        }
-        case GET_SINGLE_MESSAGE_FAIL: {
+        
+        case GET_SINGLE_MESSAGE_FAIL: 
         state = {...state, loadingMessages: false, error: {message: action.payload}}
         break
-        }
+        
 
         
-        case DELETE_MESSAGE: {
+        case DELETE_MESSAGE: 
         state = {...state}
         break
-        }
-        case DELETE_MESSAGE_OK: {
+        
+        case DELETE_MESSAGE_OK: 
         state = {...state, message: action.payload}
         break
-        }
-        case DELETE_MESSAGE_FAIL: {
+        
+        case DELETE_MESSAGE_FAIL: 
         state = {...state, message: {}, error:{message: action.payload}}
         break
-        }
+        
 
         default:
             break

@@ -7,7 +7,6 @@ import { faPalette, faEnvelope, faEnvelopeOpen } from '@fortawesome/free-solid-s
 
 import postal from '../../assets/images/postal.png'
 import './Messages.scss';
-import { number } from 'yup';
 
 const Messages = () => {
 

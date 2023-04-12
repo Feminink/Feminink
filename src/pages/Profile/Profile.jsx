@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ProfileComponent from "../../components/ProfileComponent/ProfileComponent";
 
 const Profile = () => {
-  return <h1>Profile Page</h1>;
+
+  return ( 
+    <div> 
+   <ProfileComponent/>
+   </div>)
 };
 
 export default Profile;

@@ -2,12 +2,8 @@
 import axios from "axios";
 // IMPORT ACTION TYPES
 import {
-  DO_LOGIN,
-  DO_LOGIN_OK,
-  DO_LOGIN_FAIL,
-  DO_LOGOUT,
-  DO_LOGOUT_OK,
-  DO_LOGOUT_FAIL,
+  DO_LOGIN,DO_LOGIN_OK,DO_LOGIN_FAIL,
+  DO_LOGOUT,DO_LOGOUT_OK,DO_LOGOUT_FAIL,
 } from "./actionTypes";
 
 export function actionDoLogin(loginData) {
@@ -38,7 +34,6 @@ export function doLogin(userData) {
         userData
       );
       dispatch(actionDoLoginOk(response.data));
-      console.log(response.data, "response.data");
     } catch (error) {
       dispatch(actionDoLoginFail(error));
     }
@@ -71,3 +66,5 @@ export function doLogout() {
     }
   };
 }
+
+

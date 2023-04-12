@@ -4,8 +4,10 @@ import './ContactComponent.scss';
 
 import { getInfo } from '../../store/info/actions';
 
+//IMPORT SWEETALERT
+
 // IMPORT FUNCIÖN DE CONTACTAR
-import { doContact } from '../../store/Tattoo/actions';
+import { actionDoContactOk, doContact} from '../../store/Tattoo/actions';
 
 //IMPORT HOOKS
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,6 +20,10 @@ const ContactComponent = () => {
   const dispatch = useDispatch();
   const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
 
+
+  function showMenssge(){
+  alert("el mensaje se ha enviado correctamente")
+  }
   useEffect(() => {
     dispatch(getInfo());
   }, []);
@@ -37,13 +43,25 @@ const ContactComponent = () => {
           description: formik.values.description,
           artist: formik.values.artist,
           color: formik.values.color,
-        })
+        }),
+
       );
+      if(sendForm && actionDoContactOk){
+        showMenssge()
+      }else{
+      alert ("No se ha podido enviar, vuelve a intentarlo")
+      }
     }
   };
 
   function validate(values) {
-    const errors = {};
+    const errors = {
+     name: "",
+     email: "",
+     description: "",
+     artist: "",
+     color: "",
+    };
     // ERROR NAME
     if (!values.name) {
       errors.name = 'Required';
@@ -54,10 +72,12 @@ const ContactComponent = () => {
     }
     // ERROR EMAIL
     if (!values.email) {
-      errors.email = 'Required';
-    } else if (values.email.length < 5) {
-      errors.email = 'Must be 5 characters or more';
-    } 
+      errors.email = "Please select an email address";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+      errors.email = "Invalid email address";
+    }
     // ERROR DESCRIPTION
     if (!values.description) {
       errors.description = 'Required';
@@ -78,6 +98,7 @@ const ContactComponent = () => {
     validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+
     },
   });
 
@@ -89,8 +110,8 @@ const ContactComponent = () => {
 
   return (
     <section className='section__contact section'>
-        <form onSubmit={formik.handleSubmit} className='form'> 
-          <header className='form__title h2'> 
+        <form onSubmit={formik.handleSubmit} className='form'  noValidate>
+          <header className='form__title h2'>
             <h2>Ponte en contacto con FemininK </h2>
           </header>
           <div className='form__container'>
@@ -156,13 +177,13 @@ const ContactComponent = () => {
                <span className='form__line'></span>
             </div>
             <div className="form__group">
-                <input 
-                  onChange={formik.handleChange} 
+                <input
+                  onChange={formik.handleChange}
                   className='form__color'
                   name="color"
                   type="color"
                   onBlur={formik.handleBlur}
-                  value={formik.values.color} 
+                  value={formik.values.color}
                   required/>
                 <label className='form__label'>Color base</label>
                 <span className='form__line'></span>

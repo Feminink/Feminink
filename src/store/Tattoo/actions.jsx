@@ -37,17 +37,20 @@ export function actionDoContactFail(error) {
   };
 }
 
-export function doContact(userContactForm) {
-  return async (dispatch) => {
-    dispatch(actionDoContact(userContactForm));
-    try {
-      const res = await axios.post(backContact, userContactForm);
-      dispatch(actionDoContactOk(res.data));
-      console.log(res, res.data, "res.data");
-    } catch (error) {
-      dispatch(actionDoContactFail(error));
+
+export function doContact(userContactForm){
+    return async (dispatch)=>{
+        dispatch(actionDoContact(userContactForm))
+        try {
+            
+            const res = await axios.post(backContact, userContactForm)
+            dispatch(actionDoContactOk(res.data))
+        } catch (error) {
+            dispatch(actionDoContactFail(error))
+        }
     }
-  };
+
+
 }
 
 //FUNCIÖN PARA OBTENER LOS MENSAJES DE CONTACTO
@@ -132,15 +135,19 @@ export function actionDeleteMessageFail(error) {
   };
 }
 
+
+
+
 export function deleteMessage(messageId) {
   return async (dispatch) => {
     dispatch(actionDeleteMessage(messageId));
     try {
       const response = await axios.delete(`${backContact}/${messageId}`);
       dispatch(actionDeleteMessageOk(response.data));
-      console.log(response.data, "response.data");
+     
     } catch (error) {
       dispatch(actionDeleteMessageFail(error));
     }
   };
+
 }
