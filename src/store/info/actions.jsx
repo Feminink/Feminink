@@ -4,28 +4,25 @@ import { GET_INFO, GET_INFO_OK, GET_INFO_FAIL } from "./actionTypes";
 
 const backInfo = "http://localhost:3000/results";
 
-// FUNCION ACTIONGETOURTEAM
+/* FUNCTION TO RENDER INFO */
+
 export function actionGetInfo() {
   return {
     type: GET_INFO,
   };
 }
-
 export function actionGetInfoOk(info) {
   return {
     type: GET_INFO_OK,
     payload: info,
   };
 }
-
 export function actionGetInfoFail(error) {
   return {
     type: GET_INFO_FAIL,
     payload: error,
   };
 }
-
-// FUNCTION GETINFO
 export function getInfo() {
   return async (dispatch) => {
     try {

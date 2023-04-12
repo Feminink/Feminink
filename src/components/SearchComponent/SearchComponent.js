@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./SearchComponent.scss";
 
-const SearchComponent = () => {
-  return <div>SearchComponent Component</div>;
-};
+const SearchComponent = () => {};
 
 SearchComponent.propTypes = {};
 

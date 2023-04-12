@@ -18,62 +18,59 @@ import "./LoginComponent.scss";
 import logo from '../../assets/images/footer-logo.svg';
 
 
+// IMPORT LOGO
+import logo from '../../assets/images/header-logo.svg';
+
 const LoginComponent = () => {
-
   const { user } = useSelector((state) => state.AuthReducer);
-  const dispatch = useDispatch();
-
-  // FUNCIÓN PARA SETEAR LOS ERRORES EN CADA INPUT
-  const validate = (values) => {
-    const errors = {
-      email: "",
-      password: "",
-    };
-    if (!values.email) {
-      errors.email = "Required";
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    ) {
-      errors.email = "This is not an email address";
-    }
-
-    if (!values.password) {
-      errors.password = "Required";
-    }
-
-    return errors;
-  };
-
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      password: "",
-    },
-    validate,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-
-    },  
-    },
-    )
+ const dispatch = useDispatch();
+ // FUNCIÓN PARA SETEAR LOS ERRORES EN CADA INPUT
+ const validate = (values) => {
+   const errors = {
+     email: "",
+     password: "",
+   };
+   if (!values.email) {
+     errors.email = "Required";
+   } else if (
+     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+   ) {
+     errors.email = "This is not an email address";
+   }
+   if (!values.password) {
+     errors.password = "Required";
+   }
+   return errors;
+ };
+ const formik = useFormik({
+   initialValues: {
+     email: "",
+     password: "",
+   },
+   validate,
+   onSubmit: (values) => {
+     alert(JSON.stringify(values, null, 2));
+   },  
+   },
+   )
+ 
+ // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
+ function onClickLogin() {
+   if (formik.values.email && formik.values.password) {
+     return dispatch(
+       doLogin({
+         email: formik.values.email,
+         password: formik.values.password,
+       })
+       
+     );
+   }
   
-  // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
-  function onClickLogin() {
-    if (formik.values.email && formik.values.password) {
-      return dispatch(
-        doLogin({
-          email: formik.values.email,
-          password: formik.values.password,
-        })
-        
-      );
-    }
-   
-  }
+ }
+ if (user && user.id) {
+   return <Navigate to="/profile" replace></Navigate>;
+ }
 
-  if (user && user.id) {
-    return <Navigate to="/profile" replace></Navigate>;
-  }
   return (
     <section className="section__login section">
       <div className="container">
@@ -121,7 +118,7 @@ const LoginComponent = () => {
       </div>
     </section>
   );
-}
+};
 LoginComponent.propTypes = {};
 
 LoginComponent.defaultProps = {};

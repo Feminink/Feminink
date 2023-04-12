@@ -1,8 +1,11 @@
+export const GET_GALLERY = "GET_GALLERY";
+export const GET_GALLERY_OK = "GET_GALLERY_OK";
+export const GET_GALLERY_FAIL = "GET_GALLERY_FAIL";
+
+export const GET_DETAIL = "GET_DETAIL";
+export const GET_DETAIL_OK = "GET_DETAIL_OK";
+export const GET_DETAIL_FAIL = "GET_DETAIL_FAIL";
 
 export const DO_REGISTRATION = "DO_REGISTRATION";
 export const DO_REGISTRATION_OK = "DO_REGISTRATION_OK";
 export const DO_REGISTRATION_FAIL = "DO_REGISTRATION_FAIL";
-
-export const GET_USERS = "GET_USERS";
-export const GET_USERS_OK = "GET_USERS_OK";
-export const GET_USERS_FAIL = "GET_USERS_FAIL";
