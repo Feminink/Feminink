@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
+import video from '../../assets/images/video.mp4'
 // IMPORT GETINFO FUNCTION
 import { getInfo } from "../../store/info/actions";
 
@@ -43,6 +44,9 @@ const InspirationComponent = () => {
 
   return (
     <> 
+    <video loop autoPlay>
+      <source src={video} type="video/mp4" />
+    </video>
     <section className="div__inspiration">
       <ul className="inspiration__ul ul">
         {info &&
