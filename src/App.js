@@ -10,6 +10,7 @@ import Contact from "./pages/Contact/Contact";
 import Gallery from "./pages/Gallery/Gallery";
 import Messages from "./pages/Messages/Messages";
 import Message from "./pages/Message/Message";
+import Detail from "./pages/Detail/Detail";
 // IMPORT REACT ROUTER
 import { Route, Routes, Navigate } from "react-router-dom";
 
@@ -19,7 +20,6 @@ import FooterComponent from "./layout/FooterComponent/FooterComponent";
 
 // IMPORT STYLES
 import "./App.scss";
-import DetailComponent from "./components/DetailComponent/DetailComponent";
 
 function App() {
   return (
@@ -30,11 +30,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
             <Route exact path="/gallery" element={<Gallery />}></Route>
-            <Route
-              exact
-              path="/gallery/:id"
-              element={<DetailComponent />}
-            ></Route>
+            <Route exact path="/gallery/:id" element={<Detail />}></Route>
             <Route exact path="/about" element={<About />}></Route>
             <Route exact path="/inspiration" element={<Inspiration />}></Route>
             <Route exact path="/profile" element={<Profile />}></Route>

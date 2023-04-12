@@ -4,22 +4,22 @@ import React, { useEffect } from "react";
 // IMPORT USE DISPATCH, USE SELECTOR
 import { useDispatch, useSelector } from "react-redux";
 // IMPORT LINK, USEPARAMS
-import { Link, useParams } from "react-router-dom";
-// IMPORT FUNCTION GETINFO FROM STORE
-import { getInfo } from "../../store/info/actions";
-
+import { Link } from "react-router-dom";
 // IMPORT STYLES
 import "./DetailComponent.scss";
+import { getDetail } from "../../store/gallery/actions";
 
 const DetailComponent = () => {
-  const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
   const dispatch = useDispatch();
+  const { detail, loadingDetail } = useSelector(
+    (state) => state.GalleryReducer
+  );
 
   useEffect(() => {
-    dispatch(getInfo(info.gallery));
+    dispatch(getDetail());
   }, []);
 
-  if (loadingInfo) {
+  if (loadingDetail) {
     return (
       <div>
         <h2>Loading...</h2>
@@ -27,20 +27,20 @@ const DetailComponent = () => {
     );
   }
   return (
-    <div>
-      {/* <div key={info.gallery.id} className="singleCard flex">
-        <img src={info.gallery.image} alt={info.gallery.alt} />
+    <div className="container">
+      <div key={detail.id}>
+        <img src={detail.image} alt={detail.alt} />
         <div>
-          <h1>{info.gallery.title}</h1>
-          <h2>Model: {info.gallery.model}</h2>
-          <h3>Artist:{info.gallery.artist}</h3>
-          <h3>Description:{info.gallery.description}</h3>
+          <h3> {detail.title}</h3>
+          <h3>Model: {detail.model}</h3>
+          <h3>Artist: {detail.artist}</h3>
+          <h3>Description: {detail.description}</h3>
         </div>
       </div>
 
       <Link to="/gallery">
         <button>Back to results</button>
-      </Link> */}
+      </Link>
     </div>
   );
 };

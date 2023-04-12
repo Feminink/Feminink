@@ -2,6 +2,9 @@ import {
   GET_GALLERY,
   GET_GALLERY_OK,
   GET_GALLERY_FAIL,
+  GET_DETAIL,
+  GET_DETAIL_OK,
+  GET_DETAIL_FAIL,
   DO_REGISTRATION,
   DO_REGISTRATION_OK,
   DO_REGISTRATION_FAIL,
@@ -13,6 +16,8 @@ import {
 const initialState = {
   gallery: [],
   loadingGallery: false,
+  loadingDetail: false,
+  detail: {},
   form: {},
   loadingForm: false,
   error: {
@@ -42,6 +47,23 @@ export default function GalleryReducer(state = initialState, action) {
         error: { message: action.payload },
       };
       break;
+
+    case GET_DETAIL: {
+      state = { ...state, loadingDetail: true };
+      break;
+    }
+    case GET_DETAIL_OK: {
+      state = { ...state, loadingDetail: false, detail: action.payload };
+      break;
+    }
+    case GET_DETAIL_FAIL: {
+      state = {
+        ...state,
+        loadingDetail: false,
+        error: { message: action.payload },
+      };
+      break;
+    }
     case DO_REGISTRATION:
       state = { ...state, loadingForm: true };
       break;

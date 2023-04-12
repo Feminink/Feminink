@@ -91,15 +91,15 @@ const GalleryComponent = () => {
                   <div className="image-container">
                     <Link to={`/gallery/${gallerya.id}`}>
                       <img src={gallerya.image} alt={gallerya.alt} />
-                    </Link>
-                    <div className="overlay">
-                      <div className="text">
-                        <h3>{gallerya.title}</h3>
-                        <p>
-                          <b>Artist:</b> {gallerya.artist}
-                        </p>
+                      <div className="overlay">
+                        <div className="text">
+                          <h3>{gallerya.title}</h3>
+                          <p>
+                            <b>Artist:</b> {gallerya.artist}
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                   <div className="gallery__details">
                     <h5>Model: {gallerya.model}</h5>

@@ -3,6 +3,9 @@ import {
   GET_GALLERY,
   GET_GALLERY_OK,
   GET_GALLERY_FAIL,
+  GET_DETAIL,
+  GET_DETAIL_OK,
+  GET_DETAIL_FAIL,
   DO_REGISTRATION,
   DO_REGISTRATION_OK,
   DO_REGISTRATION_FAIL,
@@ -42,6 +45,37 @@ export function getGallery() {
       console.log(response.data, "respuesta de action");
     } catch (error) {
       dispatch(actionGetGalleryFail);
+    }
+  };
+}
+
+export function actionGetDetail(detailId) {
+  return {
+    type: GET_DETAIL,
+    payload: detailId,
+  };
+}
+export function actionGetDetailOk(detail) {
+  return {
+    type: GET_DETAIL_OK,
+    payload: detail,
+  };
+}
+export function actionGetDetailFail(error) {
+  return {
+    type: GET_DETAIL_FAIL,
+    payload: error,
+  };
+}
+
+export function getDetail(detailId) {
+  return async (dispatch) => {
+    dispatch(actionGetDetail(detailId));
+    try {
+      const response = await axios.get(`${backGallery}/${detailId}`);
+      dispatch(actionGetDetailOk(response.data));
+    } catch (error) {
+      dispatch(actionGetDetailFail(error));
     }
   };
 }
