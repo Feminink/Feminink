@@ -5,3 +5,7 @@ export const DO_LOGIN_FAIL = "DO_LOGIN_FAIL";
 export const DO_LOGOUT = "DO_LOGOUT";
 export const DO_LOGOUT_OK = "DO_LOGOUT_OK";
 export const DO_LOGOUT_FAIL = "DO_LOGOUT_FAIL";
+
+export const GET_SINGLE_USER = "GET_SINGLE_USER"
+export const GET_SINGLE_USER_OK = "GET_SINGLE_USER_OK"
+export const GET_SINGLE_USER_FAIL = "GET_SINGLE_USER_FAIL"

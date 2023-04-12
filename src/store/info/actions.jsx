@@ -32,7 +32,6 @@ export function getInfo() {
       dispatch(actionGetInfo());
       const res = await axios.get(backInfo);
       dispatch(actionGetInfoOk(res.data));
-      console.log(res.data, "respuesta de action");
     } catch (error) {
       dispatch(actionGetInfoFail);
     }

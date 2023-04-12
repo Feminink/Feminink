@@ -39,7 +39,6 @@ export function doContact(userContactForm){
             
             const res = await axios.post(backContact, userContactForm)
             dispatch(actionDoContactOk(res.data))
-            console.log(res, res.data, "res.data")
         } catch (error) {
             dispatch(actionDoContactFail(error))
         }
@@ -137,7 +136,6 @@ export function deleteMessage(messageId){
         try {
             const response = await axios.delete(`${backContact}/${messageId}`)
             dispatch(actionDeleteMessageOk(response.data))
-            console.log(response.data, "response.data")
         
         } catch (error) {
             dispatch(actionDeleteMessageFail(error))

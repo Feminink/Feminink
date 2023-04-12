@@ -2,12 +2,9 @@
 import axios from "axios";
 // IMPORT ACTION TYPES
 import {
-  DO_LOGIN,
-  DO_LOGIN_OK,
-  DO_LOGIN_FAIL,
-  DO_LOGOUT,
-  DO_LOGOUT_OK,
-  DO_LOGOUT_FAIL,
+  DO_LOGIN,DO_LOGIN_OK,DO_LOGIN_FAIL,
+  DO_LOGOUT,DO_LOGOUT_OK,DO_LOGOUT_FAIL,
+  GET_SINGLE_USER, GET_SINGLE_USER_FAIL, GET_SINGLE_USER_OK
 } from "./actionTypes";
 
 export function actionDoLogin(loginData) {
@@ -38,7 +35,6 @@ export function doLogin(userData) {
         userData
       );
       dispatch(actionDoLoginOk(response.data));
-      console.log(response.data, "response.data");
     } catch (error) {
       dispatch(actionDoLoginFail(error));
     }
@@ -71,3 +67,37 @@ export function doLogout() {
     }
   };
 }
+
+
+// export function actionGetSingleUser(userId){
+  // return{
+    // type: GET_SINGLE_USER,
+    // payload: userId
+   
+  // }
+// }
+// export function actionGetSingleUserOk(user){
+  // return{
+    // type: GET_SINGLE_USER_OK,
+    // payload: user
+  // }
+// }
+// export function actionGetSingleUserFail(error){
+  // return{
+    // type: GET_SINGLE_USER_FAIL,
+    // payload:error
+  // }
+// }
+
+// export function getSingleUser(userId){
+  // return async (dispatch)=>{
+    // dispatch(actionGetSingleUser(userId))
+    // try {
+      // const response = await axios.get(`http://localhost:3000/users/${userId}`)
+      // console.log(response, "respuesta de action singleUser")
+      // dispatch(actionGetSingleUserOk(response.data))
+    // } catch (error) {
+      // dispatch(actionGetSingleUserFail(error))
+    // }
+  // }
+// }
