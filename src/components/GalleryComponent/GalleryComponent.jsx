@@ -10,21 +10,8 @@ import { Link } from "react-router-dom";
 const GalleryComponent = () => {
   const dispatch = useDispatch();
   const [searchByStyle, setSearchByStyle] = useState("");
-  const [filterByArtist, setFilterByArtist] = useState([]);
   const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
   const artists = ["Miriam F", "Laura O", "Ignacio E"];
-
-  const filterHandler = (e) => {
-    if (e.target.checked) {
-      setFilterByArtist([...filterByArtist, e.target.value]);
-    } else {
-      setFilterByArtist(
-        filterByArtist.filter(
-          (filterByArtist) => filterByArtist !== e.target.value
-        )
-      );
-    }
-  };
 
   useEffect(() => {
     dispatch(getInfo());
@@ -65,7 +52,7 @@ const GalleryComponent = () => {
                       name={artist}
                       type="checkbox"
                       value={artist}
-                      onChange={filterHandler}
+                      onChange=""
                     />
                     {artist}
                   </label>
