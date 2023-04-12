@@ -6,14 +6,10 @@ import { useFormik } from "formik";
 // IMPORTS FROM REACT-REDUX
 import { useDispatch, useSelector } from "react-redux";
 // IMPORT FROM STORE
-import { getUsers } from "../../store/gallery/actions";
-import { doRegistration} from "../../store/gallery/actions";
+import { doRegistration } from "../../store/gallery/actions";
 import { Link, Navigate } from "react-router-dom";
-// IMPORT YUP
-// import * as Yup from "yup";
 
 const RegistrationComponent = () => {
-  const { user } = useSelector((state) => state.GalleryReducer);
   const dispatch = useDispatch();
 
   const sendRegistration = () => {
