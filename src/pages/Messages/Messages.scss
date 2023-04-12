@@ -1,3 +1,12 @@
+
+// .background{
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+
+// }
 .section__messages{
     display:flex;
     flex-direction: row;
@@ -5,13 +14,13 @@
     margin: 0 auto;
     gap: 2em;
     margin-top: 1%;
-    background-image: url(../../assets/images/tentaculo.jpeg);  
+    background-image: url(../../assets/images/tentaculo.png);  
     background-repeat: no-repeat;
     mix-blend-mode: multiply;
     background-position: 50%;
     background-size: contain;
-    //  border: 15px outset rgb(20, 19, 18);
     padding: 3%;
+
     &__div{
         display:flex;
         width: 80%;

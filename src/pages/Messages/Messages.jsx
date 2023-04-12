@@ -70,6 +70,7 @@ const Messages = () => {
   } else {
     return (
       <>
+      {/* <div className='background'> */}
         <div className='div__postalBox'> 
           <img  className='div__postalBox__img' src={postal}  alt="postalbox"></img>
           <h2 className='counter'>   {messages.length} </h2>
@@ -117,6 +118,7 @@ const Messages = () => {
 
           </div>
         </section>
+        {/* </div> */}
       </>
     )
   }
