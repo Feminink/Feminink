@@ -13,6 +13,7 @@ import './InspirationComponent.scss';
 // IMPORT FONTAWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { IDLE_NAVIGATION } from '@remix-run/router';
 
 const InspirationComponent = () => {
   
@@ -41,6 +42,7 @@ const InspirationComponent = () => {
   }
 
   return (
+    <> 
     <section className="div__inspiration">
       <ul className="inspiration__ul ul">
         {info &&
@@ -89,6 +91,11 @@ const InspirationComponent = () => {
           })}
       </ul>
     </section>
+    <section className='section__about'>
+   <h2> {info && info.about && info.about.text}</h2>
+    </section>
+   
+    </>
   );
 };
 

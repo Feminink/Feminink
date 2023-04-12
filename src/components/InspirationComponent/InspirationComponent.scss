@@ -7,6 +7,7 @@
         justify-content: space-between;
         flex-wrap: wrap; 
         gap: 2em;
+       
 
         .inspiration__li {
             display: block;
@@ -87,7 +88,21 @@
 .details__bio {
     font-family: 'Montserrat', sans-serif;
 }
+.section__about{
+    display:flex;
+    text-align: justify;
+    padding: 1%;
 
+}
+.div__background{
+    background-color: black;
+     background-image: url(../../../public/assets/images/trapecio.jpeg);
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+    
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
