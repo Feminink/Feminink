@@ -33,7 +33,7 @@ const SingleMessage = () => {
          <section className='section__single-message section'>
                <div className='single-message__header'>
                   <div className='container'>
-                     <h2 className='div__presentation__h2'>{sentence} {message.artist}{sentence1}{message.name}!</h2>
+                     <h2>Tus tatuajes molan un montón {message.artist}, así que vas a hacerle uno muy cool a {message.name}!</h2>
                   </div> 
                </div>
                <div className='single-message__body container'>
@@ -42,9 +42,11 @@ const SingleMessage = () => {
                      <h4>Para: {message.artist}</h4>
                      <h4 className=""> {message.email}</h4>
                      <p className="" ><FontAwesomeIcon icon={faQuoteLeft} size="lg" /> {message.description} <FontAwesomeIcon icon={faQuoteRight} size="lg" /></p>
-                     <h4 className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h4>
-                     <Link to="/messages"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /></button></Link>    
-                     <Link to="/messages">Volver</Link>
+                     <h4 className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h4>    
+                     <div className='single-message__links'>
+                        <Link to="/messages">Volver</Link>
+                        <Link to="/messages"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /> Borrar</button></Link>
+                     </div>
                   </div>
                   <div className='single-message__image'>
                      <img src={mermaidn} className="div__img__image" alt="mermaid"/> 
