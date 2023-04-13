@@ -1,38 +1,40 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import './ContactComponent.scss';
+import React, { useEffect } from "react";
+import PropTypes from "prop-types";
+import "./ContactComponent.scss";
 
-import { getInfo } from '../../store/info/actions';
+import { getInfo } from "../../store/info/actions";
 
 //IMPORT SWEETALERT
 
 // IMPORT FUNCIÖN DE CONTACTAR
-import { actionDoContactOk, doContact} from '../../store/Tattoo/actions';
+import {
+  actionDoContactFail,
+  actionDoContactOk,
+  doContact,
+} from "../../store/Tattoo/actions";
 
 //IMPORT HOOKS
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 
 //IMPORT HOOK FORMIK
-import { useFormik } from 'formik';
+import { useFormik } from "formik";
 
 const ContactComponent = () => {
-
   const dispatch = useDispatch();
   const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
 
-
-  function showMessage(sendForm, actionDoContactOk){
-    if(sendForm && actionDoContactOk){
-      alert("el mensaje se ha enviado correctamente")
-       }else{ 
-         alert ("No se ha podido enviar, vuelve a intentarlo") }
-   }
+  function showMessage(sendForm, actionDoContactOk) {
+    if (sendForm && actionDoContactOk) {
+      alert("el mensaje se ha enviado correctamente");
+    } else if (sendForm && actionDoContactFail) {
+      alert("No se ha podido enviar, vuelve a intentarlo");
+    }
+  }
 
   useEffect(() => {
     dispatch(getInfo());
   }, []);
 
-  
   const sendForm = () => {
     if (
       formik.values.name &&
@@ -48,27 +50,25 @@ const ContactComponent = () => {
           description: formik.values.description,
           artist: formik.values.artist,
           color: formik.values.color,
-        }),
-
+        })
       );
-      showMessage(formik.values.sendForm, formik.values.actionDoContactOk)
-
+      showMessage(formik.values.sendForm, formik.values.actionDoContactOk);
     }
   };
 
- const validate = (values)=> {
+  const validate = (values) => {
     const errors = {
-     name: "",
-     email: "",
-     description: "",
-     artist: "",
-     color: "",
+      name: "",
+      email: "",
+      description: "",
+      artist: "",
+      color: "",
     };
     // ERROR NAME
     if (!values.name) {
-      errors.name = 'Required';
+      errors.name = "Required";
     } else if (values.name.length < 3) {
-      errors.name = 'Nombres de dos letras hay, pero pocos';
+      errors.name = "Nombres de dos letras hay, pero pocos";
     }
     // ERROR EMAIL
     if (!values.email) {
@@ -79,118 +79,138 @@ const ContactComponent = () => {
       errors.email = "Invalid email address";
     }
     // ERROR DESCRIPTION
-    if (values.description === 0) {
-      errors.description = 'Required';
+    if (!values.description) {
+      errors.description = "Required";
     } else if (values.description.length > 50) {
-      errors.description = 'Máximo 50 caracteres';
+      errors.description = "Máximo 50 caracteres";
     }
     return errors;
-  }
+  };
 
   const formik = useFormik({
     initialValues: {
-      name: '',
-      email: '',
-      description: '',
-      color: '#000000',
-      artist: '',
+      name: "",
+      email: "",
+      description: "",
+      color: "#000000",
+      artist: "",
     },
     validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
-
     },
   });
 
-  if(loadinginfo){
-    return(
-      <p>"Loading..."</p>
-    )
+  if (loadinginfo) {
+    return <p>"Loading..."</p>;
   }
 
   return (
-    <section className='section__contact section'>
-        <form  id="contactForm" onSubmit={formik.handleSubmit} className='form'  noValidate>
-          <header className='form__title h2'>
-            <h2>Ponte en contacto con FemininK </h2>
-          </header>
-          <div className='form__container'>
-            <div className="form__group" >
-              <input className='form__input'
-                name="name"
-                type="text"
-                value={formik.values.name}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                placeholder= " "
-                required
-              />
-              {formik.touched.name && formik.errors.name ? (
-                <div className="error">{formik.errors.name}</div>
-              ) : null}
-              <label className='form__label'>Nombre </label>
-              <span className='form__line'></span>
-            </div>
-            <div className="form__group">
-              <input className='form__input'
-                name="email"
-                type="email"
-                value={formik.values.email}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                placeholder= " "
-                required
-              />
-              {formik.touched.email && formik.errors.email ? (
-                <div className="error">{formik.errors.email}</div>
-              ) : null}
-              <label className='form__label'>Email </label>
-              <span className='form__line'></span>
-            </div>
-            <div className="form__group">
-              <textarea className='form__input'
-                name="description"
-                type="text"
-                value={formik.values.description}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                placeholder= " "
-                required>
-              </textarea>
-              <label className='form__label'>Descripción del tatuaje</label>
-              <span className='form__line'></span>
-            </div>
-            <div className="form__group">
-               <select className='form__input'
-                name="artist"
-                value={formik.values.artist}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                required>
-                {info && info.admins?.map((member) => {
+    <section className="section__contact section">
+      <form
+        id="contactForm"
+        onSubmit={formik.handleSubmit}
+        className="form"
+        noValidate
+      >
+        <header className="form__title h2">
+          <h2>Ponte en contacto con FemininK </h2>
+        </header>
+        <div className="form__container">
+          <div className="form__group">
+            <input
+              className="form__input"
+              name="name"
+              type="text"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder=" "
+              required
+            />
+            {formik.touched.name && formik.errors.name ? (
+              <div className="error">{formik.errors.name}</div>
+            ) : null}
+            <label className="form__label">Nombre </label>
+            <span className="form__line"></span>
+          </div>
+          <div className="form__group">
+            <input
+              className="form__input"
+              name="email"
+              type="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder=" "
+              required
+            />
+            {formik.touched.email && formik.errors.email ? (
+              <div className="error">{formik.errors.email}</div>
+            ) : null}
+            <label className="form__label">Email </label>
+            <span className="form__line"></span>
+          </div>
+          <div className="form__group">
+            <textarea
+              className="form__input"
+              name="description"
+              type="text"
+              value={formik.values.description}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder=" "
+              required
+            ></textarea>
+            {formik.touched.description && formik.errors.description ? (
+              <div className="error">{formik.errors.description}</div>
+            ) : null}
+            <label className="form__label">Descripción del tatuaje</label>
+            <span className="form__line"></span>
+          </div>
+          <div className="form__group">
+            <select
+              className="form__input"
+              name="artist"
+              value={formik.values.artist}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              required
+            >
+              {info &&
+                info.admins?.map((member) => {
                   return (
-                    <option key={member.id} value={member.name}>{member.name}</option>
+                    <option key={member.id} value={member.name}>
+                      {member.name}
+                    </option>
                   );
                 })}
-               </select>
-               <label className='form__label'>Artista</label>
-               <span className='form__line'></span>
-            </div>
-            <div className="form__group">
-                <input
-                  onChange={formik.handleChange}
-                  className='form__color'
-                  name="color"
-                  type="color"
-                  onBlur={formik.handleBlur}
-                  value={formik.values.color}
-                  required/>
-                <label className='form__label'>Color base</label>
-                <span className='form__line'></span>
-            </div>
-            <button className='form__submit' form="contactForm" type="reset" onClick={sendForm} noValidate>Enviar</button>
+            </select>
+            <label className="form__label">Artista</label>
+            <span className="form__line"></span>
           </div>
-        </form>
+          <div className="form__group">
+            <input
+              onChange={formik.handleChange}
+              className="form__color"
+              name="color"
+              type="color"
+              onBlur={formik.handleBlur}
+              value={formik.values.color}
+              required
+            />
+            <label className="form__label">Color base</label>
+            <span className="form__line"></span>
+          </div>
+          <button
+            className="form__submit"
+            form="contactForm"
+            onClick={sendForm}
+          >
+            Enviar
+          </button>
+        </div>
+      </form>
     </section>
   );
 };
