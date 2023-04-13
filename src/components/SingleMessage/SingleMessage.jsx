@@ -18,6 +18,8 @@ import mermaidn from '../../assets/images/mermaidn.png'
 
 const SingleMessage = () => { 
 
+
+
    const dispatch = useDispatch(); 
    const {message}= useSelector((state)=>state.TattooReducer)
 
@@ -46,6 +48,7 @@ const SingleMessage = () => {
                      <div className='single-message__links'>
                         <Link to="/messages">Volver</Link>
                         <Link to="/messages"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /> Borrar</button></Link>
+
                      </div>
                   </div>
                   <div className='single-message__image'>

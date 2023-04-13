@@ -1,0 +1,75 @@
+.div__question__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+   
+}
+.question{
+    color: rgb(255, 81, 0);
+}
+.number__question{
+  
+}
+.questions{
+display:flex;
+flex-direction: column;
+
+gap: 1em;
+margin: 1%;
+
+}
+.response__right{
+    flex-direction: column;
+    display: flex;
+    margin: 1%;
+}
+.quiz__button{
+    color:black;
+    font-weight: 400;
+    padding: 1em 0;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+    background-color: rgb(194, 232, 231);
+    box-shadow: 0 9px rgb(246, 235, 150);
+    &:hover {
+        background-color: #e7bf30;
+    }
+}
+.correct{
+    background-color: green;
+   
+}
+.incorrect{
+    background-color: red;
+   
+}
+.quiz{
+    display: flex;
+    justify-content: center;
+    color: rgb(65, 60, 70);
+    background-color: rgb(255, 208, 0);
+    padding: 20%;
+}
+.points0{
+    background-color: red;
+    display: flex;
+    padding: 10%;
+}
+.points1{
+    background-color: orange;
+    display: flex;
+    padding: 10%;
+}
+.points2{
+    background-color: aqua;
+    display: flex;
+    padding: 10%;
+}
+.points3{
+    background-color: violet;
+    display: flex;
+    padding: 10%;
+}

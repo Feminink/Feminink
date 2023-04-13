@@ -39,12 +39,12 @@ return (
                       <h3 className='div__info__profile__h'>{user.email} </h3> 
                        <ul className='ul__skills'> 
                       <h3>Tattoo skills</h3>
-                           {user.skills.map((skill)=>{
+                           {user.skills.map((skill) =>{
                                 return( 
-                                <li className='ul__skills__li'>{skill}</li>
+                                <li className='ul__skills__li'>{skill.join(", ")}</li>
                             )})}
                         </ul>
-                 </div>
+                 </div> 
 
   
     </section>
@@ -56,7 +56,7 @@ return (
            return(
           message.artist === user.name? 
           <div className='section__info__div__msg'> 
-          <h3><FontAwesomeIcon icon={faEnvelope} />  {message.name}</h3>
+         <Link to={`/contact/${message.id}`}>  <h3><FontAwesomeIcon icon={faEnvelope} />  {message.name}</h3></Link>
           <h3 className='section__info__description'>{message.description}</h3>
           <h3 className='section__info__description'>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h3>
           <h5 className='hidden__info'> {counter.push(message)}</h5>

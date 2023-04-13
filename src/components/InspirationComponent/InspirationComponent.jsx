@@ -13,7 +13,6 @@ import './InspirationComponent.scss';
 // IMPORT FONTAWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { IDLE_NAVIGATION } from '@remix-run/router';
 
 const InspirationComponent = () => {
   
