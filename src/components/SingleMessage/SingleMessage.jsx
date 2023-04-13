@@ -7,7 +7,7 @@ import {useDispatch, useSelector } from 'react-redux';
 
 //IMPORT FONTAWESEOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPalette, faTrash} from '@fortawesome/free-solid-svg-icons';
+import { faPalette, faTrash, faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons';
 
 //IMPORT ACTION TO DELETE
 import { deleteMessage } from '../../store/Tattoo/actions';
@@ -18,45 +18,49 @@ import mermaidn from '../../assets/images/mermaidn.png'
 
 const SingleMessage = () => { 
 
- const dispatch = useDispatch(); 
-const {message}= useSelector((state)=>state.TattooReducer)
-
-const sentence = "Tus tatuajes molan un montón"
-const sentence1 = ", así que vas a hacerle uno muy cool a "
 
 
-const removeMessage = (message) =>{
-   dispatch(deleteMessage(message.id))
-  
- }
+   const dispatch = useDispatch(); 
+   const {message}= useSelector((state)=>state.TattooReducer)
 
+   const sentence = "Tus tatuajes molan un montón"
+   const sentence1 = ", así que vas a hacerle uno muy cool a "
 
- return (  <> 
+   const removeMessage = (message) =>{
+      dispatch(deleteMessage(message.id))
+   }
 
-                     <div className='div__presentation'> 
-                        <h1 className='div__presentation__h1'>{sentence} {message.artist}{sentence1}{message.name}!</h1>
-                     </div> 
-                       <div className="div__single">
-                          <section key={message.id} className='section__messages__div1'> 
-                               <h2>De: {message.name}</h2>
-                               <h3>Para: {message.artist}</h3>
-                               <h3 className="" > {message.email}</h3>
-                               <h3 className="" > {message.description}</h3>
-                               <h3  className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h3>
-                          <Link to="/messages"> <button  onClick={(e)=>removeMessage(message)}  className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /></button></Link> 
-                               
-                          <Link to="/profile">Go Back</Link>
-                          </section>
+   return (  
+      <> 
+         <section className='section__single-message section'>
+               <div className='single-message__header'>
+                  <div className='container'>
+                     <h2>Tus tatuajes molan un montón {message.artist}, así que vas a hacerle uno muy cool a {message.name}!</h2>
+                  </div> 
+               </div>
+               <div className='single-message__body container'>
+                  <div className='single-message__text'>
+                     <h3>De: {message.name}</h3>
+                     <h4>Para: {message.artist}</h4>
+                     <h4 className=""> {message.email}</h4>
+                     <p className="" ><FontAwesomeIcon icon={faQuoteLeft} size="lg" /> {message.description} <FontAwesomeIcon icon={faQuoteRight} size="lg" /></p>
+                     <h4 className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h4>    
+                     <div className='single-message__links'>
+                        <Link to="/messages">Volver</Link>
+                        <Link to="/messages"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /> Borrar</button></Link>
 
-                       <div className='div__img'>
-                            <img src={mermaidn} className="div__img__image" alt="mermaid"/>
-                       </div>
                      </div>
-                     <div className='div__contact'>
-                        <h2> Envía un email a  <a className='link' href={`mailto:"${message.email}"`} style={{color: message.color}}> {message.name} </a></h2>
-                     </div>
-
-          </>)
+                  </div>
+                  <div className='single-message__image'>
+                     <img src={mermaidn} className="div__img__image" alt="mermaid"/> 
+                  </div>
+               </div>
+               <div className='single-message__contact container'>
+                  <h3>Envía un email a <a className='link' href={`mailto:"${message.email}"`} style={{color: message.color}}>{message.name}</a></h3>
+               </div>
+         </section> 
+      </>
+   )
 };
 
 SingleMessage.propTypes = {};

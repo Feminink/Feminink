@@ -1,10 +1,11 @@
-.gallery {
-    
+.gallery {    
     &__ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 2em;
+        width: 79%;
+
   
         .gallery__li {
             display: block;
@@ -94,3 +95,27 @@
     }
 
 }
+
+
+
+
+
+
+.filters-container {
+    background-color: rgba(248, 202, 96, 0.8);
+    font-family: "Montserrat", sans-serif;
+    flex-direction: column;
+    width: 20%;
+    height: auto;
+    border: 1px dotted black;
+    margin-right: 1%;
+    fieldset {
+        border: none;
+        justify-content: space-between;
+    }
+    input {
+        margin-top: 3em;
+  
+    }
+}
+

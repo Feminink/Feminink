@@ -174,128 +174,6 @@
         ]
       }
     ],
-    "gallery": [
-      {
-        "id": "1",
-        "image": "./assets/images/gallery/pexels-photo-4123910.webp",
-        "title": "Flower tattoo",
-        "artist": "Miriam F",
-        "model": "Tatiana Parker",
-        "style": "New school",
-        "alt": "Tattoed woman with red hair",
-        "description": "This tattoo was created with a delicate but confident stroke. A beautiful flower, like our Tatiana, one of our studio's most precious gems. A seemingly unpretentious choice, but one which contrasts with the strength of her determined and captivating look."
-      },
-      {
-        "id": "2",
-        "image": "./assets/images/gallery/pexels-photo-3778028.jpeg",
-        "title": "Tattoo in the making",
-        "artist": "Laura O",
-        "model": "Susana White",
-        "style": "Blackwork",
-        "alt": "Tattooer at work",
-        "description": "In the art of tattooing, the skin becomes the most precious of canvases. That of the tattoo artist is a not inconsiderable responsibility, but one that does not seem to bother our Laura at all. We can observe her relaxed but firm hand as she traces a draft of her work of art directly on the skin of our model."
-      },
-      {
-        "id": "3",
-        "image": "./assets/images/gallery/pexels-photo-1848657.webp",
-        "title": "Geometrical flower",
-        "artist": "Miriam F",
-        "model": "Sonia García",
-        "style": "Dotwork",
-        "alt": "Tattooed woman in yellow top",
-        "description": "'Look at my tattoo: cool, huh? Of course, Miriam did it' Sonia's gaze seems to say. And it is indeed true, Miriam has done a remarkable job. To create a floral and geometric tattoo with such precision requires a talent that few tattoo artists possess. But we are not surprised, knowing the great passion our artist has for nature."
-      },
-      {
-        "id": "4",
-        "image": "./assets/images/gallery/pexels-photo-2183131.webp",
-        "title": "Japanese dragon tattoo",
-        "artist": "Ignacio E",
-        "model": "Shen Tao",
-        "style": "Japanese traditional",
-        "alt": "Japanese dragon tattoo",
-        "description": "A photo that speaks for itself. Such colours. Such light. What incredible strength. It could only be the work of our Ignacio, a master in the art of Japanese tattooing. The creation of this work took a good 90 hours, but our Shen Tao did not bat an eyelid. A true Zen professional."
-      },
-      {
-        "id": "5",
-        "image": "./assets/images/gallery/pexels-brett-sayles-2865412.webp",
-        "title": "Tattoo in the making",
-        "artist": "Laura O",
-        "model": "Laura Hawkins",
-        "style": "Watercolor",
-        "alt": "Tattoer at work",
-        "description": "The complexity of a portrait does not frighten our studio artists, who are always ready to create the most realistic tattoos possible. Photographs on the skin? Here at Feminink we take them for you. "
-      },
-      {
-        "id": "6",
-        "image": "./assets/images/gallery/pexels-photo-1784272.webp",
-        "title": "Nature tattoo",
-        "artist": "Miriam F",
-        "model": "Peter Smith",
-        "style": "Nature",
-        "alternate-text": "Nature tattoo on arm",
-        "description": "United for the planet. Together we are stronger. The artist who created this beautiful combination of nature tattoos? Our Miriam, of course, who never ceases to amaze us. A tireless worker, she tattooed both twins Peter & Peter Smith in 24 hours, while they were busy on their bicycle tour around Europe. So many life stories here at Feminink!"
-      },
-      {
-        "id": "7",
-        "image": "./assets/images/gallery/pexels-cottonbro-studio-5320148.webp",
-        "title": "Oldschool rose tattoo",
-        "artist": "Laura O",
-        "model": "Bryan Fury",
-        "style": "Oldschool",
-        "alt": "Tattooed man with rose tattoo",
-        "description": "Even the toughest of boxing fighters hides a soft side inside. Or on his arm, why not. This is the example given to us by Bryan, who, when he met our Laura, chose to have an Old School-style rose tattooed on his arm. A perhaps bizarre juxtaposition if we look at the 'bad boy' tattoo surrounding the border-top of his abdominal area."
-      },
-      {
-        "id": "8",
-        "image": "./assets/images/gallery/pexels-cottonbro-studio-5235789.webp",
-        "title": "Skull tattoo",
-        "artist": "Ignacio E",
-        "model": "Pedro González",
-        "style": "Black and grey",
-        "alt": "Tattooed man with skull tattoo",
-        "description": "It is not everyone who knows how to dress a tattoo as if it were a garment. When it is a giant skull, this can even be intimidating. Our model is very proud of his tattoo and does not hesitate to show it off when he rides his motorbike through the streets of Barcelona. Another one of Feminink's works!"
-      },
-      {
-        "id": "9",
-        "image": "./assets/images/gallery/pexels-spencer-selover-428320.webp",
-        "title": "Fox tattoo",
-        "artist": "Miriam F",
-        "model": "Karla Johnson",
-        "style": "Graffiti",
-        "alt": "Tattooed woman with fox tattoo",
-        "description": "The passion for Pokemon is strong in Karla's heart, and she asked our Miriam for a brightly coloured tattoo of Vulpix, undoubtedly one of the best-known Pokemon of the 10th generation. The colours of this 'graffiti' style tattoo are vivid and create a perfect match with the beautiful hair of Karla, who chose to pose for our gallery on the beaches of the south coast of Spain."
-      },
-      {
-        "id": "10",
-        "image": "./assets/images/gallery/pexels-vjapratama-1003842.webp",
-        "title": "Tattoo on the face",
-        "artist": "Laura O",
-        "model": "Pedro Méndez",
-        "style": "Gothic",
-        "alt": "Tattooed man with gothic tattoo",
-        "description": "Facial tattoos are becoming increasingly trendy, and undoubtedly require a strong personality in order to be worn day after day. Their realisation, however, also requires great commitment and dedication. Laura, who took care of this delicate work requested by Pedro Méndez, knows this well."
-      },
-      {
-        "id": "11",
-        "image": "./assets/images/gallery/pexels-matheus-ferrero-2123061.webp",
-        "title": "Realistic tattoo left arm",
-        "artist": "Miriam F",
-        "model": "Mac Miller",
-        "style": "Realistic",
-        "alt": "Tattooed man with realistic tattoo",
-        "description": "A realism tattoo is exactly how it sounds: a piece of artwork that looks so realistic you almost believe it's a photo! It is full of intricate details with high amounts of shading, and generally takes the most amount of time to complete."
-      },
-      {
-        "id": "12",
-        "image": "./assets/images/gallery/pexels-photo-3657562.webp",
-        "title": "Tattoo in the making",
-        "artist": "Ignacio E",
-        "model": "Laura Judge",
-        "style": "Japanese traditional",
-        "alt": "Tattooed woman with dragon tattoo",
-        "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
-      }
-    ],
     "studio": [
       {
         "id": "1",
@@ -328,13 +206,13 @@
       {
         "id": 1,
         "name": "Angelina Jolie",
-        "text": "Me encanta cómo los tatuajes pueden ser una expresión artística de la personalidad. He tenido varios tatuajes a lo largo de los años, y cada uno tiene un significado especial para mí.",
+        "text": "Me encanta cómo los tatuajes pueden ser una expresión artística de la personalidad. He tenido varios tatuajes a lo largo de los años, y cada uno tiene un significado especial para mí. Para mí, los tatuajes son una forma de contar mi historia.",
         "image": "./assets/images/testimonials/angelina_jolie.jpg"
       },
       {
         "id": 2,
         "name": "Rihanna",
-        "text": "¡Este estudio de tatuajes es increíble! Los artistas son muy talentosos y amables. Me ayudaron a crear un diseño personalizado y el resultado superó todas mis expectativas.",
+        "text": "¡Este estudio de tatuajes es increíble! Los artistas son muy talentosos y amables. Me ayudaron a crear un diseño personalizado y el resultado superó todas mis expectativas. Los tatuajes son una forma de expresión que me encanta explorar.",
         "image": "./assets/images/testimonials/rihanna.jpg"
       },
       {
@@ -349,64 +227,12 @@
         "text": "Este estudio de tatuajes es realmente excepcional. Como una mujer tatuada, sé lo importante que es encontrar un estudio de tatuajes que ofrezca artistas talentosos, un ambiente cómodo y seguro, y una amplia variedad de diseños.",
         "image": "./assets/images/testimonials/kat_von_d.jpg"
       }
-    ],
-    "lastWorks": [
-      {
-        "id": 1,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 2,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 3,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 4,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 5,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 6,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 7,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 8,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 9,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 10,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      }
     ]
   },
   "gallery": [
     {
       "id": "1",
-      "image": "./assets/images/gallery/pexels-photo-4123910.webp",
+      "image": "../../assets/images/gallery/pexels-photo-4123910.webp",
       "title": "Flower tattoo",
       "artist": "Miriam F",
       "model": "Tatiana Parker",
@@ -416,7 +242,7 @@
     },
     {
       "id": "2",
-      "image": "./assets/images/gallery/pexels-photo-3778028.jpeg",
+      "image": "../../assets/images/gallery/pexels-photo-3778028.jpeg",
       "title": "Tattoo in the making",
       "artist": "Laura O",
       "model": "Susana White",
@@ -426,7 +252,7 @@
     },
     {
       "id": "3",
-      "image": "./assets/images/gallery/pexels-photo-1848657.webp",
+      "image": "../../assets/images/gallery/pexels-photo-1848657.webp",
       "title": "Geometrical flower",
       "artist": "Miriam F",
       "model": "Sonia García",
@@ -436,7 +262,7 @@
     },
     {
       "id": "4",
-      "image": "./assets/images/gallery/pexels-photo-2183131.webp",
+      "image": "../../assets/images/gallery/pexels-photo-2183131.webp",
       "title": "Japanese dragon tattoo",
       "artist": "Ignacio E",
       "model": "Shen Tao",
@@ -446,7 +272,7 @@
     },
     {
       "id": "5",
-      "image": "./assets/images/gallery/pexels-brett-sayles-2865412.webp",
+      "image": "../../assets/images/gallery/pexels-brett-sayles-2865412.webp",
       "title": "Tattoo in the making",
       "artist": "Laura O",
       "model": "Laura Hawkins",
@@ -456,7 +282,7 @@
     },
     {
       "id": "6",
-      "image": "./assets/images/gallery/pexels-photo-1784272.webp",
+      "image": "../../assets/images/gallery/pexels-photo-1784272.webp",
       "title": "Nature tattoo",
       "artist": "Miriam F",
       "model": "Peter Smith",
@@ -466,7 +292,7 @@
     },
     {
       "id": "7",
-      "image": "./assets/images/gallery/pexels-cottonbro-studio-5320148.webp",
+      "image": "../../assets/images/gallery/pexels-cottonbro-studio-5320148.webp",
       "title": "Oldschool rose tattoo",
       "artist": "Laura O",
       "model": "Bryan Fury",
@@ -476,7 +302,7 @@
     },
     {
       "id": "8",
-      "image": "./assets/images/gallery/pexels-cottonbro-studio-5235789.webp",
+      "image": "../../assets/images/gallery/pexels-cottonbro-studio-5235789.webp",
       "title": "Skull tattoo",
       "artist": "Ignacio E",
       "model": "Pedro González",
@@ -486,7 +312,7 @@
     },
     {
       "id": "9",
-      "image": "./assets/images/gallery/pexels-spencer-selover-428320.webp",
+      "image": "../../assets/images/gallery/pexels-spencer-selover-428320.webp",
       "title": "Fox tattoo",
       "artist": "Miriam F",
       "model": "Karla Johnson",
@@ -496,7 +322,7 @@
     },
     {
       "id": "10",
-      "image": "./assets/images/gallery/pexels-vjapratama-1003842.webp",
+      "image": "../../assets/images/gallery/pexels-vjapratama-1003842.webp",
       "title": "Tattoo on the face",
       "artist": "Laura O",
       "model": "Pedro Méndez",
@@ -506,7 +332,7 @@
     },
     {
       "id": "11",
-      "image": "./assets/images/gallery/pexels-matheus-ferrero-2123061.webp",
+      "image": "../../assets/images/gallery/pexels-matheus-ferrero-2123061.webp",
       "title": "Realistic tattoo left arm",
       "artist": "Miriam F",
       "model": "Mac Miller",
@@ -516,7 +342,7 @@
     },
     {
       "id": "12",
-      "image": "./assets/images/gallery/pexels-photo-3657562.webp",
+      "image": "../../assets/images/gallery/pexels-photo-3657562.webp",
       "title": "Tattoo in the making",
       "artist": "Ignacio E",
       "model": "Laura Judge",

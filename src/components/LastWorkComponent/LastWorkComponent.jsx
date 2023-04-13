@@ -39,21 +39,21 @@ const LastWorkComponent = () => {
         // install Swiper modules
         modules={[Navigation, Pagination, A11y, Autoplay]}
         spaceBetween={25}
-        slidesPerView={5}
+        slidesPerView={4}
         navigation
         autoplay={{delay: 5000, disableOnInteraction: false,}}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       > 
-        {info && info.lastWorks && info.lastWorks.map((work) => {
+        {info && info.gallery && info.gallery.map((work) => {
           return (
             <SwiperSlide className="last-works" key={work.id}>
               <div className="image-container">
                 <img src={work.image} alt={work.title}/>
                 <div className="overlay">
                   <div className="text">
-                    <h3>{work.title}</h3>
+                    <h4>{work.title}</h4>
                   </div>
                 </div>
               </div>

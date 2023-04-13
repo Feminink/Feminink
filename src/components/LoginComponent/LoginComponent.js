@@ -14,8 +14,8 @@ import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 // IMPORT STYLES
 import "./LoginComponent.scss";
-//IMPORT LOGO
-import logo from "../../assets/images/footer-logo.svg";
+// IMPORT LOGO
+import logo from '../../assets/images/footer-logo.svg';
 
 const LoginComponent = () => {
   const { user } = useSelector((state) => state.AuthReducer);
@@ -114,18 +114,9 @@ const LoginComponent = () => {
               <label className="form__label">Password</label>
               <span className="form__line"></span>
             </div>
+            <button type="submit" form="loginForm" className='form__submit' onClick={onClickLogin}>Login</button>
           </div>
-          <p className="not-member__p p">
-            Not a member yet? <Link to="/signup">Register now</Link>
-          </p>
-          <button
-            type="submit"
-            form="loginForm"
-            className="form__submit"
-            onClick={onClickLogin}
-          >
-            Login
-          </button>
+          <p className="not-member__p p">Not a member yet? <Link to="/signup">Register now</Link></p>
         </form>
       </div>
     </section>

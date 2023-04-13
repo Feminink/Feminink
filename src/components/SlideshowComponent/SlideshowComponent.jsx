@@ -5,12 +5,11 @@ import PropTypes from 'prop-types';
 import './SlideshowComponent.scss';
 
 // import Swiper core and required modules
-import { Navigation, Pagination, A11y, Autoplay } from 'swiper';
+import { Pagination, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/scss';
-import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
 const SlideshowComponent = () => {
@@ -18,10 +17,9 @@ const SlideshowComponent = () => {
     <section className='section__slideshow section'>
       <Swiper style={{"--swiper-navigation-color": "#f8ca60","--swiper-pagination-color": "#f8ca60", "--swiper-scrollbar-drag-bg-color": "#f8ca60"}}
         // install Swiper modules
-        modules={[Navigation, Pagination, A11y, Autoplay]}
+        modules={[Pagination, A11y, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
-        navigation
         autoplay={{delay: 5000, disableOnInteraction: false,}}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}

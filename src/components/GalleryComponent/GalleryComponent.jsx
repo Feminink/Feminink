@@ -1,23 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { getInfo } from "../../store/info/actions";
 import PropTypes from "prop-types";
+// IMPORT USE EFFECT, USE STATE
+import React, { useEffect, useState } from "react";
+// IMPORT GET GALLERY FUNCTION
+import { getGallery } from "../../store/gallery/actions";
+// IMPORT USE DISPATCH, USE SELECTOR
 import { useDispatch, useSelector } from "react-redux";
-
+// IMPORT LINK
+import { Link } from "react-router-dom";
 /* IMPORT STYLES */
 import "./GalleryComponent.scss";
-import { Link } from "react-router-dom";
 
 const GalleryComponent = () => {
   const dispatch = useDispatch();
-  const [searchByStyle, setSearchByStyle] = useState("");
-  const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
+  const { gallery, loadingGallery } = useSelector(
+    (state) => state.GalleryReducer
+  );
   const artists = ["Miriam F", "Laura O", "Ignacio E"];
+  const [searchByStyle, setSearchByStyle] = useState("");
 
   useEffect(() => {
-    dispatch(getInfo());
+    dispatch(getGallery());
   }, []);
 
-  if (loadingInfo) {
+  if (loadingGallery) {
     return (
       <div className="container">
         <h2>Loading...</h2>
@@ -27,49 +32,51 @@ const GalleryComponent = () => {
   return (
     <section className="section__gallery container">
       <h2>Gallery</h2>
-      <section className="filters-container">
-        <form>
-          <fieldset className="form__group">
-            <label className="form__label">Search by style:</label>
-            <input
-              className="form__input"
-              type="search"
-              placeholder=""
-              onChange={(e) => setSearchByStyle(e.target.value)}
-            />
-          </fieldset>
-        </form>
+      <div className="container flex bg">
+        <section className="filters-container flex">
+          <form>
+            <fieldset className="form__group container">
+              <label>
+                <b>Search by style:</b>
+              </label>
+              <input
+                className="form__input"
+                type="search"
+                placeholder=""
+                onChange={(e) => setSearchByStyle(e.target.value)}
+              />
+            </fieldset>
+          </form>
+          <form>
+            <fieldset className="form__group">
+              <label>
+                <b>Search by artist name:</b>
+              </label>
+              <ul>
+                {artists.map((artist) => (
+                  <li key={artist}>
+                    <label>
+                      <input
+                        id="checkbox"
+                        name={artist}
+                        type="checkbox"
+                        value={artist}
+                        onChange=""
+                      />
+                      {artist}
+                    </label>
+                  </li>
+                ))}
+              </ul>
+            </fieldset>
+          </form>
+        </section>
 
-        <form>
-          <fieldset className="form__group">
-            <label className="form__label">Search by artist name:</label>
-            <ul>
-              {artists.map((artist) => (
-                <li key={artist}>
-                  <label>
-                    <input
-                      id="checkbox"
-                      name={artist}
-                      type="checkbox"
-                      value={artist}
-                      onChange=""
-                    />
-                    {artist}
-                  </label>
-                </li>
-              ))}
-            </ul>
-          </fieldset>
-        </form>
-      </section>
-
-      <ul className="gallery__ul ul">
-        {info &&
-          info.gallery &&
-          info.gallery
+        <ul className="gallery__ul ul">
+          {gallery
             .filter((gallerya) => {
               return searchByStyle.toLowerCase() === ""
-                ? info.gallery
+                ? gallery
                 : gallerya.style.toLowerCase().startsWith(searchByStyle);
             })
             .map((gallerya) => {
@@ -97,7 +104,8 @@ const GalleryComponent = () => {
                 </li>
               );
             })}
-      </ul>
+        </ul>
+      </div>
     </section>
   );
 };

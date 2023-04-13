@@ -7,17 +7,14 @@ import { getSingleMessage } from '../../store/Tattoo/actions';
 const Message = () => {
   const dispatch = useDispatch();
 
-    const params = useParams();
-    useEffect(()=>{
-      dispatch(getSingleMessage(params.id))
-    },[])
+  const params = useParams();
+  
+  useEffect(()=>{
+    dispatch(getSingleMessage(params.id))
+  },[])
  
   return (
-    <div>
     <SingleMessage></SingleMessage>
-         </div>
-
-   
   )
 }
 
