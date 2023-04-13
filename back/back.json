@@ -101,13 +101,13 @@
         "question": "¿Cuál de las siguientes afirmaciones sobre pintoras del surrealismo es incorrecta?",
         "options": [ 
           {
-            "response": "Dorothea Tanning es la autora de 'Eine Kleine Nachtmusik' ", "isCorrect": true
+            "response": "Dorothea Tanning es la autora de 'Eine Kleine Nachtmusik' ", "isCorrect": false
           },
           {
-            "response": "Remedios Varo es la autora de 'La cienca inútil o el alquimista' ", "isCorrect": true
+            "response": "Remedios Varo es la autora de 'La cienca inútil o el alquimista' ", "isCorrect": false
           },
           {
-            "response": "Leonora Carrington es la autora de 'El venado herido' ", "isCorrect": false
+            "response": "Leonora Carrington es la autora de 'El venado herido' ", "isCorrect": true
           }
         ]
       },

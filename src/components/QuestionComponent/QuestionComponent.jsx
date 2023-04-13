@@ -12,7 +12,7 @@ const QuestionComponent = () => {
   
   const dispatch = useDispatch();
   //ESTADO QUE CONTROLA EN QUË PREGUNTA ESTÄS
-  const [question, setQuestion] = useState(0);
+  const [questCurrent, setQuestCurrent] = useState(0);
   //ESTADO QUE CONTROLA LA PUNTUACIÖN
   const [score, setScore] = useState(0);
   //ESTADO QUE CONTROLA SI EL JUEGO HA TERMINADO
@@ -22,6 +22,78 @@ const QuestionComponent = () => {
     dispatch(getInfo());
   }, []);
 
+  function handleAnswer(isCorrect, e){
+    
+    if(isCorrect){
+      setScore(score + 1);
+      e.target.classList.add(isCorrect ? "correct" : "incorrect");
+      setQuestCurrent(questCurrent + 1)
+      setTimeout(()=>{
+        if (questCurrent === info.quiz.length - 1){
+          setIsfinished(true)
+        }
+         
+        
+        
+      }, 1000);
+    }else{
+      e.target.classList.add("incorrect")
+      setQuestCurrent(questCurrent + 1)
+      if( questCurrent === info.quiz.length - 1){
+        setIsfinished(true)
+      }
+      
+    }
+    
+  }
+
+   if (isFinished){
+  
+    return  <div className={"points" + score}>Has obtenido {score} de {info.quiz.length} APLICATE</div>
+   
+  } else if (isFinished && score === 1){
+    <div className={"points" + score}>Has obtenido {score} de {info.quiz.length} OLE </div>
+  } else if (isFinished && score === 2){
+    <div className={"points" + score}>Has obtenido {score} de {info.quiz.length}  </div>
+
+  }
+        // switch(score){
+          // case score === 0:
+            // return(
+              // <div className={"points" + score}>
+             {/* score = {} */}
+                {/* <h1> Has acertado {score} de {info.quiz.length}! Feminist friendly</h1> */}
+                {/* <button onClick={()=> (window.location.href = "/contact")}> Ponte en contacto </button> */}
+              {/* </div>  */}
+            // );
+                // break 
+            // case score === 1:
+              // return(
+                // <div className={"points" +score}>
+{/*             */}
+                  {/* <h1> Has acertado {score} de {info.quiz.length}! Feminist fdfsdfriendly</h1> */}
+                  {/* <button onClick={()=> (window.location.href = "/contact")}> Ponte en contacto </button> */}
+                {/* </div>  */}
+              // );
+              //  break 
+              // case score === 2:
+                // return(
+                  // <div className={"points" +score}>
+{/*                   */}
+                    {/* <h1> Has acertado {score} de {info.quiz.length}!  fddfsdfriendly</h1> */}
+                    {/* <button onClick={()=> (window.location.href = "/contact")}> Ponte en contacto </button> */}
+                  {/* </div>  */}
+                // );
+              //  break 
+        // default:
+          // break
+          //  }
+  
+
+  
+  
+
+
   if(loadingInfo){
     return (
       <div className="container">
@@ -29,37 +101,25 @@ const QuestionComponent = () => {
     </div>
     );
   }
-
+ 
   return (<div className="div__question__wrapper">
    
   
 {info && info.quiz && info.quiz.map((quizz, index)=>{
   return (
     <div key={index} className='questions'> 
-    <div className='question__title'> 
-    <span>Question {question +1} of </span> {info.quiz.length}
+    <div className='number__question'> 
+    <span>Question {questCurrent + 1} of </span> {info.quiz.length}
     <h2>{quizz.question}</h2>
     </div>
     <div className='response__right'>{quizz.options.map((option, index)=> {
       return( 
-     <button key={index} className='quiz__button'> {option.response}</button> 
+     <button key={index} className='quiz__button' onClick={(e)=>handleAnswer(option.isCorrect, e)}> {option.response}</button> 
 )})} </div>
     </div>
   )
 })}
-    {/* <div className='question__left'> */}
-        {/* <div className='question__number'> */}
-           {/* } */}
-              {/* </div> */}
-                 {/* <div className='question__title'> */}
-              {/* </div> */}
-    {/* </div> */}
 
-    {/* <div className='question__right'> */}
-      {/* <button>1</button> */}
-      {/* <button>2</button> */}
-      {/* <button>3</button> */}
-    {/* </div> */}
   </div>)
 };
 
