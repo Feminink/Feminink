@@ -1,0 +1,107 @@
+.wrapper__profile{
+      display:flex;
+      flex-direction: row;
+      margin: 0 auto;
+      gap: 4em;
+      justify-content: space-between;
+      padding: 4%;
+      background-color: #f7be2ced;
+
+    &__section__singleUser{
+      
+         display: flex; 
+         flex-direction: column;
+         width:calc(45% - 4em);
+         padding: 2%;
+         justify-content: center;
+         border-radius:20px;
+         box-shadow: 0px 8px 8px #c5c1b8;
+         align-items: flex-start;
+         &:hover{
+            scale: 1.05;
+            background-color: #faf7f290;
+         }
+    }
+}
+.div__info__profile{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    
+    
+    &__h{
+        width: 90%;
+        padding: 1%;
+    }
+}
+.wrappers{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+}
+.div__image__profile{
+    display:flex;
+    margin: 3%;
+    padding: 2%;
+    &__image{
+    //    width: 100%;
+       width: 500px;
+       border-radius: 60%;
+       object-fit: cover;
+       height: 170px;
+       border: 4px solid rgb(255, 239, 166);
+    }
+}
+.section__info{
+     display: flex;
+     flex-direction: column;
+     text-align: justify;
+     padding: 2%;
+     border-radius: 20px;
+     box-shadow: 0px 8px 8px #c5c1b8;
+     &__div__msg{
+        display:flex;
+        
+        &:hover{
+            background-color:#faf7f290;
+            
+         }
+     }
+
+     &__description{
+        display: none;
+     }
+     &__bio{
+       
+        // flex-direction: column;
+        text-align: justify;
+        padding: 1%;
+        border-radius: 20px;
+        box-shadow: 0px 8px 8px#c5c1b8;
+       
+        &:hover{
+            scale: 1.05;
+            background-color: #faf7f290;
+         }
+     }
+}
+.bio{
+    // background-color:rgb(255, 239, 166);
+    border: 4px solid rgb(255, 239, 166);
+    border-radius: 100%;
+    width:fit-content;
+    padding: 1%
+}
+.hidden__info{
+    display: none;
+}
+.ul__skills{
+    display:flex;
+    flex-direction: column;
+    font-size: large;
+    &__li{
+
+    }
+
+}
