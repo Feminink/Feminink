@@ -7,6 +7,7 @@
     display:flex;
     justify-content: center;
     flex-direction: row;
+    
    
 
 }
@@ -56,6 +57,7 @@
     width: 100%;
     flex-direction: column;
     box-shadow: 0px 5px 5px  #abaaa4;
+    border-radius: 20px;
     &:hover{
         scale: 1.05;
         
@@ -65,8 +67,7 @@
     width: 10%;
     left: 90%;
     position: relative;
-    background-color: rgb(251, 192, 18);
-    // background-color: transparent;
+    background-color: transparent;
     border-style: none;
     height: 20%;
     padding: 1%;

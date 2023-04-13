@@ -82,7 +82,7 @@ const Messages = () => {
                 <div key={message.id} className='section__messages__div'> 
                     {isRead[message.id] ? (
                      <div className='read' onClick={() => addRead(message)}> 
-                        <h2>De: {message.name}</h2>
+                        <h3>De: {message.name}</h3>
                         <h3>Para: {message.artist}</h3>
                         <h3 className="h3__hidden"> {message.email}</h3>
                         <h3 className="h3__hidden"> {message.description}</h3>
