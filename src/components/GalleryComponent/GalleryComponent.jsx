@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getInfo } from "../../store/info/actions";
+import { getGallery } from "../../store/gallery/actions";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -9,28 +9,34 @@ import { Link } from "react-router-dom";
 
 const GalleryComponent = () => {
   const dispatch = useDispatch();
+  const { gallery, loadingGallery } = useSelector(
+    (state) => state.GalleryReducer
+  );
+  const artists = ["Miriam F", "Laura O", "Ignacio E"];
   const [searchByStyle, setSearchByStyle] = useState("");
   const [filterByArtist, setFilterByArtist] = useState([]);
-  const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
-  const artists = ["Miriam F", "Laura O", "Ignacio E"];
 
   const filterHandler = (e) => {
     if (e.target.checked) {
-      setFilterByArtist([...filterByArtist, e.target.value]);
+      setFilterByArtist((previousSearch) => [
+        ...previousSearch,
+        e.target.value,
+      ]);
     } else {
-      setFilterByArtist(
-        filterByArtist.filter(
-          (filterByArtist) => filterByArtist !== e.target.value
-        )
-      );
+      setFilterByArtist((previousSearch) => {
+        const index = previousSearch.indexOf(e.target.value);
+        if (index > -1) {
+          return previousSearch.splice(index, 1);
+        }
+      });
     }
   };
 
   useEffect(() => {
-    dispatch(getInfo());
+    dispatch(getGallery());
   }, []);
 
-  if (loadingInfo) {
+  if (loadingGallery) {
     return (
       <div className="container">
         <h2>Loading...</h2>
@@ -40,10 +46,10 @@ const GalleryComponent = () => {
   return (
     <section className="section__gallery container">
       <h2>Gallery</h2>
-      <section className="filters-container">
+      <section className="filters-container flex">
         <form>
-          <fieldset className="form__group">
-            <label className="form__label">Search by style:</label>
+          <fieldset className="form__group container">
+            <label>Search by style:</label>
             <input
               className="form__input"
               type="search"
@@ -52,10 +58,9 @@ const GalleryComponent = () => {
             />
           </fieldset>
         </form>
-
         <form>
           <fieldset className="form__group">
-            <label className="form__label">Search by artist name:</label>
+            <label>Search by artist name:</label>
             <ul>
               {artists.map((artist) => (
                 <li key={artist}>
@@ -77,39 +82,40 @@ const GalleryComponent = () => {
       </section>
 
       <ul className="gallery__ul ul">
-        {info &&
-          info.gallery &&
-          info.gallery
-            .filter((gallerya) => {
-              return searchByStyle.toLowerCase() === ""
-                ? info.gallery
-                : gallerya.style.toLowerCase().startsWith(searchByStyle);
-            })
-            .map((gallerya) => {
-              return (
-                <li className="gallery__li li" key={gallerya.id}>
-                  <div className="image-container">
-                    <Link to={`/gallery/${gallerya.id}`}>
-                      <img src={gallerya.image} alt={gallerya.alt} />
-                      <div className="overlay">
-                        <div className="text">
-                          <h3>{gallerya.title}</h3>
-                          <p>
-                            <b>Artist:</b> {gallerya.artist}
-                          </p>
-                          <p>
-                            <b>Style:</b> {gallerya.style}
-                          </p>
-                        </div>
+        {gallery
+          .filter((gallerya) => {
+            return searchByStyle.toLowerCase() === ""
+              ? gallery
+              : gallerya.style.toLowerCase().startsWith(searchByStyle);
+          })
+          .filter((gallerya) => {
+            return filterByArtist;
+          })
+          .map((gallerya) => {
+            return (
+              <li className="gallery__li li" key={gallerya.id}>
+                <div className="image-container">
+                  <Link to={`/gallery/${gallerya.id}`}>
+                    <img src={gallerya.image} alt={gallerya.alt} />
+                    <div className="overlay">
+                      <div className="text">
+                        <h3>{gallerya.title}</h3>
+                        <p>
+                          <b>Artist:</b> {gallerya.artist}
+                        </p>
+                        <p>
+                          <b>Style:</b> {gallerya.style}
+                        </p>
                       </div>
-                    </Link>
-                  </div>
-                  <div className="gallery__details">
-                    <h5>Model: {gallerya.model}</h5>
-                  </div>
-                </li>
-              );
-            })}
+                    </div>
+                  </Link>
+                </div>
+                <div className="gallery__details">
+                  <h5>Model: {gallerya.model}</h5>
+                </div>
+              </li>
+            );
+          })}
       </ul>
     </section>
   );
