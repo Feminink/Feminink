@@ -1,10 +1,18 @@
 .single-message__header {
     background-color: rgb(248, 202, 96);
+    text-align: center;
 }
 
 .single-message__body {
     display: flex;
+    gap: 2em;
     background-color: whitesmoke;
+    align-items: center;
+}
+
+.single-message__text {
+    box-shadow: 0px 5px 5px  #abaaa4;
+    padding: 2em;
 }
 
 .div__single{
