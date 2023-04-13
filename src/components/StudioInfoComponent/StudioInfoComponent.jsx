@@ -6,6 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 // IMPORT STYLES
 import "./StudioInfoComponent.scss";
 
+//IMPORT FONTAWESEOME
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPalette, faTrash, faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons';
+
 const StudioInfoComponent = () => {
 
     const dispatch = useDispatch();

@@ -160,13 +160,13 @@
       {
         "id": 1,
         "name": "Angelina Jolie",
-        "text": "Me encanta cómo los tatuajes pueden ser una expresión artística de la personalidad. He tenido varios tatuajes a lo largo de los años, y cada uno tiene un significado especial para mí.",
+        "text": "Me encanta cómo los tatuajes pueden ser una expresión artística de la personalidad. He tenido varios tatuajes a lo largo de los años, y cada uno tiene un significado especial para mí. Para mí, los tatuajes son una forma de contar mi historia.",
         "image": "./assets/images/testimonials/angelina_jolie.jpg"
       },
       {
         "id": 2,
         "name": "Rihanna",
-        "text": "¡Este estudio de tatuajes es increíble! Los artistas son muy talentosos y amables. Me ayudaron a crear un diseño personalizado y el resultado superó todas mis expectativas.",
+        "text": "¡Este estudio de tatuajes es increíble! Los artistas son muy talentosos y amables. Me ayudaron a crear un diseño personalizado y el resultado superó todas mis expectativas. Los tatuajes son una forma de expresión que me encanta explorar.",
         "image": "./assets/images/testimonials/rihanna.jpg"
       },
       {
@@ -180,58 +180,6 @@
         "name": "Kat Von D",
         "text": "Este estudio de tatuajes es realmente excepcional. Como una mujer tatuada, sé lo importante que es encontrar un estudio de tatuajes que ofrezca artistas talentosos, un ambiente cómodo y seguro, y una amplia variedad de diseños.",
         "image": "./assets/images/testimonials/kat_von_d.jpg"
-      }
-    ],
-    "lastWorks": [
-      {
-        "id": 1,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 2,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 3,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 4,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 5,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 6,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 7,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 8,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 9,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
-      },
-      {
-        "id": 10,
-        "title": "Me encanta",
-        "image": "./assets/images/testimonials/angelina_jolie.jpg"
       }
     ]
   },

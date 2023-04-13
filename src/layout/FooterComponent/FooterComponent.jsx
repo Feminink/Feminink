@@ -29,33 +29,32 @@ const FooterComponent = () => {
               </Link>
             </div>
             <div className="footer-nav__column">
-              <h4 className="footer-nav__h4 h4">Footer Heading 1</h4>
+              <h4 className="footer-nav__h4 h4">Site map</h4>
               <ul className="footer-nav__ul ul">
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 1</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 2</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 3</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 4</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 5</Link></li>
+                <li className="footer-nav__li li"><Link to="/home" className="footer-nav__link link">Home</Link></li>
+                <li className="footer-nav__li li"><Link to="/gallery" className="footer-nav__link link">Gallery</Link></li>
+                <li className="footer-nav__li li"><Link to="/about" className="footer-nav__link link">About</Link></li>
+                <li className="footer-nav__li li"><Link to="/contact" className="footer-nav__link link">Contact</Link></li>
               </ul>
             </div>
             <div className="footer-nav__column">
-              <h4 className="footer-nav__h4 h4">Footer Heading 2</h4>
+              <h4 className="footer-nav__h4 h4">Nuestras tiendas</h4>
               <ul className="footer-nav__ul">
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 1</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 2</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 3</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 4</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 5</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Madrid</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Barcelona</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Valencia</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Cádiz</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Cerdeña</Link></li>
               </ul>
             </div>
             <div className="footer-nav__column">
-              <h4 className="footer-nav__h4 h4">Footer Heading 3</h4>
+              <h4 className="footer-nav__h4 h4">Follow Us</h4>
               <ul className="footer-nav__ul">
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 1</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 2</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 3</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 4</Link></li>
-                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Link 5</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Instagram</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Twitter</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Facebook</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">LinkedIn</Link></li>
+                <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Github</Link></li>
               </ul>
             </div>
           </nav>

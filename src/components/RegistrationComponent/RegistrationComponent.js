@@ -9,6 +9,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { doRegistration } from "../../store/gallery/actions";
 import { Link, Navigate } from "react-router-dom";
 
+// IMPORT LOGO
+import logo from '../../assets/images/footer-logo.svg';
+
+// IMPORT YUP
+// import * as Yup from "yup";
+
 const RegistrationComponent = () => {
   const dispatch = useDispatch();
 
@@ -98,7 +104,7 @@ const RegistrationComponent = () => {
     },
   });
   return (
-    <div className="container flex">
+    <section className='section__signup section'>
       <form
         id="registrationForm"
         className="form flex"
@@ -107,100 +113,118 @@ const RegistrationComponent = () => {
       >
         <header className="form__title h2">
           <h2>Register now</h2>
+          <img src={logo} className='footer__logo img' alt='logo'/>
         </header>
-        <fieldset className="form__group">
-          <label className="form__label">Name</label>
-          <input
-            className="form__input"
-            id="name"
-            name="name"
-            type="text"
-            placeholder=" "
-            value={formik.values.name}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            required
-          />
-          {formik.touched.name && formik.errors.name ? (
-            <div className="error">{formik.errors.name}</div>
-          ) : null}
-          <label className="form__label">Surname</label>
-          <input
-            className="form__input"
-            id="surname"
-            name="surname"
-            type="text"
-            placeholder=" "
-            value={formik.values.surname}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            required
-          />
-          {formik.touched.surname && formik.errors.surname ? (
-            <div className="error">{formik.errors.surname}</div>
-          ) : null}
-          <label className="form__label">Date of birth</label>
-          <input
-            className="form__input"
-            id="birthday"
-            name="birthday"
-            type="date"
-            placeholder=" "
-            value={formik.values.birthday}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            required
-          />
-          {formik.touched.birthday && formik.errors.birthday ? (
-            <div className="error">{formik.errors.birthday}</div>
-          ) : null}
-          <label className="form__label">Email</label>
-          <input
-            className="form__input"
-            id="email"
-            name="email"
-            type="email"
-            placeholder=" "
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            required
-          />
-          {formik.touched.email && formik.errors.email ? (
-            <div className="error">{formik.errors.email}</div>
-          ) : null}
-          <label className="form__label">Password</label>
-          <input
-            className="form__input"
-            id="password"
-            name="password"
-            type="password"
-            placeholder=" "
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            required
-          />
-          {formik.touched.password && formik.errors.password ? (
-            <div className="error">{formik.errors.password}</div>
-          ) : null}
-          <label className="form__label">Repeat password</label>
-          <input
-            className="form__input"
-            id="repassword"
-            name="repassword"
-            type="password"
-            placeholder=" "
-            value={formik.values.repassword}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            required
-          />
-          {formik.touched.repassword && formik.errors.repassword ? (
-            <div className="error">{formik.errors.repassword}</div>
-          ) : null}
-          <span className="form__line"></span>
-        </fieldset>
+        <div className='form__container'>
+          <div className="form__group">
+            <input
+              className="form__input"
+              id="name"
+              name="name"
+              type="text"
+              placeholder=" "
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              required
+            />
+            {formik.touched.name && formik.errors.name ? (
+              <div className="error">{formik.errors.name}</div>
+            ) : null}
+            <label className="form__label">Name</label>
+            <span className='form__line'></span>
+          </div>
+          <div className="form__group">
+            <input
+              className="form__input"
+              id="surname"
+              name="surname"
+              type="text"
+              placeholder=" "
+              value={formik.values.surname}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              required
+            />
+            {formik.touched.surname && formik.errors.surname ? (
+              <div className="error">{formik.errors.surname}</div>
+            ) : null}
+            <label className="form__label">Surname</label>
+            <span className='form__line'></span>
+          </div>
+          <div className="form__group">
+            <input
+              className="form__input"
+              id="birthday"
+              name="birthday"
+              type="date"
+              placeholder=" "
+              value={formik.values.birthday}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              required
+            />
+            {formik.touched.birthday && formik.errors.birthday ? (
+              <div className="error">{formik.errors.birthday}</div>
+            ) : null}
+            <label className="form__label">Date of birth</label>
+            <span className='form__line'></span>
+          </div>
+          <div className="form__group">
+            <input
+              className="form__input"
+              id="email"
+              name="email"
+              type="email"
+              placeholder=" "
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              required
+            />
+            {formik.touched.email && formik.errors.email ? (
+              <div className="error">{formik.errors.email}</div>
+            ) : null}
+            <label className="form__label">Email</label>
+            <span className='form__line'></span>
+          </div>
+          <div className="form__group">
+            <input
+              className="form__input"
+              id="password"
+              name="password"
+              type="password"
+              placeholder=" "
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              required
+            />
+            {formik.touched.password && formik.errors.password ? (
+              <div className="error">{formik.errors.password}</div>
+            ) : null}
+            <label className="form__label">Password</label>
+            <span className='form__line'></span>
+          </div>
+          <div className="form__group">
+            <input
+              className="form__input"
+              id="repassword"
+              name="repassword"
+              type="password"
+              placeholder=" "
+              value={formik.values.repassword}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              required
+            />
+            {formik.touched.repassword && formik.errors.repassword ? (
+              <div className="error">{formik.errors.repassword}</div>
+            ) : null}
+            <label className="form__label">Repeat password</label>
+            <span className="form__line"></span>
+          </div>
+        </div>
         <p>
           Already have an account? <Link to="/login ">Login here</Link>
         </p>
@@ -212,7 +236,7 @@ const RegistrationComponent = () => {
           Submit
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 

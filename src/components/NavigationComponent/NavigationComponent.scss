@@ -28,10 +28,10 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 40%;
         background-color: whitesmoke;
         transform: translateX(-100%);
         transition: transform 0.5s ease-out;
+        z-index: 999;
     }
 }
   
@@ -70,7 +70,6 @@ body.menu-open {
     .header__main-nav {
         display: block;
         transform: translateX(0);
-        z-index: 2;
     }
   
     .show-menu__bar {
@@ -88,6 +87,53 @@ body.menu-open {
             transform: translateY(-7px) rotate(-45deg);
         }
     }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .header {
+
+    &__main-nav {
+      width: 70%;
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  .header {
+
+    &__main-nav {
+      width: 60%;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  .header {
+
+    &__main-nav {
+      width: 50%;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+  .header {
+
+    &__main-nav {
+      width: 40%;
+    }
+  }
 }
     
 /* -- END NAVIGATION STYLES -- */
