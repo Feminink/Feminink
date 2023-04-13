@@ -41,7 +41,7 @@ return (
                       <h3>Tattoo skills</h3>
                            {user.skills.map((skill)=>{
                                 return( 
-                                <li className='ul__skills__li'>{skill.join(", ").toUpperCase()}</li>
+                                <li className='ul__skills__li'>{skill}</li>
                             )})}
                         </ul>
                  </div>
