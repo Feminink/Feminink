@@ -30,6 +30,9 @@ const RegistrationComponent = () => {
           password: formik.values.password,
         })
       );
+      alert("Registration successful!");
+    } else {
+      alert("Something went wrong. Check the errors and try again.");
     }
   };
 

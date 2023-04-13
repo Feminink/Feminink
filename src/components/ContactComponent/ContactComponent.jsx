@@ -23,14 +23,6 @@ const ContactComponent = () => {
   const dispatch = useDispatch();
   const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
 
-  function showMessage(sendForm, actionDoContactOk) {
-    if (sendForm && actionDoContactOk) {
-      alert("el mensaje se ha enviado correctamente");
-    } else if (sendForm && actionDoContactFail) {
-      alert("No se ha podido enviar, vuelve a intentarlo");
-    }
-  }
-
   useEffect(() => {
     dispatch(getInfo());
   }, []);
@@ -52,7 +44,9 @@ const ContactComponent = () => {
           color: formik.values.color,
         })
       );
-      showMessage(formik.values.sendForm, formik.values.actionDoContactOk);
+      alert("Tu mensaje se ha enviado correctamente");
+    } else {
+      alert("Es necessario rellenar todos los campos");
     }
   };
 
