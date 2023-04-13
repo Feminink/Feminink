@@ -13,6 +13,9 @@ import { useDispatch, useSelector } from 'react-redux';
 //IMPORT HOOK FORMIK
 import { useFormik } from 'formik';
 
+// IMPORT LOGO
+import logo from '../../assets/images/footer-logo.svg';
+
 const ContactComponent = () => {
 
   const dispatch = useDispatch();
@@ -91,7 +94,8 @@ const ContactComponent = () => {
     <section className='section__contact section'>
         <form onSubmit={formik.handleSubmit} className='form'> 
           <header className='form__title h2'> 
-            <h2>Ponte en contacto con FemininK </h2>
+            <h2>Ponte en contacto con</h2>
+            <img src={logo} className='footer__logo img' alt='logo'/>
           </header>
           <div className='form__container'>
             <div className="form__group" >
