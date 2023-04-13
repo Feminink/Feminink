@@ -303,7 +303,6 @@
         "text": "Este estudio de tatuajes es realmente excepcional. Como una mujer tatuada, sé lo importante que es encontrar un estudio de tatuajes que ofrezca artistas talentosos, un ambiente cómodo y seguro, y una amplia variedad de diseños.",
         "image": "./assets/images/testimonials/kat_von_d.jpg"
       }
-
     ],
     "lastWorks": [
       {
@@ -356,8 +355,6 @@
         "title": "Me encanta",
         "image": "./assets/images/testimonials/angelina_jolie.jpg"
       }
-
-
     ]
   },
   "gallery": [
@@ -575,6 +572,7 @@
       "color": "#e6d1d1",
       "id": 7
     }
+
   ],
   "users": [
     {
@@ -628,8 +626,6 @@
       "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
       "isAdmin": true,
       "id": 11
-      
     }
-  
   ]
 }

@@ -21,13 +21,18 @@ const ContactComponent = () => {
   const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
 
 
-  function showMenssge(){
-  alert("el mensaje se ha enviado correctamente")
-  }
+  function showMessage(sendForm, actionDoContactOk){
+    if(sendForm && actionDoContactOk){
+      alert("el mensaje se ha enviado correctamente")
+       }else{ 
+         alert ("No se ha podido enviar, vuelve a intentarlo") }
+   }
+
   useEffect(() => {
     dispatch(getInfo());
   }, []);
 
+  
   const sendForm = () => {
     if (
       formik.values.name &&
@@ -46,15 +51,12 @@ const ContactComponent = () => {
         }),
 
       );
-      if(sendForm && actionDoContactOk){
-        showMenssge()
-      }else{
-      alert ("No se ha podido enviar, vuelve a intentarlo")
-      }
+      showMessage(formik.values.sendForm, formik.values.actionDoContactOk)
+
     }
   };
 
-  function validate(values) {
+ const validate = (values)=> {
     const errors = {
      name: "",
      email: "",
@@ -67,8 +69,6 @@ const ContactComponent = () => {
       errors.name = 'Required';
     } else if (values.name.length < 3) {
       errors.name = 'Nombres de dos letras hay, pero pocos';
-    } else if (values.name) {
-      errors.name = `Wild ${values.name} for us`;
     }
     // ERROR EMAIL
     if (!values.email) {
@@ -79,7 +79,7 @@ const ContactComponent = () => {
       errors.email = "Invalid email address";
     }
     // ERROR DESCRIPTION
-    if (!values.description) {
+    if (values.description === 0) {
       errors.description = 'Required';
     } else if (values.description.length > 50) {
       errors.description = 'Máximo 50 caracteres';
@@ -110,7 +110,7 @@ const ContactComponent = () => {
 
   return (
     <section className='section__contact section'>
-        <form onSubmit={formik.handleSubmit} className='form'  noValidate>
+        <form  id="contactForm" onSubmit={formik.handleSubmit} className='form'  noValidate>
           <header className='form__title h2'>
             <h2>Ponte en contacto con FemininK </h2>
           </header>
@@ -188,7 +188,7 @@ const ContactComponent = () => {
                 <label className='form__label'>Color base</label>
                 <span className='form__line'></span>
             </div>
-            <button className='form__submit' type="reset" onClick={sendForm} noValidate>Enviar</button>
+            <button className='form__submit' form="contactForm" type="reset" onClick={sendForm} noValidate>Enviar</button>
           </div>
         </form>
     </section>
