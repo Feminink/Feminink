@@ -580,6 +580,7 @@
       "password": "$2a$10$E3XpZ.voylNvH/j0C2vE3O72zGkDgsOWkumajeWtFV8RLbcm2GTa6",
       "name": "Miriam F",
       "surname": "Fraga",
+      "color": "#baf1e5",
       "birthday": "1999-12-30",
       "bio": "Miriam es una tatuadora joven de Cádiz que se ha ganado un gran reconocimiento por su trabajo innovador y su activismo feminista. Sus tatuajes son conocidos por su significado profundo y su estilo único. Se ha convertido en una inspiración para muchas mujeres de la ciudad que buscan empoderarse y ser asertivas. Miriam lucha por la igualdad de género y defiende la libertad de expresión a través de sus tatuajes. Es una artista talentosa y una verdadera fuerza a tener en cuenta.",
       "skills": [
@@ -596,6 +597,7 @@
       "password": "$2a$10$u3LTLENeE7iGhgWxPP/2U.n5O5ySVnQFXvmwSkSnFxqYeilGU5tOC",
       "name": "Ignacio E",
       "surname": "Erviti",
+      "color": "#f66977f8;",
       "birthday": "1988-02-15",
       "bio": "Ignacio es un joven tatuador que lleva más de cinco años trabajando en el puerto de Santa María. Desde el principio, ha tenido un gran talento para el arte del tatuaje, convirtiéndose en uno de los mejores tatuadores de la ciudad.  Ignacio es conocido por su creatividad y sus habilidades técnicas, y ha creado algunos de los tatuajes más impresionantes de la ciudad. Siempre está dispuesto a escuchar las ideas de sus clientes y a ayudarlos a crear el tatuaje perfecto.",
       "skills": [
@@ -614,6 +616,7 @@
       "password": "$2a$10$OZF08LCcT6VfBkah01ySae1fGAMb8Qbk10CZHTKKq0v6U9hBpRYZa",
       "name": "Laura O",
       "surname": "Origa",
+      "color": "#3FB190",
       "birthday": "1993-01-06",
       "bio": "Laura, proviene de la hermosa isla de Cerdeña. Creció entre la hermosa vida y la magia de esta isla, que ahora influye en su trabajo.  Laura siempre tuvo un interés en el arte y decidió convertirse en tatuadora. Se entrenó con maestros tatuadores reconocidos y desarrolló un estilo único combinando la tradicional técnica de tatuar con la búsqueda de la belleza de Cerdeña.  Como tatuadora, Laura se esfuerza por producir obras de arte de calidad, que reflejan su pasión por el arte y su anhelo de capturar la belleza de la naturaleza. Crea hermosos diseños que abarcan desde motivos tradicionales hasta diseños más modernos.",
       "skills": [

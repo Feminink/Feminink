@@ -4,6 +4,10 @@ import  './ProfileComponent.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import {getMessages} from '../../store/Tattoo/actions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
 
 const ProfileComponent = () => {
 
@@ -16,27 +20,28 @@ const ProfileComponent = () => {
     dispatch(getMessages());
   }, []);
 
+   let counter = [];
+ 
   if(loadingMessages){
     return ( 
     <p> "Loading..."</p>)
   }else { 
 return ( 
-  <div className="wrapper__profile"> 
+  <div style={{background:user.color}} className="wrapper__profile"> 
       <section className="wrapper__profile__section__singleUser">
          
                  <div className='div__image__profile'> 
                    <img className='div__image__profile__image' src={user.image} alt={user.name}></img> 
                  </div>
 
-                 <div className='div__info__profile'> 
-                      <h2>My Profile</h2>
-                     <h2>Bienvenida {user.name}</h2>
-                     <h3>{user.email} </h3> 
+                 <div  className='div__info__profile'> 
+                      <h2 className='div__info__profile__h'>Welcome {user.name}</h2>
+                      <h3 className='div__info__profile__h'>{user.email} </h3> 
                        <ul className='ul__skills'> 
-                        <h3>Tattoo skills</h3>
+                      <h3>Tattoo skills</h3>
                            {user.skills.map((skill)=>{
                                 return( 
-                                <li>{skill}</li>
+                                <li className='ul__skills__li'>{skill.join(", ").toUpperCase()}</li>
                             )})}
                         </ul>
                  </div>
@@ -45,28 +50,29 @@ return (
     </section>
 <div className='wrappers'> 
     <section className='section__info'>
-  <h4>Mail Box </h4>
+   
+   
           {messages.map((message)=>{
            return(
-     
           message.artist === user.name? 
-          <div> 
-          {/* // LA LONGITUD DEL ARRAY AÚN NO LA HE SACADO */}
-          {/* <h3>{user.name} tienes { message.artist.includes(user.name)? message.length : ""} mensajes nuevos!</h3> */}
-          <h3>De {message.name}</h3>
+          <div className='section__info__div__msg'> 
+          <h3><FontAwesomeIcon icon={faEnvelope} />  {message.name}</h3>
           <h3 className='section__info__description'>{message.description}</h3>
-          <h3>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h3>
+          <h3 className='section__info__description'>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h3>
+          <h5 className='hidden__info'> {counter.push(message)}</h5>
           </div>
            : ""
-        )
-   
- })}
- 
+        ) 
+ }
+     
+ )}
+ <h4>Mail Box  ({counter.length}) </h4>
+
   </section>
   <section className='section__info__bio'>
- <h3>BIO </h3> 
+ <h3 className='bio'>BIO </h3> 
 
- <h3>{user.bio}</h3> 
+ <h4>{user.bio}</h4> 
  </section>
 </div>
 
