@@ -21,46 +21,72 @@ const ProfileComponent = () => {
     <p> "Loading..."</p>)
   }else { 
 return ( 
-  <> 
-  <div className="div__singleUser">
-    <div>
-    <h1>TUS DATOS </h1> 
-     <h1>Bienvenida {user.name}</h1>
-     <h1>{user.email} </h1> 
-     <ul> 
-       {user.skills.map((skill)=>{
-            return( 
-            <li>{skill}</li>
-        )})}
-    </ul>
-    <h2>{user.bio}</h2>
-    </div>
-  <div> 
-    <img src={user.image} alt={user.name}></img> 
-    </div>
-  </div>
-  
-  <section>
-  
-{messages.map((message)=>{
-  return(
-    
-    message.artist === user.name? 
-    <div> 
-    {/* // LA LONGITUD DEL ARRAY AÚN NO LA HE SACADO */}
-    <h1>{user.name} tienes { message.artist.includes(user.name)? message.length : ""} mensajes nuevos!</h1>
-    <h1>De {message.name}</h1>
-    <h1>{message.description}</h1>
-    <h1>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h1>
-    </div>
+  <div className="wrapper__profile"> 
+      <section className="wrapper__profile__section__singleUser">
+         
+                 <div className='div__image__profile'> 
+                   <img className='div__image__profile__image' src={user.image} alt={user.name}></img> 
+                 </div>
 
-     : ""
-  )
-  
-})}
+                 <div className='div__info__profile'> 
+                      <h2>My Profile</h2>
+                     <h2>Bienvenida {user.name}</h2>
+                     <h3>{user.email} </h3> 
+                       <ul className='ul__skills'> 
+                        <h3>Tattoo skills</h3>
+                           {user.skills.map((skill)=>{
+                                return( 
+                                <li>{skill}</li>
+                            )})}
+                        </ul>
+                 </div>
 
+  
+    </section>
+<div className='wrappers'> 
+    <section className='section__info'>
+  <h4>Mail Box </h4>
+          {messages.map((message)=>{
+           return(
+     
+          message.artist === user.name? 
+          <div> 
+          {/* // LA LONGITUD DEL ARRAY AÚN NO LA HE SACADO */}
+          {/* <h3>{user.name} tienes { message.artist.includes(user.name)? message.length : ""} mensajes nuevos!</h3> */}
+          <h3>De {message.name}</h3>
+          <h3 className='section__info__description'>{message.description}</h3>
+          <h3>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h3>
+          </div>
+           : ""
+        )
+   
+ })}
+ 
   </section>
-  </>
+  <section className='section__info__bio'>
+ <h3>BIO </h3> 
+
+ <h3>{user.bio}</h3> 
+ </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
   )}
  };
 
