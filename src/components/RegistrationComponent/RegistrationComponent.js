@@ -28,7 +28,6 @@ const RegistrationComponent = () => {
           birthday: formik.values.birthday,
           email: formik.values.email,
           password: formik.values.password,
-          repassword: formik.values.repassword,
         })
       );
     }
