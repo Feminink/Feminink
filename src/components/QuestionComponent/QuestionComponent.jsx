@@ -6,7 +6,10 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 //IMPORT GETINFO
 import { getInfo } from "../../store/info/actions";
-
+//IMPORT GIF
+import no from '../../assets/images/no.gif'
+import hello from '../../assets/images/hello.jpeg'
+import body from '../../assets/images/body.webp'
 const QuestionComponent = () => { 
 
   const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
@@ -49,6 +52,7 @@ function changeClass(){
       code += characters.charAt(Math.floor(Math.random() * characters.length));
     }
     setCode(code)
+    localStorage.setItem("_code", code)
     changeClass()
     return code
   }
@@ -73,30 +77,36 @@ function changeClass(){
       if( questCurrent === info.quiz.length - 1){
         setIsfinished(true)
       }
-      
     }
-    
   }
 
    if (isFinished && score === 0){
-  return <div className={"points" + score}> <h2> Has acertado {score} de {info.quiz.length} quizá para la próxima! </h2>
-  <Link to="/about">Volver </Link></div>
+  return <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length} quizá para la próxima! </h2>
+        <img className='gif' src={no} alt="no"></img>
+  <Link className='link' to="/about">Volver </Link></div>
    
   } else if (isFinished && score === 1){
-    return  <div className={"points" + score}> <h2> Has acertado {score} de {info.quiz.length} sigue así! </h2> <Link to="/contact">Volver </Link></div>
+    return  <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}</h2> 
+     <h2 className="points__h2"> feminist level </h2>
+          <img className='hello' src={hello} alt="no"></img>
+     <Link className='link' to="/contact">Volver </Link></div>
   } else if (isFinished && score === 2){
 
-   return  <div className={"points" + score}> <h2> Has acertado {score} de {info.quiz.length} OLE! Por poco </h2> <Link to="/contact">Volver </Link></div>
+   return  <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}  </h2> 
+   <h2 className='points__h2'>Wooow! Por poco! </h2>
+   <img className='body' src={body} alt="gif_feminism"></img>
+   <Link className='link' to="/contact">Volver </Link></div>
+ 
 
   }else if(isFinished && score === 3  ){
     
-    return <div  className={"points" + score}><h2> Has acertado {score} de {info.quiz.length} NIVEL FEMINIST-INK DESBLOQUEADO </h2>
+    return <div  className={"points" + score}><h2 className='points__h2'>  Has acertado {score} de {info.quiz.length}</h2>
+           <h2 className='points__win'>  NIVEL NINJA-FEMINIST-INK DESBLOQUEADO </h2>
            <button className="button__quiz" onClick={randomCode} onChange={changeClass} >YOU GOT IT </button>
-           <div> <h1 className='hidden' >{code}</h1> <Link to="/contact">Volver </Link></div> 
+           <div> <h1 className='points__win' >{code}</h1> 
+           {/* <h1 className='points__win' >No olvides tu código el día de la cita!</h1>  */}
+           <Link className='link' to="/contact">Volver </Link></div> 
      </div>
-   
-
-   
   }
 
 
@@ -115,7 +125,7 @@ function changeClass(){
   return (
     <div key={index} className='questions'> 
     <div className='number__question'> 
-     <h2>{quizz.question}</h2>
+     <h3 className='number__question__h3'>{quizz.question}</h3>
     </div>
     <div className='response__right'>{quizz.options.map((option, index)=> {
       return( 

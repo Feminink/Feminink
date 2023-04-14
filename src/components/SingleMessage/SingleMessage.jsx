@@ -46,8 +46,8 @@ const SingleMessage = () => {
                      <p className="" ><FontAwesomeIcon icon={faQuoteLeft} size="lg" /> {message.description} <FontAwesomeIcon icon={faQuoteRight} size="lg" /></p>
                      <h4 className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h4>    
                      <div className='single-message__links'>
-                        <Link to="/profile">Volver</Link>
-                        <Link to="/profile"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /> Borrar</button></Link>
+                        <Link className='link' to="/profile">Go back</Link>
+                        <Link className='link' to="/profile"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /> Borrar</button></Link>
 
                      </div>
                   </div>
