@@ -48,7 +48,7 @@
         background-color: rgb(248, 202, 96);
       }
   
-      &--login:hover {
+      &--login:hover, &--profile:hover {
         background-color: lightgreen;
       }
   
@@ -131,7 +131,7 @@ body.menu-open {
   .header {
 
     &__main-nav {
-      width: 40%;
+      width: 35%;
     }
   }
 }

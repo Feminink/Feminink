@@ -388,7 +388,7 @@
       "description": "Quiero una frase en el pecho donde ponga \"IA RULES\"",
       "artist": "Laura O",
       "color": "#151414",
-      "id": 6
+      "id": 5
     },
     {
       "name": "Chimamanda Ngozi ",
@@ -396,7 +396,7 @@
       "description": "Hey! Buenísima iniciativa chicas! En esta ocasión quisiera tatuarme unos tribales canis en las pantorrilla, he pensando en Nacho E",
       "artist": "Ignacio E",
       "color": "#e6d1d1",
-      "id": 7
+      "id": 6
     }
   ],
   "users": [
@@ -454,6 +454,14 @@
       "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
       "isAdmin": true,
       "id": 11
+    },
+    {
+      "email": "pepe@mail.com",
+      "password": "$2a$10$1.WkMtaNbwsg9I1mze9gue5CQaVag.fBDkeeP7F5hBVo3ugCtsPNS",
+      "name": "Pepe",
+      "surname": "Papa",
+      "birthday": "2023-04-05",
+      "id": 12
     }
   ]
 }

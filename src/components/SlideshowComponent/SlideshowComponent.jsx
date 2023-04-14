@@ -25,11 +25,11 @@ const SlideshowComponent = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       >
-        <SwiperSlide><img src='https://images.pexels.com/photos/5533992/pexels-photo-5533992.jpeg'></img></SwiperSlide>
-        <SwiperSlide><img src='https://images.pexels.com/photos/5533992/pexels-photo-5533992.jpeg'></img></SwiperSlide>
-        <SwiperSlide><img src='https://images.pexels.com/photos/5533992/pexels-photo-5533992.jpeg'></img></SwiperSlide>
-        <SwiperSlide><img src='https://images.pexels.com/photos/5533992/pexels-photo-5533992.jpeg'></img></SwiperSlide>
-        <SwiperSlide><img src='https://images.pexels.com/photos/5533992/pexels-photo-5533992.jpeg'></img></SwiperSlide>
+        <SwiperSlide><img src='../../assets/images/slideshow/slideshow_01.webp'></img></SwiperSlide>
+        <SwiperSlide><img src='../../assets/images/slideshow/slideshow_02.webp'></img></SwiperSlide>
+        <SwiperSlide><img src='../../assets/images/slideshow/slideshow_03.webp'></img></SwiperSlide>
+        <SwiperSlide><img src='../../assets/images/slideshow/slideshow_04.webp'></img></SwiperSlide>
+        <SwiperSlide><img src='../../assets/images/slideshow/slideshow_05.webp'></img></SwiperSlide>
       </Swiper>
     </section>
   )

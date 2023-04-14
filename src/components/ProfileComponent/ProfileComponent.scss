@@ -54,12 +54,12 @@
     }
 }
 .section__info{
-     display: flex;
-     flex-direction: column;
-     text-align: justify;
-     padding: 2%;
-     border-radius: 20px;
-     box-shadow: 0px 8px 8px #c5c1b8;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: justify;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0px 8px 8px #c5c1b8;
      &__div__msg{
         display:flex;
         
@@ -103,5 +103,24 @@
     &__li{
 
     }
+}
 
+.profile {
+
+    &__info {
+        display: flex;
+        gap: 2em;
+    }
+
+    &__data {
+        width: 25%;
+        padding: 2em 1em ;
+        background-color: whitesmoke;
+        box-shadow: 0px 5px 0px #f8ca60;
+        border-radius: 0.5em;
+    }
+
+    &__bio-inbox {
+        width: 75%;
+    }
 }

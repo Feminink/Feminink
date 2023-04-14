@@ -13,7 +13,7 @@ import { doLogout } from "../../store/auth/actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRightFromBracket,
-  faUser,
+  faCircleUser,
   faArrowRightToBracket,
   faHouse,
   faImages,
@@ -80,7 +80,7 @@ const NavigationComponent = () => {
               <FontAwesomeIcon icon={faUserGroup} size="xs" /> About
             </Link>
           </li>
-          {user && user.id ? (
+          {user && user.isAdmin ? (
             <li className="main-nav__li li">
               <Link
                 className="main-nav__link link"
@@ -124,19 +124,19 @@ const NavigationComponent = () => {
                 onClick={toggleMenu}
                 to="/signup"
               >
-                <FontAwesomeIcon icon={faArrowRightToBracket} size="xs" /> Sign
+                <FontAwesomeIcon icon={faArrowRightToBracket} /> Sign
                 Up
               </Link>
             </li>
           )}
           {user && user.id ? (
-            <li className="main-nav__li li">
+            <li className="main-nav__li main-nav__li--profile li">
               <Link
                 className="main-nav__link link"
                 onClick={toggleMenu}
                 to="/profile"
               >
-                <FontAwesomeIcon icon={faUser} size="xs" /> Profile
+                <FontAwesomeIcon icon={faCircleUser} /> | Hello, {user.name}!
               </Link>
             </li>
           ) : (

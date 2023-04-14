@@ -21,9 +21,6 @@ const SingleMessage = () => {
    const dispatch = useDispatch(); 
    const {message}= useSelector((state)=>state.TattooReducer)
 
-   const sentence = "Tus tatuajes molan un montón"
-   const sentence1 = ", así que vas a hacerle uno muy cool a "
-
    const removeMessage = (message) =>{
       dispatch(deleteMessage(message.id))
    }

@@ -4,7 +4,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 2em;
-        width: 79%;
+        width: 80%;
 
   
         .gallery__li {
@@ -60,6 +60,11 @@
     }
 }
 
+.flex {
+    display: flex;
+    gap: 2em;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -75,10 +80,6 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-    .gallery__li {
-        width: calc(50% - 2em);
-    }
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -91,15 +92,10 @@
 @media only screen and (min-width: 1200px) {
 
     .gallery__li {
-        width: calc(25% - 2em);
+        width: calc(50% - 1em);
     }
 
 }
-
-
-
-
-
 
 .filters-container {
     background-color: rgba(248, 202, 96, 0.8);
@@ -108,7 +104,6 @@
     width: 20%;
     height: auto;
     border: 1px dotted black;
-    margin-right: 1%;
     fieldset {
         border: none;
         justify-content: space-between;
