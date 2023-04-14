@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // IMPORT STYLES
 import "./DetailComponent.scss";
+// IMPORT GET DETAIL FROM STORE
 import { getDetail } from "../../store/gallery/actions";
 
 const DetailComponent = () => {

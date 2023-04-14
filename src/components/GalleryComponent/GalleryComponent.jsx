@@ -19,7 +19,9 @@ const GalleryComponent = () => {
   const [searchByStyle, setSearchByStyle] = useState("");
   const [checked, setChecked] = useState([]);
 
-  const onChange = (e) => {};
+  const onChange = (e) => {
+    console.log(e.target.value);
+  };
 
   useEffect(() => {
     dispatch(getGallery());
@@ -65,7 +67,7 @@ const GalleryComponent = () => {
                         type="checkbox"
                         value={artist}
                         onChange={(e) => {
-                          onChange(e.target.value);
+                          onChange(e);
                         }}
                       />
                       {artist}

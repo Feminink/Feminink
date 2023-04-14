@@ -4,8 +4,6 @@ import "./ContactComponent.scss";
 
 import { getInfo } from "../../store/info/actions";
 
-//IMPORT SWEETALERT
-
 // IMPORT FUNCIÖN DE CONTACTAR
 import { doContact } from "../../store/Tattoo/actions";
 
@@ -17,6 +15,9 @@ import { useFormik } from "formik";
 
 // IMPORT LOGO
 import logo from "../../assets/images/footer-logo.svg";
+
+// IMPORT SWEET ALERT LIBRARY
+import swal from "sweetalert";
 
 const ContactComponent = () => {
   const dispatch = useDispatch();
@@ -43,9 +44,9 @@ const ContactComponent = () => {
           color: formik.values.color,
         })
       );
-      alert("Tu mensaje se ha enviado correctamente");
+      swal("Enhorabuena!", "Tu mensaje se ha enviado correctamente", "success");
     } else {
-      alert("Es necessario rellenar todos los campos");
+      swal("Atención:", "es necessario rellenar todos los campos", "warning");
     }
   };
 
