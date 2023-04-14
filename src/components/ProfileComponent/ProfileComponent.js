@@ -26,7 +26,7 @@ const ProfileComponent = () => {
     return ( 
     <p> "Loading..."</p>)
   }else { 
-return ( 
+return (
   <div style={{background:user.color}} className="wrapper__profile"> 
       <section className="wrapper__profile__section__singleUser">
          
@@ -41,9 +41,10 @@ return (
                       <h3>Tattoo skills</h3>
                            {user.skills.map((skill) =>{
                                 return( 
-                                <li className='ul__skills__li'>{skill.join(", ")}</li>
+                                <li className='ul__skills__li'>{skill}</li>
                             )})}
                         </ul>
+                      
                  </div> 
 
   

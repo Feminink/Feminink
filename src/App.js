@@ -11,6 +11,8 @@ import Gallery from "./pages/Gallery/Gallery";
 import Messages from "./pages/Messages/Messages";
 import Message from "./pages/Message/Message";
 import Detail from "./pages/Detail/Detail";
+import Quiz from "./pages/Quiz/Quiz";
+
 // IMPORT REACT ROUTER
 import { Route, Routes, Navigate } from "react-router-dom";
 
@@ -34,11 +36,11 @@ function App() {
             <Route exact path="/about" element={<About />}></Route>
             <Route exact path="/inspiration" element={<Inspiration />}></Route>
             <Route exact path="/profile" element={<Profile />}></Route>
-            {/* <Route exact path="/users/:id" element={<Profile />}></Route> */}
             <Route exact path="/login" element={<Login />}></Route>
             <Route exact path="/contact" element={<Contact />}></Route>
             <Route exact path="/signup" element={<Registration />}></Route>
             <Route exact path="/messages" element={<Messages />}></Route>
+            <Route exact path="/quiz" element={<Quiz />}></Route>
             <Route exact path="/contact/:id" element={<Message />}></Route>
             <Route exact path="*" element={<NotFound />}></Route>
           </Routes>

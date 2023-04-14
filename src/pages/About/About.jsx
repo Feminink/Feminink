@@ -1,10 +1,13 @@
 import React from "react";
 import Inspiration from "../Inspiration/Inspiration";
 import video from '../../assets/images/video.mp4'
-import Quiz from "../Quiz/Quiz";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // IMPORT COMPONENT
 const About = () => {
+  const { user } = useSelector((state) => state.AuthReducer);
+
   return (
     <>
     <div className="div__background">
@@ -13,9 +16,10 @@ const About = () => {
     </video> 
     <Inspiration></Inspiration>
      <div className="div__question__wrapper"> 
-       <h1 className='question'>¿Quieres ganar un 15% de descuento en tu siguiente tatuaje?</h1>
+     
+    {user && user.id ? (  <Link to="/quiz">  <h1 className='question'>¿Quieres ganar un 15% de descuento en tu siguiente tatuaje?</h1></Link> ): ( <Link to="/signup">  <h1 className='question'>¿Quieres ganar un 15% de descuento en tu siguiente tatuaje?</h1></Link>  )}
+      <h2 className='question'>Acierta a la primera nuestro quiz!</h2>
      </div>
-     <Quiz></Quiz>
     </div>
      
     </>
