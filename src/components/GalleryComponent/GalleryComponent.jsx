@@ -19,6 +19,16 @@ const GalleryComponent = () => {
   const [searchByStyle, setSearchByStyle] = useState("");
   const [checked, setChecked] = useState([]);
 
+  function checkFilter(ischecked, artist) {
+    let copy = [...checked];
+    if (ischecked) {
+      copy.push(artist);
+      setChecked(copy);
+    } else {
+      setChecked(copy.filter((x) => x !== artist));
+    }
+  }
+
   useEffect(() => {
     dispatch(getGallery());
   }, []);
@@ -33,7 +43,7 @@ const GalleryComponent = () => {
   return (
     <section className="section__gallery container">
       <h2>Gallery</h2>
-      <div className="container flex bg">
+      <div className="container flex">
         <section className="filters-container flex">
           <form>
             <fieldset className="form__group container">
@@ -62,9 +72,7 @@ const GalleryComponent = () => {
                         name={artist}
                         type="checkbox"
                         value={artist}
-                        onChange={(e) => {
-                          setChecked(e.target.value);
-                        }}
+                        onChange={(e) => checkFilter(e.target.checked, artist)}
                       />
                       {artist}
                     </label>
@@ -84,7 +92,7 @@ const GalleryComponent = () => {
             })
             .filter((gallerya) => {
               return checked.length > 0
-                ? gallerya.artist.includes(checked)
+                ? checked.includes(gallerya.artist)
                 : gallery;
             })
             .map((gallerya) => {

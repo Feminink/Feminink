@@ -1,0 +1,45 @@
+.bg {
+    text-align: center;
+    background-image: url(../../assets/images/tinta.webp);  
+    background-color: rgb(0, 0, 0);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15em;
+}
+.notfound__content {
+    h1 {
+        color: black;
+        font-size: 7em;
+        margin: 0;
+    }
+    h2 {
+        color: black;
+        font-size: 3em;
+    }
+    h3 {
+        color: black;
+        font-size: 2em;
+
+
+    }
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(248, 202, 96, 0.6);
+    text-align: center;
+    height: fit-content;
+    width: 80em;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-radius: 1em;
+}
+
+.notfound__button {
+    width: 10em;
+    color: white;
+    &:hover {
+        transform: scale(1.06);
+
+    }
+}
