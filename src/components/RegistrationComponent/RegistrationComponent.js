@@ -8,12 +8,10 @@ import { useDispatch, useSelector } from "react-redux";
 // IMPORT FROM STORE
 import { doRegistration } from "../../store/gallery/actions";
 import { Link, Navigate } from "react-router-dom";
-
+// IMPORT SWEET ALERT LIBRARY
+import swal from "sweetalert";
 // IMPORT LOGO
-import logo from '../../assets/images/footer-logo.svg';
-
-// IMPORT YUP
-// import * as Yup from "yup";
+import logo from "../../assets/images/footer-logo.svg";
 
 const RegistrationComponent = () => {
   const dispatch = useDispatch();
@@ -36,9 +34,9 @@ const RegistrationComponent = () => {
           password: formik.values.password,
         })
       );
-      alert("Registration successful!");
+      swal("Success!", "Your account is now registered", "success");
     } else {
-      alert("Something went wrong. Check the errors and try again.");
+      swal("Something went wrong", "Check the errors and try again", "error");
     }
   };
 
@@ -104,7 +102,7 @@ const RegistrationComponent = () => {
     },
   });
   return (
-    <section className='section__signup section'>
+    <section className="section__signup section">
       <form
         id="registrationForm"
         className="form flex"
@@ -113,9 +111,9 @@ const RegistrationComponent = () => {
       >
         <header className="form__title h2">
           <h2>Register now</h2>
-          <img src={logo} className='footer__logo img' alt='logo'/>
+          <img src={logo} className="footer__logo img" alt="logo" />
         </header>
-        <div className='form__container'>
+        <div className="form__container">
           <div className="form__group">
             <input
               className="form__input"
@@ -132,7 +130,7 @@ const RegistrationComponent = () => {
               <div className="error">{formik.errors.name}</div>
             ) : null}
             <label className="form__label">Name</label>
-            <span className='form__line'></span>
+            <span className="form__line"></span>
           </div>
           <div className="form__group">
             <input
@@ -150,7 +148,7 @@ const RegistrationComponent = () => {
               <div className="error">{formik.errors.surname}</div>
             ) : null}
             <label className="form__label">Surname</label>
-            <span className='form__line'></span>
+            <span className="form__line"></span>
           </div>
           <div className="form__group">
             <input
@@ -168,7 +166,7 @@ const RegistrationComponent = () => {
               <div className="error">{formik.errors.birthday}</div>
             ) : null}
             <label className="form__label">Date of birth</label>
-            <span className='form__line'></span>
+            <span className="form__line"></span>
           </div>
           <div className="form__group">
             <input
@@ -186,7 +184,7 @@ const RegistrationComponent = () => {
               <div className="error">{formik.errors.email}</div>
             ) : null}
             <label className="form__label">Email</label>
-            <span className='form__line'></span>
+            <span className="form__line"></span>
           </div>
           <div className="form__group">
             <input
@@ -204,7 +202,7 @@ const RegistrationComponent = () => {
               <div className="error">{formik.errors.password}</div>
             ) : null}
             <label className="form__label">Password</label>
-            <span className='form__line'></span>
+            <span className="form__line"></span>
           </div>
           <div className="form__group">
             <input

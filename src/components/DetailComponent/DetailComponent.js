@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // IMPORT STYLES
 import "./DetailComponent.scss";
+// IMPORT GET DETAIL FROM STORE
 import { getDetail } from "../../store/gallery/actions";
 
 const DetailComponent = () => {
@@ -30,7 +31,6 @@ const DetailComponent = () => {
     <div className="section__gallery container center">
       <div className="detail__container" key={detail.id}>
         <img src={detail.image} alt={detail.alt} />
-        <h3> {detail.title}</h3>
         <div className="gallery__details">
           <p>
             <b>Model:</b> <span>{detail.model}</span>

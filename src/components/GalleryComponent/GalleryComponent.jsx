@@ -17,6 +17,7 @@ const GalleryComponent = () => {
   );
   const artists = ["Miriam F", "Laura O", "Ignacio E"];
   const [searchByStyle, setSearchByStyle] = useState("");
+  const [checked, setChecked] = useState([]);
 
   useEffect(() => {
     dispatch(getGallery());
@@ -61,7 +62,9 @@ const GalleryComponent = () => {
                         name={artist}
                         type="checkbox"
                         value={artist}
-                        onChange=""
+                        onChange={(e) => {
+                          setChecked(e.target.value);
+                        }}
                       />
                       {artist}
                     </label>
@@ -78,6 +81,11 @@ const GalleryComponent = () => {
               return searchByStyle.toLowerCase() === ""
                 ? gallery
                 : gallerya.style.toLowerCase().startsWith(searchByStyle);
+            })
+            .filter((gallerya) => {
+              return checked.length > 0
+                ? gallerya.artist.includes(checked)
+                : gallery;
             })
             .map((gallerya) => {
               return (

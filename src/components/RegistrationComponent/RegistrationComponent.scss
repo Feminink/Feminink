@@ -30,5 +30,39 @@ button {
 
 .error {
     color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
     
+}
+
+
+.swal-overlay {
+    background-color: rgba(196, 193, 194, 0.45);
+
+}
+
+.swal-text {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 17px;
+    display: block;
+    margin: 22px;
+    text-align: center;
+    color: #61534e;
+}
+
+.swal-footer {
+    background-color: rgb(245, 248, 250);
+    margin-top: 32px;
+    border-top: 2px solid rgb(248, 202, 96, 0.3);
+    overflow: hidden;
+}
+
+.swal-button {
+    color: rgba(0, 0, 0, 0.8);
+    ;
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: rgb(248, 202, 96, 0.3);
+    font-size: 12px;
+    border: 0.1px solid rgb(248, 202, 96, 0.3);
 }
