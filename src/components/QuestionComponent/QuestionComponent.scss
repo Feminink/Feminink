@@ -4,6 +4,7 @@
     justify-content: center;
     margin: 0 auto;
     width: 90%;
+    //  background-color: pink;
    
 }
 .question{
@@ -11,6 +12,7 @@
     text-align: justify;
     display: flex;
     justify-content: center;
+    background-color: aqua;
 }
 .number__question{
   
@@ -18,46 +20,57 @@
 .questions{
 display:flex;
 flex-direction: column;
-
 gap: 1em;
 margin: 1%;
+text-align: center;
+width: 90%;
+
+//  background-color: antiquewhite;
 
 }
 .response__right{
     flex-direction: column;
     display: flex;
-    margin: 1%;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+    // background-color: red;
 }
 .quiz__button{
     color:black;
     font-weight: 400;
+     width: 90%;
     padding: 1em 0;
     border: none;
     border-radius: .5em;
     cursor: pointer;
-    background-color: rgb(194, 232, 231);
-    box-shadow: 0 9px rgb(246, 235, 150);
+    background-color: rgba(248, 178, 27, 0.88);
+    box-shadow: 0 2px 6px 4px rgba(255, 247, 184, 0.989);
     &:hover {
-        background-color: #e7bf30;
+        background-color: #fbd13a;
     }
 }
 .correct{
-    background-color: green;
+    background-color: rgb(185, 142, 235);
+    box-shadow:0 2px 6px 4px rgb(235, 219, 252);
+    
    
 }
 .incorrect{
-    background-color: red;
-   
+    background-color: rgb(245, 132, 132);
+    box-shadow:0 2px 6px 4px rgb(252, 212, 183);
 }
 .visibility{
     display: none; 
 }
 .quiz{
-    display: flex;
+     display: flex;
     justify-content: center;
-    color: rgb(65, 60, 70);
-    background-color: rgb(255, 208, 0);
-    padding: 20%;
+    color: rgb(235, 230, 240);
+    background-color: rgb(50, 48, 48);
+    margin: 0 auto;
+    
+    // padding: 20%;
 }
 .points0{
     background-color: red;
@@ -73,18 +86,30 @@ margin: 1%;
     flex-direction: column;
 }
 .points2{
-    background-color: aqua;
+    // background-color: aqua;
     display: flex;
-    padding: 10%;
+    padding: 20%;
     flex-direction: column;
+    color: green;
 }
 .points3{
     background-color: violet;
     display: flex;
-    padding: 10%;
+    padding: 20%;
     flex-direction: column;
 }
 .discount{
     display: flex;
     flex-direction: column;
+}
+.button__quiz{
+    color:black;
+    font-weight: 600;
+     width: 90px;
+    padding: 1em 0;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+    background-color: rgba(248, 178, 27, 0.88);
+    box-shadow: 0 2px 6px 4px rgba(255, 247, 184, 0.989);
 }

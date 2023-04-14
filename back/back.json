@@ -425,14 +425,6 @@
       "id": 3
     },
     {
-      "name": "Artemisia Gentileschi ",
-      "email": "artemisiag@roma.it",
-      "description": "Hola chicas! Había pensando en repetir con Miriam, esta vez me gustaría que ma tatuase mi propio \"Judit decapitando a Holofernes\", avisad cuanto antes para la cita!",
-      "artist": "Miriam F",
-      "color": "#0d0c0c",
-      "id": 4
-    },
-    {
       "name": "Mira Murati",
       "email": "miramurati@mail.com",
       "description": "Quiero una frase en el pecho donde ponga \"IA RULES\"",
@@ -447,6 +439,14 @@
       "artist": "Ignacio E",
       "color": "#e6d1d1",
       "id": 7
+    },
+    {
+      "name": "Leonor",
+      "email": "leonor@mail.com",
+      "description": "Hola, me quiero tatuar un corazón con el nombre de Juan",
+      "artist": "Miriam F",
+      "color": "#281f1f",
+      "id": 8
     }
   ],
   "users": [

@@ -26,8 +26,8 @@ const QuestionComponent = () => {
    const [isClicked, setIsClicked] = useState(false);
 
  
- 
-function cambiarClase(){
+ //FUNCIÖN PARA CAMBIAR CLASE DEL BOTÖN DESPUËS DE HACER CLICK
+function changeClass(){
     
    const button = document.querySelector("button");
    button.classList.add("visibility")
@@ -41,23 +41,20 @@ function cambiarClase(){
     dispatch(getInfo());
   }, []);
 
-
- 
-
+//FUNCIÖN PARA GENERAR EL COD DE DESCUENTO
   function randomCode() {
     let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let code = '';
     for (let i = 0; i < 6; i++) {
       code += characters.charAt(Math.floor(Math.random() * characters.length));
-      console.log(code, "codevalue")
     }
     setCode(code)
-    cambiarClase()
+    changeClass()
     return code
   }
 
   
-
+//FUNCIÖN QUE MANEJA SI HAS ACERTADO O NO LA PREGUNTA Y SI EL JUEGO HA TERMINADO O NO
   function handleAnswer(isCorrect, e){
     
     if(isCorrect){
@@ -94,7 +91,7 @@ function cambiarClase(){
   }else if(isFinished && score === 3  ){
     
     return <div  className={"points" + score}><h2> Has acertado {score} de {info.quiz.length} NIVEL FEMINIST-INK DESBLOQUEADO </h2>
-           <button className="button" onClick={randomCode} onChange={cambiarClase} >Desbloquea tu descuento </button>
+           <button className="button__quiz" onClick={randomCode} onChange={changeClass} >YOU GOT IT </button>
            <div> <h1 className='hidden' >{code}</h1> <Link to="/contact">Volver </Link></div> 
      </div>
    

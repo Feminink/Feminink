@@ -35,7 +35,7 @@ const SingleMessage = () => {
          <section className='section__single-message section'>
                <div className='single-message__header'>
                   <div className='container'>
-                     <h2>Tus tatuajes molan un montón {message.artist}, así que vas a hacerle uno muy cool a {message.name}!</h2>
+                     <h2>{sentence} {message.artist}{sentence1}{message.name}!</h2>
                   </div> 
                </div>
                <div className='single-message__body container'>
@@ -47,7 +47,7 @@ const SingleMessage = () => {
                      <h4 className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h4>    
                      <div className='single-message__links'>
                         <Link to="/profile">Volver</Link>
-                        <Link to="/messages"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /> Borrar</button></Link>
+                        <Link to="/profile"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /> Borrar</button></Link>
 
                      </div>
                   </div>
