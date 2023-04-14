@@ -19,10 +19,6 @@ const GalleryComponent = () => {
   const [searchByStyle, setSearchByStyle] = useState("");
   const [checked, setChecked] = useState([]);
 
-  const onChange = (e) => {
-    console.log(e.target.value);
-  };
-
   useEffect(() => {
     dispatch(getGallery());
   }, []);
@@ -67,7 +63,7 @@ const GalleryComponent = () => {
                         type="checkbox"
                         value={artist}
                         onChange={(e) => {
-                          onChange(e);
+                          setChecked(e.target.value);
                         }}
                       />
                       {artist}
@@ -87,9 +83,9 @@ const GalleryComponent = () => {
                 : gallerya.style.toLowerCase().startsWith(searchByStyle);
             })
             .filter((gallerya) => {
-              return !checked.checked
-                ? gallery
-                : gallerya.artist.includes(checked);
+              return checked.length > 0
+                ? gallerya.artist.includes(checked)
+                : gallery;
             })
             .map((gallerya) => {
               return (
