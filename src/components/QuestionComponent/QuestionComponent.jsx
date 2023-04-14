@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './QuestionComponent.scss';
-
+import { Link } from 'react-router-dom';
 //IMPORT HOOKS
 import { useDispatch, useSelector } from 'react-redux';
 //IMPORT GETINFO
 import { getInfo } from "../../store/info/actions";
+
 const QuestionComponent = () => { 
 
   const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
@@ -18,9 +19,44 @@ const QuestionComponent = () => {
   //ESTADO QUE CONTROLA SI EL JUEGO HA TERMINADO
   const [isFinished, setIsfinished] = useState(false)
 
+  //ESTADO PARA CODIGO ALEATORIO
+  const [code, setCode] = useState("")
+
+  //ESTADO PARA CONTROLAR SI CLICKED OR NOT 
+   const [isClicked, setIsClicked] = useState(false);
+
+ 
+ 
+function cambiarClase(){
+    
+   const button = document.querySelector("button");
+   button.classList.add("visibility")
+   console.log(button, "button ")
+   setIsClicked(true)
+    
+  }
+
+
   useEffect(() => {
     dispatch(getInfo());
   }, []);
+
+
+ 
+
+  function randomCode() {
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let code = '';
+    for (let i = 0; i < 6; i++) {
+      code += characters.charAt(Math.floor(Math.random() * characters.length));
+      console.log(code, "codevalue")
+    }
+    setCode(code)
+    cambiarClase()
+    return code
+  }
+
+  
 
   function handleAnswer(isCorrect, e){
     
@@ -33,8 +69,6 @@ const QuestionComponent = () => {
           setIsfinished(true)
         }
          
-        
-        
       }, 1000);
     }else{
       e.target.classList.add("incorrect")
@@ -47,51 +81,26 @@ const QuestionComponent = () => {
     
   }
 
-   if (isFinished){
-  
-    return  <div className={"points" + score}>Has obtenido {score} de {info.quiz.length} APLICATE</div>
+   if (isFinished && score === 0){
+  return <div className={"points" + score}> <h2> Has acertado {score} de {info.quiz.length} quizá para la próxima! </h2>
+  <Link to="/about">Volver </Link></div>
    
   } else if (isFinished && score === 1){
-    <div className={"points" + score}>Has obtenido {score} de {info.quiz.length} OLE </div>
+    return  <div className={"points" + score}> <h2> Has acertado {score} de {info.quiz.length} sigue así! </h2> <Link to="/contact">Volver </Link></div>
   } else if (isFinished && score === 2){
-    <div className={"points" + score}>Has obtenido {score} de {info.quiz.length}  </div>
 
+   return  <div className={"points" + score}> <h2> Has acertado {score} de {info.quiz.length} OLE! Por poco </h2> <Link to="/contact">Volver </Link></div>
+
+  }else if(isFinished && score === 3  ){
+    
+    return <div  className={"points" + score}><h2> Has acertado {score} de {info.quiz.length} NIVEL FEMINIST-INK DESBLOQUEADO </h2>
+           <button className="button" onClick={randomCode} onChange={cambiarClase} >Desbloquea tu descuento </button>
+           <div> <h1 className='hidden' >{code}</h1> <Link to="/contact">Volver </Link></div> 
+     </div>
+   
+
+   
   }
-        // switch(score){
-          // case score === 0:
-            // return(
-              // <div className={"points" + score}>
-             {/* score = {} */}
-                {/* <h1> Has acertado {score} de {info.quiz.length}! Feminist friendly</h1> */}
-                {/* <button onClick={()=> (window.location.href = "/contact")}> Ponte en contacto </button> */}
-              {/* </div>  */}
-            // );
-                // break 
-            // case score === 1:
-              // return(
-                // <div className={"points" +score}>
-{/*             */}
-                  {/* <h1> Has acertado {score} de {info.quiz.length}! Feminist fdfsdfriendly</h1> */}
-                  {/* <button onClick={()=> (window.location.href = "/contact")}> Ponte en contacto </button> */}
-                {/* </div>  */}
-              // );
-              //  break 
-              // case score === 2:
-                // return(
-                  // <div className={"points" +score}>
-{/*                   */}
-                    {/* <h1> Has acertado {score} de {info.quiz.length}!  fddfsdfriendly</h1> */}
-                    {/* <button onClick={()=> (window.location.href = "/contact")}> Ponte en contacto </button> */}
-                  {/* </div>  */}
-                // );
-              //  break 
-        // default:
-          // break
-          //  }
-  
-
-  
-  
 
 
   if(loadingInfo){
@@ -109,8 +118,7 @@ const QuestionComponent = () => {
   return (
     <div key={index} className='questions'> 
     <div className='number__question'> 
-    <span>Question {questCurrent + 1} of </span> {info.quiz.length}
-    <h2>{quizz.question}</h2>
+     <h2>{quizz.question}</h2>
     </div>
     <div className='response__right'>{quizz.options.map((option, index)=> {
       return( 
