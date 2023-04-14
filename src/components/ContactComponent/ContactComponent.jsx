@@ -7,11 +7,7 @@ import { getInfo } from "../../store/info/actions";
 //IMPORT SWEETALERT
 
 // IMPORT FUNCIÖN DE CONTACTAR
-import {
-  actionDoContactFail,
-  actionDoContactOk,
-  doContact,
-} from "../../store/Tattoo/actions";
+import { doContact } from "../../store/Tattoo/actions";
 
 //IMPORT HOOKS
 import { useDispatch, useSelector } from "react-redux";
@@ -20,7 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useFormik } from "formik";
 
 // IMPORT LOGO
-import logo from '../../assets/images/footer-logo.svg';
+import logo from "../../assets/images/footer-logo.svg";
 
 const ContactComponent = () => {
   const dispatch = useDispatch();
@@ -103,69 +99,75 @@ const ContactComponent = () => {
   }
 
   return (
-    <section className='section__contact section'>
-        <form onSubmit={formik.handleSubmit} className='form' noValidate> 
-          <header className='form__title h2'> 
-            <h2>Ponte en contacto con</h2>
-            <img src={logo} className='footer__logo img' alt='logo'/>
-          </header>
-          <div className='form__container'>
-            <div className="form__group" >
-              <input className='form__input'
-                name="name"
-                type="text"
-                value={formik.values.name}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                placeholder= " "
-                required
-              />
-              {formik.touched.name && formik.errors.name ? (
-                <div className="error">{formik.errors.name}</div>
-              ) : null}
-              <label className='form__label'>Nombre </label>
-              <span className='form__line'></span>
-            </div>
-            <div className="form__group">
-              <input className='form__input'
-                name="email"
-                type="email"
-                value={formik.values.email}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                placeholder= " "
-                required
-              />
-              {formik.touched.email && formik.errors.email ? (
-                <div className="error">{formik.errors.email}</div>
-              ) : null}
-              <label className='form__label'>Email </label>
-              <span className='form__line'></span>
-            </div>
-            <div className="form__group">
-              <textarea className='form__input'
-                name="description"
-                type="text"
-                value={formik.values.description}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                placeholder= " "
-                required>
-              </textarea>
-              {formik.touched.description && formik.errors.description ? (
+    <section className="section__contact section">
+      <form onSubmit={formik.handleSubmit} className="form" noValidate>
+        <header className="form__title h2">
+          <h2>Ponte en contacto con</h2>
+          <img src={logo} className="footer__logo img" alt="logo" />
+        </header>
+        <div className="form__container">
+          <div className="form__group">
+            <input
+              className="form__input"
+              name="name"
+              type="text"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder=" "
+              required
+            />
+            {formik.touched.name && formik.errors.name ? (
+              <div className="error">{formik.errors.name}</div>
+            ) : null}
+            <label className="form__label">Nombre </label>
+            <span className="form__line"></span>
+          </div>
+          <div className="form__group">
+            <input
+              className="form__input"
+              name="email"
+              type="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder=" "
+              required
+            />
+            {formik.touched.email && formik.errors.email ? (
+              <div className="error">{formik.errors.email}</div>
+            ) : null}
+            <label className="form__label">Email </label>
+            <span className="form__line"></span>
+          </div>
+          <div className="form__group">
+            <textarea
+              className="form__input"
+              name="description"
+              type="text"
+              value={formik.values.description}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder=" "
+              required
+            ></textarea>
+            {formik.touched.description && formik.errors.description ? (
               <div className="error">{formik.errors.description}</div>
             ) : null}
-              <label className='form__label'>Descripción del tatuaje</label>
-              <span className='form__line'></span>
-            </div>
-            <div className="form__group">
-               <select className='form__input'
-                name="artist"
-                value={formik.values.artist}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                required>
-                {info && info.admins?.map((member) => {
+            <label className="form__label">Descripción del tatuaje</label>
+            <span className="form__line"></span>
+          </div>
+          <div className="form__group">
+            <select
+              className="form__input"
+              name="artist"
+              value={formik.values.artist}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              required
+            >
+              {info &&
+                info.admins?.map((member) => {
                   return (
                     <option key={member.id} value={member.name}>
                       {member.name}
