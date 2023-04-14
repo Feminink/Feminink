@@ -81,6 +81,59 @@
         ]
       }
     ],
+    "quiz": [
+      {
+        "question": "¿Qué tienen en común la mayoría de mujeres tatuadoras del s.XIX y s.XX?",
+        "options": [
+          {
+            "response": "Empezaron sus carreras siendo tatuadas por sus parejas para ser expuestas en los freakshows de circos",
+            "isCorrect": true
+          },
+          {
+            "response": "No tenían las mismas oportunidades profesionales que los hombres y se veían forzadas a hacer uso de sus cuerpos para ganarse la vida",
+            "isCorrect": false
+          },
+          {
+            "response": "Ninguna de ellas ganaba lo mismo que los hombres por realizar el mismo trabajo ",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "question": "¿Cuál de las siguientes afirmaciones sobre pintoras del surrealismo es incorrecta?",
+        "options": [
+          {
+            "response": "Dorothea Tanning es la autora de 'Eine Kleine Nachtmusik' ",
+            "isCorrect": false
+          },
+          {
+            "response": "Remedios Varo es la autora de 'La cienca inútil o el alquimista' ",
+            "isCorrect": false
+          },
+          {
+            "response": "Leonora Carrington es la autora de 'El venado herido' ",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "question": "¿A cuál de las siguientes pintoras le arrebataron la autoría de muchos de sus cuadros asignándosele esta a pintores de la corte del rey Felipe II?",
+        "options": [
+          {
+            "response": "Catarina van Hemessen",
+            "isCorrect": false
+          },
+          {
+            "response": "Artemisia Gentileschi",
+            "isCorrect": false
+          },
+          {
+            "response": "Sofonisba Anguissola",
+            "isCorrect": true
+          }
+        ]
+      }
+    ],
     "about": {
       "text": "Desde FeminInk queremos rescatar y poner en valor un trozo de la historia que rara vez sale a la luz, precisamente porque corresponde a las mujeres. Si hoy tenemos cabida en los estudios de tatuaje, en parte, se lo debemos a mujeres que se atrevieron a desafiar la norma en la que solo tenían espacio para ser contempladas en freakshows por llevar todo el cuerpo tatuado. El salto de estas mujeres, dos siglos atrás hacia un espacio masculinizado y desconocido supondrá la puerta de entrada de otras muchas que irán agrietando poco a poco algunas de las normas de género asociadas no solo a la estética de las mujeres, sino a su libertad de expresión. Gracias por ser nuestras referentas."
     },
@@ -310,10 +363,9 @@
       "id": 1,
       "name": "Laura O",
       "username": "Laura WHATEVER",
-      "password": "randompwd",
       "place": "Cerdeña",
       "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
-      "email": "laurao@mail.com",
+      "email": "lauraO@mail.com",
       "description": "",
       "noway": [
         "Símbolo del infinito",
@@ -324,10 +376,9 @@
       "id": 2,
       "name": "Ignacio E",
       "username": "Ignacio WHATEVER",
-      "password": "randompwd1",
       "place": "Puerto de Sta María",
       "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
-      "email": "ignacio@mail.com",
+      "email": "nachoe@mail.com",
       "description": "",
       "noway": [
         "Campanillas",
@@ -338,10 +389,9 @@
       "id": 3,
       "name": "Miriam F",
       "username": "Miriam WHATEVER",
-      "password": "randompwd2",
       "place": "Cädiz",
       "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-      "email": "miriamf@mail.com",
+      "email": "miriamfr@mail.com",
       "description": "",
       "noway": [
         "Delfines en el tobillo",
@@ -375,20 +425,12 @@
       "id": 3
     },
     {
-      "name": "Artemisia Gentileschi ",
-      "email": "artemisiag@roma.it",
-      "description": "Hola chicas! Había pensando en repetir con Miriam, esta vez me gustaría que ma tatuase mi propio \"Judit decapitando a Holofernes\", avisad cuanto antes para la cita!",
-      "artist": "Miriam F",
-      "color": "#0d0c0c",
-      "id": 4
-    },
-    {
       "name": "Mira Murati",
       "email": "miramurati@mail.com",
       "description": "Quiero una frase en el pecho donde ponga \"IA RULES\"",
       "artist": "Laura O",
       "color": "#151414",
-      "id": 5
+      "id": 6
     },
     {
       "name": "Chimamanda Ngozi ",
@@ -396,8 +438,19 @@
       "description": "Hey! Buenísima iniciativa chicas! En esta ocasión quisiera tatuarme unos tribales canis en las pantorrilla, he pensando en Nacho E",
       "artist": "Ignacio E",
       "color": "#e6d1d1",
-      "id": 6
+      "id": 7
+    },
+    {
+      "name": "Leonor",
+      "email": "leonor@mail.com",
+      "description": "Hola, me quiero tatuar un corazón con el nombre de Juan",
+      "artist": "Miriam F",
+      "color": "#281f1f",
+      "id": 8
+
+
     }
+
   ],
   "users": [
     {
@@ -426,11 +479,9 @@
       "birthday": "1988-02-15",
       "bio": "Ignacio es un joven tatuador que lleva más de cinco años trabajando en el puerto de Santa María. Desde el principio, ha tenido un gran talento para el arte del tatuaje, convirtiéndose en uno de los mejores tatuadores de la ciudad.  Ignacio es conocido por su creatividad y sus habilidades técnicas, y ha creado algunos de los tatuajes más impresionantes de la ciudad. Siempre está dispuesto a escuchar las ideas de sus clientes y a ayudarlos a crear el tatuaje perfecto.",
       "skills": [
-        [
-          "Tradicional",
-          "Old school",
-          "Borneo"
-        ]
+        "Tradicional",
+        "Old school",
+        "Borneo"
       ],
       "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
       "isAdmin": true,
@@ -445,22 +496,20 @@
       "birthday": "1993-01-06",
       "bio": "Laura, proviene de la hermosa isla de Cerdeña. Creció entre la hermosa vida y la magia de esta isla, que ahora influye en su trabajo.  Laura siempre tuvo un interés en el arte y decidió convertirse en tatuadora. Se entrenó con maestros tatuadores reconocidos y desarrolló un estilo único combinando la tradicional técnica de tatuar con la búsqueda de la belleza de Cerdeña.  Como tatuadora, Laura se esfuerza por producir obras de arte de calidad, que reflejan su pasión por el arte y su anhelo de capturar la belleza de la naturaleza. Crea hermosos diseños que abarcan desde motivos tradicionales hasta diseños más modernos.",
       "skills": [
-        [
-          "Acuarela",
-          "Blackwork",
-          "Dotwork"
-        ]
+        "Acuarela",
+        "Blackwork",
+        "Dotwork"
       ],
       "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
       "isAdmin": true,
       "id": 11
     },
     {
-      "email": "pepe@mail.com",
-      "password": "$2a$10$1.WkMtaNbwsg9I1mze9gue5CQaVag.fBDkeeP7F5hBVo3ugCtsPNS",
-      "name": "Pepe",
-      "surname": "Papa",
-      "birthday": "2023-04-05",
+      "email": "manolo@yahoo.es",
+      "password": "$2a$10$d69w/k8QcTw3idpvOG.PfuQvgXphMnv5.j4Ge8yAmL3IofAkDX8Ce",
+      "name": "Manolo",
+      "surname": "Pérez",
+      "birthday": "1998-02-15",
       "id": 12
     }
   ]

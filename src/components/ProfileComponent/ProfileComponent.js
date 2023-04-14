@@ -55,7 +55,7 @@ const ProfileComponent = () => {
                 <ul className='ul__skills'> 
                   {user.skills.map((skill)=>{
                     return ( 
-                      <li className='ul__skills__li'>{skill}</li>
+                      <li className='ul__skills__li'><p>{skill}</p></li>
                     )
                   })}
                 </ul>
@@ -72,19 +72,35 @@ const ProfileComponent = () => {
             ) : ("")} 
             <section className='section__info'>
               {messages.map((message) => {
-                return (
-                  message.artist === user.name? 
-                    <div className='section__info__div__msg'> 
-                      <h4><FontAwesomeIcon icon={faEnvelope} /> {message.name}</h4>
-                      <h4 className='section__info__description'>{message.description}</h4>
-                      <h4 className='section__info__description'>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h4>
-                      <h4 className='hidden__info'> {counter.push(message)}</h4>
-                    </div>
-                  : "")
+                if (user && user.isAdmin) {
+                  if (message.artist === user.name) {
+                    return (
+                      <div className='section__info__div__msg'> 
+                        <h4><FontAwesomeIcon icon={faEnvelope} /> {message.name}</h4>
+                        <h4 className='section__info__description'>{message.description}</h4>
+                        <h4 className='section__info__description'>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h4>
+                        <h4 className='hidden__info'> {counter.push(message)}</h4>
+                      </div>
+                    )
+                  }
+                } else {
+                  if (message.name === user.name) {
+                    return (
+                      <div className='section__info__div__msg'> 
+                        <h4><FontAwesomeIcon icon={faEnvelope} /> {message.artist}</h4>
+                        <h4 className='section__info__description'>{message.description}</h4>
+                        <h4 className='section__info__description'>Su email es {message.email}! Escríbele a {message.artist} para darle cita en el estudio!</h4>
+                        <h4 className='hidden__info'> {counter.push(message)}</h4>
+                      </div>
+                    )
+                  }
+                }
+                return null;
               })}
+              <h3>Mail Box({counter.length})</h3>
             </section>
+          </div>
         </div>
-      </div>
     </section>
     {user && user.isAdmin ? (
       <section className='section__send-date'>

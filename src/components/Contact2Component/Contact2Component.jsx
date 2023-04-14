@@ -7,11 +7,7 @@ import { getInfo } from "../../store/info/actions";
 //IMPORT SWEETALERT
 
 // IMPORT FUNCIÖN DE CONTACTAR
-import {
-    actionDoContact2Fail,
-    actionDoContact2Ok,
-    doContact2,
-  } from "../../store/Tattoo/actions";
+import { doContact2 } from "../../store/Tattoo/actions";
 
 //IMPORT HOOKS
 import { useDispatch, useSelector } from "react-redux";
@@ -50,8 +46,9 @@ const ContactComponent = () => {
             })
         );
         alert("Tu mensaje se ha enviado correctamente");
+            formik.resetForm(); // Resetea los valores del formulario
         } else {
-        alert("Es necessario rellenar todos los campos");
+            alert("Es necesario rellenar todos los campos");
         }
     };
 
