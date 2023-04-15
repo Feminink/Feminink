@@ -8,6 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
+/* IMPORT AVATAR */
+import avatar from '../../assets/images/avatar.webp';
+
 import Contact2Component from "../../components/Contact2Component/Contact2Component";
 
 const ProfileComponent = () => {
@@ -39,7 +42,7 @@ const ProfileComponent = () => {
             {user && user.isAdmin ? (
               <img className='profile__image img' src={user.image} alt={user.name}></img>
             ) : (
-              <img className='profile__image img' src="https://i.ytimg.com/vi/7pSmhZFbCy0/maxresdefault.jpg" alt=''></img>
+              <img className='profile__image img' src={avatar} alt=''></img>
             )}
           </div>
           <div className='profile__description'> 
@@ -65,19 +68,18 @@ const ProfileComponent = () => {
           </div>
           <div className='profile__bio-inbox'>
             {user && user.isAdmin ? (
-              <section className='section__info__bio'>
+              <section className='section__inbox__bio'>
                 <h3 className='bio'>BIO</h3> 
                 <p>{user.bio}</p> 
               </section>
             ) : ("")} 
-            <section className='section__info'>
+            <section className='section__inbox'>
               {messages.map((message) => {
                 if (user && user.isAdmin) {
                   if (message.artist === user.name) {
                     return (
                       <div className='section__info__div__msg'> 
-                        <h4><FontAwesomeIcon icon={faEnvelope} /> {message.name}</h4>
-                        <h4 className='section__info__description'>{message.description}</h4>
+                        <h4><FontAwesomeIcon icon={faEnvelope} /> Mensaje de: {message.name}</h4>
                         <h4 className='section__info__description'>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h4>
                         <h4 className='hidden__info'> {counter.push(message)}</h4>
                       </div>
