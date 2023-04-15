@@ -4,10 +4,10 @@ import  './ProfileComponent.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import {getMessages} from '../../store/Tattoo/actions'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPalette, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 
 const ProfileComponent = () => {
 
@@ -16,21 +16,21 @@ const ProfileComponent = () => {
    const {messages, loadingMessages} = useSelector((state)=>state.TattooReducer);
    const dispatch = useDispatch()
    
-   const [isRead, setIsRead] = useState();
+  //  const [isRead, setIsRead] = useState();
    useEffect(() => {
     dispatch(getMessages());
   }, []);
 
-  const addRead = (message) => {
-    setIsRead(prevState => {
-      const newState = {
-        ...prevState,
-        [message.id]: !prevState[message.id]
-      };
-      localStorage.setItem('isRead', JSON.stringify(newState));
-      return newState;
-    });
-  };
+  // const addRead = (message) => {
+    // setIsRead(prevState => {
+      // const newState = {
+        // ...prevState,
+        // [message.id]: !prevState[message.id]
+      // };
+      // localStorage.setItem('isRead', JSON.stringify(newState));
+      // return newState;
+    // });
+  // };
    let counter = [];
  
   if(loadingMessages){
@@ -68,9 +68,6 @@ return (
            return(
           message.artist === user.name? 
           <div className='section__info__div__msg'> 
-          <Link onClick={() => addRead(message)} to={`/contact/${message.id}`} >
-                          <h3>Leído</h3>
-                        </Link> 
 
          <Link to={`/contact/${message.id}`}>  <h3><FontAwesomeIcon icon={faEnvelope} />  {message.name}</h3></Link>
           <h3 className='section__info__description'>{message.description}</h3>
