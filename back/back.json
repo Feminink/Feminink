@@ -232,7 +232,7 @@
   "gallery": [
     {
       "id": "1",
-      "image": "../../assets/images/gallery/pexels-photo-4123910.webp",
+      "image": "./assets/images/gallery/pexels-photo-4123910.webp",
       "title": "Flower tattoo",
       "artist": "Miriam F",
       "model": "Tatiana Parker",
@@ -242,7 +242,7 @@
     },
     {
       "id": "2",
-      "image": "../../assets/images/gallery/pexels-photo-3778028.jpeg",
+      "image": "./assets/gallery/pexels-photo-3778028.jpeg",
       "title": "Tattoo in the making",
       "artist": "Laura O",
       "model": "Susana White",
@@ -252,7 +252,7 @@
     },
     {
       "id": "3",
-      "image": "../../assets/images/gallery/pexels-photo-1848657.webp",
+      "image": "../../assets/gallery/pexels-photo-1848657.webp",
       "title": "Geometrical flower",
       "artist": "Miriam F",
       "model": "Sonia García",
@@ -262,7 +262,7 @@
     },
     {
       "id": "4",
-      "image": "../../assets/images/gallery/pexels-photo-2183131.webp",
+      "image": "../../assets/gallery/pexels-photo-2183131.webp",
       "title": "Japanese dragon tattoo",
       "artist": "Ignacio E",
       "model": "Shen Tao",
@@ -272,7 +272,7 @@
     },
     {
       "id": "5",
-      "image": "../../assets/images/gallery/pexels-brett-sayles-2865412.webp",
+      "image": "../../assets/gallery/pexels-brett-sayles-2865412.webp",
       "title": "Tattoo in the making",
       "artist": "Laura O",
       "model": "Laura Hawkins",
@@ -282,7 +282,7 @@
     },
     {
       "id": "6",
-      "image": "../../assets/images/gallery/pexels-photo-1784272.webp",
+      "image": "../assets/gallery/pexels-photo-1784272.webp",
       "title": "Nature tattoo",
       "artist": "Miriam F",
       "model": "Peter Smith",
@@ -292,7 +292,7 @@
     },
     {
       "id": "7",
-      "image": "../../assets/images/gallery/pexels-cottonbro-studio-5320148.webp",
+      "image": "../../assets/gallery/pexels-cottonbro-studio-5320148.webp",
       "title": "Oldschool rose tattoo",
       "artist": "Laura O",
       "model": "Bryan Fury",
@@ -302,7 +302,7 @@
     },
     {
       "id": "8",
-      "image": "../../assets/images/gallery/pexels-cottonbro-studio-5235789.webp",
+      "image": "../../assets/gallery/pexels-cottonbro-studio-5235789.webp",
       "title": "Skull tattoo",
       "artist": "Ignacio E",
       "model": "Pedro González",
@@ -312,7 +312,7 @@
     },
     {
       "id": "9",
-      "image": "../../assets/images/gallery/pexels-spencer-selover-428320.webp",
+      "image": "../../assets/gallery/pexels-spencer-selover-428320.webp",
       "title": "Fox tattoo",
       "artist": "Miriam F",
       "model": "Karla Johnson",
@@ -322,7 +322,7 @@
     },
     {
       "id": "10",
-      "image": "../../assets/images/gallery/pexels-vjapratama-1003842.webp",
+      "image": "/../../assets/gallery/pexels-vjapratama-1003842.webp",
       "title": "Tattoo on the face",
       "artist": "Laura O",
       "model": "Pedro Méndez",
@@ -332,7 +332,7 @@
     },
     {
       "id": "11",
-      "image": "../../assets/images/gallery/pexels-matheus-ferrero-2123061.webp",
+      "image": "./assets/gallery/pexels-matheus-ferrero-2123061.webp",
       "title": "Realistic tattoo left arm",
       "artist": "Miriam F",
       "model": "Mac Miller",
@@ -342,7 +342,7 @@
     },
     {
       "id": "12",
-      "image": "../../assets/images/gallery/pexels-photo-3657562.webp",
+      "image": "../../assets/gallery/pexels-photo-3657562.webp",
       "title": "Tattoo in the making",
       "artist": "Ignacio E",
       "model": "Laura Judge",
