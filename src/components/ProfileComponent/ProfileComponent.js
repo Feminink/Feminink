@@ -14,7 +14,8 @@ import avatar from '../../assets/images/avatar.webp';
 import Contact2Component from "../../components/Contact2Component/Contact2Component";
 
 const ProfileComponent = () => {
-
+ 
+  const code = localStorage.getItem("_code");
   const {user} = useSelector((state)=> state.AuthReducer)
   const {messages, loadingMessages} = useSelector((state)=>state.TattooReducer);
   const dispatch = useDispatch()
@@ -48,6 +49,7 @@ const ProfileComponent = () => {
           <div className='profile__description'> 
             <h2 className=''>Welcome!</h2>
             <p>{user.name} {user.surname}</p>
+            <h2>{code}</h2>
             <h3 className=''>Email: </h3>
             <p>{user.email}</p>
             <h3 className=''>Birthday: </h3>
