@@ -1,5 +1,6 @@
 import {
     DO_CONTACT, DO_CONTACT_OK, DO_CONTACT_FAIL,
+    DO_CONTACT_2, DO_CONTACT_2_OK, DO_CONTACT_2_FAIL,
     GET_MESSAGES, GET_MESSAGES_OK, GET_MESSAGES_FAIL,
     GET_SINGLE_MESSAGE, GET_SINGLE_MESSAGE_OK, GET_SINGLE_MESSAGE_FAIL,
     DELETE_MESSAGE,DELETE_MESSAGE_OK, DELETE_MESSAGE_FAIL
@@ -19,7 +20,6 @@ const firstState = {
 export default function TattooReducer(state = firstState, action){
     switch(action.type){
 
-
         case DO_CONTACT:
         state = {...state, loadingForm:true} 
         break
@@ -27,6 +27,16 @@ export default function TattooReducer(state = firstState, action){
         state = {...state, loadingForm: false, form: action.payload} 
         break
         case DO_CONTACT_FAIL:
+        state = {...state, loadingForm: false, form: {}, error: {message: action.payload}}
+        break
+
+        case DO_CONTACT_2:
+        state = {...state, loadingForm:true} 
+        break
+        case DO_CONTACT_2_OK:
+        state = {...state, loadingForm: false, form: action.payload} 
+        break
+        case DO_CONTACT_2_FAIL:
         state = {...state, loadingForm: false, form: {}, error: {message: action.payload}}
         break
 

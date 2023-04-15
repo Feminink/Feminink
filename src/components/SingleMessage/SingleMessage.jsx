@@ -18,13 +18,8 @@ import mermaidn from '../../assets/images/mermaidn.png'
 
 const SingleMessage = () => { 
 
-
-
    const dispatch = useDispatch(); 
    const {message}= useSelector((state)=>state.TattooReducer)
-
-   const sentence = "Tus tatuajes molan un montón"
-   const sentence1 = ", así que vas a hacerle uno muy cool a "
 
    const removeMessage = (message) =>{
       dispatch(deleteMessage(message.id))
@@ -35,7 +30,7 @@ const SingleMessage = () => {
          <section className='section__single-message section'>
                <div className='single-message__header'>
                   <div className='container'>
-                     <h2>{sentence} {message.artist}{sentence1}{message.name}!</h2>
+                     <h2>Tus tatuajes molan un montón, {message.artist}, asi que vas a hacerle uno muy cool a {message.name}!</h2>
                   </div> 
                </div>
                <div className='single-message__body container'>

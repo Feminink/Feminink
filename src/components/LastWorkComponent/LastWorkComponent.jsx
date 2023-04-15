@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
-import { getInfo } from "../../store/info/actions";
+// IMPORT GET GALLERY FUNCTION
+import { getGallery } from "../../store/gallery/actions";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
+
+// IMPORT LINK
+import { Link } from "react-router-dom";
 
 /* IMPORT STYLES */
 import './LastWorkComponent.scss';
@@ -18,13 +22,13 @@ import 'swiper/scss/pagination';
 const LastWorkComponent = () => {
 
   const dispatch = useDispatch();
-  const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
+  const { gallery, loadingGallery } = useSelector((state) => state.GalleryReducer);
 
   useEffect(() => {
-    dispatch(getInfo());
+    dispatch(getGallery());
   }, []);
 
-  if (loadingInfo) {
+  if (loadingGallery) {
     return (
       <div className="container">
         <h2>Loading...</h2>
@@ -46,9 +50,12 @@ const LastWorkComponent = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       > 
-        {info && info.gallery && info.gallery.map((work) => {
+        {gallery && gallery.map((work) => {
           return (
             <SwiperSlide className="last-works" key={work.id}>
+              <Link to={`/gallery/${work.id}`}>
+
+              
               <div className="image-container">
                 <img src={work.image} alt={work.title}/>
                 <div className="overlay">
@@ -57,6 +64,7 @@ const LastWorkComponent = () => {
                   </div>
                 </div>
               </div>
+              </Link>
             </SwiperSlide>
           )
         })}

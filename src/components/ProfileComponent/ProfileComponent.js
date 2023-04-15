@@ -9,7 +9,10 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPalette, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 
-const ProfileComponent = () => {
+/* IMPORT AVATAR */
+import avatar from '../../assets/images/avatar.webp';
+
+import Contact2Component from "../../components/Contact2Component/Contact2Component";
 
    const code = localStorage.getItem("_code")
    const {user} = useSelector((state)=> state.AuthReducer)
@@ -18,8 +21,15 @@ const ProfileComponent = () => {
    
   //  const [isRead, setIsRead] = useState();
    useEffect(() => {
+   const ProfileComponent = () => {
+
+  const {user} = useSelector((state)=> state.AuthReducer)
+  const {messages, loadingMessages} = useSelector((state)=>state.TattooReducer);
+  const dispatch = useDispatch()
+   
+  useEffect(() => {
     dispatch(getMessages());
-  }, []);
+  },[]);
 
   // const addRead = (message) => {
     // setIsRead(prevState => {
@@ -79,35 +89,22 @@ return (
  }
      
  )}
- <h4>Mail Box  ({counter.length}) </h4>
+ 
+
+   <h4>Mail Box  ({counter.length}) </h4>
 
   </section>
-  <section className='section__info__bio'>
- <h3 className='bio'>BIO </h3> 
-
- <h4>{user.bio}</h4> 
- </section>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-  )}
- };
+ <section className='section__info__bio'>
+<h3 className='bio'>BIO </h3> 
+<h4>{user.bio}</h4> 
+</section>
+   </div> 
+       
+    </div>
+ )} 
+    
+   
+};
 
 ProfileComponent.propTypes = {};
 
