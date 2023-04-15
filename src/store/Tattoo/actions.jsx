@@ -4,6 +4,9 @@ import {
   DO_CONTACT,
   DO_CONTACT_FAIL,
   DO_CONTACT_OK,
+  DO_CONTACT_2,
+  DO_CONTACT_2_FAIL,
+  DO_CONTACT_2_OK,
   GET_MESSAGES,
   GET_MESSAGES_OK,
   GET_MESSAGES_FAIL,
@@ -37,20 +40,49 @@ export function actionDoContactFail(error) {
   };
 }
 
-
 export function doContact(userContactForm){
-    return async (dispatch)=>{
-        dispatch(actionDoContact(userContactForm))
-        try {
-            
-            const res = await axios.post(backContact, userContactForm)
-            dispatch(actionDoContactOk(res.data))
-        } catch (error) {
-            dispatch(actionDoContactFail(error))
-        }
-    }
+  return async (dispatch)=>{
+      dispatch(actionDoContact(userContactForm))
+      try {
+          
+          const res = await axios.post(backContact, userContactForm)
+          dispatch(actionDoContactOk(res.data))
+      } catch (error) {
+          dispatch(actionDoContactFail(error))
+      }
+  }
+}
 
+// FUNCIÖN PARA POSTEAR DATA EN JSON: CONTACT 2
+export function actionDoContact2(contactForm2) {
+  return {
+    type: DO_CONTACT_2,
+    payload: contactForm2,
+  };
+}
+export function actionDoContact2Ok(mail2) {
+  return {
+    type: DO_CONTACT_2_OK,
+    payload: mail2,
+  };
+}
+export function actionDoContact2Fail(error2) {
+  return {
+    type: DO_CONTACT_2_FAIL,
+    payload: error2,
+  };
+}
 
+export function doContact2(userContactForm2){
+  return async (dispatch)=>{
+      dispatch(actionDoContact2(userContactForm2))
+      try {
+          const res = await axios.post(backContact, userContactForm2)
+          dispatch(actionDoContact2Ok(res.data))
+      } catch (error) {
+          dispatch(actionDoContact2Fail(error))
+      }
+  }
 }
 
 //FUNCIÖN PARA OBTENER LOS MENSAJES DE CONTACTO
