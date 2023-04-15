@@ -166,13 +166,16 @@ const ContactComponent = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               required
-            >
+            ><h1>ARTIST</h1>
               {info &&
                 info.admins?.map((member) => {
+                  
                   return (
+                    
                     <option key={member.id} value={member.name}>
                       {member.name}
                     </option>
+                    
                   );
                 })}
             </select>
