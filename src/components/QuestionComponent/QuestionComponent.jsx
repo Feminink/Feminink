@@ -10,6 +10,9 @@ import { getInfo } from "../../store/info/actions";
 import no from '../../assets/images/no.gif'
 import hello from '../../assets/images/hello.jpeg'
 import body from '../../assets/images/body.webp'
+//IMPORT QUESTIONS
+import Questions from './Questions';
+
 const QuestionComponent = () => { 
 
   const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
@@ -119,7 +122,10 @@ function changeClass(){
   }
  
   return (<div className="div__question__wrapper">
-   
+  <div className='div__question__wrapper__quiz'> 
+  <h1>Resuelve nuestro quiz a la primera y obtén tu código de descuento!</h1>
+
+  </div>
   
 {info && info.quiz && info.quiz.map((quizz, index)=>{
   return (
