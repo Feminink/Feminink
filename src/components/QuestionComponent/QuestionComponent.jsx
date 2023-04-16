@@ -7,12 +7,12 @@ import { useDispatch, useSelector } from 'react-redux';
 //IMPORT GETINFO
 import { getInfo } from "../../store/info/actions";
 //IMPORT GIF
-import no from '../../assets/images/no.gif'
-import hello from '../../assets/images/hello.jpeg'
+// import no from '../../assets/images/no.gif'
+// import hello from '../../assets/images/hello.jpeg'
 import body from '../../assets/images/body.webp'
 
-import {saveCode} from '../../store/gallery/actions'
-
+import {actionSaveCode} from '../../store/gallery/actions'
+import { saveCode } from '../../store/gallery/actions';
 //IMPORT QUESTIONS
 import Questions from './Questions';
 
@@ -42,15 +42,14 @@ function changeClass(){
     
    const button = document.querySelector("button");
    button.classList.add("visibility")
-   console.log(button, "button ")
-   setIsClicked(true)
+   setIsClicked(isClicked)
     
   }
- 
+
   useEffect(() => {
     dispatch(getInfo());
     // dispatch(actionSaveCode(user.id));
-     dispatch(saveCode(code, user.id));
+    //  dispatch(saveCode({code:code, user: user.name, userId: user.id}));
   }, []);
  
  
@@ -62,10 +61,14 @@ function changeClass(){
     for (let i = 0; i < 6; i++) {
       code += characters.charAt(Math.floor(Math.random() * characters.length));
     }
-    setCode(code)
-    console.log(code, "code")
+    setCode(code);
     localStorage.setItem("_code", code)
     changeClass()
+    if(code){dispatch(
+      saveCode({code:code, user: user.name, userId: user.id})
+    )}else{
+      {}
+    }
    
     return code
   }
@@ -124,8 +127,8 @@ function changeClass(){
            <h2 className='points__win'>  NIVEL NINJA-FEMINIST-INK DESBLOQUEADO </h2>
            <button className="button__quiz" onClick={randomCode}>YOU GOT IT </button>
            <div> <h1 className='points__win' >{code}</h1> 
-           {/* <button onClick={saveCode(user.id, code)}> Save the code </button> */}
-           {/* <h1 className='points__win' >No olvides tu código el día de la cita!</h1>  */}
+           {/* <button onClick={saveCode}> Save the code </button> */}
+         {/* <h1 className='points__win' >No olvides tu código el día de la cita!</h1>  */}
            <Link className='link__score' to="/profile">Go back </Link></div> 
      </div>
      </div>

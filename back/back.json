@@ -618,5 +618,19 @@
       "code": [],
       "id": 13
     }
+  ],
+  "discounts": [
+    {
+      "code": "f1wEpC",
+      "user": "Miriam F",
+      "userId": 4,
+      "id": 78
+    },
+    {
+      "code": "xzN5Yy",
+      "user": "Rosalía",
+      "userId": 13,
+      "id": 79
+    }
   ]
 }

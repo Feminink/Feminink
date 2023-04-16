@@ -19,6 +19,7 @@ import {
 
 const backGallery = "http://localhost:3000/gallery";
 const backUsers = "http://localhost:3000/users";
+const backDiscounts = "http://localhost:3000/discounts"
 
 /* FUNCTION TO RENDER GALLERY */
 export function actionGetGallery() {
@@ -136,12 +137,11 @@ export function actionSaveCodeFail(error){
   }
  
 }
-export function saveCode(code, userId) {
+export function saveCode(code) {
   return async (dispatch) => {
-    dispatch(actionSaveCode(code))
+     dispatch(actionSaveCode(code))
     try {
-      const response = await axios.put(`${backUsers}/${userId}/code`, {code});
-      console.log(code, "code")
+      const response = await axios.post(backDiscounts, code);
       console.log(response, "response")
       dispatch(actionSaveCodeOk(response.data));
       console.log(response.data, "resdata")

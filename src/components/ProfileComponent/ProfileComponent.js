@@ -52,6 +52,8 @@ const ProfileComponent = () => {
             <p>{user.name} {user.surname}</p>
             <h3 className=''>Email: </h3>
             <p>{user.email}</p>
+            {/* //TERNARIO PARA MOSTRAR SI TIENES UN CODE O NO LO TIENES */}
+            <h2>{code}</h2>
             <h3 className=''>Birthday: </h3>
             <p>{user.birthday}</p>
             {user && user.isAdmin ? (
