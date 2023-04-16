@@ -6,7 +6,7 @@
         "name": "Maud Wagner",
         "date": "1877",
         "city": "Kansas, EEUU",
-        "image": "../../assets/images/Maud-Wagner.webp",
+        "image": "./assets/images/Maud-Wagner.webp",
         "designs": [],
         "data": "Maud, siendo una adolescente consiguió escaparse de casa para unirse al circo, para sobrevivir a la pobreza de su familia. Conoció a Gus Wagner. que sería su marido y le enseñaría a tatuar. Maud alcanzó la fama como la primera artista del tatuaje femenina conocida en todo el mundo. Paralelamente, Maud también se tatuaba a sí misma y, junto con los que le realizaba su marido, pronto convirtió su cuerpo en una atracción. Stevens recorrió el país exhibiéndose en los espectáculos de freaks y consiguió romper el estigma que rodeaba a las mujeres que intervenían sus cuerpos con colores y sombras.",
         "style_tattoo": [
@@ -86,28 +86,33 @@
         "question": "¿Qué tienen en común la mayoría de mujeres tatuadoras del s.XIX y s.XX?",
         "options": [
           {
-            "response": "Empezaron sus carreras siendo tatuadas por sus parejas para ser expuestas en los freakshows de circos", "isCorrect": true
+            "response": "Empezaron sus carreras siendo tatuadas por sus parejas para ser expuestas en los freakshows de circos",
+            "isCorrect": true
           },
           {
-            "response": "No tenían las mismas oportunidades profesionales que los hombres y se veían forzadas a hacer uso de sus cuerpos para ganarse la vida", "isCorrect": false
+            "response": "No tenían las mismas oportunidades profesionales que los hombres y se veían forzadas a hacer uso de sus cuerpos para ganarse la vida",
+            "isCorrect": false
           },
           {
-            "response": "Ninguna de ellas ganaba lo mismo que los hombres por realizar el mismo trabajo ", "isCorrect": false
+            "response": "Ninguna de ellas ganaba lo mismo que los hombres por realizar el mismo trabajo ",
+            "isCorrect": false
           }
-
         ]
       },
       {
         "question": "¿Cuál de las siguientes afirmaciones sobre pintoras del surrealismo es incorrecta?",
-        "options": [ 
+        "options": [
           {
-            "response": "Dorothea Tanning es la autora de 'Eine Kleine Nachtmusik' ", "isCorrect": false
+            "response": "Dorothea Tanning es la autora de 'Eine Kleine Nachtmusik' ",
+            "isCorrect": false
           },
           {
-            "response": "Remedios Varo es la autora de 'La cienca inútil o el alquimista' ", "isCorrect": false
+            "response": "Remedios Varo es la autora de 'La cienca inútil o el alquimista' ",
+            "isCorrect": false
           },
           {
-            "response": "Leonora Carrington es la autora de 'El venado herido' ", "isCorrect": true
+            "response": "Leonora Carrington es la autora de 'El venado herido' ",
+            "isCorrect": true
           }
         ]
       },
@@ -115,17 +120,19 @@
         "question": "¿A cuál de las siguientes pintoras le arrebataron la autoría de muchos de sus cuadros asignándosele esta a pintores de la corte del rey Felipe II?",
         "options": [
           {
-            "response": "Catarina van Hemessen", "isCorrect": false
+            "response": "Catarina van Hemessen",
+            "isCorrect": false
           },
           {
-            "response": "Artemisia Gentileschi", "isCorrect": false
+            "response": "Artemisia Gentileschi",
+            "isCorrect": false
           },
           {
-            "response": "Sofonisba Anguissola", "isCorrect": true
+            "response": "Sofonisba Anguissola",
+            "isCorrect": true
           }
         ]
       }
-
     ],
     "about": {
       "text": "Desde FeminInk queremos rescatar y poner en valor un trozo de la historia que rara vez sale a la luz, precisamente porque corresponde a las mujeres. Si hoy tenemos cabida en los estudios de tatuaje, en parte, se lo debemos a mujeres que se atrevieron a desafiar la norma en la que solo tenían espacio para ser contempladas en freakshows por llevar todo el cuerpo tatuado. El salto de estas mujeres, dos siglos atrás hacia un espacio masculinizado y desconocido supondrá la puerta de entrada de otras muchas que irán agrietando poco a poco algunas de las normas de género asociadas no solo a la estética de las mujeres, sino a su libertad de expresión. Gracias por ser nuestras referentas."
@@ -237,7 +244,7 @@
       "artist": "Miriam F",
       "model": "Tatiana Parker",
       "style": "New school",
-      "alt": "Tattoed woman with red hair",
+      "alt": "Tattooed woman with red hair",
       "description": "This tattoo was created with a delicate but confident stroke. A beautiful flower, like our Tatiana, one of our studio's most precious gems. A seemingly unpretentious choice, but one which contrasts with the strength of her determined and captivating look."
     },
     {
@@ -254,11 +261,11 @@
       "id": "3",
       "image": "./assets/images/gallery/pexels-photo-1848657.webp",
       "title": "Geometrical flower",
-      "artist": "Miriam F",
+      "artist": "Laura O",
       "model": "Sonia García",
       "style": "Dotwork",
       "alt": "Tattooed woman in yellow top",
-      "description": "'Look at my tattoo: cool, huh? Of course, Miriam did it' Sonia's gaze seems to say. And it is indeed true, Miriam has done a remarkable job. To create a floral and geometric tattoo with such precision requires a talent that few tattoo artists possess. But we are not surprised, knowing the great passion our artist has for nature."
+      "description": "'Look at my tattoo: cool, huh? Of course, Miriam did it' Sonia's gaze seems to say. And it is indeed true, Laura has done a remarkable job. To create a floral and geometric tattoo with such precision requires a talent that few tattoo artists possess. But we are not surprised, knowing the great passion our artist has for nature."
     },
     {
       "id": "4",
@@ -266,7 +273,7 @@
       "title": "Japanese dragon tattoo",
       "artist": "Ignacio E",
       "model": "Shen Tao",
-      "style": "Japanese traditional",
+      "style": "Old school",
       "alt": "Japanese dragon tattoo",
       "description": "A photo that speaks for itself. Such colours. Such light. What incredible strength. It could only be the work of our Ignacio, a master in the art of Japanese tattooing. The creation of this work took a good 90 hours, but our Shen Tao did not bat an eyelid. A true Zen professional."
     },
@@ -294,11 +301,11 @@
       "id": "7",
       "image": "./assets/images/gallery/pexels-cottonbro-studio-5320148.webp",
       "title": "Oldschool rose tattoo",
-      "artist": "Laura O",
+      "artist": "Ignacio E",
       "model": "Bryan Fury",
-      "style": "Oldschool",
+      "style": "Old school",
       "alt": "Tattooed man with rose tattoo",
-      "description": "Even the toughest of boxing fighters hides a soft side inside. Or on his arm, why not. This is the example given to us by Bryan, who, when he met our Laura, chose to have an Old School-style rose tattooed on his arm. A perhaps bizarre juxtaposition if we look at the 'bad boy' tattoo surrounding the border-top of his abdominal area."
+      "description": "Even the toughest of boxing fighters hides a soft side inside. Or on his arm, why not. This is the example given to us by Bryan, who, when he met our Ignacio, chose to have an Old School-style rose tattooed on his arm. A perhaps bizarre juxtaposition if we look at the 'bad boy' tattoo surrounding the border-top of his abdominal area."
     },
     {
       "id": "8",
@@ -345,110 +352,110 @@
       "image": "./assets/images/gallery/pexels-photo-3657562.webp",
       "title": "Tattoo in the making",
       "artist": "Ignacio E",
-      "model": "Shiro Jung",
-      "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
+      "model": "Ewa Jung",
+      "style": "Traditional",
+      "alt": "Tattoer at work",
       "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
     },
     {
       "id": "13",
       "image": "./assets/images/gallery/gallery_pexels-photo-8042013.webp",
-      "title": "Tattoo in the making",
-      "artist": "Ignacio E",
+      "title": "Martial arts meets tattooing",
+      "artist": "Miriam F",
       "model": "Peter Emerson",
       "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
-      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+      "alt": "Karateka with tattooed chest",
+      "description": "An interesting choice by our model Peter, who chose to tattoo his passion on his chest, just at heart height. We see him wearing his freshly washed karateka tunic, embroidered with the same symbol he has chosen to imprint on his skin."
     },
     {
       "id": "14",
       "image": "./assets/images/gallery/gallery_pexels-photo-6205778.webp",
-      "title": "Tattoo in the making",
-      "artist": "Ignacio E",
+      "title": "Mechanics and coffee machines",
+      "artist": "Laura O",
       "model": "Joshua Kohl",
-      "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
-      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+      "style": "Biomechanical tattoos",
+      "alt": "Tattooed man cleaning coffee machine",
+      "description": "Biomechanical tattoos are a stylistic approach to tattooing which combines the human body with a contemporary design that makes it look as if the body is made up of mechanical parts. Think Terminator. Remember Arnold's robot arm? Is just what our friend Joshua wanted, whom we see engaged in the daily cleaning of the coffee machine at his club."
     },
     {
       "id": "15",
       "image": "./assets/images/gallery/gallery_pexels-photo-6140703.webp",
-      "title": "Tattoo in the making",
+      "title": "Spirituality and tattooing",
       "artist": "Ignacio E",
       "model": "Conan O'Connor",
-      "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
-      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+      "style": "Borneo",
+      "alt": "Man with tattooed arm",
+      "description": "Borneo's illustrious tattoos are considered sacred, magical and are tied closely to the beliefs of the Dayak community. For the people of Borneo, as with all indigenous cultural practices of the world, getting a tattoo is closely associated with physical power and the spiritual world."
     },
     {
       "id": "16",
       "image": "./assets/images/gallery/gallery_andezgif.com-gif-maker.webp",
-      "title": "Tattoo in the making",
-      "artist": "Ignacio E",
+      "title": "Floral wings",
+      "artist": "Miriam F",
       "model": "Andrea Pescatrulli",
-      "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
-      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+      "style": "Floral",
+      "alt": "Woman with tattooed back",
+      "description": "One of our Miriam's most distinguished works is undoubtedly this wonderful flower arrangement. Its shape perfectly matches the model's choice to tattoo her own back. The arrangement of its components seems to create a harmonious winged, strongly geometric structure."
     },
     {
       "id": "17",
       "image": "./assets/images/gallery/gallery_pexels-photo-3768158.webp",
-      "title": "Tattoo in the making",
-      "artist": "Ignacio E",
+      "title": "Polaroids and watercolors",
+      "artist": "Laura O",
       "model": "Laura Judge",
-      "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
-      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+      "style": "Watercolor",
+      "alt": "Woman at work with watercolor tattoo",
+      "description": "When art as an integral part of one's everyday life meets a passion for tattoos. Laura is one of the most talented photographers who have passed through our studio. She met our Laura and told her about her idea: we can see from her smile that she was very pleased with the result. Between Lauras there is total understanding!"
     },
     {
       "id": "18",
       "image": "./assets/images/gallery/gallery_pexels-photo-3691366.webp",
-      "title": "Tattoo in the making",
-      "artist": "Ignacio E",
+      "title": "Sunflowers all over",
+      "artist": "Miriam F",
       "model": "Sophie Vergara",
-      "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
-      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+      "style": "Floral",
+      "alt": "Woman with floral tattoo on right arm",
+      "description": "It is Sophie's favourite flower: the common name, “sunflower”, typically refers to the popular annual species Helianthus annuus, or the common sunflower, whose round flower heads in combination with the ligules look like the glowing sun. In Greek, helios means sun and anthos means flower, thus the name Sunflower. "
     },
     {
       "id": "19",
       "image": "./assets/images/gallery/gallery_pexels-photo-3088369.webp",
-      "title": "Tattoo in the making",
-      "artist": "Ignacio E",
+      "title": "I see a tattoo in your cards",
+      "artist": "Laura O",
       "model": "Chloe Maroney",
-      "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
-      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+      "style": "Gothic",
+      "alt": "Tattooed fortune teller",
+      "description": "'The cards tell me. You will soon get a tattoo!' The tarot cards said it, Chloe confirms it. Her hands don't lie. Her tattoo was done by our goth tattoo artist Laura."
     },
     {
       "id": "20",
       "image": "./assets/images/gallery/gallery_pexels-photo-1803880.webp",
-      "title": "Tattoo in the making",
+      "title": "Just out of the studio",
       "artist": "Ignacio E",
       "model": "Ashton Williams",
-      "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
-      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+      "style": "Black and grey",
+      "alt": "Tattooed guy with ear dilators",
+      "description": "A bemused expression but no second thoughts from Ashton, whom we chose to immortalise outside our studio with his new black and grey tattoo. It is an abstract design created by his daughter Susy and faithfully copied by our Ignacio. An excellent job. Not to underestimate the difficulty added by the fact that it was chosen to be tattooed on the neck."
     },
     {
       "id": "21",
       "image": "./assets/images/gallery/gallery_jeroezgif.com-gif-maker.webp",
-      "title": "Tattoo in the making",
-      "artist": "Ignacio E",
+      "title": "Sleepy tattooed beauty",
+      "artist": "Laura O",
       "model": "Jeroen Pharrel",
-      "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
-      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+      "style": "Watercolor",
+      "alt": "Tattooed guy with eagle tattoo",
+      "description": "Fantasy tattoos are a popular tattoo for individuals with a creative personality. One such as that of Jeroen, who asked our watercolour tattooing expert to create this beautiful composition depicting an eagle about to land on a volcanic lava ground. What does it mean? That will remain a secret between him and the artist."
     },
     {
-      "id": "21",
+      "id": "22",
       "image": "./assets/images/gallery/gallery_laspexels-photo-4813343.webp",
-      "title": "Tattoo in the making",
-      "artist": "Ignacio E",
+      "title": "High contrasts",
+      "artist": "Miriam F",
       "model": "Kamila Farusho",
-      "style": "Japanese traditional",
-      "alt": "Tattooed woman with dragon tattoo",
-      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+      "style": "Stick and poke",
+      "alt": "Tattooed woman wearing make-up",
+      "description": "It is extremely common for people to think that stick and poke tattoos fade quicker than machine ones. But, we're going to let you into a little secret: All tattoos fade! That's right, over time, your tattoos, whether stick and poke or machine will fade and change."
     }
   ],
   "admins": [
@@ -518,14 +525,6 @@
       "id": 3
     },
     {
-      "name": "Artemisia Gentileschi ",
-      "email": "artemisiag@roma.it",
-      "description": "Hola chicas! Había pensando en repetir con Miriam, esta vez me gustaría que ma tatuase mi propio \"Judit decapitando a Holofernes\", avisad cuanto antes para la cita!",
-      "artist": "Miriam F",
-      "color": "#0d0c0c",
-      "id": 4
-    },
-    {
       "name": "Mira Murati",
       "email": "miramurati@mail.com",
       "description": "Quiero una frase en el pecho donde ponga \"IA RULES\"",
@@ -540,6 +539,14 @@
       "artist": "Ignacio E",
       "color": "#e6d1d1",
       "id": 7
+    },
+    {
+      "name": "Leonor",
+      "email": "leonor@mail.com",
+      "description": "Hola, me quiero tatuar un corazón con el nombre de Juan",
+      "artist": "Miriam F",
+      "color": "#281f1f",
+      "id": 8
     }
   ],
   "users": [
@@ -569,11 +576,9 @@
       "birthday": "1988-02-15",
       "bio": "Ignacio es un joven tatuador que lleva más de cinco años trabajando en el puerto de Santa María. Desde el principio, ha tenido un gran talento para el arte del tatuaje, convirtiéndose en uno de los mejores tatuadores de la ciudad.  Ignacio es conocido por su creatividad y sus habilidades técnicas, y ha creado algunos de los tatuajes más impresionantes de la ciudad. Siempre está dispuesto a escuchar las ideas de sus clientes y a ayudarlos a crear el tatuaje perfecto.",
       "skills": [
-        
-          "Tradicional",
-          "Old school",
-          "Borneo"
-        
+        "Tradicional",
+        "Old school",
+        "Borneo"
       ],
       "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
       "isAdmin": true,
@@ -588,15 +593,21 @@
       "birthday": "1993-01-06",
       "bio": "Laura, proviene de la hermosa isla de Cerdeña. Creció entre la hermosa vida y la magia de esta isla, que ahora influye en su trabajo.  Laura siempre tuvo un interés en el arte y decidió convertirse en tatuadora. Se entrenó con maestros tatuadores reconocidos y desarrolló un estilo único combinando la tradicional técnica de tatuar con la búsqueda de la belleza de Cerdeña.  Como tatuadora, Laura se esfuerza por producir obras de arte de calidad, que reflejan su pasión por el arte y su anhelo de capturar la belleza de la naturaleza. Crea hermosos diseños que abarcan desde motivos tradicionales hasta diseños más modernos.",
       "skills": [
-        
-          "Acuarela",
-          "Blackwork",
-          "Dotwork"
-        
+        "Acuarela",
+        "Blackwork",
+        "Dotwork"
       ],
       "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
       "isAdmin": true,
       "id": 11
+    },
+    {
+      "email": "manolo@yahoo.es",
+      "password": "$2a$10$d69w/k8QcTw3idpvOG.PfuQvgXphMnv5.j4Ge8yAmL3IofAkDX8Ce",
+      "name": "Manolo",
+      "surname": "Pérez",
+      "birthday": "1998-02-15",
+      "id": 12
     }
   ]
 }
