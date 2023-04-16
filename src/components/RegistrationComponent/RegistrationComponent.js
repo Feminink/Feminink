@@ -12,11 +12,17 @@ import { Link, Navigate } from "react-router-dom";
 import swal from "sweetalert";
 // IMPORT LOGO
 import logo from "../../assets/images/footer-logo.svg";
+// IMPORT USESOUND HOOK
+import useSound from "use-sound";
+import click from "../../assets/sounds/COMCell_Messagesent.wav";
+import sent from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
 
 const RegistrationComponent = () => {
   const dispatch = useDispatch();
+  const [play] = useSound(click);
 
   const sendRegistration = () => {
+    play();
     if (
       formik.values.name &&
       formik.values.surname &&

@@ -3,8 +3,13 @@ import PropTypes from "prop-types";
 import "./NotFoundComponent.scss";
 // IMPORT LINK
 import { Link } from "react-router-dom";
+// IMPORT USESOUND HOOK
+import useSound from "use-sound";
+import click from "../../assets/sounds/COMCell_Messagesent.wav";
 
 const NotFoundComponent = () => {
+  const [play] = useSound(click);
+
   return (
     <div className="bg">
       <div className="notfound__content">
@@ -12,7 +17,7 @@ const NotFoundComponent = () => {
         <h2>Looks like we run out of ink...</h2>
       </div>
       <Link to="/">
-        <button className="form__submit notfound__button">
+        <button onClick={play} className="form__submit notfound__button">
           Back to the Homepage
         </button>
       </Link>

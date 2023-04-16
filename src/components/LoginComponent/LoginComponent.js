@@ -18,10 +18,14 @@ import "./LoginComponent.scss";
 import logo from "../../assets/images/footer-logo.svg";
 // IMPORT SWEET ALERT LIBRARY
 import swal from "sweetalert";
+// IMPORT USESOUND HOOK
+import useSound from "use-sound";
+import click from "../../assets/sounds/COMCell_Messagesent.wav";
 
 const LoginComponent = () => {
   const { user } = useSelector((state) => state.AuthReducer);
   const dispatch = useDispatch();
+  const [play] = useSound(click);
 
   // FUNCIÓN PARA SETEAR LOS ERRORES EN CADA INPUT
   const validate = (values) => {
@@ -55,6 +59,7 @@ const LoginComponent = () => {
 
   // FUNCIÓN PARA ENVIAR LOS DATOS AL BACK
   function onClickLogin() {
+    play();
     if (formik.values.email && formik.values.password) {
       return dispatch(
         doLogin({

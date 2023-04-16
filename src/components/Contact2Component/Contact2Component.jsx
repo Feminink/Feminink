@@ -19,16 +19,24 @@ import { useFormik } from "formik";
 // IMPORT LOGO
 import logo from "../../assets/images/footer-logo.svg";
 
+// IMPORT USESOUND HOOK
+import useSound from "use-sound";
+import click from "../../assets/sounds/COMCell_Messagesent.wav";
+import sent from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
+
 const ContactComponent = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.AuthReducer);
   const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
+  const [play] = useSound(click);
+  const [play2] = useSound(sent);
 
   useEffect(() => {
     dispatch(getInfo());
   }, []);
 
   const sendForm = () => {
+    play();
     if (
       formik.values.artist &&
       formik.values.name &&
@@ -45,6 +53,7 @@ const ContactComponent = () => {
           description: formik.values.description,
         })
       );
+      play2();
       swal("Hurray!", "Message sent successfully", "success");
       formik.resetForm(); // Resetea los valores del formulario
     } else {

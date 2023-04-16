@@ -19,15 +19,23 @@ import logo from "../../assets/images/footer-logo.svg";
 // IMPORT SWEET ALERT LIBRARY
 import swal from "sweetalert";
 
+// IMPORT USESOUND HOOK
+import useSound from "use-sound";
+import click from "../../assets/sounds/COMCell_Messagesent.wav";
+import sent from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
+
 const ContactComponent = () => {
   const dispatch = useDispatch();
   const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
+  const [play] = useSound(click);
+  const [play2] = useSound(sent);
 
   useEffect(() => {
     dispatch(getInfo());
   }, []);
 
   const sendForm = () => {
+    play();
     if (
       formik.values.name &&
       formik.values.email &&
@@ -44,6 +52,7 @@ const ContactComponent = () => {
           color: formik.values.color,
         })
       );
+      play2();
       swal("Hurray!", "Message sent successfully", "success");
     } else {
       swal("Woops:", "you must complete all the fields", "warning");
