@@ -64,25 +64,23 @@ function changeClass(){
 //FUNCIÖN QUE MANEJA SI HAS ACERTADO O NO LA PREGUNTA Y SI EL JUEGO HA TERMINADO O NO
   function handleAnswer(isCorrect, e){
     
-    if(isCorrect){
-      setScore(score + 1);
-      e.target.classList.add(isCorrect ? "correct" : "incorrect");
-      setQuestCurrent(questCurrent + 1)
+    if(isCorrect) setScore(score + 1);
+
+     e.target.classList.add(isCorrect ? "correct" : "incorrect");
+     
+      // setQuestCurrent(questCurrent + 1)
       setTimeout(()=>{
-        if (questCurrent === info.quiz.length - 1){
+
+    if (questCurrent === Questions.length - 1){
           setIsfinished(true)
+        }else{ 
+          setQuestCurrent(questCurrent + 1)
         }
          
-      }, 1000);
-    }else{
-      e.target.classList.add("incorrect")
-      setQuestCurrent(questCurrent + 1)
-      if( questCurrent === info.quiz.length - 1){
-        setIsfinished(true)
-      }
-    }
+      }, 1000); 
   }
-
+     
+  
    if (isFinished && score === 0){
   return <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length} quizá para la próxima! </h2>
         <img className='gif' src={no} alt="no"></img>
@@ -123,23 +121,40 @@ function changeClass(){
  
   return (<div className="div__question__wrapper">
   <div className='div__question__wrapper__quiz'> 
-  <h1>Resuelve nuestro quiz a la primera y obtén tu código de descuento!</h1>
-
+     <h1>Resuelve nuestro quiz a la primera y obtén tu código de descuento!</h1>
   </div>
   
-{info && info.quiz && info.quiz.map((quizz, index)=>{
-  return (
-    <div key={index} className='questions'> 
-    <div className='number__question'> 
-     <h3 className='number__question__h3'>{quizz.question}</h3>
-    </div>
-    <div className='response__right'>{quizz.options.map((option, index)=> {
-      return( 
-     <button key={index} className='quiz__button' onClick={(e)=>handleAnswer(option.isCorrect, e)}> {option.response}</button> 
-)})} </div>
-    </div>
-  )
-})}
+<div className='questions'>
+
+  <div className='number__question'>
+    <span className='number__question__h3'> Question {questCurrent + 1} of </span> {Questions.length }
+  </div>
+  <div className='left__side__number__question__title'>
+    {Questions[questCurrent].question}
+  </div>
+</div>
+<div className='response__right'>
+{Questions[questCurrent].options.map((option)=> ( 
+  <button key={option.response} onClick={(e)=>handleAnswer(option.isCorrect, e)} className='quiz__button'>{option.response}</button>
+
+))}
+</div>
+
+
+
+{/* {info && info.quiz && info.quiz.map((quizz, index)=>{ */}
+  {/* return ( */}
+    {/* <div key={index} className='questions'>  */}
+    {/* <div className='number__question'>  */}
+     {/* <h3 className='number__question__h3'>{quizz.question}</h3> */}
+    {/* </div> */}
+    {/* <div className='response__right'>{quizz.options.map((option, index)=> { */}
+      {/* return(  */}
+     {/* <button key={index} className='quiz__button' onClick={(e)=>handleAnswer(option.isCorrect, e)}> {option.response}</button>  */}
+{/* )})} </div> */}
+    {/* </div> */}
+  {/* ) */}
+{/* })} */}
 
   </div>)
 };
