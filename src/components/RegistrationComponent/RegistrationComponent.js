@@ -35,6 +35,7 @@ const RegistrationComponent = () => {
         })
       );
       swal("Success!", "Your account is now registered", "success");
+      formik.resetForm(); // Resetea los valores del formulario
     } else {
       swal("Something went wrong", "Check the errors and try again", "error");
     }

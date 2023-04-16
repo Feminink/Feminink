@@ -45,6 +45,7 @@ const ContactComponent = () => {
         })
       );
       swal("Enhorabuena!", "Tu mensaje se ha enviado correctamente", "success");
+      formik.resetForm(); // Resetea los valores del formulario
     } else {
       swal("Atención:", "es necessario rellenar todos los campos", "warning");
     }
@@ -166,16 +167,14 @@ const ContactComponent = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               required
-            ><h1>ARTIST</h1>
+            >
+              <h1>ARTIST</h1>
               {info &&
                 info.admins?.map((member) => {
-                  
                   return (
-                    
                     <option key={member.id} value={member.name}>
                       {member.name}
                     </option>
-                    
                   );
                 })}
             </select>
