@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./NotFoundComponent.scss";
+// IMPORT LINK
 import { Link } from "react-router-dom";
 
 const NotFoundComponent = () => {

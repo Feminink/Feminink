@@ -44,9 +44,9 @@ const ContactComponent = () => {
           color: formik.values.color,
         })
       );
-      swal("Enhorabuena!", "Tu mensaje se ha enviado correctamente", "success");
+      swal("Hurray!", "Message sent successfully", "success");
     } else {
-      swal("Atención:", "es necessario rellenar todos los campos", "warning");
+      swal("Woops:", "you must fill all the fields", "warning");
     }
   };
 
@@ -62,7 +62,7 @@ const ContactComponent = () => {
     if (!values.name) {
       errors.name = "Required";
     } else if (values.name.length < 3) {
-      errors.name = "Nombres de dos letras hay, pero pocos";
+      errors.name = "There are two-letter names, but just few";
     }
     // ERROR EMAIL
     if (!values.email) {
@@ -76,7 +76,7 @@ const ContactComponent = () => {
     if (!values.description) {
       errors.description = "Required";
     } else if (values.description.length > 50) {
-      errors.description = "Máximo 50 caracteres";
+      errors.description = "Your message can't exceed 50 characters";
     }
     return errors;
   };
@@ -103,7 +103,7 @@ const ContactComponent = () => {
     <section className="section__contact section">
       <form onSubmit={formik.handleSubmit} className="form" noValidate>
         <header className="form__title h2">
-          <h2>Ponte en contacto con</h2>
+          <h2>Get in touch with</h2>
           <img src={logo} className="footer__logo img" alt="logo" />
         </header>
         <div className="form__container">
@@ -121,7 +121,7 @@ const ContactComponent = () => {
             {formik.touched.name && formik.errors.name ? (
               <div className="error">{formik.errors.name}</div>
             ) : null}
-            <label className="form__label">Nombre </label>
+            <label className="form__label">Name </label>
             <span className="form__line"></span>
           </div>
           <div className="form__group">
@@ -155,7 +155,7 @@ const ContactComponent = () => {
             {formik.touched.description && formik.errors.description ? (
               <div className="error">{formik.errors.description}</div>
             ) : null}
-            <label className="form__label">Descripción del tatuaje</label>
+            <label className="form__label">Tattoo description</label>
             <span className="form__line"></span>
           </div>
           <div className="form__group">
@@ -176,7 +176,7 @@ const ContactComponent = () => {
                   );
                 })}
             </select>
-            <label className="form__label">Artista</label>
+            <label className="form__label">Artist </label>
             <span className="form__line"></span>
           </div>
           <div className="form__group">
@@ -189,7 +189,7 @@ const ContactComponent = () => {
               value={formik.values.color}
               required
             />
-            <label className="form__label">Color base</label>
+            <label className="form__label">Color base </label>
             <span className="form__line"></span>
           </div>
           <button
@@ -197,7 +197,7 @@ const ContactComponent = () => {
             form="contactForm"
             onClick={sendForm}
           >
-            Enviar
+            Send
           </button>
         </div>
       </form>

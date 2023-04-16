@@ -10,8 +10,6 @@ import { Link } from 'react-router-dom';
 
 
 const ProfileComponent = () => {
-
-
    const {user} = useSelector((state)=> state.AuthReducer)
    const {messages, loadingMessages} = useSelector((state)=>state.TattooReducer);
    const dispatch = useDispatch()

@@ -6,7 +6,7 @@
         "name": "Maud Wagner",
         "date": "1877",
         "city": "Kansas, EEUU",
-        "image": "./assets/images/Maud-Wagner.webp",
+        "image": "../../assets/images/Maud-Wagner.webp",
         "designs": [],
         "data": "Maud, siendo una adolescente consiguió escaparse de casa para unirse al circo, para sobrevivir a la pobreza de su familia. Conoció a Gus Wagner. que sería su marido y le enseñaría a tatuar. Maud alcanzó la fama como la primera artista del tatuaje femenina conocida en todo el mundo. Paralelamente, Maud también se tatuaba a sí misma y, junto con los que le realizaba su marido, pronto convirtió su cuerpo en una atracción. Stevens recorrió el país exhibiéndose en los espectáculos de freaks y consiguió romper el estigma que rodeaba a las mujeres que intervenían sus cuerpos con colores y sombras.",
         "style_tattoo": [
@@ -242,7 +242,7 @@
     },
     {
       "id": "2",
-      "image": "./assets/gallery/pexels-photo-3778028.jpeg",
+      "image": "./assets/images/gallery/pexels-photo-3778028.jpeg",
       "title": "Tattoo in the making",
       "artist": "Laura O",
       "model": "Susana White",
@@ -252,7 +252,7 @@
     },
     {
       "id": "3",
-      "image": "../../assets/gallery/pexels-photo-1848657.webp",
+      "image": "./assets/images/gallery/pexels-photo-1848657.webp",
       "title": "Geometrical flower",
       "artist": "Miriam F",
       "model": "Sonia García",
@@ -262,7 +262,7 @@
     },
     {
       "id": "4",
-      "image": "../../assets/gallery/pexels-photo-2183131.webp",
+      "image": "./assets/images/gallery/pexels-photo-2183131.webp",
       "title": "Japanese dragon tattoo",
       "artist": "Ignacio E",
       "model": "Shen Tao",
@@ -272,7 +272,7 @@
     },
     {
       "id": "5",
-      "image": "../../assets/gallery/pexels-brett-sayles-2865412.webp",
+      "image": "./assets/images/gallery/pexels-brett-sayles-2865412.webp",
       "title": "Tattoo in the making",
       "artist": "Laura O",
       "model": "Laura Hawkins",
@@ -282,7 +282,7 @@
     },
     {
       "id": "6",
-      "image": "../assets/gallery/pexels-photo-1784272.webp",
+      "image": "./assets/images/gallery/pexels-photo-1784272.webp",
       "title": "Nature tattoo",
       "artist": "Miriam F",
       "model": "Peter Smith",
@@ -292,7 +292,7 @@
     },
     {
       "id": "7",
-      "image": "../../assets/gallery/pexels-cottonbro-studio-5320148.webp",
+      "image": "./assets/images/gallery/pexels-cottonbro-studio-5320148.webp",
       "title": "Oldschool rose tattoo",
       "artist": "Laura O",
       "model": "Bryan Fury",
@@ -302,7 +302,7 @@
     },
     {
       "id": "8",
-      "image": "../../assets/gallery/pexels-cottonbro-studio-5235789.webp",
+      "image": "./assets/images/gallery/pexels-cottonbro-studio-5235789.webp",
       "title": "Skull tattoo",
       "artist": "Ignacio E",
       "model": "Pedro González",
@@ -312,7 +312,7 @@
     },
     {
       "id": "9",
-      "image": "../../assets/gallery/pexels-spencer-selover-428320.webp",
+      "image": "./assets/images/gallery/pexels-spencer-selover-428320.webp",
       "title": "Fox tattoo",
       "artist": "Miriam F",
       "model": "Karla Johnson",
@@ -322,7 +322,7 @@
     },
     {
       "id": "10",
-      "image": "/../../assets/gallery/pexels-vjapratama-1003842.webp",
+      "image": "./assets/images/gallery/pexels-vjapratama-1003842.webp",
       "title": "Tattoo on the face",
       "artist": "Laura O",
       "model": "Pedro Méndez",
@@ -332,7 +332,7 @@
     },
     {
       "id": "11",
-      "image": "./assets/gallery/pexels-matheus-ferrero-2123061.webp",
+      "image": "./assets/images/gallery/pexels-matheus-ferrero-2123061.webp",
       "title": "Realistic tattoo left arm",
       "artist": "Miriam F",
       "model": "Mac Miller",
@@ -342,10 +342,110 @@
     },
     {
       "id": "12",
-      "image": "../../assets/gallery/pexels-photo-3657562.webp",
+      "image": "./assets/images/gallery/pexels-photo-3657562.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Shiro Jung",
+      "style": "Japanese traditional",
+      "alt": "Tattooed woman with dragon tattoo",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "13",
+      "image": "./assets/images/gallery/gallery_pexels-photo-8042013.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Peter Emerson",
+      "style": "Japanese traditional",
+      "alt": "Tattooed woman with dragon tattoo",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "14",
+      "image": "./assets/images/gallery/gallery_pexels-photo-6205778.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Joshua Kohl",
+      "style": "Japanese traditional",
+      "alt": "Tattooed woman with dragon tattoo",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "15",
+      "image": "./assets/images/gallery/gallery_pexels-photo-6140703.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Conan O'Connor",
+      "style": "Japanese traditional",
+      "alt": "Tattooed woman with dragon tattoo",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "16",
+      "image": "./assets/images/gallery/gallery_andezgif.com-gif-maker.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Andrea Pescatrulli",
+      "style": "Japanese traditional",
+      "alt": "Tattooed woman with dragon tattoo",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "17",
+      "image": "./assets/images/gallery/gallery_pexels-photo-3768158.webp",
       "title": "Tattoo in the making",
       "artist": "Ignacio E",
       "model": "Laura Judge",
+      "style": "Japanese traditional",
+      "alt": "Tattooed woman with dragon tattoo",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "18",
+      "image": "./assets/images/gallery/gallery_pexels-photo-3691366.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Sophie Vergara",
+      "style": "Japanese traditional",
+      "alt": "Tattooed woman with dragon tattoo",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "19",
+      "image": "./assets/images/gallery/gallery_pexels-photo-3088369.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Chloe Maroney",
+      "style": "Japanese traditional",
+      "alt": "Tattooed woman with dragon tattoo",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "20",
+      "image": "./assets/images/gallery/gallery_pexels-photo-1803880.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Ashton Williams",
+      "style": "Japanese traditional",
+      "alt": "Tattooed woman with dragon tattoo",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "21",
+      "image": "./assets/images/gallery/gallery_jeroezgif.com-gif-maker.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Jeroen Pharrel",
+      "style": "Japanese traditional",
+      "alt": "Tattooed woman with dragon tattoo",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "21",
+      "image": "./assets/images/gallery/gallery_laspexels-photo-4813343.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Kamila Farusho",
       "style": "Japanese traditional",
       "alt": "Tattooed woman with dragon tattoo",
       "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."

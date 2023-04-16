@@ -7,7 +7,7 @@ import { getGallery } from "../../store/gallery/actions";
 import { useDispatch, useSelector } from "react-redux";
 // IMPORT LINK
 import { Link } from "react-router-dom";
-/* IMPORT STYLES */
+// IMPORT STYLES
 import "./GalleryComponent.scss";
 
 const GalleryComponent = () => {
@@ -18,16 +18,6 @@ const GalleryComponent = () => {
   const artists = ["Miriam F", "Laura O", "Ignacio E"];
   const [searchByStyle, setSearchByStyle] = useState("");
   const [checked, setChecked] = useState([]);
-
-  function checkFilter(ischecked, artist) {
-    let copy = [...checked];
-    if (ischecked) {
-      copy.push(artist);
-      setChecked(copy);
-    } else {
-      setChecked(copy.filter((x) => x !== artist));
-    }
-  }
 
   useEffect(() => {
     dispatch(getGallery());
@@ -42,8 +32,7 @@ const GalleryComponent = () => {
   }
   return (
     <section className="section__gallery container">
-      <h2>Gallery</h2>
-      <div className="container flex">
+      <div className="flex">
         <section className="filters-container flex">
           <form>
             <fieldset className="form__group container">
@@ -72,7 +61,9 @@ const GalleryComponent = () => {
                         name={artist}
                         type="checkbox"
                         value={artist}
-                        onChange={(e) => checkFilter(e.target.checked, artist)}
+                        onChange={(e) => {
+                          setChecked(e.target.value);
+                        }}
                       />
                       {artist}
                     </label>
@@ -92,7 +83,7 @@ const GalleryComponent = () => {
             })
             .filter((gallerya) => {
               return checked.length > 0
-                ? checked.includes(gallerya.artist)
+                ? gallerya.artist.includes(checked)
                 : gallery;
             })
             .map((gallerya) => {
