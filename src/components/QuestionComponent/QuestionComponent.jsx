@@ -13,7 +13,6 @@ import body from '../../assets/images/body.webp'
 
 import {saveCode} from '../../store/gallery/actions'
 
-
 //IMPORT QUESTIONS
 import Questions from './Questions';
 
@@ -47,9 +46,14 @@ function changeClass(){
    setIsClicked(true)
     
   }
+ 
   useEffect(() => {
     dispatch(getInfo());
+    // dispatch(actionSaveCode(user.id));
+     dispatch(saveCode(code, user.id));
   }, []);
+ 
+ 
 
 //FUNCIÖN PARA GENERAR EL COD DE DESCUENTO
   function randomCode() {
@@ -59,6 +63,7 @@ function changeClass(){
       code += characters.charAt(Math.floor(Math.random() * characters.length));
     }
     setCode(code)
+    console.log(code, "code")
     localStorage.setItem("_code", code)
     changeClass()
    
@@ -108,8 +113,9 @@ function changeClass(){
     
     return <div  className={"points" + score}><h2 className='points__h2'>  Has acertado {score} de {info.quiz.length}</h2>
            <h2 className='points__win'>  NIVEL NINJA-FEMINIST-INK DESBLOQUEADO </h2>
-           <button className="button__quiz" onClick={()=> {randomCode(); saveCode(user.id)}}>YOU GOT IT </button>
+           <button className="button__quiz" onClick={randomCode}>YOU GOT IT </button>
            <div> <h1 className='points__win' >{code}</h1> 
+           <button onClick={saveCode(user.id, code)}> Save the code </button>
            {/* <h1 className='points__win' >No olvides tu código el día de la cita!</h1>  */}
            <Link className='link' to="/profile">Volver </Link></div> 
      </div>

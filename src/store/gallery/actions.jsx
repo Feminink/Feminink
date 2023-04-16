@@ -1,6 +1,4 @@
 import axios from "axios";
-import { connect } from 'react-redux'
-import QuestionComponent from "../../components/QuestionComponent/QuestionComponent";
 
 import {
   GET_GALLERY,
@@ -16,18 +14,6 @@ import {
   SAVE_CODE_OK, 
   SAVE_CODE_FAIL
 } from "./actionTypes";
-
-
-function randomCode() {
-  let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let code = '';
-  for (let i = 0; i < 6; i++) {
-    code += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  
-  localStorage.setItem("_code", code)
-  return code
-}
 
 
 
@@ -58,7 +44,6 @@ export function getGallery() {
     try {
       const response = await axios.get(backGallery);
       dispatch(actionGetGalleryOk(response.data));
-      console.log(response.data, "respuesta de action");
     } catch (error) {
       dispatch(actionGetGalleryFail);
     }
@@ -131,10 +116,9 @@ export function doRegistration(registrationForm) {
 }
 
 //FUNCTION TO SAVECODE
-export function actionSaveCode(userId){
+export function actionSaveCode(){
  return{
   type: SAVE_CODE,
-  payload: userId
  }
 
 }
@@ -152,15 +136,28 @@ export function actionSaveCodeFail(error){
   }
  
 }
-export function saveCode(userId) {
-  const code = randomCode();
+export function saveCode(code, userId) {
   return async (dispatch) => {
+    dispatch(actionSaveCode(code))
     try {
-      dispatch(actionSaveCode(userId));
-      const response = await axios.post(`${backUsers}/${userId}/code`, code);
+      const response = await axios.put(`${backUsers}/${userId}/code`, {code});
+      console.log(code, "code")
+      console.log(response, "response")
       dispatch(actionSaveCodeOk(response.data));
+      console.log(response.data, "resdata")
     } catch (error) {
       dispatch(actionSaveCodeFail(error));
-    }}}
+    }
+  }
+}
 
-// export default connect(mapStateToProps, mapDispatchToProps)(QuestionComponent);
+
+
+
+
+
+
+
+
+
+
