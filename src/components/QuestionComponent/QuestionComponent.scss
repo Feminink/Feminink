@@ -21,7 +21,6 @@
     
 }
 .questions__numbers{
-    // background-color: pink;
     padding: 1%;
 }
 .number__question{
@@ -78,21 +77,25 @@
     border-radius: .5em;
     margin-top: 1%;
     cursor: pointer;
-    // background-color: rgba(248, 178, 27, 0.88);
-    // box-shadow: 0 6px 6px 6px rgba(255, 247, 184, 0.989);
     &:hover {
-        background-color: #fbd13a;
+        background-color: #fde692;
     }
 }
 .correct{
     background-color: rgb(185, 142, 235);
     box-shadow:0 2px 6px 4px rgb(235, 219, 252);
+    &:hover {
+        background-color:rgb(185, 142, 235);
+    }
     
    
 }
 .incorrect{
     background-color: rgb(245, 132, 132);
     box-shadow:0 2px 6px 4px rgb(252, 212, 183);
+    &:hover {
+        background-color:rgb(245, 132, 132);
+    }
 }
 .visibility{
     display: none; 
@@ -102,6 +105,7 @@
      justify-content: center;
      color: rgb(235, 230, 240);
      background-color: rgb(50, 48, 48);
+     background-image: url();
      margin: 0 auto;
      justify-content: center;
    
@@ -109,13 +113,15 @@
 }
 .points0{
     display: flex;
-    padding: 20%;
+    height: 500px;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 .points1{
     display: flex;
-    padding: 10%;
+    //  padding: 20%;
+    height: 500px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -124,19 +130,22 @@
 .points2{
     
     display: flex;
-    padding: 20%;
     flex-direction: column;
     align-items: center;
 
 }
 .points3{
     display: flex;
-    padding: 20%;
+    height: 500px;
     flex-direction: column;   
+     align-items: flex-start;
+    justify-content: center;
 
 }
 .points__win{
-   color:rgb(185, 142, 235)
+   color:rgb(185, 142, 235);
+   justify-content: center;
+   display:flex;
 }
 .div__score{
     
@@ -171,14 +180,12 @@ mix-blend-mode: difference;
 
 }
 .body{
-    mix-blend-mode: difference;
     border-radius: 50%;
     margin: 50px;
 }
 .link__score{
     text-decoration: none;
     color: white;
-    // background-color: pink;
-    padding: 1%;
+    margin-bottom: 2%;
     
 }

@@ -76,8 +76,8 @@ const ContactComponent = () => {
     // ERROR DESCRIPTION
     if (!values.description) {
       errors.description = "Required";
-    } else if (values.description.length > 50) {
-      errors.description = "Your message can't exceed 50 characters";
+    } else if (values.description.length > 100) {
+      errors.description = "Your message can't exceed 100 characters";
     }
     return errors;
   };

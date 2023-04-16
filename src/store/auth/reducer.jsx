@@ -12,17 +12,17 @@ function saveUser(){
     return {}
   }
 }
-// function saveCode(){
-  // try {
-    // return JSON.parse(localStorage.getItem("_code"))
-  // } catch (error) {
-    // return {}
-  // }
-// }
+function saveCode(){
+  try {
+    return JSON.parse(localStorage.getItem("_code"))
+  } catch (error) {
+    return {}
+  }
+}
 
 const initialState = {
    user: saveUser(),
-  //  code: saveCode(),
+   code: saveCode(),
    loadingLogin: false,
    loadingUser: false,
    error: {
