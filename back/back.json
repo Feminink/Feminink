@@ -213,25 +213,25 @@
       {
         "id": 1,
         "name": "Angelina Jolie",
-        "text": "Me encanta cómo los tatuajes pueden ser una expresión artística de la personalidad. He tenido varios tatuajes a lo largo de los años, y cada uno tiene un significado especial para mí. Para mí, los tatuajes son una forma de contar mi historia.",
+        "text": "I love how tattoos can be an artistic expression of personality. I have had several tattoos over the years, and each one has a special meaning for me. In my mind, tattoos are a way of telling my story.",
         "image": "./assets/images/testimonials/angelina_jolie.jpg"
       },
       {
         "id": 2,
         "name": "Rihanna",
-        "text": "¡Este estudio de tatuajes es increíble! Los artistas son muy talentosos y amables. Me ayudaron a crear un diseño personalizado y el resultado superó todas mis expectativas. Los tatuajes son una forma de expresión que me encanta explorar.",
+        "text": "This tattoo studio is amazing! The artists are very talented and friendly. They helped me create a custom design and the result exceeded all my expectations. Tattoos are a form of expression that I love to explore.",
         "image": "./assets/images/testimonials/rihanna.jpg"
       },
       {
         "id": 3,
         "name": "Megan Fox",
-        "text": "Los tatuajes son una forma genial de expresar mi personalidad y estilo. He tenido varios tatuajes a lo largo de los años, y esta tienda de tatuajes definitivamente tiene algunos de los mejores artistas que he encontrado.",
+        "text": "Tattoos are a great way to express my personality and style. I've had several tattoos over the years, and this tattoo shop definitely has some of the best artists I've come across in my entire life. I sure recommend it.",
         "image": "./assets/images/testimonials/megan_fox.jpg"
       },
       {
         "id": 4,
         "name": "Kat Von D",
-        "text": "Este estudio de tatuajes es realmente excepcional. Como una mujer tatuada, sé lo importante que es encontrar un estudio de tatuajes que ofrezca artistas talentosos, un ambiente cómodo y seguro, y una amplia variedad de diseños.",
+        "text": "This tattoo studio is truly exceptional. As a tattooed woman myself, I know how important it is to find a tattoo studio that offers talented artists, a comfortable and safe environment, and a wide variety of original and unique designs.",
         "image": "./assets/images/testimonials/kat_von_d.jpg"
       }
     ]
