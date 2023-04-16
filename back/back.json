@@ -141,7 +141,7 @@
       {
         "id": 1,
         "name": "Laura O",
-        "username": "Laura WHATEVER",
+        "aka": "The Linguist",
         "password": "randompwd",
         "place": "Cerdeña",
         "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
@@ -155,7 +155,7 @@
       {
         "id": 2,
         "name": "Ignacio E",
-        "username": "Ignacio WHATEVER",
+        "aka": "The Stylist",
         "password": "randompwd1",
         "place": "Puerto de Sta María",
         "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
@@ -169,7 +169,7 @@
       {
         "id": 3,
         "name": "Miriam F",
-        "username": "Miriam WHATEVER",
+        "aka": "The Mastermind",
         "password": "randompwd2",
         "place": "Cädiz",
         "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
