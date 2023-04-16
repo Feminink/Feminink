@@ -46,7 +46,7 @@ const ContactComponent = () => {
       );
       swal("Hurray!", "Message sent successfully", "success");
     } else {
-      swal("Woops:", "you must fill all the fields", "warning");
+      swal("Woops:", "you must complete all the fields", "warning");
     }
   };
 

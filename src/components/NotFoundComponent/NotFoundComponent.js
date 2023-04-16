@@ -8,9 +8,9 @@ const NotFoundComponent = () => {
   return (
     <div className="bg">
       <div className="notfound__content">
-        <h1>Ooops!</h1>
-        <h2>Parece que nos hemos quedado sin tinta...</h2>
-        <h3>Vuelve a intentarlo más tarde</h3>
+        <h1>Woops...</h1>
+        <h2>Looks like we run out of ink...</h2>
+        <h3>Try again later</h3>
       </div>
       <Link to="/">
         <button className="form__submit notfound__button">Homepage</button>

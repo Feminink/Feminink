@@ -45,10 +45,10 @@ const ContactComponent = () => {
           description: formik.values.description,
         })
       );
-      swal("Atención:", "es necessario rellenar todos los campos", "warning");
+      swal("Hurray!", "Message sent successfully", "success");
       formik.resetForm(); // Resetea los valores del formulario
     } else {
-      swal("Atención:", "es necessario rellenar todos los campos", "warning");
+      swal("Woops:", "you must complete all the fields", "warning");
     }
   };
 
@@ -64,7 +64,7 @@ const ContactComponent = () => {
     if (!values.name) {
       errors.name = "Required";
     } else if (values.name.length < 3) {
-      errors.name = "Nombres de dos letras hay, pero pocos";
+      errors.name = "There are two-letter names, but just few";
     }
     // ERROR EMAIL
     if (!values.email) {
@@ -105,7 +105,7 @@ const ContactComponent = () => {
     <section className="section__contact section">
       <form onSubmit={formik.handleSubmit} className="form" noValidate>
         <header className="form__title h2">
-          <h2>Contacta con clientes</h2>
+          <h2>Contact the client</h2>
           <img src={logo} className="footer__logo img" alt="logo" />
         </header>
         <div className="form__container">
@@ -127,7 +127,7 @@ const ContactComponent = () => {
                   );
                 })}
             </select>
-            <label className="form__label">Artista</label>
+            <label className="form__label">Artist</label>
             <span className="form__line"></span>
           </div>
           <div className="form__group">
@@ -144,7 +144,7 @@ const ContactComponent = () => {
             {formik.touched.name && formik.errors.name ? (
               <div className="error">{formik.errors.name}</div>
             ) : null}
-            <label className="form__label">Nombre del cliente </label>
+            <label className="form__label">Name of the client </label>
             <span className="form__line"></span>
           </div>
           <div className="form__group">
@@ -179,7 +179,7 @@ const ContactComponent = () => {
             {formik.touched.date && formik.errors.date ? (
               <div className="error">{formik.errors.date}</div>
             ) : null}
-            <label className="form__label">Día de la cita</label>
+            <label className="form__label">Appointment date</label>
             <span className="form__line"></span>
           </div>
           <div className="form__group">
@@ -196,7 +196,7 @@ const ContactComponent = () => {
             {formik.touched.description && formik.errors.description ? (
               <div className="error">{formik.errors.description}</div>
             ) : null}
-            <label className="form__label">Descripción del mensaje</label>
+            <label className="form__label">Message </label>
             <span className="form__line"></span>
           </div>
           <button
@@ -204,7 +204,7 @@ const ContactComponent = () => {
             form="contactForm"
             onClick={sendForm}
           >
-            Enviar
+            Send
           </button>
         </div>
       </form>
