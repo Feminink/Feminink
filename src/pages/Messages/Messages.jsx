@@ -38,7 +38,7 @@ const Messages = () => {
     setNumMessagesToShow(4);
     setShowMore(false);
   } else {
-    setNumMessagesToShow(numMessagesToShow + 10);
+    setNumMessagesToShow(numMessagesToShow + 20);
     setShowMore(true);
   }
 }

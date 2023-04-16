@@ -83,7 +83,7 @@ const ProfileComponent = () => {
                     return (
                       <div className='section__info__div__msg'> 
                         <Link to={`/contact/${message.id}`}><h4><FontAwesomeIcon icon={faEnvelope} /> Mensaje de: {message.name}</h4></Link>
-                        <h4 className='section__info__description'>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h4>
+                        {/* <h4 className='section__info__description'>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h4> */}
                         <h4 className='hidden__info'> {counter.push(message)}</h4>
                       </div>
                     )

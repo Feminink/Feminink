@@ -93,19 +93,13 @@ function changeClass(){
   
    if (isFinished && score === 0){
   return <div className='div__score'> 
-       <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length} quizá para la próxima! </h2>
+       <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}  </h2>
              {/* <img className='gif' src={no} alt="no"></img> */}
              <h2 className="points__h2"> Ups... </h2>
              {/* <h2>NOT FOUND</h2> */}
        <Link className='link__score' to="/profile">Go back </Link></div>
   
   </div>
- 
- 
- 
- 
-
- 
  
   } else if (isFinished && score === 1){
     return <div className='div__score'>
