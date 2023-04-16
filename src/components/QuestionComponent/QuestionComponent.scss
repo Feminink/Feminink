@@ -103,6 +103,7 @@
      color: rgb(235, 230, 240);
      background-color: rgb(50, 48, 48);
      margin: 0 auto;
+     justify-content: center;
    
    
 }
@@ -118,6 +119,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .points2{
     
@@ -125,17 +127,23 @@
     padding: 20%;
     flex-direction: column;
     align-items: center;
+
 }
 .points3{
     display: flex;
     padding: 20%;
-    flex-direction: column;
+    flex-direction: column;   
+
 }
 .points__win{
    color:rgb(185, 142, 235)
 }
-.points__h2{
+.div__score{
     
+    display: flex;
+    flex-direction: column;
+
+
 }
 .discount{
     display: flex;
@@ -166,4 +174,11 @@ mix-blend-mode: difference;
     mix-blend-mode: difference;
     border-radius: 50%;
     margin: 50px;
+}
+.link__score{
+    text-decoration: none;
+    color: white;
+    // background-color: pink;
+    padding: 1%;
+    
 }

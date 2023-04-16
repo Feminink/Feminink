@@ -92,32 +92,48 @@ function changeClass(){
      
   
    if (isFinished && score === 0){
-  return <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length} quizá para la próxima! </h2>
-        <img className='gif' src={no} alt="no"></img>
-  <Link className='link' to="/profile">Volver </Link></div>
-   
+  return <div className='div__score'> 
+       <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length} quizá para la próxima! </h2>
+             {/* <img className='gif' src={no} alt="no"></img> */}
+             <h2 className="points__h2"> Ups... </h2>
+             {/* <h2>NOT FOUND</h2> */}
+       <Link className='link__score' to="/profile">Go back </Link></div>
+  
+  </div>
+ 
+ 
+ 
+ 
+
+ 
+ 
   } else if (isFinished && score === 1){
-    return  <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}</h2> 
-     <h2 className="points__h2"> feminist level </h2>
-          <img className='hello' src={hello} alt="no"></img>
-     <Link className='link' to="/profile">Volver </Link></div>
+    return <div className='div__score'>
+            <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}</h2> 
+            <h2 className="points__h2"> Sigue así! </h2>
+                 {/* <img className='hello' src={hello} alt="no"></img> */}
+            <Link className='link__score' to="/profile">Go back </Link></div>
+         </div>
   } else if (isFinished && score === 2){
 
-   return  <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}  </h2> 
-   <h2 className='points__h2'>Wooow! Por poco! </h2>
-   <img className='body' src={body} alt="gif_feminism"></img>
-   <Link className='link' to="/profile">Volver </Link></div>
- 
+   return <div className='div__score'> 
+              <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}  </h2> 
+             <h2 className='points__h2'>Wooow! Por poco! </h2>
+             <img className='body' src={body} alt="gif_feminism"></img>
+             <Link className='link__score' to="/profile">Go back </Link></div>
+          </div>
 
   }else if(isFinished && score === 3  ){
     
-    return <div  className={"points" + score}><h2 className='points__h2'>  Has acertado {score} de {info.quiz.length}</h2>
+    return <div className='div__score'> 
+    <div  className={"points" + score}><h2 className='points__h2'>  Has acertado {score} de {info.quiz.length}</h2>
            <h2 className='points__win'>  NIVEL NINJA-FEMINIST-INK DESBLOQUEADO </h2>
            <button className="button__quiz" onClick={randomCode}>YOU GOT IT </button>
            <div> <h1 className='points__win' >{code}</h1> 
-           <button onClick={saveCode(user.id, code)}> Save the code </button>
+           {/* <button onClick={saveCode(user.id, code)}> Save the code </button> */}
            {/* <h1 className='points__win' >No olvides tu código el día de la cita!</h1>  */}
-           <Link className='link' to="/profile">Volver </Link></div> 
+           <Link className='link__score' to="/profile">Go back </Link></div> 
+     </div>
      </div>
   }
 
