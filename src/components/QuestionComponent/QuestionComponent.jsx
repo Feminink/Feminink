@@ -10,12 +10,17 @@ import { getInfo } from "../../store/info/actions";
 import no from '../../assets/images/no.gif'
 import hello from '../../assets/images/hello.jpeg'
 import body from '../../assets/images/body.webp'
+
+import {saveCode} from '../../store/gallery/actions'
+
 //IMPORT QUESTIONS
 import Questions from './Questions';
 
 const QuestionComponent = () => { 
 
   const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
+  const {user} = useSelector((state)=> state.AuthReducer)
+  
   
   const dispatch = useDispatch();
   //ESTADO QUE CONTROLA EN QUË PREGUNTA ESTÄS
@@ -31,7 +36,7 @@ const QuestionComponent = () => {
   //ESTADO PARA CONTROLAR SI CLICKED OR NOT 
    const [isClicked, setIsClicked] = useState(false);
 
- 
+
  //FUNCIÖN PARA CAMBIAR CLASE DEL BOTÖN DESPUËS DE HACER CLICK
 function changeClass(){
     
@@ -41,11 +46,14 @@ function changeClass(){
    setIsClicked(true)
     
   }
-
-
+ 
   useEffect(() => {
     dispatch(getInfo());
+    // dispatch(actionSaveCode(user.id));
+     dispatch(saveCode(code, user.id));
   }, []);
+ 
+ 
 
 //FUNCIÖN PARA GENERAR EL COD DE DESCUENTO
   function randomCode() {
@@ -55,8 +63,10 @@ function changeClass(){
       code += characters.charAt(Math.floor(Math.random() * characters.length));
     }
     setCode(code)
+    console.log(code, "code")
     localStorage.setItem("_code", code)
     changeClass()
+   
     return code
   }
 
@@ -84,29 +94,30 @@ function changeClass(){
    if (isFinished && score === 0){
   return <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length} quizá para la próxima! </h2>
         <img className='gif' src={no} alt="no"></img>
-  <Link className='link' to="/about">Volver </Link></div>
+  <Link className='link' to="/profile">Volver </Link></div>
    
   } else if (isFinished && score === 1){
     return  <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}</h2> 
      <h2 className="points__h2"> feminist level </h2>
           <img className='hello' src={hello} alt="no"></img>
-     <Link className='link' to="/contact">Volver </Link></div>
+     <Link className='link' to="/profile">Volver </Link></div>
   } else if (isFinished && score === 2){
 
    return  <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}  </h2> 
    <h2 className='points__h2'>Wooow! Por poco! </h2>
    <img className='body' src={body} alt="gif_feminism"></img>
-   <Link className='link' to="/contact">Volver </Link></div>
+   <Link className='link' to="/profile">Volver </Link></div>
  
 
   }else if(isFinished && score === 3  ){
     
     return <div  className={"points" + score}><h2 className='points__h2'>  Has acertado {score} de {info.quiz.length}</h2>
            <h2 className='points__win'>  NIVEL NINJA-FEMINIST-INK DESBLOQUEADO </h2>
-           <button className="button__quiz" onClick={randomCode} onChange={changeClass} >YOU GOT IT </button>
+           <button className="button__quiz" onClick={randomCode}>YOU GOT IT </button>
            <div> <h1 className='points__win' >{code}</h1> 
+           <button onClick={saveCode(user.id, code)}> Save the code </button>
            {/* <h1 className='points__win' >No olvides tu código el día de la cita!</h1>  */}
-           <Link className='link' to="/contact">Volver </Link></div> 
+           <Link className='link' to="/profile">Volver </Link></div> 
      </div>
   }
 
@@ -126,11 +137,13 @@ function changeClass(){
   
 <div className='questions'>
 
-  <div className='number__question'>
-    <span className='number__question__h3'> Question {questCurrent + 1} of </span> {Questions.length }
+
+  <div className='questions__numbers'>
+    <h3 className='questions__numbers__h3'> Question {questCurrent + 1} of {Questions.length }</h3> 
   </div>
   <div className='left__side__number__question__title'>
-    {Questions[questCurrent].question}
+    <h2 className='number__question'>{Questions[questCurrent].question} </h2> 
+
   </div>
 </div>
 <div className='response__right'>
@@ -141,20 +154,6 @@ function changeClass(){
 </div>
 
 
-
-{/* {info && info.quiz && info.quiz.map((quizz, index)=>{ */}
-  {/* return ( */}
-    {/* <div key={index} className='questions'>  */}
-    {/* <div className='number__question'>  */}
-     {/* <h3 className='number__question__h3'>{quizz.question}</h3> */}
-    {/* </div> */}
-    {/* <div className='response__right'>{quizz.options.map((option, index)=> { */}
-      {/* return(  */}
-     {/* <button key={index} className='quiz__button' onClick={(e)=>handleAnswer(option.isCorrect, e)}> {option.response}</button>  */}
-{/* )})} </div> */}
-    {/* </div> */}
-  {/* ) */}
-{/* })} */}
 
   </div>)
 };

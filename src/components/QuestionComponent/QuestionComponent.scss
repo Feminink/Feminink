@@ -20,19 +20,22 @@
     
     
 }
+.questions__numbers{
+    // background-color: pink;
+    padding: 1%;
+}
 .number__question{
   display: flex;
   margin-bottom: 1%;
   justify-content: center;
-  width: 50%;
-//   background-color: rgb(63, 61, 61);
+  background-color: rgb(63, 61, 61);
   padding: 2%;
   align-items: center;
   box-shadow: 0  6px 6px rgba(182, 181, 177, 0.989);
   &:hover{
-     scale: 2;
+     scale: 1.5;
      position: relative; 
-     left: 30%;
+     left: 10%;
      top: 20%;
      width: 80%;
      background-color: rgb(57, 57, 55);
@@ -46,7 +49,7 @@
 }
 .questions{
  display:flex;
- flex-direction: row;
+ flex-direction: column;
  margin-top: 1%;
  text-align: center;
  width: 80%;
@@ -61,7 +64,7 @@
     width: 100%;
     padding: 1%;
     gap: 1em;
-    // background-color: pink;
+    //  background-color: pink;
     
 }
 .quiz__button{
@@ -75,8 +78,8 @@
     border-radius: .5em;
     margin-top: 1%;
     cursor: pointer;
-    background-color: rgba(248, 178, 27, 0.88);
-    box-shadow: 0 2px 6px 4px rgba(255, 247, 184, 0.989);
+    // background-color: rgba(248, 178, 27, 0.88);
+    // box-shadow: 0 6px 6px 6px rgba(255, 247, 184, 0.989);
     &:hover {
         background-color: #fbd13a;
     }

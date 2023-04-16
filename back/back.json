@@ -608,6 +608,15 @@
       "surname": "Pérez",
       "birthday": "1998-02-15",
       "id": 12
+    },
+    {
+      "email": "rosalia@tratra.es",
+      "password": "$2a$10$/5x3sECxot8STh5p3t00Mu0TU1yoJPAOrSXOrixmsS11fm1kcB59m",
+      "name": "Rosalía",
+      "surname": "Vila",
+      "birthday": "1992-09-25",
+      "code": [],
+      "id": 13
     }
   ]
 }

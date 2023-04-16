@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import {
   GET_GALLERY,
   GET_GALLERY_OK,
@@ -9,7 +10,12 @@ import {
   DO_REGISTRATION,
   DO_REGISTRATION_OK,
   DO_REGISTRATION_FAIL,
+  SAVE_CODE, 
+  SAVE_CODE_OK, 
+  SAVE_CODE_FAIL
 } from "./actionTypes";
+
+
 
 const backGallery = "http://localhost:3000/gallery";
 const backUsers = "http://localhost:3000/users";
@@ -38,7 +44,6 @@ export function getGallery() {
     try {
       const response = await axios.get(backGallery);
       dispatch(actionGetGalleryOk(response.data));
-      console.log(response.data, "respuesta de action");
     } catch (error) {
       dispatch(actionGetGalleryFail);
     }
@@ -109,3 +114,50 @@ export function doRegistration(registrationForm) {
     }
   };
 }
+
+//FUNCTION TO SAVECODE
+export function actionSaveCode(){
+ return{
+  type: SAVE_CODE,
+ }
+
+}
+export function actionSaveCodeOk(code){
+  return {
+    type: SAVE_CODE_OK,
+    payload: code
+  }
+ 
+}
+export function actionSaveCodeFail(error){
+  return {
+    type: SAVE_CODE_FAIL,
+    payload:error
+  }
+ 
+}
+export function saveCode(code, userId) {
+  return async (dispatch) => {
+    dispatch(actionSaveCode(code))
+    try {
+      const response = await axios.put(`${backUsers}/${userId}/code`, {code});
+      console.log(code, "code")
+      console.log(response, "response")
+      dispatch(actionSaveCodeOk(response.data));
+      console.log(response.data, "resdata")
+    } catch (error) {
+      dispatch(actionSaveCodeFail(error));
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
