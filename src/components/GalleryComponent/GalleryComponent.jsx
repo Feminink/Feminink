@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 // IMPORT LINK
 import { Link } from "react-router-dom";
 // IMPORT STYLES
+// IMPORT STYLES
 import "./GalleryComponent.scss";
 
 const GalleryComponent = () => {
@@ -32,7 +33,7 @@ const GalleryComponent = () => {
   }
   return (
     <section className="section__gallery container">
-      <div className="flex bg">
+      <div className="flex">
         <section className="filters-container flex">
           <form>
             <fieldset className="form__group container">
