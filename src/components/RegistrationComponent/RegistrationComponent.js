@@ -25,17 +25,17 @@ const RegistrationComponent = () => {
       formik.values.password &&
       formik.values.repassword
     ) {
-      dispatch(
-        doRegistration({
-          name: formik.values.name,
-          surname: formik.values.surname,
-          birthday: formik.values.birthday,
-          email: formik.values.email,
-          password: formik.values.password,
-        })
-      );
+    dispatch(
+      doRegistration({
+        name: formik.values.name,
+        surname: formik.values.surname,
+        birthday: formik.values.birthday,
+        email: formik.values.email,
+        password: formik.values.password,
+      })
+    );
       swal("Success!", "Your account is now registered", "success");
-      formik.resetForm(); // Resetea los valores del formulario
+      formik.resetForm(); // RESET FORM
     } else {
       swal("Something went wrong", "Check the errors and try again", "error");
     }

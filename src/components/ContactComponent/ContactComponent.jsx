@@ -45,6 +45,7 @@ const ContactComponent = () => {
         })
       );
       swal("Hurray!", "Message sent successfully", "success");
+        formik.resetForm(); // RESET FORM
     } else {
       swal("Woops:", "you must complete all the fields", "warning");
     }

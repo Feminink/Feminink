@@ -20,6 +20,7 @@ const SingleMessage = () => {
 
    const dispatch = useDispatch(); 
    const {message}= useSelector((state)=>state.TattooReducer)
+   const {user} = useSelector((state)=> state.AuthReducer)
 
    const removeMessage = (message) =>{
       dispatch(deleteMessage(message.id))
@@ -29,10 +30,13 @@ const SingleMessage = () => {
       <> 
          <section className='section__single-message section'>
                <div className='single-message__header'>
-                  <div className='container'>
-                     <h2>Tus tatuajes molan un montón, {message.artist}, asi que vas a hacerle uno muy cool a {message.name}!</h2>
-                  </div> 
-               </div>
+                  {user && user.isAdmin ? (
+                     <div className='container'>
+                        <h2>Tus tatuajes molan un montón, {message.artist}, asi que vas a hacerle uno muy cool a {message.name}!</h2>
+                     </div>
+                  ) : ("")}
+
+               </div> 
                <div className='single-message__body container'>
                   <div className='single-message__text'>
                      <h3>De: {message.name}</h3>
@@ -51,7 +55,11 @@ const SingleMessage = () => {
                   </div>
                </div>
                <div className='single-message__contact container'>
-                  <h3>Envía un email a <a className='link' href={`mailto:"${message.email}"`} style={{color: message.color}}>{message.name}</a></h3>
+                  {user && user.isAdmin ? (
+                     <h3>Envía un email a <Link to="/profile" style={{color: message.color}}>{message.name}</Link></h3>
+                  ) : (
+                     <h3>Envía un email a <Link to="/contact" style={{color: message.color}}>{message.artist}</Link></h3>
+                  )}
                </div>
          </section> 
       </>

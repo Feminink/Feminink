@@ -50,7 +50,6 @@ const ProfileComponent = () => {
           <div className='profile__description'> 
             <h2 className=''>Welcome!</h2>
             <p>{user.name} {user.surname}</p>
-            <h2>{code}</h2>
             <h3 className=''>Email: </h3>
             <p>{user.email}</p>
             <h3 className=''>Birthday: </h3>
@@ -81,7 +80,7 @@ const ProfileComponent = () => {
                 if (user && user.isAdmin) {
                   if (message.artist === user.name) {
                     return (
-                      <div className='section__info__div__msg'> 
+                      <div className='section__info__div__msg' key={message.id}> 
                         <Link to={`/contact/${message.id}`}><h4><FontAwesomeIcon icon={faEnvelope} /> Mensaje de: {message.name}</h4></Link>
                         <h4 className='section__info__description'>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h4>
                         <h4 className='hidden__info'> {counter.push(message)}</h4>
@@ -91,11 +90,11 @@ const ProfileComponent = () => {
                 } else {
                   if (message.name === user.name) {
                     return (
-                      <div className='section__info__div__msg'> 
-                        <h4><FontAwesomeIcon icon={faEnvelope} /> {message.artist}</h4>
+                      <div className='section__info__div__msg' key={message.id}> 
+                        <Link to={`/contact/${message.id}`}><h4><FontAwesomeIcon icon={faEnvelope} /> Mensaje de: {message.artist}</h4></Link>
                         <h4 className='section__info__description'>{message.description}</h4>
-                        <h4 className='section__info__description'>Su email es {message.email}! Escríbele a {message.artist} para darle cita en el estudio!</h4>
                         <h4 className='hidden__info'> {counter.push(message)}</h4>
+                        <hr className='hr'/>
                       </div>
                     )
                   }
