@@ -4,7 +4,8 @@ import "./Contact2Component.scss";
 
 import { getInfo } from "../../store/info/actions";
 
-//IMPORT SWEETALERT
+// IMPORT SWEET ALERT LIBRARY
+import swal from "sweetalert";
 
 // IMPORT FUNCIÖN DE CONTACTAR
 import { doContact2 } from "../../store/Tattoo/actions";
@@ -45,10 +46,10 @@ const ContactComponent = () => {
                 description: formik.values.description,
             })
         );
-        alert("Tu mensaje se ha enviado correctamente");
-            formik.resetForm(); // Resetea los valores del formulario
+        swal("Tu mensaje se ha enviado correctamente");
+            formik.resetForm(); // RESET FORM
         } else {
-            alert("Es necesario rellenar todos los campos");
+            swal("Es necesario rellenar todos los campos");
         }
     };
 
