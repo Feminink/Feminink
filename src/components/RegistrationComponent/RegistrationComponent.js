@@ -35,6 +35,7 @@ const RegistrationComponent = () => {
         })
       );
       swal("Success!", "Your account is now registered", "success");
+      formik.resetForm(); // Resetea los valores del formulario
     } else {
       swal("Something went wrong", "Check the errors and try again", "error");
     }
@@ -110,7 +111,7 @@ const RegistrationComponent = () => {
         noValidate
       >
         <header className="form__title h2">
-          <h2>Register now</h2>
+          <h2>Register now on</h2>
           <img src={logo} className="footer__logo img" alt="logo" />
         </header>
         <div className="form__container">

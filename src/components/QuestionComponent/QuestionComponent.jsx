@@ -137,11 +137,13 @@ function changeClass(){
   
 <div className='questions'>
 
+
   <div className='questions__numbers'>
     <h3 className='questions__numbers__h3'> Question {questCurrent + 1} of {Questions.length }</h3> 
   </div>
   <div className='left__side__number__question__title'>
     <h2 className='number__question'>{Questions[questCurrent].question} </h2> 
+
   </div>
 </div>
 <div className='response__right'>
@@ -150,6 +152,8 @@ function changeClass(){
 
 ))}
 </div>
+
+
 
   </div>)
 };
