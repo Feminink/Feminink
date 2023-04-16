@@ -20,6 +20,16 @@ const GalleryComponent = () => {
   const [searchByStyle, setSearchByStyle] = useState("");
   const [checked, setChecked] = useState([]);
 
+  function checkFilter(isChecked, artist) {
+    let copy = [...checked];
+    if (isChecked) {
+      copy.push(artist);
+      setChecked(copy);
+    } else {
+      setChecked(copy.filter((x) => x !== artist));
+    }
+  }
+
   useEffect(() => {
     dispatch(getGallery());
   }, []);
@@ -63,7 +73,7 @@ const GalleryComponent = () => {
                         type="checkbox"
                         value={artist}
                         onChange={(e) => {
-                          setChecked(e.target.value);
+                          checkFilter(e.target.value);
                         }}
                       />
                       {artist}
@@ -84,7 +94,7 @@ const GalleryComponent = () => {
             })
             .filter((gallerya) => {
               return checked.length > 0
-                ? gallerya.artist.includes(checked)
+                ? checked.includes(gallerya.artist)
                 : gallery;
             })
             .map((gallerya) => {

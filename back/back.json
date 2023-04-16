@@ -10,7 +10,7 @@
         "designs": [],
         "data": "Maud, siendo una adolescente consiguió escaparse de casa para unirse al circo, para sobrevivir a la pobreza de su familia. Conoció a Gus Wagner. que sería su marido y le enseñaría a tatuar. Maud alcanzó la fama como la primera artista del tatuaje femenina conocida en todo el mundo. Paralelamente, Maud también se tatuaba a sí misma y, junto con los que le realizaba su marido, pronto convirtió su cuerpo en una atracción. Stevens recorrió el país exhibiéndose en los espectáculos de freaks y consiguió romper el estigma que rodeaba a las mujeres que intervenían sus cuerpos con colores y sombras.",
         "style_tattoo": [
-          "Tradicional"
+          "Traditional"
         ]
       },
       {
@@ -36,8 +36,8 @@
         "designs": [],
         "data": "Millie, que abandonó la escuela a los 13 años, uniéndose al mundo del circo y comenzó a trabajar como bailarina exótica. Tatuó su cuerpo como recomendación de un tatuador, para que ganase más dinero (se sintió obligada a hacerlo). Sin embargo, esto empujó a Millie a abandonar el mundo del espectáculo y aprendió el oficio de tatuajes abriendo su propio salón de tatuajes, The Tattoo Emporium, en Bowery, en la parte trasera de una peluquería. El hecho de que Millie tuviera su propio negocio fue un logro increíble pues se categorizó para siempre como una de las más resaltantes mujeres tatuadoras a lo largo de la historia. En ese momento, el tatuaje estaba totalmente dominado por los hombres. ",
         "style_tattoo": [
-          "Tradicional",
-          "Brillante"
+          "Traditional",
+          "Brilliant"
         ]
       },
       {
@@ -617,6 +617,14 @@
       "birthday": "1992-09-25",
       "code": [],
       "id": 13
+    },
+    {
+      "email": "laura.origa@bootcamp-upgrade.com",
+      "password": "$2a$10$/P4ulNBP37yNYMvmFnvbKuNpsKPiBUzHRqrIWYm4xvJQpqwRBg6ay",
+      "name": "Blabla",
+      "surname": "Origa",
+      "birthday": "2023-04-20",
+      "id": 14
     }
   ]
 }

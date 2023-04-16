@@ -57,13 +57,13 @@ const InspirationComponent = () => {
                       <div className="text">
                         <h3>{woman.name}</h3>
                         <p>
-                          <b>Lugar:</b> {woman.city}
+                          <b>Where:</b> {woman.city}
                         </p>
                         <p>
-                          <b>Año:</b> {woman.date}
+                          <b>Year:</b> {woman.date}
                         </p>
                         <p>
-                          <b>Estilo:</b> {woman.style_tattoo.join(", ")}
+                          <b>Style:</b> {woman.style_tattoo.join(", ")}
                         </p>
                       </div>
                     </div>

@@ -21,8 +21,8 @@ import logo from "../../assets/images/footer-logo.svg";
 
 // IMPORT USESOUND HOOK
 import useSound from "use-sound";
-import click from "../../assets/sounds/COMCell_Messagesent.wav";
-import sent from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
+import click from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
+import sent from "../../assets/sounds/COMCell_Messagesent.wav";
 
 const ContactComponent = () => {
   const dispatch = useDispatch();

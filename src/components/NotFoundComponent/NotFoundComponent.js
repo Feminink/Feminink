@@ -5,7 +5,7 @@ import "./NotFoundComponent.scss";
 import { Link } from "react-router-dom";
 // IMPORT USESOUND HOOK
 import useSound from "use-sound";
-import click from "../../assets/sounds/COMCell_Messagesent.wav";
+import click from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
 
 const NotFoundComponent = () => {
   const [play] = useSound(click);

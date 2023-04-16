@@ -20,7 +20,7 @@ import logo from "../../assets/images/footer-logo.svg";
 import swal from "sweetalert";
 // IMPORT USESOUND HOOK
 import useSound from "use-sound";
-import click from "../../assets/sounds/COMCell_Messagesent.wav";
+import click from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
 
 const LoginComponent = () => {
   const { user } = useSelector((state) => state.AuthReducer);
