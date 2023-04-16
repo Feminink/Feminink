@@ -15,8 +15,9 @@ import Contact2Component from "../../components/Contact2Component/Contact2Compon
 
 const ProfileComponent = () => {
  
-  const code = localStorage.getItem("_code");
   const {user} = useSelector((state)=> state.AuthReducer)
+  const code = localStorage.getItem("_code", user);
+
   const {messages, loadingMessages} = useSelector((state)=>state.TattooReducer);
   const dispatch = useDispatch()
    

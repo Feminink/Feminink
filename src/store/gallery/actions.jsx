@@ -1,4 +1,7 @@
 import axios from "axios";
+import { connect } from 'react-redux'
+import QuestionComponent from "../../components/QuestionComponent/QuestionComponent";
+
 import {
   GET_GALLERY,
   GET_GALLERY_OK,
@@ -9,7 +12,24 @@ import {
   DO_REGISTRATION,
   DO_REGISTRATION_OK,
   DO_REGISTRATION_FAIL,
+  SAVE_CODE, 
+  SAVE_CODE_OK, 
+  SAVE_CODE_FAIL
 } from "./actionTypes";
+
+
+function randomCode() {
+  let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let code = '';
+  for (let i = 0; i < 6; i++) {
+    code += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  
+  localStorage.setItem("_code", code)
+  return code
+}
+
+
 
 const backGallery = "http://localhost:3000/gallery";
 const backUsers = "http://localhost:3000/users";
@@ -109,3 +129,38 @@ export function doRegistration(registrationForm) {
     }
   };
 }
+
+//FUNCTION TO SAVECODE
+export function actionSaveCode(userId){
+ return{
+  type: SAVE_CODE,
+  payload: userId
+ }
+
+}
+export function actionSaveCodeOk(code){
+  return {
+    type: SAVE_CODE_OK,
+    payload: code
+  }
+ 
+}
+export function actionSaveCodeFail(error){
+  return {
+    type: SAVE_CODE_FAIL,
+    payload:error
+  }
+ 
+}
+export function saveCode(userId) {
+  const code = randomCode();
+  return async (dispatch) => {
+    try {
+      dispatch(actionSaveCode(userId));
+      const response = await axios.post(`${backUsers}/${userId}/code`, code);
+      dispatch(actionSaveCodeOk(response.data));
+    } catch (error) {
+      dispatch(actionSaveCodeFail(error));
+    }}}
+
+// export default connect(mapStateToProps, mapDispatchToProps)(QuestionComponent);
