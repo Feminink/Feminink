@@ -49,6 +49,17 @@ const LastWorkComponent = () => {
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
+        breakpoints={{
+          1024: {  // desde 1024px de ancho en adelante, 4 slides por vista
+            slidesPerView: 4
+          },
+          768: {   // desde 768px hasta 1023px de ancho, 2 slides por vista
+            slidesPerView: 2
+          },
+          0: {   // hasta 767px de ancho, 1 slide por vista
+            slidesPerView: 1
+          }
+        }}
       > 
         {gallery && gallery.map((work) => {
           return (
