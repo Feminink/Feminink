@@ -547,6 +547,23 @@
       "artist": "Miriam F",
       "color": "#281f1f",
       "id": 8
+    },
+    {
+      "name": "Rosalia",
+      "email": "rosalia@tratra.es",
+      "description": "Hola",
+      "artist": "Ignacio E",
+      "color": "#dec9c9",
+      "id": 9
+    },
+    {
+      "artist": "Ignacio E",
+      "name": "Rosalía",
+      "email": "nachoe@mail.com",
+      "date": "2023-03-29",
+      "description": "Hola",
+      "isUser": true,
+      "id": 10
     }
   ],
   "users": [

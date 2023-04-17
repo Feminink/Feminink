@@ -1,3 +1,4 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import  './ProfileComponent.scss';
@@ -25,7 +26,7 @@ const ProfileComponent = () => {
     dispatch(getMessages());
   },[]);
 
-  let counter = [];
+  // let counter = [];
  
   if(loadingMessages) {
     return (
