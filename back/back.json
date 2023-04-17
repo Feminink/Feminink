@@ -8,36 +8,36 @@
         "city": "Kansas, EEUU",
         "image": "./assets/images/Maud-Wagner.webp",
         "designs": [],
-        "data": "Maud, siendo una adolescente consiguió escaparse de casa para unirse al circo, para sobrevivir a la pobreza de su familia. Conoció a Gus Wagner. que sería su marido y le enseñaría a tatuar. Maud alcanzó la fama como la primera artista del tatuaje femenina conocida en todo el mundo. Paralelamente, Maud también se tatuaba a sí misma y, junto con los que le realizaba su marido, pronto convirtió su cuerpo en una atracción. Stevens recorrió el país exhibiéndose en los espectáculos de freaks y consiguió romper el estigma que rodeaba a las mujeres que intervenían sus cuerpos con colores y sombras.",
+        "data": "Maud, as a teenager, managed to run away from home to join the circus to survive her family's poverty. She met Gus Wagner, who would become her husband and teach her how to tattoo. Maud achieved fame as the first female tattoo artist known worldwide. At the same time, Maud was also tattooing herself and, along with her husband's tattoos, she soon made her body an attraction. Stevens travelled the country exhibiting at freak shows and managed to break the stigma surrounding women who intervened their bodies with colours and shades.",
         "style_tattoo": [
-          "Tradicional"
+          "Traditional"
         ]
       },
       {
         "id": 2,
         "name": "Jessie Knight",
         "date": "1904",
-        "city": "Croydon, Londres",
+        "city": "Croydon, London",
         "image": "./assets/images/Jessie-Knight.webp",
         "designs": [],
-        "data": "Su padre Leonard, era capitán de la marina, tatuador y francotirador, mientras que su madre era poeta e ilustradora. Recibió un disparo en el hombro durante un terrible accidente mientras trabajaba así que viró hacia el mundo del tatuaje. Sus tatuajes estaban obteniendo una reputación estelar, y en 1955 Jessie ganó el segundo lugar en el Champion Tattoo Artist of all England. Jessie abrió sus propias tiendas de tatuajes, primero en la ciudad portuaria de Portsmouth y luego en Aldershot.Su trabajo fue incluido en una exposición en el Museo Marítimo Nacional de Cornualles, de marzo de 2017 a enero de 2018, que muestra una historia del tatuaje británico.",
+        "data": "Her father, Leonard, was a navy captain, tattooist and sniper, while his mother was a poet and illustrator. He was shot in the shoulder during a terrible accident while on the job so he turned to tattooing. His tattoos were gaining a stellar reputation, and in 1955 Jessie won second place in the Champion Tattoo Artist of all England. Jessie opened his own tattoo shops, first in the harbour town of Portsmouth and then in Aldershot.His work was included in an exhibition at the National Maritime Museum in Cornwall from March 2017 to January 2018, showing a history of British tattooing.",
         "style_tattoo": [
           "Color",
-          "A mano alzada",
-          "Tradicional"
+          "Freehand",
+          "Traditional"
         ]
       },
       {
         "id": 3,
         "name": "Millie Hull",
         "date": "1896",
-        "city": "Nueva York",
+        "city": "New York",
         "image": "./assets/images/Millie-Hull.webp",
         "designs": [],
-        "data": "Millie, que abandonó la escuela a los 13 años, uniéndose al mundo del circo y comenzó a trabajar como bailarina exótica. Tatuó su cuerpo como recomendación de un tatuador, para que ganase más dinero (se sintió obligada a hacerlo). Sin embargo, esto empujó a Millie a abandonar el mundo del espectáculo y aprendió el oficio de tatuajes abriendo su propio salón de tatuajes, The Tattoo Emporium, en Bowery, en la parte trasera de una peluquería. El hecho de que Millie tuviera su propio negocio fue un logro increíble pues se categorizó para siempre como una de las más resaltantes mujeres tatuadoras a lo largo de la historia. En ese momento, el tatuaje estaba totalmente dominado por los hombres. ",
+        "data": "Millie, who left school at 13, joined the circus world and started working as an exotic dancer. She tattooed her body on the recommendation of a tattoo artist, so that she could earn more money (she felt obliged to do so). However, this pushed Millie out of show business and she learned the tattoo trade by opening her own tattoo parlour, The Tattoo Emporium, on the Bowery, in the back of a hairdresser's shop. The fact that Millie had her own business was an incredible achievement as she forever categorised herself as one of the most prominent female tattoo artists in history. At the time, tattooing was totally dominated by men.",
         "style_tattoo": [
-          "Tradicional",
-          "Brillante"
+          "Traditional",
+          "Bright"
         ]
       },
       {
@@ -47,9 +47,9 @@
         "city": "Florida, EEUU",
         "image": "./assets/images/betty-broadbent.webp",
         "designs": [],
-        "data": "Conocida como La Venus Tatuada. Trabajó como la Dama Tatuada en los circos independientes que se encontraba. Cuando regresó a Estados Unidos, Betty volvió a trabajar como una atracción tatuada en el circo. Para esta temporada, se estableció como tatuadora. Además de exhibir su arte, Broadbent trabajaba como tatuadora. Trabajó en tiendas de todo el país, incluidos espacios ubicados en Montreal, San Francisco y Nueva York. En 1937 comienza a trabajar a nivel internacional. Pasó un tiempo trabajando para circos independientes tanto en Nueva Zelanda como en Australia.​ La revista Pix publicó sus diseños, y recientemente la Biblioteca Estatal de Nuevas Gales del Sur en Australia ha digitalizado y publicado más de 9.000 negativos de la publicación, entre los que se encuentran algunos de Broadbent.​ ",
+        "data": "Known as The Tattooed Venus. She worked as the Tattooed Lady in the independent circuses she found. When she returned to the United States, Betty returned to work as a tattooed attraction in the circus. For this season, she established herself as a tattoo artist. In addition to exhibiting her art, Broadbent worked as a tattoo artist. She worked in shops across the country, including spaces in Montreal, San Francisco and New York. In 1937 she began working internationally. She spent time working for independent circuses in both New Zealand and Australia. Pix magazine published her designs, and recently the State Library of New South Wales in Australia has digitised and published over 9,000 of the publication's negatives, including some of Broadbent's.",
         "style_tattoo": [
-          "Tradicional"
+          "Traditional"
         ]
       },
       {
@@ -59,41 +59,42 @@
         "city": "Wisconsin",
         "image": "./assets/images/Artoria-Gibbons.webp",
         "designs": [],
-        "data": "Su nombre real era Anna Mae Burlingston y nació en 1893 en el seno de una familia sumamente pobre. Cuando trabajó como sirvienta conoció al que más tarde se convirtió en su esposo Charles (Red) Gibbons, un reconocido artista tatuador. Fue él quien le tatuó todo su cuerpo con motivos religiosos debido a que era una mujer muy devota. En la década de los 20 trabajó junto a su marido como tatuadora, además de que se convirtió en una atracción en circos ya que en aquella época era algo sumamente raro que una mujer contara con tantos tatuajes en todo su cuerpo.",
+        "data": "Her real name was Anna Mae Burlingston and she was born in 1893 into a very poor family. While working as a maid she met the man who later became her husband Charles (Red) Gibbons, a renowned tattoo artist. It was he who tattooed her entire body with religious motifs, as she was a very devout woman. In the 1920s she worked alongside her husband as a tattoo artist and became an attraction in circuses, as at that time it was extremely rare for a woman to have so many tattoos all over her body.",
         "style_tattoo": [
-          "Tradicional"
+          "Traditional"
         ]
       },
       {
         "id": 6,
         "name": "Whang-od",
         "date": "1917",
-        "city": "Filipinas",
+        "city": "Philippines",
         "image": "./assets/images/Whang-od.webp",
         "designs": [
           "./assets/images/arrows.jpeg",
           "./assets/images/arrows1.png",
           "./assets/images/arrows2.png"
         ],
-        "data": "Comenzó a tatuar a los quince años. Tradicionalmente, las mujeres no aprendían estas técnicas de tatuaje, pero su padre le enseñó al observar su potencial y su talento. Whang Od emplea la técnica del golpeteo manual llamado «batok». Consiste en penetrar la piel con una espira de calamansi, (cítrico filipino), que se adhiere en el extremo de un palo de ese mismo árbol. En un cuenco, prepara un mejunje hecho de carbón vegetal espesado con patata dulce, agua y azúcar. La tinta penetra a través del rápido y repetido golpeteo de la rama con un palo de bambú. Aunque son muchos los turistas que visitan Buscalan para tatuarse, es ella la que elige a quién y qué tatuar, y no al revés, por mucho que los turistas hayan recorrido las 15 horas de trayecto que separan Buscalan Kalinga de Manila, la capital de Filipinas.",
+        "data": "She started tattooing at the age of fifteen. Traditionally, women did not learn these tattooing techniques, but her father taught her by observing her potential and talent. Whang Od uses the hand-tapping technique called 'batok'. It consists of penetrating the skin with a calamansi (Philippine citrus) spire, which is attached to the end of a stick from the same tree. In a bowl, he prepares a concoction made of charcoal thickened with sweet potato, water and sugar. The ink penetrates through the rapid and repeated tapping of the branch with a bamboo stick. Although many tourists visit Buscalan to get tattooed, it is she who chooses who and what to tattoo, not the other way around, no matter how many tourists have travelled the 15-hour journey from Buscalan Kalinga to Manila, the capital of the Philippines.",
         "style_tattoo": [
           "Batok"
         ]
       }
     ],
     "about": {
-      "text": "Desde FeminInk queremos rescatar y poner en valor un trozo de la historia que rara vez sale a la luz, precisamente porque corresponde a las mujeres. Si hoy tenemos cabida en los estudios de tatuaje, en parte, se lo debemos a mujeres que se atrevieron a desafiar la norma en la que solo tenían espacio para ser contempladas en freakshows por llevar todo el cuerpo tatuado. El salto de estas mujeres, dos siglos atrás hacia un espacio masculinizado y desconocido supondrá la puerta de entrada de otras muchas que irán agrietando poco a poco algunas de las normas de género asociadas no solo a la estética de las mujeres, sino a su libertad de expresión. Gracias por ser nuestras referentas."
+      "text": "Here at FeminInk we want to rescue and highlight a piece of history that rarely comes to light, precisely because it corresponds to women. If today we have a place in tattoo studios, we owe it in part to women who dared to defy the norm in which they only had space to be seen in freakshows for having their whole body tattooed. The leap of these women, two centuries ago into a masculinised and unknown space, will be the gateway for many others who will gradually crack some of the gender norms associated not only with women's aesthetics, but also with their freedom of expression.",
+      "text1": "Thank you for being our referents."
     },
     "admins": [
       {
         "id": 1,
         "name": "Laura O",
-        "username": "Laura WHATEVER",
+        "aka": "The Ex-Linguist",
         "password": "randompwd",
         "place": "Cerdeña",
         "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
         "email": "laurao@mail.com",
-        "description": "",
+        "description": "Formerly a translator, she decided to turn her career around by dedicating herself to the tattoo world.",
         "noway": [
           "Símbolo del infinito",
           "Mariposas"
@@ -102,12 +103,12 @@
       {
         "id": 2,
         "name": "Ignacio E",
-        "username": "Ignacio WHATEVER",
+        "aka": "The Styler",
         "password": "randompwd1",
         "place": "Puerto de Sta María",
         "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
         "email": "ignacio@mail.com",
-        "description": "",
+        "description": "Blessed among women, our designer par excellence. His dexterity and artistry are well known to all who got to meet Feminink.",
         "noway": [
           "Campanillas",
           "Tribales canis"
@@ -116,12 +117,12 @@
       {
         "id": 3,
         "name": "Miriam F",
-        "username": "Miriam WHATEVER",
+        "aka": "The Mastermind",
         "password": "randompwd2",
         "place": "Cädiz",
         "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
         "email": "miriamf@mail.com",
-        "description": "",
+        "description": "The creator and beating heart of our studio. Feminink is the project she strongly wanted and pursued with all her heart and soul.",
         "noway": [
           "Delfines en el tobillo",
           "Estrellitas"
@@ -405,47 +406,6 @@
       "description": "It is extremely common for people to think that stick and poke tattoos fade quicker than machine ones. But, we're going to let you into a little secret: All tattoos fade! That's right, over time, your tattoos, whether stick and poke or machine will fade and change."
     }
   ],
-  "admins": [
-    {
-      "id": 1,
-      "name": "Laura O",
-      "username": "Laura WHATEVER",
-      "place": "Cerdeña",
-      "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
-      "email": "lauraO@mail.com",
-      "description": "",
-      "noway": [
-        "Símbolo del infinito",
-        "Mariposas"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Ignacio E",
-      "username": "Ignacio WHATEVER",
-      "place": "Puerto de Sta María",
-      "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
-      "email": "nachoe@mail.com",
-      "description": "",
-      "noway": [
-        "Campanillas",
-        "Tribales canis"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Miriam F",
-      "username": "Miriam WHATEVER",
-      "place": "Cädiz",
-      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-      "email": "miriamfr@mail.com",
-      "description": "",
-      "noway": [
-        "Delfines en el tobillo",
-        "Estrellitas"
-      ]
-    }
-  ],
   "contact": [
     {
       "name": "María Zambrano",
@@ -556,11 +516,11 @@
       "surname": "Fraga",
       "color": "#baf1e5",
       "birthday": "1999-12-30",
-      "bio": "Miriam es una tatuadora joven de Cádiz que se ha ganado un gran reconocimiento por su trabajo innovador y su activismo feminista. Sus tatuajes son conocidos por su significado profundo y su estilo único. Se ha convertido en una inspiración para muchas mujeres de la ciudad que buscan empoderarse y ser asertivas. Miriam lucha por la igualdad de género y defiende la libertad de expresión a través de sus tatuajes. Es una artista talentosa y una verdadera fuerza a tener en cuenta.",
+      "bio": "Miriam is a young tattoo artist from Cádiz who has gained recognition for her innovative work and feminist activism. Her tattoos are known for their deep meaning and unique style. She has become an inspiration for many women in the city who are looking to empower themselves and be assertive. Miriam fights for gender equality and advocates for freedom of expression through her tattoos. She is a talented artist and a true force to be reckoned with.",
       "skills": [
-        "Realismo",
+        "Realism",
         "Floral",
-        "Japonés tradicional"
+        "Japanese traditional"
       ],
       "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
       "isAdmin": true,
@@ -573,9 +533,9 @@
       "surname": "Erviti",
       "color": "#f66977f8;",
       "birthday": "1988-02-15",
-      "bio": "Ignacio es un joven tatuador que lleva más de cinco años trabajando en el puerto de Santa María. Desde el principio, ha tenido un gran talento para el arte del tatuaje, convirtiéndose en uno de los mejores tatuadores de la ciudad.  Ignacio es conocido por su creatividad y sus habilidades técnicas, y ha creado algunos de los tatuajes más impresionantes de la ciudad. Siempre está dispuesto a escuchar las ideas de sus clientes y a ayudarlos a crear el tatuaje perfecto.",
+      "bio": "Ignacio is a young tattoo artist who has been working in the port of Santa Maria for more than five years. From the beginning, he has had a great talent for the art of tattooing, becoming one of the best tattoo artists in town. Ignacio is known for his creativity and technical skills, and has created some of the most impressive tattoos in town. He is always willing to listen to his clients' ideas and help them create the perfect tattoo.",
       "skills": [
-        "Tradicional",
+        "Traditional",
         "Old school",
         "Borneo"
       ],
@@ -590,9 +550,9 @@
       "surname": "Origa",
       "color": "#3FB190",
       "birthday": "1993-01-06",
-      "bio": "Laura, proviene de la hermosa isla de Cerdeña. Creció entre la hermosa vida y la magia de esta isla, que ahora influye en su trabajo.  Laura siempre tuvo un interés en el arte y decidió convertirse en tatuadora. Se entrenó con maestros tatuadores reconocidos y desarrolló un estilo único combinando la tradicional técnica de tatuar con la búsqueda de la belleza de Cerdeña.  Como tatuadora, Laura se esfuerza por producir obras de arte de calidad, que reflejan su pasión por el arte y su anhelo de capturar la belleza de la naturaleza. Crea hermosos diseños que abarcan desde motivos tradicionales hasta diseños más modernos.",
+      "bio": "Laura, comes from the beautiful island of Sardinia. She grew up among the beautiful life and magic of this island, which now influences her work.  Laura always had an interest in art and decided to become a tattoo artist. She trained with renowned tattoo masters and developed a unique style combining the traditional tattoo technique with the search for the beauty of Sardinia. As a tattoo artist, Laura strives to produce quality works of art, which reflect her passion for art and her yearning to capture the beauty of nature. She creates beautiful designs ranging from traditional motifs to more modern designs.",
       "skills": [
-        "Acuarela",
+        "Watercolor",
         "Blackwork",
         "Dotwork"
       ],

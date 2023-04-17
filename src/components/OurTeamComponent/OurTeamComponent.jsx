@@ -36,7 +36,7 @@ const OurTeamComponent = () => {
                   <div className="overlay">
                     <div className="text">
                       <h3>
-                        {member.name} / {member.username}
+                        {member.name} / {member.aka}
                       </h3>
                       <p>
                         <b>Where: </b>
@@ -45,6 +45,10 @@ const OurTeamComponent = () => {
                       <p>
                         <b>Email: </b>
                         {member.email}
+                      </p>
+                      <p>
+                        <b>About: </b>
+                        {member.description}
                       </p>
                     </div>
                   </div>

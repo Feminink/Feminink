@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import './QuestionComponent.scss';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import "./QuestionComponent.scss";
+import { Link } from "react-router-dom";
 //IMPORT HOOKS
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 //IMPORT GETINFO
 import { getInfo } from "../../store/info/actions";
 //IMPORT GIF
@@ -14,27 +14,25 @@ import body from '../../assets/images/body.webp'
 import {actionSaveCode} from '../../store/gallery/actions'
 import { saveCode } from '../../store/gallery/actions';
 //IMPORT QUESTIONS
-import Questions from './Questions';
+import Questions from "./Questions";
 
-const QuestionComponent = () => { 
-
+const QuestionComponent = () => {
   const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
-  const {user} = useSelector((state)=> state.AuthReducer)
-  
-  
+  const { user } = useSelector((state) => state.AuthReducer);
+
   const dispatch = useDispatch();
   //ESTADO QUE CONTROLA EN QUË PREGUNTA ESTÄS
   const [questCurrent, setQuestCurrent] = useState(0);
   //ESTADO QUE CONTROLA LA PUNTUACIÖN
   const [score, setScore] = useState(0);
   //ESTADO QUE CONTROLA SI EL JUEGO HA TERMINADO
-  const [isFinished, setIsfinished] = useState(false)
+  const [isFinished, setIsfinished] = useState(false);
 
   //ESTADO PARA CODIGO ALEATORIO
-  const [code, setCode] = useState("")
+  const [code, setCode] = useState("");
 
-  //ESTADO PARA CONTROLAR SI CLICKED OR NOT 
-   const [isClicked, setIsClicked] = useState(false);
+  //ESTADO PARA CONTROLAR SI CLICKED OR NOT
+  const [isClicked, setIsClicked] = useState(false);
 
 
  //FUNCIÖN PARA CAMBIAR CLASE DEL BOTÖN DESPUËS DE HACER CLICK
@@ -51,13 +49,12 @@ function changeClass(){
     // dispatch(actionSaveCode(user.id));
     //  dispatch(saveCode({code:code, user: user.name, userId: user.id}));
   }, []);
- 
- 
 
-//FUNCIÖN PARA GENERAR EL COD DE DESCUENTO
+  //FUNCIÖN PARA GENERAR EL COD DE DESCUENTO
   function randomCode() {
-    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let code = '';
+    let characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let code = "";
     for (let i = 0; i < 6; i++) {
       code += characters.charAt(Math.floor(Math.random() * characters.length));
     }
@@ -73,6 +70,7 @@ function changeClass(){
     return code
   }
 
+
 //FUNCIÖN QUE MANEJA SI HAS ACERTADO O NO LA PREGUNTA Y SI EL JUEGO HA TERMINADO O NO
   function handleAnswer(isCorrect, e){
     
@@ -87,6 +85,8 @@ function changeClass(){
         }
          
       }, 1000); 
+
+
   }
      
    if (isFinished && score === 0){
@@ -128,18 +128,18 @@ function changeClass(){
      </div>
   }
 
-
-  if(loadingInfo){
+  if (loadingInfo) {
     return (
       <div className="container">
-      <h2>Loading...</h2>
-    </div>
+        <h2>Loading...</h2>
+      </div>
     );
   }
+
  
   return (<div className="div__question__wrapper">
   <div className='div__question__wrapper__quiz'> 
-     <h1>Resuelve nuestro quiz!</h1>
+     <h1>Solve our quiz on the first try and get your discount code!</h1>
   </div>
   <section className='div__question__wrapper__section'> 
 <div className='questions'>
@@ -165,6 +165,8 @@ function changeClass(){
 
   </div>
 )
+
+
 };
 
 QuestionComponent.propTypes = {};
