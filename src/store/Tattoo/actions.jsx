@@ -16,12 +16,16 @@ import {
   DELETE_MESSAGE,
   DELETE_MESSAGE_FAIL,
   DELETE_MESSAGE_OK,
+  GET_DISCOUNT,
+  GET_DISCOUNT_OK, 
+  GET_DISCOUNT_FAIL
   
-  
+
   
 } from "./actionTypes";
 
 const backContact = "http://localhost:3000/contact";
+const backDiscount = "http://localhost:3000/discounts"
 
 // FUNCIÖN PARA POSTEAR DATA EN JSON: CONTACT
 export function actionDoContact(contactForm) {
@@ -185,4 +189,39 @@ export function deleteMessage(messageId) {
     }
   };
 
+}
+
+
+//FUNCIÖN PARA RENDERIZAR DESCUENTOS 
+
+export function actionGetDiscount(){
+  return{
+    action: GET_DISCOUNT
+   
+  }
+}
+export function actionGetDiscountOk(discount){
+  return{
+    action: GET_DISCOUNT_OK,
+    payload: discount
+  }
+}
+export function actionGetDiscountFail(error){
+  return{
+    action: GET_DISCOUNT_FAIL,
+    payload: error
+  }
+}
+
+export function getDiscount(){
+  return async (dispatch) =>{
+    dispatch(actionGetDiscount);
+    try {
+      const response = await axios.get(backDiscount);
+      dispatch(actionGetDiscountOk(response.data))
+      console.log(response.data, "resdata discount")
+    } catch (error) {
+      dispatch(actionGetDiscountFail(error));
+    }
+  }
 }

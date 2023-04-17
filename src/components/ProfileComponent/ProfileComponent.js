@@ -12,17 +12,22 @@ import { Link } from 'react-router-dom';
 import avatar from '../../assets/images/avatar.webp';
 
 import Contact2Component from "../../components/Contact2Component/Contact2Component";
+import { getInfo } from '../../store/info/actions';
 
 const ProfileComponent = () => {
  
   const {user} = useSelector((state)=> state.AuthReducer)
-  const code = localStorage.getItem("_code", user);
+  // const code = localStorage.getItem("_code", user);
 
+  //REDUCER DE TATTOO
   const {messages, loadingMessages} = useSelector((state)=>state.TattooReducer);
-  const dispatch = useDispatch()
+  // REDUCER DE INFO
+  
+  const dispatch = useDispatch();
    
   useEffect(() => {
     dispatch(getMessages());
+    
   },[]);
 
   let counter = [];
@@ -53,7 +58,7 @@ const ProfileComponent = () => {
             <h3 className=''>Email: </h3>
             <p>{user.email}</p>
             {/* //TERNARIO PARA MOSTRAR SI TIENES UN CODE O NO LO TIENES */}
-            <h2>{code}</h2>
+            {/* <h2>{code}</h2> */}
             <h3 className=''>Birthday: </h3>
             <p>{user.birthday}</p>
             {user && user.isAdmin ? (
@@ -113,6 +118,13 @@ const ProfileComponent = () => {
         <Contact2Component></Contact2Component>
       </section>
     ) : ("")}
+
+    <section className='section__discount'>
+      <div className='section__discount__div'> 
+       {/* <h2> {info && info.discounts && info.discounts.code}</h2> */}
+       {/* {console.log(info, "codeinfo")} */}
+      </div>
+    </section>
     </>
   )}
 };

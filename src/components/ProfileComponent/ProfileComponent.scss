@@ -135,6 +135,16 @@
     }
 }
 
+.section__discount{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: pink;
+    &__div{
+        display:flex;
+    }
+}
+
 @keyframes bounce {
     20% {
       transform: translateY(-10px);
