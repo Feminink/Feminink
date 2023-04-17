@@ -99,7 +99,7 @@ const ProfileComponent = () => {
                 return false;
               }).map((message) => (
                 <div className='section__info__div__msg' key={message.id}> 
-                  <Link to={`/contact/${message.id}`}><h4><FontAwesomeIcon icon={faEnvelope} /> Mensaje de: {message.name}</h4></Link>
+                  <Link to={`/contact/${message.id}`}><h4><FontAwesomeIcon icon={faEnvelope} /> {user.isAdmin? (<h2>Message from: {message.name}</h2>): (<h2>Message from: {message.artist}</h2>)}</h4></Link>
                   <hr className='hr'/>
                 </div>
               ))}
