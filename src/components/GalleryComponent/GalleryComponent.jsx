@@ -20,9 +20,9 @@ const GalleryComponent = () => {
   const [searchByStyle, setSearchByStyle] = useState("");
   const [checked, setChecked] = useState([]);
 
-  function checkFilter(isChecked, artist) {
+  function checkFilter(ischecked, artist) {
     let copy = [...checked];
-    if (isChecked) {
+    if (ischecked) {
       copy.push(artist);
       setChecked(copy);
     } else {
@@ -72,9 +72,7 @@ const GalleryComponent = () => {
                         name={artist}
                         type="checkbox"
                         value={artist}
-                        onChange={(e) => {
-                          checkFilter(e.target.value);
-                        }}
+                        onChange={(e) => checkFilter(e.target.checked, artist)}
                       />
                       {artist}
                     </label>
