@@ -46,6 +46,10 @@ const OurTeamComponent = () => {
                         <b>Email: </b>
                         {member.email}
                       </p>
+                      <p>
+                        <b>About: </b>
+                        {member.description}
+                      </p>
                     </div>
                   </div>
                 </div>

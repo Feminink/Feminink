@@ -82,18 +82,19 @@
       }
     ],
     "about": {
-      "text": "Desde FeminInk queremos rescatar y poner en valor un trozo de la historia que rara vez sale a la luz, precisamente porque corresponde a las mujeres. Si hoy tenemos cabida en los estudios de tatuaje, en parte, se lo debemos a mujeres que se atrevieron a desafiar la norma en la que solo tenían espacio para ser contempladas en freakshows por llevar todo el cuerpo tatuado. El salto de estas mujeres, dos siglos atrás hacia un espacio masculinizado y desconocido supondrá la puerta de entrada de otras muchas que irán agrietando poco a poco algunas de las normas de género asociadas no solo a la estética de las mujeres, sino a su libertad de expresión. Gracias por ser nuestras referentas."
+      "text": "Here at FeminInk we want to rescue and highlight a piece of history that rarely comes to light, precisely because it corresponds to women. If today we have a place in tattoo studios, we owe it in part to women who dared to defy the norm in which they only had space to be seen in freakshows for having their whole body tattooed. The leap of these women, two centuries ago into a masculinised and unknown space, will be the gateway for many others who will gradually crack some of the gender norms associated not only with women's aesthetics, but also with their freedom of expression.",
+      "text1": "Thank you for being our referents."
     },
     "admins": [
       {
         "id": 1,
         "name": "Laura O",
-        "username": "Laura WHATEVER",
+        "aka": "The Ex-Linguist",
         "password": "randompwd",
         "place": "Cerdeña",
         "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
         "email": "laurao@mail.com",
-        "description": "",
+        "description": "Formerly a translator, she decided to turn her career around by dedicating herself to the tattoo world.",
         "noway": [
           "Símbolo del infinito",
           "Mariposas"
@@ -102,12 +103,12 @@
       {
         "id": 2,
         "name": "Ignacio E",
-        "username": "Ignacio WHATEVER",
+        "aka": "The Styler",
         "password": "randompwd1",
         "place": "Puerto de Sta María",
         "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
         "email": "ignacio@mail.com",
-        "description": "",
+        "description": "Blessed among women, our designer par excellence. His dexterity and artistry are well known to all who got to meet Feminink.",
         "noway": [
           "Campanillas",
           "Tribales canis"
@@ -116,12 +117,12 @@
       {
         "id": 3,
         "name": "Miriam F",
-        "username": "Miriam WHATEVER",
+        "aka": "The Mastermind",
         "password": "randompwd2",
         "place": "Cädiz",
         "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
         "email": "miriamf@mail.com",
-        "description": "",
+        "description": "The creator and beating heart of our studio. Feminink is the project she strongly wanted and pursued with all her heart and soul.",
         "noway": [
           "Delfines en el tobillo",
           "Estrellitas"
@@ -403,47 +404,6 @@
       "style": "Stick and poke",
       "alt": "Tattooed woman wearing make-up",
       "description": "It is extremely common for people to think that stick and poke tattoos fade quicker than machine ones. But, we're going to let you into a little secret: All tattoos fade! That's right, over time, your tattoos, whether stick and poke or machine will fade and change."
-    }
-  ],
-  "admins": [
-    {
-      "id": 1,
-      "name": "Laura O",
-      "aka": "The Ex-Linguist",
-      "place": "Cerdeña",
-      "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
-      "email": "lauraO@mail.com",
-      "description": "",
-      "noway": [
-        "Símbolo del infinito",
-        "Mariposas"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Ignacio E",
-      "aka": "The Styler",
-      "place": "Puerto de Sta María",
-      "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
-      "email": "nachoe@mail.com",
-      "description": "",
-      "noway": [
-        "Campanillas",
-        "Tribales canis"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Miriam F",
-      "aka": "The Mastermind",
-      "place": "Cädiz",
-      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-      "email": "miriamfr@mail.com",
-      "description": "",
-      "noway": [
-        "Delfines en el tobillo",
-        "Estrellitas"
-      ]
     }
   ],
   "contact": [
