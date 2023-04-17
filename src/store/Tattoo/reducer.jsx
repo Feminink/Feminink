@@ -11,7 +11,7 @@ const firstState = {
     form: {},
     messages: [],
     message: {},
-    discount: {},
+    discount: [],
     loadingDiscount: false,
     loadingMessages: false,
     loadingForm: false,
@@ -88,7 +88,7 @@ export default function TattooReducer(state = firstState, action){
         state = {...state, loadingDiscount: false, discount:action.payload }
         break
         case GET_DISCOUNT_FAIL:
-        state = {...state, loadingDiscount:false,  discount: {}, error: {message:action.payload} }
+        state = {...state, loadingDiscount:false,  discount: [], error: {message:action.payload} }
         break        
 
         default:

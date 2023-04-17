@@ -196,19 +196,19 @@ export function deleteMessage(messageId) {
 
 export function actionGetDiscount(){
   return{
-    action: GET_DISCOUNT
+   type: GET_DISCOUNT
    
   }
 }
 export function actionGetDiscountOk(discount){
   return{
-    action: GET_DISCOUNT_OK,
+   type: GET_DISCOUNT_OK,
     payload: discount
   }
 }
 export function actionGetDiscountFail(error){
   return{
-    action: GET_DISCOUNT_FAIL,
+   type: GET_DISCOUNT_FAIL,
     payload: error
   }
 }

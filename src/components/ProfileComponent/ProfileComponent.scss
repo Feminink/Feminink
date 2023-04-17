@@ -137,11 +137,12 @@
 
 .section__discount{
     display:flex;
-    justify-content: center;
     flex-direction: column;
-    background-color: pink;
+    background-color: rgb(250, 192, 84);
     &__div{
         display:flex;
+        justify-content: center;
+
     }
 }
 
