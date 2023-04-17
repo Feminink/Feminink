@@ -59,7 +59,7 @@ const NavigationComponent = () => {
         <ul className="main-nav__ul ul">
           <li className="main-nav__li li">
             <Link className="main-nav__link link" onClick={toggleMenu} to="/">
-              <FontAwesomeIcon icon={faHouse} size="xs" /> Home
+              <FontAwesomeIcon icon={faHouse} size="sm" /> Home
             </Link>
           </li>
           <li className="main-nav__li li">
@@ -68,7 +68,7 @@ const NavigationComponent = () => {
               onClick={toggleMenu}
               to="/gallery"
             >
-              <FontAwesomeIcon icon={faImages} size="xs" /> Gallery
+              <FontAwesomeIcon icon={faImages} size="sm" /> Gallery
             </Link>
           </li>
           <li className="main-nav__li li">
@@ -77,7 +77,7 @@ const NavigationComponent = () => {
               onClick={toggleMenu}
               to="/about"
             >
-              <FontAwesomeIcon icon={faUserGroup} size="xs" /> About
+              <FontAwesomeIcon icon={faUserGroup} size="sm" /> About
             </Link>
           </li>
           {user && user.isAdmin ? (
@@ -87,7 +87,7 @@ const NavigationComponent = () => {
                 onClick={toggleMenu}
                 to="/messages"
               >
-                <FontAwesomeIcon icon={faMessage} size="xs" /> Messages
+                <FontAwesomeIcon icon={faMessage} size="sm" /> Messages
               </Link>
             </li>
           ) : (
@@ -99,7 +99,7 @@ const NavigationComponent = () => {
               onClick={toggleMenu}
               to="/contact"
             >
-              <FontAwesomeIcon icon={faEnvelope} size="xs" /> Contact
+              <FontAwesomeIcon icon={faEnvelope} size="sm" /> Contact
             </Link>
           </li>
           {user && user.id ? (
@@ -111,7 +111,7 @@ const NavigationComponent = () => {
                 onClick={toggleMenu}
                 to="/login"
               >
-                <FontAwesomeIcon icon={faArrowRightToBracket} size="xs" /> Login
+                <FontAwesomeIcon icon={faArrowRightToBracket} size="sm" /> Login
               </Link>
             </li>
           )}
@@ -124,7 +124,7 @@ const NavigationComponent = () => {
                 onClick={toggleMenu}
                 to="/signup"
               >
-                <FontAwesomeIcon icon={faArrowRightToBracket} /> Sign
+                <FontAwesomeIcon icon={faArrowRightToBracket} size="sm" /> Sign
                 Up
               </Link>
             </li>
@@ -149,7 +149,7 @@ const NavigationComponent = () => {
               to="/"
               onClick={onClickLogout}
             >
-              <FontAwesomeIcon icon={faArrowRightFromBracket} size="xs" />{" "}
+              <FontAwesomeIcon icon={faArrowRightFromBracket} size="sm" />{" "}
               Logout
             </Link>
           </li>

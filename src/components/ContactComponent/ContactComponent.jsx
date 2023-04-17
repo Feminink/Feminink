@@ -191,7 +191,7 @@ const ContactComponent = () => {
               value={formik.values.color}
               required
             />
-            <label className="form__label">Color base </label>
+            <label className="form__label">Color base</label>
             <span className="form__line"></span>
           </div>
           <button

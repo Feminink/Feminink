@@ -38,7 +38,7 @@ const FooterComponent = () => {
               </ul>
             </div>
             <div className="footer-nav__column">
-              <h4 className="footer-nav__h4 h4">Nuestras tiendas</h4>
+              <h4 className="footer-nav__h4 h4">Our Tattoo studios</h4>
               <ul className="footer-nav__ul">
                 <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Madrid</Link></li>
                 <li className="footer-nav__li li"><Link to="#" className="footer-nav__link link">Barcelona</Link></li>
@@ -68,10 +68,10 @@ const FooterComponent = () => {
             </div>
             <ul className="legal-nav__ul ul">
               <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Cookies</Link></li>
-              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Aviso legal</Link></li>
-              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Política de privacidad</Link></li>
-              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Condiciones de Uso en RR.SS</Link></li>
-              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Política de Privacidad en RR.SS</Link></li>
+              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Legal Notice</Link></li>
+              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Privacy Policy</Link></li>
+              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Terms of Use</Link></li>
+              <li className="legal-nav__li li"><Link to="#" className="legal-nav__link link">Privacy Policy</Link></li>
             </ul>
           </nav>
         </div>

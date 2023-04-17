@@ -9,7 +9,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 /* IMPORT AVATAR */
-import avatar from '../../assets/images/avatar.webp';
+import avatar from '../../assets/images/avatar.png';
 
 import Contact2Component from "../../components/Contact2Component/Contact2Component";
 
@@ -52,6 +52,8 @@ const ProfileComponent = () => {
             <p>{user.name} {user.surname}</p>
             <h3 className=''>Email: </h3>
             <p>{user.email}</p>
+            <h3>Code: </h3>
+            <p>{code}</p>
             <h3 className=''>Birthday: </h3>
             <p>{user.birthday}</p>
             {user && user.isAdmin ? (
@@ -76,32 +78,31 @@ const ProfileComponent = () => {
               </section>
             ) : ("")} 
             <section className='section__inbox'>
-              {messages.map((message) => {
-                if (user && user.isAdmin) {
-                  if (message.artist === user.name) {
-                    return (
-                      <div className='section__info__div__msg' key={message.id}> 
-                        <Link to={`/contact/${message.id}`}><h4><FontAwesomeIcon icon={faEnvelope} /> Mensaje de: {message.name}</h4></Link>
-                        {/* <h4 className='section__info__description'>Su email es {message.email}! Escríbele a {message.name} para darle cita en el estudio!</h4> */}
-                        <h4 className='hidden__info'> {counter.push(message)}</h4>
-                      </div>
-                    )
-                  }
-                } else {
-                  if (message.name === user.name) {
-                    return (
-                      <div className='section__info__div__msg' key={message.id}> 
-                        <Link to={`/contact/${message.id}`}><h4><FontAwesomeIcon icon={faEnvelope} /> Mensaje de: {message.artist}</h4></Link>
-                        <h4 className='section__info__description'>{message.description}</h4>
-                        <h4 className='hidden__info'> {counter.push(message)}</h4>
-                        <hr className='hr'/>
-                      </div>
-                    )
-                  }
+              {messages.filter((message) => {
+                if (user && user.isUser && message.isUser && message.email === user.email) {
+                  return true;
+                } else if (!user.isAdmin && message.isUser && message.name === user.name) {
+                  return true;
+                } else if (user.isAdmin && !message.isUser && message.artist === user.name) {
+                  return true;
                 }
-                return null;
-              })}
-              <h3>Mail Box({counter.length})</h3>
+                return false;
+              }).map((message) => (
+                <div className='section__info__div__msg' key={message.id}> 
+                  <Link to={`/contact/${message.id}`}><h4><FontAwesomeIcon icon={faEnvelope} /> Mensaje de: {message.name}</h4></Link>
+                  <hr className='hr'/>
+                </div>
+              ))}
+              <h3>Mail Box ({messages.filter((message) => {
+                if (user && user.isUser && message.isUser && message.email === user.email) {
+                  return true;
+                } else if (!user.isAdmin && message.isUser && message.name === user.name) {
+                  return true;
+                } else if (user.isAdmin && !message.isUser && message.artist === user.name) {
+                  return true;
+                }
+                return false;
+              }).length})</h3>
             </section>
           </div>
         </div>

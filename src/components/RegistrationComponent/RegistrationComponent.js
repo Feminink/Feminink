@@ -36,8 +36,6 @@ const RegistrationComponent = () => {
     );
       swal("Success!", "Your account is now registered", "success");
       formik.resetForm(); // RESET FORM
-    } else {
-      swal("Something went wrong", "Check the errors and try again", "error");
     }
   };
 
@@ -53,7 +51,9 @@ const RegistrationComponent = () => {
 
     // ERROR NAME
     if (!values.name) {
-      errors.name = "You should add at least one character";
+      errors.name = "Required";
+    } else if (values.name.length < 3) {
+      errors.name = "There are two-letter names, but just few";
     }
     // ERROR SURNAME
     if (!values.surname) {

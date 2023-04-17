@@ -7,7 +7,7 @@ import {useDispatch, useSelector } from 'react-redux';
 
 //IMPORT FONTAWESEOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPalette, faTrash, faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons';
+import { faPalette, faTrash, faQuoteLeft, faQuoteRight, faBackward} from '@fortawesome/free-solid-svg-icons';
 
 //IMPORT ACTION TO DELETE
 import { deleteMessage } from '../../store/Tattoo/actions';
@@ -39,16 +39,33 @@ const SingleMessage = () => {
                </div> 
                <div className='single-message__body container'>
                   <div className='single-message__text'>
-                     <h3>De: {message.name}</h3>
-                     <h4>Para: {message.artist}</h4>
-                     <h4 className=""> {message.email}</h4>
-                     <p className="" ><FontAwesomeIcon icon={faQuoteLeft} size="lg" /> {message.description} <FontAwesomeIcon icon={faQuoteRight} size="lg" /></p>
-                     <h4 className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h4>    
-                     <div className='single-message__links'>
-                        <Link className='link' to="/profile">Go back</Link>
-                        <Link className='link' to="/profile"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /> Borrar</button></Link>
-
-                     </div>
+                     {user && user.isAdmin ? (
+                        <>
+                           <h3>From: {message.name}</h3>
+                           <h4>To: {message.artist}</h4>
+                           <h4 className="">Email: {message.email}</h4>
+                           <h4 className="">Message: </h4>
+                           <p className="" ><FontAwesomeIcon icon={faQuoteLeft} size="lg" /> {message.description} <FontAwesomeIcon icon={faQuoteRight} size="lg" /></p>
+                           <h4 className="" > <FontAwesomeIcon icon={faPalette} style={{color: message.color}} /> {message.color} </h4>    
+                           <div className='single-message__links'>
+                              <Link className='link' to="/profile"><FontAwesomeIcon icon={faBackward} /> Go back</Link>
+                              <Link className='link' to="/profile"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /> Borrar</button></Link>
+                           </div>
+                        </>
+                     ) : (
+                        <>
+                           <h3>From: {message.artist}</h3>
+                           <h4>To: {message.name}</h4>
+                           <h4 className="">Email: {message.email}</h4>
+                           <h4 className="">Date of appointment: {message.date}</h4>
+                           <h4 className="">Message: </h4>
+                           <p className="" ><FontAwesomeIcon icon={faQuoteLeft} size="lg" /> {message.description} <FontAwesomeIcon icon={faQuoteRight} size="lg" /></p>   
+                           <div className='single-message__links'>
+                              <Link className='link' to="/profile"><FontAwesomeIcon icon={faBackward} /> Go back</Link>
+                              <Link className='link' to="/profile"><button onClick={(e)=>removeMessage(message)} className="delete"><FontAwesomeIcon className='delete__icon' icon={faTrash} /> Borrar</button></Link>
+                           </div>
+                        </>
+                     ) }
                   </div>
                   <div className='single-message__image'>
                      <img src={mermaidn} className="div__img__image" alt="mermaid"/> 
