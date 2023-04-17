@@ -145,7 +145,7 @@ function changeClass(){
  
   return (<div className="div__question__wrapper">
   <div className='div__question__wrapper__quiz'> 
-     <h1>Resuelve nuestro quiz a la primera y obtén tu código de descuento!</h1>
+     <h1>Resuelve nuestro quiz!</h1>
   </div>
   
 <div className='questions'>

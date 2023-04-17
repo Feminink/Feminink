@@ -3,8 +3,8 @@ const Questions = [
       question: "¿Qué tienen en común la mayoría de mujeres tatuadoras del s.XIX y s.XX?",
       options: [
         {
-          response: "Empezaron sus carreras siendo tatuadas por sus parejas para ser expuestas en los freakshows de circos",
-          isCorrect: true
+          response: "Empezaron sus carreras siendo tatuadas por hombres para ser expuestas en los freakshows de circos",
+          isCorrect: false
         },
         {
           response: "No tenían las mismas oportunidades profesionales que los hombres y se veían forzadas a hacer uso de sus cuerpos para ganarse la vida",
@@ -12,7 +12,7 @@ const Questions = [
         },
         {
           response: "Ninguna de ellas ganaba lo mismo que los hombres por realizar el mismo trabajo ",
-          isCorrect: false
+          isCorrect: true
         }
       ]
     },

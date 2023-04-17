@@ -18,7 +18,7 @@ const About = () => {
      <div className="div__question__wrapper"> 
      
     {user && user.id ? (  <Link to="/quiz">  <h1 className='question'>¿Quieres ganar un 15% de descuento en tu siguiente tatuaje?</h1></Link> ): ( <Link to="/signup">  <h1 className='question'>¿Quieres ganar un 15% de descuento en tu siguiente tatuaje?</h1></Link>  )}
-      <h2 className='question'>Acierta a la primera nuestro quiz!</h2>
+      <h2 className='question'>Resuelve nuestro quiz y obtén tu código de descuento!</h2>
      </div>
     </div>
      

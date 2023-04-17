@@ -24,7 +24,6 @@ const ProfileComponent = () => {
   //REDUCER DE TATTOO
   const {messages, loadingMessages, loadingDiscount, discount} = useSelector((state)=>state.TattooReducer);
   
-  
   const dispatch = useDispatch();
    
   useEffect(() => {
@@ -32,7 +31,7 @@ const ProfileComponent = () => {
     dispatch(getDiscount());
   },[]);
 
-  // let counter = [];
+
  
   if(loadingMessages && loadingDiscount) {
     return (
@@ -125,6 +124,7 @@ const ProfileComponent = () => {
      {discount && discount.map((disc) => {
       
       if( disc.userId === user.id){
+        
         return (
           <div key={disc.code}> 
               <h2 >Discount code: {disc.code}</h2>
