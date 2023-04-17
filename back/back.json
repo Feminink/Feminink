@@ -94,7 +94,7 @@
         "place": "Cerdeña",
         "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
         "email": "laurao@mail.com",
-        "description": "Formerly a translator, she decided to turn her career around by dedicating herself to the tattoo world.",
+        "description": "Former translator, turned her career to the tattoo world.",
         "noway": [
           "Símbolo del infinito",
           "Mariposas"
@@ -108,7 +108,7 @@
         "place": "Puerto de Sta María",
         "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
         "email": "ignacio@mail.com",
-        "description": "Blessed among women, our designer par excellence. His dexterity and artistry are well known to all who got to meet Feminink.",
+        "description": "Blessed among women, our designer par excellence.",
         "noway": [
           "Campanillas",
           "Tribales canis"
@@ -122,7 +122,7 @@
         "place": "Cädiz",
         "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
         "email": "miriamf@mail.com",
-        "description": "The creator and beating heart of our studio. Feminink is the project she strongly wanted and pursued with all her heart and soul.",
+        "description": "The creator and beating heart of the Feminink project.",
         "noway": [
           "Delfines en el tobillo",
           "Estrellitas"
@@ -490,6 +490,15 @@
       "id": 12
     },
     {
+      "artist": "Laura O",
+      "name": "Rosalia",
+      "email": "lauraO@mail.com",
+      "date": "2023-04-14",
+      "description": "Hola rosalia soy laura",
+      "isUser": true,
+      "id": 13
+    },
+    {
       "artist": "Miriam F",
       "name": "Rosalía",
       "email": "miriamfr@mail.com",
@@ -567,9 +576,111 @@
       "birthday": "1992-09-25",
       "code": [],
       "id": 13
+    },
+    {
+      "email": "gustavino@frufru.it",
+      "password": "$2a$10$MYKtKu3JZ9yXJt3KEC.DCOP9MuYM3iC7IqXdGwjfdH48rKl7zPvwK",
+      "name": "Gustavino",
+      "surname": "FruFru",
+      "birthday": "2023-04-23",
+      "id": 14
+    },
+    {
+      "email": "gustavo@frufru.it",
+      "password": "$2a$10$YmTxhyQZ37jkgG9Y/v8cme7cH/AuvP4JS.paIvZ2xxVWQ.7v33H.C",
+      "name": "Gustavo",
+      "surname": "FruFru",
+      "birthday": "2023-04-20",
+      "id": 15
+    },
+    {
+      "email": "gustav@fru.it",
+      "password": "$2a$10$hTjGvSvsNOa/mtwQUwkIZ.iIYmVZ5Znusv51J6ldsyluhq7gO.ku2",
+      "name": "Gustav",
+      "surname": "Fru",
+      "birthday": "2023-04-13",
+      "id": 16
+    },
+    {
+      "email": "gust@fru.it",
+      "password": "$2a$10$iHIpPk.QAoHxEI.4sS5JOu0NX6zH.Gw/Qlg40M7ws.Gwj6Kxl/67y",
+      "name": "Gustav",
+      "surname": "Fru",
+      "birthday": "2023-04-27",
+      "id": 17
+    },
+    {
+      "email": "laurao@mail.com",
+      "password": "$2a$10$HT0zKpE8McBP12HgFnidD.b1AV6iiIQgCIM5NZJhT8K1p42n3rJ2e",
+      "name": "Lau",
+      "surname": "jkefnkejn",
+      "birthday": "2023-04-27",
+      "id": 18
+    },
+    {
+      "email": "laura.origa@bootcamp-upgrade.com",
+      "password": "$2a$10$HENaxsEQlbCqa6SDQBjMr.Q8fWSartVJUrBwbLfa77hHkP9M1XNqS",
+      "name": "Laura",
+      "surname": "ndfkjneknf",
+      "birthday": "2023-04-22",
+      "id": 19
+    },
+    {
+      "email": "gusto@frufru.com",
+      "password": "$2a$10$TG1LAK3J17tCfOVRLShtP../yZ7UQlyWivO1tNgGmy0SK3c0SYPOC",
+      "name": "Gusto",
+      "surname": "Giusti",
+      "birthday": "2023-03-28",
+      "id": 20
+    },
+    {
+      "email": "dhbajbhf@mail.com",
+      "password": "$2a$10$GOGtwyx7CaCikafYGVu9x.QQDkEBeUNH.wFHHUxKplxGilvyMW.UK",
+      "name": "fjhkejnkf",
+      "surname": "fjkebjk",
+      "birthday": "2023-04-12",
+      "id": 21
+    },
+    {
+      "email": "bsldnk@mail.com",
+      "password": "$2a$10$yF0qHdXyHj3IQpTtcFbIbu1M5mJ.4K/9irrpG6opnxtuIV6hnnCcy",
+      "name": "Blabla",
+      "surname": "fkjsnfk",
+      "birthday": "2023-04-14",
+      "id": 22
+    },
+    {
+      "email": "jfnddkjnf@mail.com",
+      "password": "$2a$10$IDYS/EquO929BQpwdwwaiOOo4FgAszHNPWccBEzmN55d0Rw4p4tD6",
+      "name": "Gustav",
+      "surname": "Fru",
+      "birthday": "2023-04-15",
+      "id": 23
+    },
+    {
+      "email": "dnjdfnkjs@mail.com",
+      "password": "$2a$10$Sl5CJewdneK.H2jp3YAzKeMtgkKiX8pay75Oc2sJt1XSVw9RWOdMK",
+      "name": "lkfdakl",
+      "surname": "sldknkjdn",
+      "birthday": "2023-04-21",
+      "id": 24
+    },
+    {
+      "email": "jnjkf@mail.com",
+      "password": "$2a$10$u9IT/juah2jyGrRKcv2Arus8s6bVmMWR7QxzYXkn956Sw0HSVNA1e",
+      "name": "fjnekjfn",
+      "surname": "fnfkjenf",
+      "birthday": "2023-04-14",
+      "id": 25
+    },
+    {
+      "email": "jfefqk@mail.com",
+      "password": "$2a$10$nxCO.37HKsBhLF5G7LM89eBBGiNvWfIQMelDR5iYr4oRFDF8r.oLe",
+      "name": "fejnf",
+      "surname": "jfebjfb",
+      "birthday": "2023-04-08",
+      "id": 26
     }
   ],
-  "discounts": [
-
-  ]
+  "discounts": []
 }

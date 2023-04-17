@@ -21,8 +21,6 @@ const RegistrationComponent = () => {
   const dispatch = useDispatch();
   const [play] = useSound(click);
 
-
-
   const validate = (values) => {
     const errors = {
       name: "",
@@ -106,17 +104,20 @@ const RegistrationComponent = () => {
           password: formik.values.password,
         })
       );
-      swal("Success!", "Your account is now registered", "success");
-      // formik.resetForm();
+      swal("Success!", "Your account is now registered", "success").then(
+        function () {
+          window.location = "/login";
+        }
+      );
     } else {
-      swal("Something went wrong", "Check the errors and try again", "error");
+      return swal(
+        "Something went wrong",
+        "Check the errors and try again",
+        "error"
+      );
     }
   };
-  if (!user && user.id) {
-    return <Navigate to="/login" replace></Navigate>;
-  }else{
-    <Navigate to="/login" replace></Navigate>;
-  }
+
   return (
     <section className="section__signup section">
       <form
