@@ -490,15 +490,6 @@
       "id": 12
     },
     {
-      "artist": "Laura O",
-      "name": "Rosalia",
-      "email": "lauraO@mail.com",
-      "date": "2023-04-14",
-      "description": "Hola rosalia soy laura",
-      "isUser": true,
-      "id": 13
-    },
-    {
       "artist": "Miriam F",
       "name": "Rosalía",
       "email": "miriamfr@mail.com",
@@ -579,6 +570,6 @@
     }
   ],
   "discounts": [
-    
+
   ]
 }
