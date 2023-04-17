@@ -113,7 +113,7 @@ const ContactComponent = () => {
   }
 
   return (
-    <section className="section__contact-profile section">
+    <section id="contact" className="section__contact-profile section">
       <form onSubmit={formik.handleSubmit} className="form" noValidate>
         <header className="form__title h2">
           <h2>Reach out to the customer</h2>

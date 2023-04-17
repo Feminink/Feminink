@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 15em;
+    // display:flex;
 }
 .notfound__content {
     h1 {
@@ -26,6 +27,7 @@
     margin: 0 auto;
     justify-content: space-between;
     border-radius: 1em;
+    align-items: center;
 }
 
 .notfound__button {
