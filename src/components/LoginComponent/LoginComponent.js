@@ -89,7 +89,7 @@ const LoginComponent = () => {
           noValidate
         >
           <header>
-            <h2 className="form__title h2">Iniciar sesión</h2>
+            <h2 className="form__title h2">Login</h2>
             <img src={logo} className="footer__logo img" alt="logo" />
           </header>
           <div className="form__container">
