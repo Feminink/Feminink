@@ -72,6 +72,7 @@
     background-color: transparent;
     font-size: 1.5rem;
     cursor: pointer;
+
 }
   
 .details-content.collapsed {
@@ -83,17 +84,20 @@
 .details-content.expanded {
     max-height: 100vh;
     transition: max-height 0.5s ease-in;
+    text-align: justify;
 }
 
 .details__bio {
     font-family: 'Montserrat', sans-serif;
 }
 .section__about{
-    display:flex;
+    display: flex;
+    flex-direction: column;
     text-align: justify;
     padding: 1%;
     margin-top: 2%;
     background-color: rgba(248, 202, 96, 0.713);
+    
 
 }
 .div__background{

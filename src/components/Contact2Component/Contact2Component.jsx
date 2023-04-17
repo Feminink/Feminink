@@ -17,43 +17,49 @@ import { useDispatch, useSelector } from "react-redux";
 import { useFormik } from "formik";
 
 // IMPORT LOGO
-import logo from '../../assets/images/footer-logo.svg';
+import logo from "../../assets/images/footer-logo.svg";
+
+// IMPORT USESOUND HOOK
+import useSound from "use-sound";
+import click from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
+import sent from "../../assets/sounds/COMCell_Messagesent.wav";
 
 const ContactComponent = () => {
-
-    const dispatch = useDispatch();
-    const {user} = useSelector((state)=> state.AuthReducer)
-    const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.AuthReducer);
+  const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
+  const [play] = useSound(click);
+  const [play2] = useSound(sent);
 
     useEffect(() => {
         dispatch(getInfo());
     }, []);
 
-    const sendForm = () => {
-        if (
-            formik.values.artist &&
-            formik.values.name &&
-            formik.values.email &&
-            formik.values.date &&
-            formik.values.description &&
-            formik.values.isUser
-        ) {
-        dispatch(
-            doContact2({
-                artist: formik.values.artist,
-                name: formik.values.name,
-                email: formik.values.email,
-                date: formik.values.date,
-                description: formik.values.description,
-                isUser: formik.values.isUser
-            })
-        );
-        swal("Hurray!", "Message sent successfully", "success");
-          formik.resetForm(); // Resetea los valores del formulario
-      } else {
-        swal("Woops:", "you must complete all the fields", "warning");
-      }
-    };
+  const sendForm = () => {
+    play();
+    if (
+      formik.values.artist &&
+      formik.values.name &&
+      formik.values.email &&
+      formik.values.date &&
+      formik.values.description
+    ) {
+      dispatch(
+        doContact2({
+          artist: formik.values.artist,
+          name: formik.values.name,
+          email: formik.values.email,
+          date: formik.values.date,
+          description: formik.values.description,
+        })
+      );
+      play2();
+      swal("Hurray!", "Message sent successfully", "success");
+      formik.resetForm(); // Resetea los valores del formulario
+    } else {
+      swal("Woops:", "you must complete all the fields", "warning");
+    }
+  };
 
     const validate = (values) => {
         const errors = {

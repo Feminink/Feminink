@@ -12,32 +12,14 @@ import { Link, Navigate } from "react-router-dom";
 import swal from "sweetalert";
 // IMPORT LOGO
 import logo from "../../assets/images/footer-logo.svg";
+// IMPORT USESOUND HOOK
+import useSound from "use-sound";
+import click from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
 
 const RegistrationComponent = () => {
+  const { user } = useSelector((state) => state.AuthReducer);
   const dispatch = useDispatch();
-
-  const sendRegistration = () => {
-    if (
-      formik.values.name &&
-      formik.values.surname &&
-      formik.values.birthday &&
-      formik.values.email &&
-      formik.values.password &&
-      formik.values.repassword
-    ) {
-    dispatch(
-      doRegistration({
-        name: formik.values.name,
-        surname: formik.values.surname,
-        birthday: formik.values.birthday,
-        email: formik.values.email,
-        password: formik.values.password,
-      })
-    );
-      swal("Success!", "Your account is now registered", "success");
-      formik.resetForm(); // RESET FORM
-    }
-  };
+  const [play] = useSound(click);
 
   const validate = (values) => {
     const errors = {
@@ -102,6 +84,34 @@ const RegistrationComponent = () => {
       alert(JSON.stringify(values, null, 2));
     },
   });
+
+  const sendRegistration = () => {
+    play();
+    if (
+      formik.values.name &&
+      formik.values.surname &&
+      formik.values.birthday &&
+      formik.values.email &&
+      formik.values.password &&
+      formik.values.repassword
+    ) {
+      dispatch(
+        doRegistration({
+          name: formik.values.name,
+          surname: formik.values.surname,
+          birthday: formik.values.birthday,
+          email: formik.values.email,
+          password: formik.values.password,
+        })
+      );
+      swal("Success!", "Your account is now registered", "success");
+    } else {
+      swal("Something went wrong", "Check the errors and try again", "error");
+    }
+  };
+  if (user && user.id) {
+    return <Navigate to="/login" replace></Navigate>;
+  }
   return (
     <section className="section__signup section">
       <form

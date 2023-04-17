@@ -8,8 +8,10 @@ import { useDispatch, useSelector } from "react-redux";
 // IMPORT LINK
 import { Link } from "react-router-dom";
 // IMPORT STYLES
-// IMPORT STYLES
 import "./GalleryComponent.scss";
+// IMPORT SIMPLEBAR
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 
 const GalleryComponent = () => {
   const dispatch = useDispatch();
@@ -19,6 +21,16 @@ const GalleryComponent = () => {
   const artists = ["Miriam F", "Laura O", "Ignacio E"];
   const [searchByStyle, setSearchByStyle] = useState("");
   const [checked, setChecked] = useState([]);
+
+  function checkFilter(ischecked, artist) {
+    let copy = [...checked];
+    if (ischecked) {
+      copy.push(artist);
+      setChecked(copy);
+    } else {
+      setChecked(copy.filter((x) => x !== artist));
+    }
+  }
 
   useEffect(() => {
     dispatch(getGallery());
@@ -62,9 +74,7 @@ const GalleryComponent = () => {
                         name={artist}
                         type="checkbox"
                         value={artist}
-                        onChange={(e) => {
-                          setChecked(e.target.value);
-                        }}
+                        onChange={(e) => checkFilter(e.target.checked, artist)}
                       />
                       {artist}
                     </label>
@@ -74,45 +84,48 @@ const GalleryComponent = () => {
             </fieldset>
           </form>
         </section>
-
-        <ul className="gallery__ul ul">
-          {gallery
-            .filter((gallerya) => {
-              return searchByStyle.toLowerCase() === ""
-                ? gallery
-                : gallerya.style.toLowerCase().startsWith(searchByStyle);
-            })
-            .filter((gallerya) => {
-              return checked.length > 0
-                ? gallerya.artist.includes(checked)
-                : gallery;
-            })
-            .map((gallerya) => {
-              return (
-                <li className="gallery__li li" key={gallerya.id}>
-                  <div className="image-container">
-                    <Link to={`/gallery/${gallerya.id}`}>
-                      <img src={gallerya.image} alt={gallerya.alt} />
-                      <div className="overlay">
-                        <div className="text">
-                          <h3>{gallerya.title}</h3>
-                          <p>
-                            <b>Artist:</b> {gallerya.artist}
-                          </p>
-                          <p>
-                            <b>Style:</b> {gallerya.style}
-                          </p>
-                        </div>
+        <SimpleBar style={{ maxHeight: 700, width: 1500 }}>
+          <div className="">
+            <ul className="gallery__ul ul">
+              {gallery
+                .filter((gallerya) => {
+                  return searchByStyle.toLowerCase() === ""
+                    ? gallery
+                    : gallerya.style.toLowerCase().startsWith(searchByStyle);
+                })
+                .filter((gallerya) => {
+                  return checked.length > 0
+                    ? checked.includes(gallerya.artist)
+                    : gallery;
+                })
+                .map((gallerya) => {
+                  return (
+                    <li className="gallery__li li" key={gallerya.id}>
+                      <div className="image-container">
+                        <Link to={`/gallery/${gallerya.id}`}>
+                          <img src={gallerya.image} alt={gallerya.alt} />
+                          <div className="overlay">
+                            <div className="text">
+                              <h3>{gallerya.title}</h3>
+                              <p>
+                                <b>Artist:</b> {gallerya.artist}
+                              </p>
+                              <p>
+                                <b>Style:</b> {gallerya.style}
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
                       </div>
-                    </Link>
-                  </div>
-                  <div className="gallery__details">
-                    <h5>Model: {gallerya.model}</h5>
-                  </div>
-                </li>
-              );
-            })}
-        </ul>
+                      <div className="gallery__details">
+                        <h5>Model: {gallerya.model}</h5>
+                      </div>
+                    </li>
+                  );
+                })}
+            </ul>
+          </div>
+        </SimpleBar>
       </div>
     </section>
   );

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import './QuestionComponent.scss';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import "./QuestionComponent.scss";
+import { Link } from "react-router-dom";
 //IMPORT HOOKS
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 //IMPORT GETINFO
 import { getInfo } from "../../store/info/actions";
 //IMPORT GIF
@@ -14,27 +14,25 @@ import body from '../../assets/images/body.webp'
 import {actionSaveCode} from '../../store/gallery/actions'
 import { saveCode } from '../../store/gallery/actions';
 //IMPORT QUESTIONS
-import Questions from './Questions';
+import Questions from "./Questions";
 
-const QuestionComponent = () => { 
-
+const QuestionComponent = () => {
   const { info, loadingInfo } = useSelector((state) => state.InfoReducer);
-  const {user} = useSelector((state)=> state.AuthReducer)
-  
-  
+  const { user } = useSelector((state) => state.AuthReducer);
+
   const dispatch = useDispatch();
   //ESTADO QUE CONTROLA EN QUË PREGUNTA ESTÄS
   const [questCurrent, setQuestCurrent] = useState(0);
   //ESTADO QUE CONTROLA LA PUNTUACIÖN
   const [score, setScore] = useState(0);
   //ESTADO QUE CONTROLA SI EL JUEGO HA TERMINADO
-  const [isFinished, setIsfinished] = useState(false)
+  const [isFinished, setIsfinished] = useState(false);
 
   //ESTADO PARA CODIGO ALEATORIO
-  const [code, setCode] = useState("")
+  const [code, setCode] = useState("");
 
-  //ESTADO PARA CONTROLAR SI CLICKED OR NOT 
-   const [isClicked, setIsClicked] = useState(false);
+  //ESTADO PARA CONTROLAR SI CLICKED OR NOT
+  const [isClicked, setIsClicked] = useState(false);
 
 
  //FUNCIÖN PARA CAMBIAR CLASE DEL BOTÖN DESPUËS DE HACER CLICK
@@ -51,13 +49,12 @@ function changeClass(){
     // dispatch(actionSaveCode(user.id));
     //  dispatch(saveCode({code:code, user: user.name, userId: user.id}));
   }, []);
- 
- 
 
-//FUNCIÖN PARA GENERAR EL COD DE DESCUENTO
+  //FUNCIÖN PARA GENERAR EL COD DE DESCUENTO
   function randomCode() {
-    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let code = '';
+    let characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let code = "";
     for (let i = 0; i < 6; i++) {
       code += characters.charAt(Math.floor(Math.random() * characters.length));
     }
@@ -73,24 +70,20 @@ function changeClass(){
     return code
   }
 
-  
-//FUNCIÖN QUE MANEJA SI HAS ACERTADO O NO LA PREGUNTA Y SI EL JUEGO HA TERMINADO O NO
-  function handleAnswer(isCorrect, e){
-    
-    if(isCorrect) setScore(score + 1);
+  //FUNCIÖN QUE MANEJA SI HAS ACERTADO O NO LA PREGUNTA Y SI EL JUEGO HA TERMINADO O NO
+  function handleAnswer(isCorrect, e) {
+    if (isCorrect) setScore(score + 1);
 
-     e.target.classList.add(isCorrect ? "correct" : "incorrect");
-     
-      // setQuestCurrent(questCurrent + 1)
-      setTimeout(()=>{
+    e.target.classList.add(isCorrect ? "correct" : "incorrect");
 
-    if (questCurrent === Questions.length - 1){
-          setIsfinished(true)
-        }else{ 
-          setQuestCurrent(questCurrent + 1)
-        }
-         
-      }, 1000); 
+    // setQuestCurrent(questCurrent + 1)
+    setTimeout(() => {
+      if (questCurrent === Questions.length - 1) {
+        setIsfinished(true);
+      } else {
+        setQuestCurrent(questCurrent + 1);
+      }
+    }, 1000);
   }
      
   
@@ -134,41 +127,46 @@ function changeClass(){
      </div>
   }
 
-
-  if(loadingInfo){
+  if (loadingInfo) {
     return (
       <div className="container">
-      <h2>Loading...</h2>
-    </div>
+        <h2>Loading...</h2>
+      </div>
     );
   }
- 
-  return (<div className="div__question__wrapper">
-  <div className='div__question__wrapper__quiz'> 
-     <h1>Resuelve nuestro quiz!</h1>
-  </div>
-  
-<div className='questions'>
 
+  return (
+    <div className="div__question__wrapper">
+      <div className="div__question__wrapper__quiz">
+        <h1>Solve our quiz on the first try and get your discount code!</h1>
+      </div>
 
-  <div className='questions__numbers'>
-    <h3 className='questions__numbers__h3'> Question {questCurrent + 1} of {Questions.length }</h3> 
-  </div>
-  <div className='left__side__number__question__title'>
-    <h2 className='number__question'>{Questions[questCurrent].question} </h2> 
-
-  </div>
-</div>
-<div className='response__right'>
-{Questions[questCurrent].options.map((option)=> ( 
-  <button key={option.response} onClick={(e)=>handleAnswer(option.isCorrect, e)} className='quiz__button'>{option.response}</button>
-
-))}
-</div>
-
-
-
-  </div>)
+      <div className="questions">
+        <div className="questions__numbers">
+          <h3 className="questions__numbers__h3">
+            {" "}
+            Question {questCurrent + 1} of {Questions.length}
+          </h3>
+        </div>
+        <div className="left__side__number__question__title">
+          <h2 className="number__question">
+            {Questions[questCurrent].question}{" "}
+          </h2>
+        </div>
+      </div>
+      <div className="response__right">
+        {Questions[questCurrent].options.map((option) => (
+          <button
+            key={option.response}
+            onClick={(e) => handleAnswer(option.isCorrect, e)}
+            className="quiz__button"
+          >
+            {option.response}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 QuestionComponent.propTypes = {};

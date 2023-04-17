@@ -26,6 +26,7 @@
     "simplebar-react": "^3.2.4",
     "sweetalert": "^2.1.2",
     "swiper": "^9.2.0",
+    "use-sound": "^4.0.1",
     "web-vitals": "^2.1.4",
     "yup": "^1.0.2"
   },

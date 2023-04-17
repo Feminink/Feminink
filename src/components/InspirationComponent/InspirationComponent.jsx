@@ -57,20 +57,20 @@ const InspirationComponent = () => {
                       <div className="text">
                         <h3>{woman.name}</h3>
                         <p>
-                          <b>Lugar:</b> {woman.city}
+                          <b>Where:</b> {woman.city}
                         </p>
                         <p>
-                          <b>Año:</b> {woman.date}
+                          <b>Year:</b> {woman.date}
                         </p>
                         <p>
-                          <b>Estilo:</b> {woman.style_tattoo.join(", ")}
+                          <b>Style:</b> {woman.style_tattoo.join(", ")}
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="inspiration__details">
                     <div className="button__container">
-                      <span className="details__bio span">Leer bio</span>
+                      <span className="details__bio span">Read bio</span>
                       <button
                         onClick={() => toggleAccordion(woman.id)}
                         className="details-button"
@@ -106,6 +106,7 @@ const InspirationComponent = () => {
       </section>
       <section className="section__about">
         <h2> {info && info.about && info.about.text}</h2>
+        <h2> {info && info.about && info.about.text && info.about.text1}</h2>
       </section>
     </>
   );
