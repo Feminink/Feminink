@@ -548,6 +548,22 @@
       "artist": "Miriam F",
       "color": "#281f1f",
       "id": 8
+    },
+    {
+      "name": "Lau",
+      "email": "laurao@mail.com",
+      "description": "huhkjkjkhjknnj",
+      "artist": "Laura O",
+      "color": "#c14949",
+      "id": 9
+    },
+    {
+      "name": "Blabla",
+      "email": "laura.origa@gmail.com",
+      "description": "kjfdkjfnekjnfe",
+      "artist": "Laura O",
+      "color": "#b45555",
+      "id": 10
     }
   ],
   "users": [
@@ -558,11 +574,11 @@
       "surname": "Fraga",
       "color": "#baf1e5",
       "birthday": "1999-12-30",
-      "bio": "Miriam es una tatuadora joven de Cádiz que se ha ganado un gran reconocimiento por su trabajo innovador y su activismo feminista. Sus tatuajes son conocidos por su significado profundo y su estilo único. Se ha convertido en una inspiración para muchas mujeres de la ciudad que buscan empoderarse y ser asertivas. Miriam lucha por la igualdad de género y defiende la libertad de expresión a través de sus tatuajes. Es una artista talentosa y una verdadera fuerza a tener en cuenta.",
+      "bio": "Miriam is a young tattoo artist from Cádiz who has gained recognition for her innovative work and feminist activism. Her tattoos are known for their deep meaning and unique style. She has become an inspiration for many women in the city who are looking to empower themselves and be assertive. Miriam fights for gender equality and advocates for freedom of expression through her tattoos. She is a talented artist and a true force to be reckoned with.",
       "skills": [
-        "Realismo",
+        "Realism",
         "Floral",
-        "Japonés tradicional"
+        "Japanese traditional"
       ],
       "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
       "isAdmin": true,
@@ -575,9 +591,9 @@
       "surname": "Erviti",
       "color": "#f66977f8;",
       "birthday": "1988-02-15",
-      "bio": "Ignacio es un joven tatuador que lleva más de cinco años trabajando en el puerto de Santa María. Desde el principio, ha tenido un gran talento para el arte del tatuaje, convirtiéndose en uno de los mejores tatuadores de la ciudad.  Ignacio es conocido por su creatividad y sus habilidades técnicas, y ha creado algunos de los tatuajes más impresionantes de la ciudad. Siempre está dispuesto a escuchar las ideas de sus clientes y a ayudarlos a crear el tatuaje perfecto.",
+      "bio": "Ignacio is a young tattoo artist who has been working in the port of Santa Maria for more than five years. From the beginning, he has had a great talent for the art of tattooing, becoming one of the best tattoo artists in town. Ignacio is known for his creativity and technical skills, and has created some of the most impressive tattoos in town. He is always willing to listen to his clients' ideas and help them create the perfect tattoo.",
       "skills": [
-        "Tradicional",
+        "Traditional",
         "Old school",
         "Borneo"
       ],
@@ -592,9 +608,9 @@
       "surname": "Origa",
       "color": "#3FB190",
       "birthday": "1993-01-06",
-      "bio": "Laura, proviene de la hermosa isla de Cerdeña. Creció entre la hermosa vida y la magia de esta isla, que ahora influye en su trabajo.  Laura siempre tuvo un interés en el arte y decidió convertirse en tatuadora. Se entrenó con maestros tatuadores reconocidos y desarrolló un estilo único combinando la tradicional técnica de tatuar con la búsqueda de la belleza de Cerdeña.  Como tatuadora, Laura se esfuerza por producir obras de arte de calidad, que reflejan su pasión por el arte y su anhelo de capturar la belleza de la naturaleza. Crea hermosos diseños que abarcan desde motivos tradicionales hasta diseños más modernos.",
+      "bio": "Laura, comes from the beautiful island of Sardinia. She grew up among the beautiful life and magic of this island, which now influences her work.  Laura always had an interest in art and decided to become a tattoo artist. She trained with renowned tattoo masters and developed a unique style combining the traditional tattoo technique with the search for the beauty of Sardinia. As a tattoo artist, Laura strives to produce quality works of art, which reflect her passion for art and her yearning to capture the beauty of nature. She creates beautiful designs ranging from traditional motifs to more modern designs.",
       "skills": [
-        "Acuarela",
+        "Watercolor",
         "Blackwork",
         "Dotwork"
       ],
