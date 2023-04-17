@@ -13,27 +13,28 @@
 .notfound__content {
     h1 {
         color: white;
-        font-size: 7em;
+        font-size: 5em;
         // margin: 0;
         // background-color: pink;
     }
     h2 {
         color: white;
-        font-size: 3em;
+        font-size: 2em;
     }
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: fit-content;
+    height: 30em;
     width: 80em;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border-radius: 1em;
 }
 
 .notfound__button {
     width: 15em;
     color: white;
+    padding: 2%;
     &:hover {
         transform: scale(1.06);
 
