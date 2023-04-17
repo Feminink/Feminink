@@ -15,7 +15,7 @@ const NotFoundComponent = () => {
       <div className="notfound__content">
         <h1>Woops!</h1>
         <h2>Looks like we run out of ink...</h2>
-        <Link to="/">
+         <Link to="/">
    <button onClick={play} className="form__submit notfound__button container">
      Back to the Homepage
    </button>
