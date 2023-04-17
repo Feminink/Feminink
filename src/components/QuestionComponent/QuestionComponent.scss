@@ -6,6 +6,10 @@
     margin: 0 auto;
     width: 90%;
     padding: 5%;
+    &__section{
+        display:flex;
+         flex-direction: column;
+    }
     &__quiz{
         text-align: center;
     }
@@ -20,40 +24,43 @@
     
     
 }
-.questions__numbers{
-    padding: 1%;
+.questions{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    &__numbers{
+        //  padding: 1%;
+         margin-bottom: 1%;
+         color:rgba(39, 38, 37, 0.88);
+        
+    }
 }
+
+
+
 .number__question{
   display: flex;
   margin-bottom: 1%;
   justify-content: center;
-  background-color: rgb(63, 61, 61);
+  background-color: rgb(42, 42, 39);
+  border-radius: 20px;
   padding: 2%;
+  color: whitesmoke;
   align-items: center;
   box-shadow: 0  6px 6px rgba(182, 181, 177, 0.989);
   &:hover{
      scale: 1.5;
-     position: relative; 
+     position: relative;
      left: 10%;
      top: 20%;
      width: 80%;
-     background-color: rgb(57, 57, 55);
-     color: rgba(248, 178, 27, 0.88);
-     height: 85%;
+     color: rgba(43, 42, 41, 0.88);
+     background-color: #cececa;
   }
 
   &__h3{
     text-align: center;
   }
-}
-.questions{
- display:flex;
- flex-direction: column;
- margin-top: 1%;
- text-align: center;
- width: 80%;
-
-
 }
 .response__right{
     flex-direction: column;
@@ -67,8 +74,9 @@
     
 }
 .quiz__button{
-    color:black;
+    color: white;
     font-weight: 400;
+    background-color: #2b2b29;
     width: 90%;
     height: 70px;
     padding: 2%;
@@ -78,7 +86,8 @@
     margin-top: 1%;
     cursor: pointer;
     &:hover {
-        background-color: #fde692;
+         background-color: #494947;
+         opacity: 0.8;
     }
 }
 .correct{
@@ -103,10 +112,10 @@
 .quiz{
      display: flex;
      justify-content: center;
-     color: rgb(235, 230, 240);
-     background-color: rgb(50, 48, 48);
-     margin: 0 auto;
-     justify-content: center;
+    //  color: rgb(235, 230, 240);
+     background-color: rgba(250, 198, 67, 0.756);
+    margin: 0 auto;
+    justify-content: center;
    
    
 }
@@ -119,7 +128,6 @@
 }
 .points1{
     display: flex;
-    //  padding: 20%;
     height: 500px;
     align-items: center;
     flex-direction: column;
@@ -131,6 +139,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+   
+   
 
 }
 .points3{
@@ -184,7 +194,7 @@ mix-blend-mode: difference;
 }
 .link__score{
     text-decoration: none;
-    color: white;
+    color: black;
     margin-bottom: 2%;
     
 }
