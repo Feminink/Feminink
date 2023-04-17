@@ -91,7 +91,7 @@ function changeClass(){
      
    if (isFinished && score === 0){
   return <div className='div__score'> 
-               <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}  </h2>
+               <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {Questions.length}  </h2>
                <h2 className="points__h2"> Ups... </h2>
                <Link className='link__score' to="/profile">Go back </Link>
             </div>
