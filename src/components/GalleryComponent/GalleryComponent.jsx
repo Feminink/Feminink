@@ -81,45 +81,45 @@ const GalleryComponent = () => {
             </fieldset>
           </form>
         </section>
-            <ul className="gallery__ul ul">
-              {gallery
-                .filter((gallerya) => {
-                  return searchByStyle.toLowerCase() === ""
-                    ? gallery
-                    : gallerya.style.toLowerCase().startsWith(searchByStyle);
-                })
-                .filter((gallerya) => {
-                  return checked.length > 0
-                    ? checked.includes(gallerya.artist)
-                    : gallery;
-                })
-                .map((gallerya) => {
-                  return (
-                    <li className="gallery__li li" key={gallerya.id}>
-                      <div className="image-container">
-                        <Link to={`/gallery/${gallerya.id}`}>
-                          <img src={gallerya.image} alt={gallerya.alt} />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>{gallerya.title}</h3>
-                              <p>
-                                <b>Artist:</b> {gallerya.artist}
-                              </p>
-                              <p>
-                                <b>Style:</b> {gallerya.style}
-                              </p>
-                            </div>
-                          </div>
-                        </Link>
+        <ul className="gallery__ul ul">
+          {gallery
+            .filter((gallerya) => {
+              return searchByStyle.toLowerCase() === ""
+                ? gallery
+                : gallerya.style.toLowerCase().startsWith(searchByStyle);
+            })
+            .filter((gallerya) => {
+              return checked.length > 0
+                ? checked.includes(gallerya.artist)
+                : gallery;
+            })
+            .map((gallerya) => {
+              return (
+                <li className="gallery__li li" key={gallerya.id}>
+                  <div className="image-container">
+                    <Link to={`/gallery/${gallerya.id}`}>
+                      <img src={gallerya.image} alt={gallerya.alt} />
+                      <div className="overlay">
+                        <div className="text">
+                          <h3>{gallerya.title}</h3>
+                          <p>
+                            <b>Artist:</b> {gallerya.artist}
+                          </p>
+                          <p>
+                            <b>Style:</b> {gallerya.style}
+                          </p>
+                        </div>
                       </div>
-                      <div className="gallery__details">
-                        <h5>Model: {gallerya.model}</h5>
-                      </div>
-                    </li>
-                  );
-                })}
-            </ul>
-          </div>
+                    </Link>
+                  </div>
+                  <div className="gallery__details">
+                    <h5>Model: {gallerya.model}</h5>
+                  </div>
+                </li>
+              );
+            })}
+        </ul>
+      </div>
     </section>
   );
 };

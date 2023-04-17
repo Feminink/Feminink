@@ -122,7 +122,7 @@ const RegistrationComponent = () => {
     <section className="section__signup section">
       <form
         id="registrationForm"
-        className="form flex"
+        className="form"
         onSubmit={formik.handleSubmit}
         noValidate
       >
