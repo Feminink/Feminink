@@ -135,7 +135,8 @@
       }
     ],
     "about": {
-      "text": "Here at FeminInk we want to rescue and highlight a piece of history that rarely comes to light, precisely because it corresponds to women. If today we have a place in tattoo studios, we owe it in part to women who dared to defy the norm in which they only had space to be seen in freakshows for having their whole body tattooed. The leap of these women, two centuries ago into a masculinised and unknown space, will be the gateway for many others who will gradually crack some of the gender norms associated not only with women's aesthetics, but also with their freedom of expression. Thank you for being our referents."
+      "text": "Here at FeminInk we want to rescue and highlight a piece of history that rarely comes to light, precisely because it corresponds to women. If today we have a place in tattoo studios, we owe it in part to women who dared to defy the norm in which they only had space to be seen in freakshows for having their whole body tattooed. The leap of these women, two centuries ago into a masculinised and unknown space, will be the gateway for many others who will gradually crack some of the gender norms associated not only with women's aesthetics, but also with their freedom of expression.",
+      "text1": "Thank you for being our referents."
     },
     "admins": [
       {
@@ -155,7 +156,7 @@
       {
         "id": 2,
         "name": "Ignacio E",
-        "aka": "The Stylist",
+        "aka": "The Styler",
         "password": "randompwd1",
         "place": "Puerto de Sta María",
         "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
