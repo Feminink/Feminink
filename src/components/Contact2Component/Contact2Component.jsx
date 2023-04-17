@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import "./Contact2Component.scss";
-
 import { getInfo } from "../../store/info/actions";
+import  './Contact2Component.scss';
 
 // IMPORT SWEET ALERT LIBRARY
 import swal from "sweetalert";
@@ -35,7 +35,8 @@ const ContactComponent = () => {
             formik.values.name &&
             formik.values.email &&
             formik.values.date &&
-            formik.values.description
+            formik.values.description &&
+            formik.values.isUser
         ) {
         dispatch(
             doContact2({
@@ -44,6 +45,7 @@ const ContactComponent = () => {
                 email: formik.values.email,
                 date: formik.values.date,
                 description: formik.values.description,
+                isUser: formik.values.isUser
             })
         );
         swal("Hurray!", "Message sent successfully", "success");
@@ -59,7 +61,8 @@ const ContactComponent = () => {
             name: "",
             email: "",
             date: "",
-            description: ""
+            description: "",
+            isUser: true
         };
         // ERROR NAME
         if (!values.name) {
@@ -91,6 +94,7 @@ const ContactComponent = () => {
             email: user.email,
             date: "",
             description: "",
+            isUser: true
         },
         validate,
         onSubmit: (values) => {
@@ -103,7 +107,7 @@ const ContactComponent = () => {
     }
 
     return (
-    <section className='section__contact section'>
+    <section className='section__contact-profile section'>
         <form onSubmit={formik.handleSubmit} className='form' noValidate> 
             <header className='form__title h2'> 
                 <h2>Contacta con clientes</h2>
@@ -125,7 +129,7 @@ const ContactComponent = () => {
                             );
                         })}
                     </select>
-                    <label className="form__label">Artista</label>
+                    <label className="form__label">Artist</label>
                     <span className="form__line"></span>
                 </div>
                 <div className="form__group">
@@ -141,7 +145,7 @@ const ContactComponent = () => {
                     {formik.touched.name && formik.errors.name ? (
                         <div className="error">{formik.errors.name}</div>
                     ) : null}
-                    <label className='form__label'>Nombre del cliente </label>
+                    <label className='form__label'>Client name </label>
                     <span className='form__line'></span>
                 </div>
                 <div className="form__group">
@@ -175,7 +179,7 @@ const ContactComponent = () => {
                     {formik.touched.date && formik.errors.date ? (
                     <div className="error">{formik.errors.date}</div>
                     ) : null}
-                    <label className="form__label">Día de la cita</label>
+                    <label className="form__label">Appointment date</label>
                     <span className='form__line'></span>
                 </div>
                 <div className="form__group">
@@ -191,10 +195,10 @@ const ContactComponent = () => {
                     {formik.touched.description && formik.errors.description ? (
                     <div className="error">{formik.errors.description}</div>
                     ) : null}
-                    <label className='form__label'>Descripción del mensaje</label>
+                    <label className='form__label'>Message description</label>
                     <span className='form__line'></span>
                 </div>
-                <button className="form__submit" form="contactForm" onClick={sendForm}>Enviar</button>
+                <button className="form__submit" form="contactForm" onClick={sendForm}>Send</button>
             </div>
         </form>
     </section>

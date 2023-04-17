@@ -20,8 +20,6 @@ import {
   GET_DISCOUNT_OK, 
   GET_DISCOUNT_FAIL
   
-
-  
 } from "./actionTypes";
 
 const backContact = "http://localhost:3000/contact";
@@ -34,12 +32,14 @@ export function actionDoContact(contactForm) {
     payload: contactForm,
   };
 }
+
 export function actionDoContactOk(mail) {
   return {
     type: DO_CONTACT_OK,
     payload: mail,
   };
 }
+
 export function actionDoContactFail(error) {
   return {
     type: DO_CONTACT_FAIL,
@@ -67,12 +67,14 @@ export function actionDoContact2(contactForm2) {
     payload: contactForm2,
   };
 }
+
 export function actionDoContact2Ok(mail2) {
   return {
     type: DO_CONTACT_2_OK,
     payload: mail2,
   };
 }
+
 export function actionDoContact2Fail(error2) {
   return {
     type: DO_CONTACT_2_FAIL,
@@ -98,12 +100,14 @@ export function actionGetMessages() {
     type: GET_MESSAGES,
   };
 }
+
 export function actionGetMessagesOk(messages) {
   return {
     type: GET_MESSAGES_OK,
     payload: messages,
   };
 }
+
 export function actionGetMessagesFail(error) {
   return {
     type: GET_MESSAGES_FAIL,
@@ -129,12 +133,14 @@ export function actionGetSingleMessage(messageId) {
     payload: messageId,
   };
 }
+
 export function actionGetSingleMessageOk(message) {
   return {
     type: GET_SINGLE_MESSAGE_OK,
     payload: message,
   };
 }
+
 export function actionGetSingleMessageFail(error) {
   return {
     type: GET_SINGLE_MESSAGE_FAIL,
@@ -161,21 +167,20 @@ export function actionDeleteMessage(messageId) {
     payload: messageId,
   };
 }
+
 export function actionDeleteMessageOk(message) {
   return {
     type: DELETE_MESSAGE_OK,
     payload: message,
   };
 }
+
 export function actionDeleteMessageFail(error) {
   return {
     type: DELETE_MESSAGE_FAIL,
     payload: error,
   };
 }
-
-
-
 
 export function deleteMessage(messageId) {
   return async (dispatch) => {
@@ -188,6 +193,7 @@ export function deleteMessage(messageId) {
       dispatch(actionDeleteMessageFail(error));
     }
   };
+
 
 }
 
@@ -224,4 +230,6 @@ export function getDiscount(){
       dispatch(actionGetDiscountFail(error));
     }
   }
+
+
 }

@@ -9,7 +9,6 @@ import "./Message.scss";
 
 const Message = () => {
   const dispatch = useDispatch();
-
   const params = useParams();
   
   useEffect(()=>{
