@@ -135,6 +135,17 @@
     }
 }
 
+.section__discount{
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(250, 192, 84);
+    &__div{
+        display:flex;
+        justify-content: center;
+
+    }
+}
+
 @keyframes bounce {
     20% {
       transform: translateY(-10px);

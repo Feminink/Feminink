@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import  './ProfileComponent.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import {getMessages} from '../../store/Tattoo/actions'
+import {getDiscount, getMessages} from '../../store/Tattoo/actions'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -13,22 +13,28 @@ import { Link } from 'react-router-dom';
 import avatar from '../../assets/images/avatar.png';
 
 import Contact2Component from "../../components/Contact2Component/Contact2Component";
+// import { getInfo } from '../../store/info/actions';
 
 const ProfileComponent = () => {
  
-  const {user} = useSelector((state)=> state.AuthReducer)
-  const code = localStorage.getItem("_code", user);
+  const {user} = useSelector((state)=> state.AuthReducer);
 
-  const {messages, loadingMessages} = useSelector((state)=>state.TattooReducer);
-  const dispatch = useDispatch()
+  // const code = localStorage.getItem("_code", user);
+
+  //REDUCER DE TATTOO
+  const {messages, loadingMessages, loadingDiscount, discount} = useSelector((state)=>state.TattooReducer);
+  
+  
+  const dispatch = useDispatch();
    
   useEffect(() => {
     dispatch(getMessages());
+    dispatch(getDiscount());
   },[]);
 
   // let counter = [];
  
-  if(loadingMessages) {
+  if(loadingMessages && loadingDiscount) {
     return (
       <div className="container">
         <h2>Loading...</h2>
@@ -53,8 +59,12 @@ const ProfileComponent = () => {
             <p>{user.name} {user.surname}</p>
             <h3 className=''>Email: </h3>
             <p>{user.email}</p>
-            <h3>Code: </h3>
-            <p>{code}</p>
+
+            {/* //TERNARIO PARA MOSTRAR SI TIENES UN CODE O NO LO TIENES */}
+            {/* <h2>{code}</h2> */}
+
+          
+
             <h3 className=''>Birthday: </h3>
             <p>{user.birthday}</p>
             {user && user.isAdmin ? (
@@ -108,11 +118,36 @@ const ProfileComponent = () => {
           </div>
         </div>
     </section>
+
+   
+    <section className='section__discount'>
+       <div className='section__discount__div'> 
+     {discount && discount.map((disc) => {
+      
+      if( disc.userId === user.id){
+        return (
+          <div key={disc.code}> 
+              <h2 >Discount code: {disc.code}</h2>
+           
+          </div>
+          
+          
+        )
+      }else{
+        return null
+      }
+     })}
+     
+       </div>
+     </section>
+  
+  
     {user && user.isAdmin ? (
       <section className='section__send-date'>
         <Contact2Component></Contact2Component>
       </section>
     ) : ("")}
+
     </>
   )}
 };
