@@ -5,8 +5,6 @@
         flex-wrap: wrap;
         gap: 2em;
         width: 80%;
-        width: 80%;
-
   
         .gallery__li {
             display: block;
@@ -87,38 +85,6 @@
     gap: 2em;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-    .gallery__li {
-        width: calc(100%);
-    }
-
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-    .gallery__li {
-        width: calc(50% - 1em);
-    }
-
-}
-
 .filters-container {
     background-color: rgba(248, 202, 96, 0.8);
     font-family: "Montserrat", sans-serif;
@@ -135,7 +101,6 @@
   
     }
 }
-
 
 input[type=checkbox] {
     position: relative;
@@ -166,4 +131,90 @@ input[type=checkbox]:checked:after {
     position: absolute;
     top: 2px;
     left: 6px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .gallery__li {
+        width: calc(100%);
+    }
+
+    .flex {
+        display: flex;
+        gap: 2em;
+        flex-direction: column;
+    }
+
+    .filters-container {
+        background-color: rgba(248, 202, 96, 0.8);
+        font-family: "Montserrat", sans-serif;
+        flex-direction: column;
+        width: 100%;
+        height: -moz-fit-content;
+        height: fit-content;
+        border: 1px dotted black;
+    }
+
+    .gallery__ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2em;
+        width: 100%;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+    .gallery__li {
+        width: calc(100%);
+    }
+
+    .flex {
+        display: flex;
+        gap: 2em;
+        flex-direction: row;
+    }
+
+    .filters-container {
+        background-color: rgba(248, 202, 96, 0.8);
+        font-family: "Montserrat", sans-serif;
+        flex-direction: column;
+        width: 20%;
+        height: -moz-fit-content;
+        height: fit-content;
+        border: 1px dotted black;
+    }
+
+    .gallery__ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2em;
+        width: 100%;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .gallery__li {
+        width: calc(50% - 1em);
+    }
+
 }

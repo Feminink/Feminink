@@ -67,18 +67,127 @@
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+
+    .footer {
+
+        text-align: center;
+
+        &__nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2em;
+        }
+    
+        &-nav__column {
+            width: calc(100%);
+        }
+
+        &__info-nav {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 2em;
+        }
+    }
+
+    .legal {
+
+        &-nav__ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+    }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+
+    .footer {
+
+        text-align: center;
+
+        &__nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1em;
+        }
+    
+        &-nav__column {
+            width: calc(100%);
+        }
+
+        &__info-nav {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 2em;
+        }
+    }
+
+    .legal {
+
+        &-nav__ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+    }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+    .footer {
+
+        text-align: left;
+
+        &__nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1em;
+        }
+    
+        &-nav__column {
+            width: calc(25% - 1em);
+        }
+
+        &__info-nav {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .legal {
+
+        &-nav__ul {
+            display: flex;
+            flex-direction: row;
+            gap: 1em;
+        }
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+
+    .footer {
+        
+        &__nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 1em;
+        }
+    
+        &-nav__column {
+            width: calc(25% - 1em);
+        }
+    }
+}
 
 /* -- END FOOTERCOMPONENT STYLES -- */

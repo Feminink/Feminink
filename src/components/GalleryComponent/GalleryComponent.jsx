@@ -9,9 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // IMPORT STYLES
 import "./GalleryComponent.scss";
-// IMPORT SIMPLEBAR
-import SimpleBar from "simplebar-react";
-import "simplebar-react/dist/simplebar.min.css";
 
 const GalleryComponent = () => {
   const dispatch = useDispatch();
@@ -84,8 +81,6 @@ const GalleryComponent = () => {
             </fieldset>
           </form>
         </section>
-        <SimpleBar style={{ maxHeight: 700, width: 1500 }}>
-          <div className="">
             <ul className="gallery__ul ul">
               {gallery
                 .filter((gallerya) => {
@@ -125,8 +120,6 @@ const GalleryComponent = () => {
                 })}
             </ul>
           </div>
-        </SimpleBar>
-      </div>
     </section>
   );
 };
