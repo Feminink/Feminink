@@ -73,15 +73,11 @@ function changeClass(){
     return code
   }
 
-  
 //FUNCIÖN QUE MANEJA SI HAS ACERTADO O NO LA PREGUNTA Y SI EL JUEGO HA TERMINADO O NO
   function handleAnswer(isCorrect, e){
     
     if(isCorrect) setScore(score + 1);
-
      e.target.classList.add(isCorrect ? "correct" : "incorrect");
-     
-      // setQuestCurrent(questCurrent + 1)
       setTimeout(()=>{
 
     if (questCurrent === Questions.length - 1){
@@ -93,44 +89,42 @@ function changeClass(){
       }, 1000); 
   }
      
-  
    if (isFinished && score === 0){
   return <div className='div__score'> 
-       <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}  </h2>
-             {/* <img className='gif' src={no} alt="no"></img> */}
-             <h2 className="points__h2"> Ups... </h2>
-             {/* <h2>NOT FOUND</h2> */}
-       <Link className='link__score' to="/profile">Go back </Link></div>
-  
-  </div>
+               <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}  </h2>
+               <h2 className="points__h2"> Ups... </h2>
+               <Link className='link__score' to="/profile">Go back </Link>
+            </div>
+         </div>
  
   } else if (isFinished && score === 1){
     return <div className='div__score'>
-            <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}</h2> 
-            <h2 className="points__h2"> Sigue así! </h2>
-                 {/* <img className='hello' src={hello} alt="no"></img> */}
-            <Link className='link__score' to="/profile">Go back </Link></div>
-         </div>
+                <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {Questions.length}</h2> 
+                <h2 className="points__h2"> Sigue así! </h2>
+                <Link className='link__score' to="/profile">Go back </Link>
+                </div>
+           </div>
   } else if (isFinished && score === 2){
 
    return <div className='div__score'> 
-              <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {info.quiz.length}  </h2> 
-             <h2 className='points__h2'>Wooow! Por poco! </h2>
-             <img className='body' src={body} alt="gif_feminism"></img>
-             <Link className='link__score' to="/profile">Go back </Link></div>
+               <div className={"points" + score}> <h2 className='points__h2'> Has acertado {score} de {Questions.length}  </h2> 
+               <h2 className='points__h2'>Wooow! Por poco! </h2>
+               <img className='body' src={body} alt="gif_feminism"></img>
+               <Link className='link__score' to="/profile">Go back </Link>
+               </div>
           </div>
 
   }else if(isFinished && score === 3  ){
     
     return <div className='div__score'> 
-    <div  className={"points" + score}><h2 className='points__h2'>  Has acertado {score} de {info.quiz.length}</h2>
-           <h2 className='points__win'>  NIVEL NINJA-FEMINIST-INK DESBLOQUEADO </h2>
-           <button className="button__quiz" onClick={randomCode}>YOU GOT IT </button>
-           <div> <h1 className='points__win' >{code}</h1> 
-           {/* <button onClick={saveCode}> Save the code </button> */}
-         {/* <h1 className='points__win' >No olvides tu código el día de la cita!</h1>  */}
-           <Link className='link__score' to="/profile">Go back </Link></div> 
-     </div>
+               <div  className={"points" + score}><h2 className='points__h2'>  Has acertado {score} de {Questions.length}</h2>
+               <h2 className='points__win'>  NIVEL NINJA-FEMINIST-INK DESBLOQUEADO </h2>
+               <button className="button__quiz" onClick={randomCode}>YOU GOT IT </button>
+               <div> <h1 className='points__win' >{code}</h1> 
+               {/* <button onClick={saveCode}> Save the code </button> */}
+               <Link className='link__score' to="/profile">Go back </Link>
+               </div> 
+           </div>
      </div>
   }
 
@@ -147,7 +141,7 @@ function changeClass(){
   <div className='div__question__wrapper__quiz'> 
      <h1>Resuelve nuestro quiz!</h1>
   </div>
-  
+  <section className='div__question__wrapper__section'> 
 <div className='questions'>
 
 
@@ -164,11 +158,13 @@ function changeClass(){
   <button key={option.response} onClick={(e)=>handleAnswer(option.isCorrect, e)} className='quiz__button'>{option.response}</button>
 
 ))}
+
 </div>
 
+</section>
 
-
-  </div>)
+  </div>
+)
 };
 
 QuestionComponent.propTypes = {};
