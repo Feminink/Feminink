@@ -139,22 +139,20 @@
         "id": "2",
         "title": "Our Hours",
         "information": [
-          "Mon-Sat: 12pm-8pm",
-          "Sun: 12pm-6pm"
+          "Mon-Sat: 12pm-8pm"
         ]
       },
       {
         "id": "3",
         "title": "Visit Us",
         "information": [
-          "4933 S 34th Ave",
           "Minneapolis, MN 55417"
         ]
       },
       {
         "id": "4",
         "title": "Email Us",
-        "information": "nokomistattoo@gmail.com"
+        "information": "feminink@gmail.com"
       }
     ],
     "testimonials": [
