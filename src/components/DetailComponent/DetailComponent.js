@@ -47,10 +47,11 @@ const DetailComponent = () => {
             <b>Description:</b> <span>{detail.description}</span>
           </p>
         </div>
+
+        <Link to="/gallery">
+          <button className="button--back">Back to Gallery</button>
+        </Link>
       </div>
-      <Link to="/gallery">
-        <button className="button--back">Back to Gallery</button>
-      </Link>
     </div>
   );
 };
