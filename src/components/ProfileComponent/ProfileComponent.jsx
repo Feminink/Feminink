@@ -6,13 +6,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import {getDiscount, getMessages} from '../../store/Tattoo/actions'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPen } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 /* IMPORT AVATAR */
 import avatar from '../../assets/images/avatar.png';
 
-import Contact2Component from "../../components/Contact2Component/Contact2Component";
+import Contact2Component from "../Contact2Component/Contact2Component";
 // import { getInfo } from '../../store/info/actions';
 
 const ProfileComponent = () => {
@@ -59,11 +59,6 @@ const ProfileComponent = () => {
             <h3 className=''>Email: </h3>
             <p>{user.email}</p>
 
-            {/* //TERNARIO PARA MOSTRAR SI TIENES UN CODE O NO LO TIENES */}
-            {/* <h2>{code}</h2> */}
-
-          
-
             <h3 className=''>Birthday: </h3>
             <p>{user.birthday}</p>
             {user && user.isAdmin ? (
@@ -78,6 +73,9 @@ const ProfileComponent = () => {
                 </ul>
               </>
             ) : ("")}
+            <div className='edite__profile'>
+            <span><FontAwesomeIcon icon={faPen} /></span>
+            </div>
           </div>
           </div>
           <div className='profile__bio-inbox'>

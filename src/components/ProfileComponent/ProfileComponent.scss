@@ -160,3 +160,11 @@
       transform: translateY(-0px);
     }
 }
+.edite__profile{
+    display: flex; 
+    justify-content: end;
+    padding: 1%;
+    &:hover{
+        cursor: pointer;
+    }
+}
