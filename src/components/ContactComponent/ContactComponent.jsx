@@ -22,12 +22,13 @@ import swal from "sweetalert";
 // IMPORT USESOUND HOOK
 import useSound from "use-sound";
 import click from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
+import click2 from "../../assets/sounds/Mouse_Click_1-fesliyanstudios.com.mp3"
 import sent from "../../assets/sounds/COMCell_Messagesent.wav";
 
 const ContactComponent = () => {
   const dispatch = useDispatch();
   const { info, loadinginfo } = useSelector((state) => state.InfoReducer);
-  const [play] = useSound(click);
+  const [play] = useSound(click2);
   const [play2] = useSound(sent);
 
   useEffect(() => {

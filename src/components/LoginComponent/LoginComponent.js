@@ -21,11 +21,12 @@ import swal from "sweetalert";
 // IMPORT USESOUND HOOK
 import useSound from "use-sound";
 import click from "../../assets/sounds/mixkit-gate-latch-click-1924.wav";
+import click2 from "../../assets/sounds/Mouse_Click_1-fesliyanstudios.com.mp3"
 
 const LoginComponent = () => {
   const { user } = useSelector((state) => state.AuthReducer);
   const dispatch = useDispatch();
-  const [play] = useSound(click);
+  const [play] = useSound(click2);
 
   // FUNCIÓN PARA SETEAR LOS ERRORES EN CADA INPUT
   const validate = (values) => {
