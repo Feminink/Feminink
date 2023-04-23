@@ -1,0 +1,126 @@
+/* -- START LOGINCOMPONENT STYLES -- */
+
+.section__contact {
+  background-image: url('../../../public/assets/images/bg_testimonials.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4em 0;
+}
+
+.form {
+  background-color: whitesmoke;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 500px;
+  padding: 2em;
+  box-shadow: 0px 5px 0px #f8ca60;
+  text-align: center;
+  border-radius: .5em;
+
+  &__title {
+      margin-top: 0;
+      color: black;
+  }
+
+  &__container {
+    margin-top: 3em;
+      display: grid;
+      gap: 2em;
+  }
+
+  &__group {
+      position: relative;
+  }
+
+  &__input {
+      width: 100%;
+      background: none;
+      color: black;
+      padding: 1em;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid rgb(248, 202, 96);
+      font-size: 1em;
+  }
+
+  &__label {
+      color: #bbbbbb;
+      cursor: pointer;
+      position: absolute;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+      top: 0;
+      left: 5px;
+      transform: translateY(10px);
+      transition: transform .5s, color .3s;
+  }
+
+  &__submit {
+      background-color: rgb(248, 202, 96);
+      color:black;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      font-weight: 400;
+      padding: 1em 0;
+      border: none;
+      border-radius: .5em;
+      cursor: pointer;
+      box-shadow: 0 9px #999;
+      width: 100%;
+
+      &:hover {
+          background-color: #e5b65a;
+      }
+
+      &:active {
+          background-color: #cca250;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
+      }
+  }
+
+  &__line {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      transform: scale(0);
+      transform: left bottom;
+      transition: .4s;
+  }
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+      transform: translateY(-20px) scale(1);
+      transform-origin: left top;
+      color: black;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown) ~ .form__label {
+      transform: translateY(-20px) scale(1);
+}
+
+.form__input:not(:placeholder-shown) {
+      color: black;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.error {
+  margin: 1em 0;
+  color: red;
+  
+}
+
+.not-member__p {
+  margin: 1em 0;
+}
+
+
+/* -- END LOGINCOMPONENT STYLES -- */

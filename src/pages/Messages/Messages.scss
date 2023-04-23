@@ -1,0 +1,120 @@
+
+.section__messages{
+    display:flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    
+    // margin-top: 1%;
+    background-image: url(../../assets/images/tentaculo.png);  
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+    background-position: 50%;
+    background-size: contain;
+    padding: 3%;
+
+    &__div{
+        display:flex;
+        width: 80%;
+        flex-direction: column;
+        box-shadow: 0px 8px 8px  #abaaa4;
+        border-radius: 20px;
+        margin: 10px;
+        padding: 1%;
+
+       &:hover{
+         opacity: 0.9;
+        scale: 1.05;
+        animation-name: move;
+        animation-duration: 1s;
+       
+       }
+       
+        &__color{
+            padding: 1%;
+            display: none;
+        }
+    }
+}
+@keyframes move  {
+    from {background-color: rgba(255, 179, 0, 0.851);}
+    to {background-color: rgb(255, 255, 255);}
+  }
+.wrapper{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.counter{
+   position: absolute;
+   color: rgb(56, 52, 52);
+   padding: 1%;
+   
+}
+.button{
+    width: 10%;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px  #abaaa4;
+    &:hover{
+        background-color: rgb(232, 230, 227);
+    }
+}
+.h3__hidden{
+    display: none;
+    &-hidden{
+        display: block;
+    }
+}
+.div__image{
+    display:flex;
+    &__image{
+        mix-blend-mode: multiply;
+    }
+}
+
+
+.read{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    color:rgb(138, 139, 139)
+   
+}
+.notRead{
+    display:flex;
+    flex-direction: column;
+    padding: 1%;
+    
+   
+}
+.load{
+    width: 10%;
+    background-color: rgb(244, 175, 70);
+    color:black;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 1em 0;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+    box-shadow: 0 9px rgb(144, 128, 97);
+    &:hover {
+        background-color: rgb(247, 182, 85);
+    }
+}
+
+
+.div__postalBox{
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+    position: relative;
+    margin: 0 auto;
+    &__img{
+        width: 15%;
+    }
+}
+
+
+

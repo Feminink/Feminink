@@ -1,0 +1,691 @@
+{
+  "results": {
+    "inspiration": [
+      {
+        "id": 1,
+        "name": "Maud Wagner",
+        "date": "1877",
+        "city": "Kansas, EEUU",
+        "image": "./assets/images/Maud-Wagner.webp",
+        "designs": [],
+        "data": "Maud, as a teenager, managed to run away from home to join the circus to survive her family's poverty. She met Gus Wagner, who would become her husband and teach her how to tattoo. Maud achieved fame as the first female tattoo artist known worldwide. At the same time, Maud was also tattooing herself and, along with her husband's tattoos, she soon made her body an attraction. Stevens travelled the country exhibiting at freak shows and managed to break the stigma surrounding women who intervened their bodies with colours and shades.",
+        "style_tattoo": [
+          "Traditional"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Jessie Knight",
+        "date": "1904",
+        "city": "Croydon, London",
+        "image": "./assets/images/Jessie-Knight.webp",
+        "designs": [],
+        "data": "Her father, Leonard, was a navy captain, tattooist and sniper, while his mother was a poet and illustrator. He was shot in the shoulder during a terrible accident while on the job so he turned to tattooing. His tattoos were gaining a stellar reputation, and in 1955 Jessie won second place in the Champion Tattoo Artist of all England. Jessie opened his own tattoo shops, first in the harbour town of Portsmouth and then in Aldershot.His work was included in an exhibition at the National Maritime Museum in Cornwall from March 2017 to January 2018, showing a history of British tattooing.",
+        "style_tattoo": [
+          "Color",
+          "Freehand",
+          "Traditional"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Millie Hull",
+        "date": "1896",
+        "city": "New York",
+        "image": "./assets/images/Millie-Hull.webp",
+        "designs": [],
+        "data": "Millie, who left school at 13, joined the circus world and started working as an exotic dancer. She tattooed her body on the recommendation of a tattoo artist, so that she could earn more money (she felt obliged to do so). However, this pushed Millie out of show business and she learned the tattoo trade by opening her own tattoo parlour, The Tattoo Emporium, on the Bowery, in the back of a hairdresser's shop. The fact that Millie had her own business was an incredible achievement as she forever categorised herself as one of the most prominent female tattoo artists in history. At the time, tattooing was totally dominated by men.",
+        "style_tattoo": [
+          "Traditional",
+          "Bright"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Betty Broadbent",
+        "date": "1909",
+        "city": "Florida, EEUU",
+        "image": "./assets/images/betty-broadbent.webp",
+        "designs": [],
+        "data": "Known as The Tattooed Venus. She worked as the Tattooed Lady in the independent circuses she found. When she returned to the United States, Betty returned to work as a tattooed attraction in the circus. For this season, she established herself as a tattoo artist. In addition to exhibiting her art, Broadbent worked as a tattoo artist. She worked in shops across the country, including spaces in Montreal, San Francisco and New York. In 1937 she began working internationally. She spent time working for independent circuses in both New Zealand and Australia. Pix magazine published her designs, and recently the State Library of New South Wales in Australia has digitised and published over 9,000 of the publication's negatives, including some of Broadbent's.",
+        "style_tattoo": [
+          "Traditional"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Artoria Gibbons",
+        "date": "1893",
+        "city": "Wisconsin",
+        "image": "./assets/images/Artoria-Gibbons.webp",
+        "designs": [],
+        "data": "Her real name was Anna Mae Burlingston and she was born in 1893 into a very poor family. While working as a maid she met the man who later became her husband Charles (Red) Gibbons, a renowned tattoo artist. It was he who tattooed her entire body with religious motifs, as she was a very devout woman. In the 1920s she worked alongside her husband as a tattoo artist and became an attraction in circuses, as at that time it was extremely rare for a woman to have so many tattoos all over her body.",
+        "style_tattoo": [
+          "Traditional"
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Whang-od",
+        "date": "1917",
+        "city": "Philippines",
+        "image": "./assets/images/Whang-od.webp",
+        "designs": [
+          "./assets/images/arrows.jpeg",
+          "./assets/images/arrows1.png",
+          "./assets/images/arrows2.png"
+        ],
+        "data": "She started tattooing at the age of fifteen. Traditionally, women did not learn these tattooing techniques, but her father taught her by observing her potential and talent. Whang Od uses the hand-tapping technique called 'batok'. It consists of penetrating the skin with a calamansi (Philippine citrus) spire, which is attached to the end of a stick from the same tree. In a bowl, he prepares a concoction made of charcoal thickened with sweet potato, water and sugar. The ink penetrates through the rapid and repeated tapping of the branch with a bamboo stick. Although many tourists visit Buscalan to get tattooed, it is she who chooses who and what to tattoo, not the other way around, no matter how many tourists have travelled the 15-hour journey from Buscalan Kalinga to Manila, the capital of the Philippines.",
+        "style_tattoo": [
+          "Batok"
+        ]
+      }
+    ],
+    "about": {
+      "text": "Here at FeminInk we want to rescue and highlight a piece of history that rarely comes to light, precisely because it corresponds to women. If today we have a place in tattoo studios, we owe it in part to women who dared to defy the norm in which they only had space to be seen in freakshows for having their whole body tattooed. The leap of these women, two centuries ago into a masculinised and unknown space, will be the gateway for many others who will gradually crack some of the gender norms associated not only with women's aesthetics, but also with their freedom of expression.",
+      "text1": "Thank you for being our referents."
+    },
+    "admins": [
+      {
+        "id": 1,
+        "name": "Laura O",
+        "aka": "The Ex-Linguist",
+        "password": "randompwd",
+        "place": "Cerdeña",
+        "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
+        "email": "laurao@mail.com",
+        "description": "Former translator, turned her career to the tattoo world.",
+        "noway": [
+          "Símbolo del infinito",
+          "Mariposas"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Ignacio E",
+        "aka": "The Styler",
+        "password": "randompwd1",
+        "place": "Puerto de Sta María",
+        "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
+        "email": "ignacio@mail.com",
+        "description": "Blessed among women, our designer par excellence.",
+        "noway": [
+          "Campanillas",
+          "Tribales canis"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Miriam F",
+        "aka": "The Mastermind",
+        "password": "randompwd2",
+        "place": "Cädiz",
+        "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
+        "email": "miriamf@mail.com",
+        "description": "The creator and beating heart of the Feminink project.",
+        "noway": [
+          "Delfines en el tobillo",
+          "Estrellitas"
+        ]
+      }
+    ],
+    "studio": [
+      {
+        "id": "1",
+        "title": "Call The Shop",
+        "information": "(952) 999-2181"
+      },
+      {
+        "id": "2",
+        "title": "Our Hours",
+        "information": [
+          "Mon-Sat: 12pm-8pm"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Visit Us",
+        "information": [
+          "Minneapolis, MN 55417"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Email Us",
+        "information": "feminink@gmail.com"
+      }
+    ],
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "Angelina Jolie",
+        "text": "I love how tattoos can be an artistic expression of personality. I have had several tattoos over the years, and each one has a special meaning for me. In my mind, tattoos are a way of telling my story.",
+        "image": "./assets/images/testimonials/angelina_jolie.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Rihanna",
+        "text": "This tattoo studio is amazing! The artists are very talented and friendly. They helped me create a custom design and the result exceeded all my expectations. Tattoos are a form of expression that I love to explore.",
+        "image": "./assets/images/testimonials/rihanna.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Megan Fox",
+        "text": "Tattoos are a great way to express my personality and style. I've had several tattoos over the years, and this tattoo shop definitely has some of the best artists I've come across in my entire life. I sure recommend it.",
+        "image": "./assets/images/testimonials/megan_fox.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Kat Von D",
+        "text": "This tattoo studio is truly exceptional. As a tattooed woman myself, I know how important it is to find a tattoo studio that offers talented artists, a comfortable and safe environment, and a wide variety of original and unique designs.",
+        "image": "./assets/images/testimonials/kat_von_d.jpg"
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "id": "1",
+      "image": "../../assets/images/gallery/pexels-photo-4123910.webp",
+      "title": "Flower tattoo",
+      "artist": "Miriam F",
+      "model": "Tatiana Parker",
+      "style": "New school",
+      "alt": "Tattooed woman with red hair",
+      "description": "This tattoo was created with a delicate but confident stroke. A beautiful flower, like our Tatiana, one of our studio's most precious gems. A seemingly unpretentious choice, but one which contrasts with the strength of her determined and captivating look."
+    },
+    {
+      "id": "2",
+      "image": "../../assets/images/gallery/pexels-photo-3778028.jpeg",
+      "title": "Tattoo in the making",
+      "artist": "Laura O",
+      "model": "Susana White",
+      "style": "Blackwork",
+      "alt": "Tattooer at work",
+      "description": "In the art of tattooing, the skin becomes the most precious of canvases. That of the tattoo artist is a not inconsiderable responsibility, but one that does not seem to bother our Laura at all. We can observe her relaxed but firm hand as she traces a draft of her work of art directly on the skin of our model."
+    },
+    {
+      "id": "3",
+      "image": "../../assets/images/gallery/pexels-photo-1848657.webp",
+      "title": "Geometrical flower",
+      "artist": "Laura O",
+      "model": "Sonia García",
+      "style": "Dotwork",
+      "alt": "Tattooed woman in yellow top",
+      "description": "'Look at my tattoo: cool, huh? Of course, Miriam did it' Sonia's gaze seems to say. And it is indeed true, Laura has done a remarkable job. To create a floral and geometric tattoo with such precision requires a talent that few tattoo artists possess. But we are not surprised, knowing the great passion our artist has for nature."
+    },
+    {
+      "id": "4",
+      "image": "../../assets/images/gallery/pexels-photo-2183131.webp",
+      "title": "Japanese dragon tattoo",
+      "artist": "Ignacio E",
+      "model": "Shen Tao",
+      "style": "Old school",
+      "alt": "Japanese dragon tattoo",
+      "description": "A photo that speaks for itself. Such colours. Such light. What incredible strength. It could only be the work of our Ignacio, a master in the art of Japanese tattooing. The creation of this work took a good 90 hours, but our Shen Tao did not bat an eyelid. A true Zen professional."
+    },
+    {
+      "id": "5",
+      "image": "../../assets/images/gallery/pexels-brett-sayles-2865412.webp",
+      "title": "Tattoo in the making",
+      "artist": "Laura O",
+      "model": "Laura Hawkins",
+      "style": "Watercolor",
+      "alt": "Tattoer at work",
+      "description": "The complexity of a portrait does not frighten our studio artists, who are always ready to create the most realistic tattoos possible. Photographs on the skin? Here at Feminink we take them for you. "
+    },
+    {
+      "id": "6",
+      "image": "../../assets/images/gallery/pexels-photo-1784272.webp",
+      "title": "Nature tattoo",
+      "artist": "Miriam F",
+      "model": "Peter Smith",
+      "style": "Nature",
+      "alternate-text": "Nature tattoo on arm",
+      "description": "United for the planet. Together we are stronger. The artist who created this beautiful combination of nature tattoos? Our Miriam, of course, who never ceases to amaze us. A tireless worker, she tattooed both twins Peter & Peter Smith in 24 hours, while they were busy on their bicycle tour around Europe. So many life stories here at Feminink!"
+    },
+    {
+      "id": "7",
+      "image": "../../assets/images/gallery/pexels-cottonbro-studio-5320148.webp",
+      "title": "Oldschool rose tattoo",
+      "artist": "Ignacio E",
+      "model": "Bryan Fury",
+      "style": "Old school",
+      "alt": "Tattooed man with rose tattoo",
+      "description": "Even the toughest of boxing fighters hides a soft side inside. Or on his arm, why not. This is the example given to us by Bryan, who, when he met our Ignacio, chose to have an Old School-style rose tattooed on his arm. A perhaps bizarre juxtaposition if we look at the 'bad boy' tattoo surrounding the border-top of his abdominal area."
+    },
+    {
+      "id": "8",
+      "image": "../../assets/images/gallery/pexels-cottonbro-studio-5235789.webp",
+      "title": "Skull tattoo",
+      "artist": "Ignacio E",
+      "model": "Pedro González",
+      "style": "Black and grey",
+      "alt": "Tattooed man with skull tattoo",
+      "description": "It is not everyone who knows how to dress a tattoo as if it were a garment. When it is a giant skull, this can even be intimidating. Our model is very proud of his tattoo and does not hesitate to show it off when he rides his motorbike through the streets of Barcelona. Another one of Feminink's works!"
+    },
+    {
+      "id": "9",
+      "image": "../../assets/images/gallery/pexels-spencer-selover-428320.webp",
+      "title": "Fox tattoo",
+      "artist": "Miriam F",
+      "model": "Karla Johnson",
+      "style": "Graffiti",
+      "alt": "Tattooed woman with fox tattoo",
+      "description": "The passion for Pokemon is strong in Karla's heart, and she asked our Miriam for a brightly coloured tattoo of Vulpix, undoubtedly one of the best-known Pokemon of the 10th generation. The colours of this 'graffiti' style tattoo are vivid and create a perfect match with the beautiful hair of Karla, who chose to pose for our gallery on the beaches of the south coast of Spain."
+    },
+    {
+      "id": "10",
+      "image": "../../assets/images/gallery/pexels-vjapratama-1003842.webp",
+      "title": "Tattoo on the face",
+      "artist": "Laura O",
+      "model": "Pedro Méndez",
+      "style": "Gothic",
+      "alt": "Tattooed man with gothic tattoo",
+      "description": "Facial tattoos are becoming increasingly trendy, and undoubtedly require a strong personality in order to be worn day after day. Their realisation, however, also requires great commitment and dedication. Laura, who took care of this delicate work requested by Pedro Méndez, knows this well."
+    },
+    {
+      "id": "11",
+      "image": "../../assets/images/gallery/pexels-matheus-ferrero-2123061.webp",
+      "title": "Realistic tattoo left arm",
+      "artist": "Miriam F",
+      "model": "Mac Miller",
+      "style": "Realistic",
+      "alt": "Tattooed man with realistic tattoo",
+      "description": "A realism tattoo is exactly how it sounds: a piece of artwork that looks so realistic you almost believe it's a photo! It is full of intricate details with high amounts of shading, and generally takes the most amount of time to complete."
+    },
+    {
+      "id": "12",
+      "image": "../../assets/images/gallery/pexels-photo-3657562.webp",
+      "title": "Tattoo in the making",
+      "artist": "Ignacio E",
+      "model": "Ewa Jung",
+      "style": "Traditional",
+      "alt": "Tattoer at work",
+      "description": "Another shot made in Feminink. Ignacio is working on a 'Japanese traditional style' tattoo, his speciality, on the arm of a client. Our studio is equipped with every comfort, because making you feel comfortable is our priority. Our tattoo artists are highly specialised professionals and will be at your disposal at all times."
+    },
+    {
+      "id": "13",
+      "image": "../../assets/images/gallery/gallery_pexels-photo-8042013.webp",
+      "title": "Martial arts meets tattooing",
+      "artist": "Miriam F",
+      "model": "Peter Emerson",
+      "style": "Japanese traditional",
+      "alt": "Karateka with tattooed chest",
+      "description": "An interesting choice by our model Peter, who chose to tattoo his passion on his chest, just at heart height. We see him wearing his freshly washed karateka tunic, embroidered with the same symbol he has chosen to imprint on his skin."
+    },
+    {
+      "id": "14",
+      "image": "../../assets/images/gallery/gallery_pexels-photo-6205778.webp",
+      "title": "Mechanics and coffee machines",
+      "artist": "Laura O",
+      "model": "Joshua Kohl",
+      "style": "Biomechanical tattoos",
+      "alt": "Tattooed man cleaning coffee machine",
+      "description": "Biomechanical tattoos are a stylistic approach to tattooing which combines the human body with a contemporary design that makes it look as if the body is made up of mechanical parts. Think Terminator. Remember Arnold's robot arm? Is just what our friend Joshua wanted, whom we see engaged in the daily cleaning of the coffee machine at his club."
+    },
+    {
+      "id": "15",
+      "image": "../../assets/images/gallery/gallery_pexels-photo-6140703.webp",
+      "title": "Spirituality and tattooing",
+      "artist": "Ignacio E",
+      "model": "Conan O'Connor",
+      "style": "Borneo",
+      "alt": "Man with tattooed arm",
+      "description": "Borneo's illustrious tattoos are considered sacred, magical and are tied closely to the beliefs of the Dayak community. For the people of Borneo, as with all indigenous cultural practices of the world, getting a tattoo is closely associated with physical power and the spiritual world."
+    },
+    {
+      "id": "16",
+      "image": "../../assets/images/gallery/gallery_andezgif.com-gif-maker.webp",
+      "title": "Floral wings",
+      "artist": "Miriam F",
+      "model": "Andrea Pescatrulli",
+      "style": "Floral",
+      "alt": "Woman with tattooed back",
+      "description": "One of our Miriam's most distinguished works is undoubtedly this wonderful flower arrangement. Its shape perfectly matches the model's choice to tattoo her own back. The arrangement of its components seems to create a harmonious winged, strongly geometric structure."
+    },
+    {
+      "id": "17",
+      "image": "../../assets/images/gallery/gallery_pexels-photo-3768158.webp",
+      "title": "Polaroids and watercolors",
+      "artist": "Laura O",
+      "model": "Laura Judge",
+      "style": "Watercolor",
+      "alt": "Woman at work with watercolor tattoo",
+      "description": "When art as an integral part of one's everyday life meets a passion for tattoos. Laura is one of the most talented photographers who have passed through our studio. She met our Laura and told her about her idea: we can see from her smile that she was very pleased with the result. Between Lauras there is total understanding!"
+    },
+    {
+      "id": "18",
+      "image": "../../assets/images/gallery/gallery_pexels-photo-3691366.webp",
+      "title": "Sunflowers all over",
+      "artist": "Miriam F",
+      "model": "Sophie Vergara",
+      "style": "Floral",
+      "alt": "Woman with floral tattoo on right arm",
+      "description": "It is Sophie's favourite flower: the common name, “sunflower”, typically refers to the popular annual species Helianthus annuus, or the common sunflower, whose round flower heads in combination with the ligules look like the glowing sun. In Greek, helios means sun and anthos means flower, thus the name Sunflower. "
+    },
+    {
+      "id": "19",
+      "image": "../../assets/images/gallery/gallery_pexels-photo-3088369.webp",
+      "title": "I see a tattoo in your cards",
+      "artist": "Laura O",
+      "model": "Chloe Maroney",
+      "style": "Gothic",
+      "alt": "Tattooed fortune teller",
+      "description": "'The cards tell me. You will soon get a tattoo!' The tarot cards said it, Chloe confirms it. Her hands don't lie. Her tattoo was done by our goth tattoo artist Laura."
+    },
+    {
+      "id": "20",
+      "image": "../../assets/images/gallery/gallery_pexels-photo-1803880.webp",
+      "title": "Just out of the studio",
+      "artist": "Ignacio E",
+      "model": "Ashton Williams",
+      "style": "Black and grey",
+      "alt": "Tattooed guy with ear dilators",
+      "description": "A bemused expression but no second thoughts from Ashton, whom we chose to immortalise outside our studio with his new black and grey tattoo. It is an abstract design created by his daughter Susy and faithfully copied by our Ignacio. An excellent job. Not to underestimate the difficulty added by the fact that it was chosen to be tattooed on the neck."
+    },
+    {
+      "id": "21",
+      "image": "../../assets/images/gallery/gallery_jeroezgif.com-gif-maker.webp",
+      "title": "Sleepy tattooed beauty",
+      "artist": "Laura O",
+      "model": "Jeroen Pharrel",
+      "style": "Watercolor",
+      "alt": "Tattooed guy with eagle tattoo",
+      "description": "Fantasy tattoos are a popular tattoo for individuals with a creative personality. One such as that of Jeroen, who asked our watercolour tattooing expert to create this beautiful composition depicting an eagle about to land on a volcanic lava ground. What does it mean? That will remain a secret between him and the artist."
+    },
+    {
+      "id": "22",
+      "image": "../../assets/images/gallery/gallery_laspexels-photo-4813343.webp",
+      "title": "High contrasts",
+      "artist": "Miriam F",
+      "model": "Kamila Farusho",
+      "style": "Stick and poke",
+      "alt": "Tattooed woman wearing make-up",
+      "description": "It is extremely common for people to think that stick and poke tattoos fade quicker than machine ones. But, we're going to let you into a little secret: All tattoos fade! That's right, over time, your tattoos, whether stick and poke or machine will fade and change."
+    }
+  ],
+  "contact": [
+    {
+      "name": "María Zambrano",
+      "description": "Hola chicos! Me encanta vuestro estudio y he pensado que necesito que me grabéis en la piel uno de vuestros trabajos artísticos. He pensado en algo abstracto ...la Verdad, por ejemplo.  De unos 5 cm en la muñeca izquierda. Muchas gracias!",
+      "email": "Maríamalaga@yahoo.es",
+      "color": "#98dde2",
+      "artist": "Ignacio E",
+      "id": 1
+    },
+    {
+      "name": "Jean Paul",
+      "description": "Hola. Quiero hacerme un tatuaje en el pecho donde ponga: \"El infierno son los otros\". El color es lo de menos. El tamaño os lo dejo a vosotros.",
+      "email": "JuanPaSartre@lanausea.fr",
+      "color": "#65ee18",
+      "artist": "Miriam F",
+      "id": 2
+    },
+    {
+      "name": "Jean Paul",
+      "description": "Hey guys! Quisiera unos motivos botánicos en los pies, porque siempre me ha gustado caminar sobre la hierba. Me hace sentir realmente libre. Unas caparidáceas, quizá?",
+      "email": "Edickinson@flowers.com",
+      "color": "#cf4ee9",
+      "artist": "Laura O",
+      "id": 3
+    },
+    {
+      "name": "Mira Murati",
+      "email": "miramurati@mail.com",
+      "description": "Quiero una frase en el pecho donde ponga \"IA RULES\"",
+      "artist": "Laura O",
+      "color": "#151414",
+      "id": 6
+    },
+    {
+      "name": "Chimamanda Ngozi ",
+      "email": "Chimamanda@ngozi.com",
+      "description": "Hey! Buenísima iniciativa chicas! En esta ocasión quisiera tatuarme unos tribales canis en las pantorrilla, he pensando en Nacho E",
+      "artist": "Ignacio E",
+      "color": "#e6d1d1",
+      "id": 7
+    },
+    {
+      "name": "Leonor",
+      "email": "leonor@mail.com",
+      "description": "Hola, me quiero tatuar un corazón con el nombre de Juan",
+      "artist": "Miriam F",
+      "color": "#281f1f",
+      "id": 8
+    },
+    {
+      "name": "Rosalia",
+      "email": "rosalia@tratra.es",
+      "description": "Hola",
+      "artist": "Ignacio E",
+      "color": "#dec9c9",
+      "id": 9
+    },
+    {
+      "artist": "Ignacio E",
+      "name": "Rosalía",
+      "email": "nachoe@mail.com",
+      "date": "2023-03-29",
+      "description": "Hola",
+      "isUser": true,
+      "id": 10
+    },
+    {
+      "name": "Rosalia",
+      "email": "rosalia@tratra.es",
+      "description": "Hola Nacho soy Rosalia",
+      "artist": "Ignacio E",
+      "color": "#1a1919",
+      "id": 11
+    },
+    {
+      "artist": "Ignacio E",
+      "name": "Rosalia",
+      "email": "nachoe@mail.com",
+      "date": "2023-04-07",
+      "description": "Hola Rosalia soy Nacho",
+      "isUser": true,
+      "id": 12
+    },
+    {
+      "artist": "Laura O",
+      "name": "Rosalia",
+      "email": "lauraO@mail.com",
+      "date": "2023-04-14",
+      "description": "Hola rosalia soy laura",
+      "isUser": true,
+      "id": 13
+    },
+    {
+      "artist": "Miriam F",
+      "name": "Rosalía",
+      "email": "miriamfr@mail.com",
+      "date": "2023-04-11",
+      "description": "Hola soy Miriam",
+      "isUser": true,
+      "id": 14
+    }
+  ],
+  "users": [
+    {
+      "email": "miriamfr@mail.com",
+      "password": "$2a$10$E3XpZ.voylNvH/j0C2vE3O72zGkDgsOWkumajeWtFV8RLbcm2GTa6",
+      "name": "Miriam F",
+      "surname": "Fraga",
+      "color": "#baf1e5",
+      "birthday": "1999-12-30",
+      "bio": "Miriam is a young tattoo artist from Cádiz who has gained recognition for her innovative work and feminist activism. Her tattoos are known for their deep meaning and unique style. She has become an inspiration for many women in the city who are looking to empower themselves and be assertive. Miriam fights for gender equality and advocates for freedom of expression through her tattoos. She is a talented artist and a true force to be reckoned with.",
+      "skills": [
+        "Realism",
+        "Floral",
+        "Japanese traditional"
+      ],
+      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
+      "isAdmin": true,
+      "id": 4
+    },
+    {
+      "email": "nachoe@mail.com",
+      "password": "$2a$10$u3LTLENeE7iGhgWxPP/2U.n5O5ySVnQFXvmwSkSnFxqYeilGU5tOC",
+      "name": "Ignacio E",
+      "surname": "Erviti",
+      "color": "#f66977f8;",
+      "birthday": "1988-02-15",
+      "bio": "Ignacio is a young tattoo artist who has been working in the port of Santa Maria for more than five years. From the beginning, he has had a great talent for the art of tattooing, becoming one of the best tattoo artists in town. Ignacio is known for his creativity and technical skills, and has created some of the most impressive tattoos in town. He is always willing to listen to his clients' ideas and help them create the perfect tattoo.",
+      "skills": [
+        "Traditional",
+        "Old school",
+        "Borneo"
+      ],
+      "image": "https://img.freepik.com/free-photo/portrait-serious-bearded-male-sunglasses-cylinder-hat_613910-1612.jpg",
+      "isAdmin": true,
+      "id": 10
+    },
+    {
+      "email": "lauraO@mail.com",
+      "password": "$2a$10$OZF08LCcT6VfBkah01ySae1fGAMb8Qbk10CZHTKKq0v6U9hBpRYZa",
+      "name": "Laura O",
+      "surname": "Origa",
+      "color": "#3FB190",
+      "birthday": "1993-01-06",
+      "bio": "Laura, comes from the beautiful island of Sardinia. She grew up among the beautiful life and magic of this island, which now influences her work.  Laura always had an interest in art and decided to become a tattoo artist. She trained with renowned tattoo masters and developed a unique style combining the traditional tattoo technique with the search for the beauty of Sardinia. As a tattoo artist, Laura strives to produce quality works of art, which reflect her passion for art and her yearning to capture the beauty of nature. She creates beautiful designs ranging from traditional motifs to more modern designs.",
+      "skills": [
+        "Watercolor",
+        "Blackwork",
+        "Dotwork"
+      ],
+      "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
+      "isAdmin": true,
+      "id": 11
+    },
+    {
+      "email": "manolo@yahoo.es",
+      "password": "$2a$10$d69w/k8QcTw3idpvOG.PfuQvgXphMnv5.j4Ge8yAmL3IofAkDX8Ce",
+      "name": "Manolo",
+      "surname": "Pérez",
+      "birthday": "1998-02-15",
+      "id": 12
+    },
+    {
+      "email": "rosalia@tratra.es",
+      "password": "$2a$10$/5x3sECxot8STh5p3t00Mu0TU1yoJPAOrSXOrixmsS11fm1kcB59m",
+      "name": "Rosalía",
+      "surname": "Vila",
+      "birthday": "1992-09-25",
+      "code": [],
+      "id": 13
+    },
+    {
+      "email": "gustavino@frufru.it",
+      "password": "$2a$10$MYKtKu3JZ9yXJt3KEC.DCOP9MuYM3iC7IqXdGwjfdH48rKl7zPvwK",
+      "name": "Gustavino",
+      "surname": "FruFru",
+      "birthday": "2023-04-23",
+      "id": 14
+    },
+    {
+      "email": "gustavo@frufru.it",
+      "password": "$2a$10$YmTxhyQZ37jkgG9Y/v8cme7cH/AuvP4JS.paIvZ2xxVWQ.7v33H.C",
+      "name": "Gustavo",
+      "surname": "FruFru",
+      "birthday": "2023-04-20",
+      "id": 15
+    },
+    {
+      "email": "gustav@fru.it",
+      "password": "$2a$10$hTjGvSvsNOa/mtwQUwkIZ.iIYmVZ5Znusv51J6ldsyluhq7gO.ku2",
+      "name": "Gustav",
+      "surname": "Fru",
+      "birthday": "2023-04-13",
+      "id": 16
+    },
+    {
+      "email": "gust@fru.it",
+      "password": "$2a$10$iHIpPk.QAoHxEI.4sS5JOu0NX6zH.Gw/Qlg40M7ws.Gwj6Kxl/67y",
+      "name": "Gustav",
+      "surname": "Fru",
+      "birthday": "2023-04-27",
+      "id": 17
+    },
+    {
+      "email": "laurao@mail.com",
+      "password": "$2a$10$HT0zKpE8McBP12HgFnidD.b1AV6iiIQgCIM5NZJhT8K1p42n3rJ2e",
+      "name": "Lau",
+      "surname": "jkefnkejn",
+      "birthday": "2023-04-27",
+      "id": 18
+    },
+    {
+      "email": "laura.origa@bootcamp-upgrade.com",
+      "password": "$2a$10$HENaxsEQlbCqa6SDQBjMr.Q8fWSartVJUrBwbLfa77hHkP9M1XNqS",
+      "name": "Laura",
+      "surname": "ndfkjneknf",
+      "birthday": "2023-04-22",
+      "id": 19
+    },
+    {
+      "email": "gusto@frufru.com",
+      "password": "$2a$10$TG1LAK3J17tCfOVRLShtP../yZ7UQlyWivO1tNgGmy0SK3c0SYPOC",
+      "name": "Gusto",
+      "surname": "Giusti",
+      "birthday": "2023-03-28",
+      "id": 20
+    },
+    {
+      "email": "dhbajbhf@mail.com",
+      "password": "$2a$10$GOGtwyx7CaCikafYGVu9x.QQDkEBeUNH.wFHHUxKplxGilvyMW.UK",
+      "name": "fjhkejnkf",
+      "surname": "fjkebjk",
+      "birthday": "2023-04-12",
+      "id": 21
+    },
+    {
+      "email": "bsldnk@mail.com",
+      "password": "$2a$10$yF0qHdXyHj3IQpTtcFbIbu1M5mJ.4K/9irrpG6opnxtuIV6hnnCcy",
+      "name": "Blabla",
+      "surname": "fkjsnfk",
+      "birthday": "2023-04-14",
+      "id": 22
+    },
+    {
+      "email": "jfnddkjnf@mail.com",
+      "password": "$2a$10$IDYS/EquO929BQpwdwwaiOOo4FgAszHNPWccBEzmN55d0Rw4p4tD6",
+      "name": "Gustav",
+      "surname": "Fru",
+      "birthday": "2023-04-15",
+      "id": 23
+    },
+    {
+      "email": "dnjdfnkjs@mail.com",
+      "password": "$2a$10$Sl5CJewdneK.H2jp3YAzKeMtgkKiX8pay75Oc2sJt1XSVw9RWOdMK",
+      "name": "lkfdakl",
+      "surname": "sldknkjdn",
+      "birthday": "2023-04-21",
+      "id": 24
+    },
+    {
+      "email": "jnjkf@mail.com",
+      "password": "$2a$10$u9IT/juah2jyGrRKcv2Arus8s6bVmMWR7QxzYXkn956Sw0HSVNA1e",
+      "name": "fjnekjfn",
+      "surname": "fnfkjenf",
+      "birthday": "2023-04-14",
+      "id": 25
+    },
+    {
+      "email": "jfefqk@mail.com",
+      "password": "$2a$10$nxCO.37HKsBhLF5G7LM89eBBGiNvWfIQMelDR5iYr4oRFDF8r.oLe",
+      "name": "fejnf",
+      "surname": "jfebjfb",
+      "birthday": "2023-04-08",
+      "id": 26
+    }
+  ],
+  "discounts": [
+    {
+      "code": "XRrhJm",
+      "user": "Ignacio E",
+      "userId": 10,
+      "id": 1
+    }
+  ]
+}

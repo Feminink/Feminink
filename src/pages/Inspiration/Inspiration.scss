@@ -1,0 +1,21 @@
+/* -- START INSPIRATIONPAGE STYLES -- */
+
+.div__design {
+    display:flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+
+    &__icon{
+        padding: 2%;
+        gap: 2em;
+        display: flex;
+
+        &:hover{
+            transform: perspective(200px) rotateX(45deg) rotateY(45deg);
+        }
+        
+    }
+}
+
+/* -- END INSPIRATIONPAGE STYLES -- */

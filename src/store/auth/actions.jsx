@@ -2,12 +2,8 @@
 import axios from "axios";
 // IMPORT ACTION TYPES
 import {
-  DO_LOGIN,
-  DO_LOGIN_OK,
-  DO_LOGIN_FAIL,
-  DO_LOGOUT,
-  DO_LOGOUT_OK,
-  DO_LOGOUT_FAIL,
+  DO_LOGIN,DO_LOGIN_OK,DO_LOGIN_FAIL,
+  DO_LOGOUT,DO_LOGOUT_OK,DO_LOGOUT_FAIL,
 } from "./actionTypes";
 
 export function actionDoLogin(loginData) {
@@ -30,10 +26,11 @@ export function actionDoLoginFail(error) {
 }
 export function doLogin(userData) {
   return async (dispatch) => {
+    dispatch(actionDoLogin(userData));
     try {
-      dispatch(actionDoLogin(userData));
+
       const response = await axios.post(
-        "https://dummyjson.com/auth/login",
+        "http://localhost:3000/login",
         userData
       );
       dispatch(actionDoLoginOk(response.data));
@@ -69,3 +66,5 @@ export function doLogout() {
     }
   };
 }
+
+

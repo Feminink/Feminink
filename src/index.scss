@@ -1,0 +1,45 @@
+/*  START GLOBAL STYLES */
+
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body, p, ul {
+  margin: 0;
+}
+
+ul {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle
+}
+
+p {
+  line-height: 1.5;
+}
+
+p, a {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  padding: 2em 0;
+}
+
+.hr {
+  margin: 1em 0;
+}
+
+/*  END GLOBAL STYLES */

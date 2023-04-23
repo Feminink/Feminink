@@ -1,0 +1,95 @@
+.section__testimonials {
+    background-image: url('../../../public/assets/images/bg_testimonials.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.testimonials {
+
+    &__container {
+        width: 45%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        padding: 4em;
+        background-color: #f8ca60;
+        border-radius: 2%;
+    }
+
+    &__image {
+        width: 150px;
+        border-radius: 50%;
+        border: 4px solid white;
+    }
+
+    &__p  {
+        line-height: 2;
+        margin: 0;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .testimonials {
+
+        &__container {
+            width: 90%;
+        }
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .testimonials {
+
+        &__container {
+            width: 90%;
+        }
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .testimonials {
+
+        &__container {
+            width: 45%;
+        }
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .testimonials {
+
+        &__container {
+            width: 45%;
+        }
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .testimonials {
+
+        &__container {
+            width: 40%;
+        }
+    }
+
+}
