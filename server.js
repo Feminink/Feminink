@@ -11,6 +11,7 @@ server.use(middlewares);
 server.get("/", function (req, res) {
   res.render("index", {});
 });
+
 // server.use(
 //   // Add custom route here if needed
 //   jsonServer.rewriter({
