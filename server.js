@@ -1,13 +1,24 @@
-const express = require("express"); //Line 1
-const app = express(); //Line 2
-const port = process.env.PORT || 3000; //Line 3
+// JSON Server module
+const jsonServer = require("json-server");
+const server = jsonServer.create();
+const router = jsonServer.router("back/back.json");
 
-// This displays message that the server running and listening to specified port
-app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
+// Make sure to use the default middleware
+const middlewares = jsonServer.defaults();
 
-// create a GET route
-app.get("/", function (req, res) {
-  res.render("index", {});
+server.use(middlewares);
+// Add this before server.use(router)
+// server.use(
+//   // Add custom route here if needed
+//   jsonServer.rewriter({
+//     "/api/*": "/$1",
+//   })
+// );
+server.use(router);
+// Listen to port
+server.listen(3000, () => {
+  console.log("JSON Server is running");
 });
-// export module
-module.exports = app;
+
+// Export the Server API
+module.exports = server;
