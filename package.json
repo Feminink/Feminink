@@ -58,7 +58,5 @@
   "devDependencies": {
     "json-server": "^0.17.3",
     "json-server-auth": "^2.1.0"
-  },
-  "proxy": "http://localhost:3000"
-
+  }
 }
