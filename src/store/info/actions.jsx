@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { GET_INFO, GET_INFO_OK, GET_INFO_FAIL } from "./actionTypes";
 
-const backInfo = "https://json-mocha.vercel.app/";
+const backInfo = "https://json-yds7.vercel.app/";
 
 /* FUNCTION TO RENDER INFO */
 
