@@ -22,8 +22,8 @@ import {
   
 } from "./actionTypes";
 
-const backContact = "http://localhost:3000/contact";
-const backDiscount = "http://localhost:3000/discounts"
+const backContact = "https://json-yds7.vercel.app/contact";
+const backDiscount = "https://json-yds7.vercel.app/discounts"
 
 // FUNCIÖN PARA POSTEAR DATA EN JSON: CONTACT
 export function actionDoContact(contactForm) {
@@ -225,7 +225,7 @@ export function getDiscount(){
     try {
       const response = await axios.get(backDiscount);
       dispatch(actionGetDiscountOk(response.data))
-      console.log(response.data, "resdata discount")
+      
     } catch (error) {
       dispatch(actionGetDiscountFail(error));
     }
