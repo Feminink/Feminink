@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { GET_OUR_TEAM, GET_OUR_TEAM_OK, GET_OUR_TEAM_FAIL } from './actionTypes';
 
-const backOurTeam = "http://localhost:3000/admins";
+const backOurTeam = "https://json-yds7.vercel.app/admins";
 
 // FUNCION ACTIONGETOURTEAM
 export function actionGetOurTeam(){
