@@ -2,8 +2,12 @@
 import axios from "axios";
 // IMPORT ACTION TYPES
 import {
-  DO_LOGIN,DO_LOGIN_OK,DO_LOGIN_FAIL,
-  DO_LOGOUT,DO_LOGOUT_OK,DO_LOGOUT_FAIL,
+  DO_LOGIN,
+  DO_LOGIN_OK,
+  DO_LOGIN_FAIL,
+  DO_LOGOUT,
+  DO_LOGOUT_OK,
+  DO_LOGOUT_FAIL,
 } from "./actionTypes";
 
 export function actionDoLogin(loginData) {
@@ -28,9 +32,8 @@ export function doLogin(userData) {
   return async (dispatch) => {
     dispatch(actionDoLogin(userData));
     try {
-
       const response = await axios.post(
-        "https://json-yds7.vercel.app/login",
+        "https://json-yds7.vercel.app/users",
         userData
       );
       dispatch(actionDoLoginOk(response.data));
@@ -66,5 +69,3 @@ export function doLogout() {
     }
   };
 }
-
-
