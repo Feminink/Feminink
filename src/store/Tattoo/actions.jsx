@@ -22,8 +22,8 @@ import {
   
 } from "./actionTypes";
 
-const backContact = "https://vercel.com/feminink/back-user/contact";
-const backDiscount = "https://vercel.com/feminink/back-user/discounts"
+const backContact = "https://back-user-r91n4x7sc-feminink.vercel.app/contact";
+const backDiscount = "https://back-user-r91n4x7sc-feminink.vercel.app//discounts"
 
 // FUNCIÖN PARA POSTEAR DATA EN JSON: CONTACT
 export function actionDoContact(contactForm) {
