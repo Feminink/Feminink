@@ -17,9 +17,9 @@ import {
 
 
 
-const backGallery = "https://json-yds7.vercel.app/gallery";
-const backUsers = "https://json-yds7.vercel.app/users";
-const backDiscounts = "https://json-yds7.vercel.app/discounts"
+const backGallery = "http://localhost:3000/gallery";
+const backUsers = "http://localhost:3000/users";
+const backDiscounts = "http://localhost:3000/discounts"
 
 /* FUNCTION TO RENDER GALLERY */
 export function actionGetGallery() {

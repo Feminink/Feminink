@@ -22,8 +22,8 @@ import {
   
 } from "./actionTypes";
 
-const backContact = "https://json-yds7.vercel.app/contact";
-const backDiscount = "https://json-yds7.vercel.app/discounts"
+const backContact = "http://localhost:3000/contact";
+const backDiscount = "http://localhost:3000/discounts"
 
 // FUNCIÖN PARA POSTEAR DATA EN JSON: CONTACT
 export function actionDoContact(contactForm) {
