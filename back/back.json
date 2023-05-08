@@ -507,41 +507,23 @@
     }
   ],
   "users": [
-    // {
-      // "email": "miriamfr@mail.com",
-      // "password": "$2a$10$E3XpZ.voylNvH/j0C2vE3O72zGkDgsOWkumajeWtFV8RLbcm2GTa6",
-      // "name": "Miriam F",
-      // "surname": "Fraga",
-      // "color": "#baf1e5",
-      // "birthday": "1999-12-30",
-      // "bio": "Miriam is a young tattoo artist from Cádiz who has gained recognition for her innovative work and feminist activism. Her tattoos are known for their deep meaning and unique style. She has become an inspiration for many women in the city who are looking to empower themselves and be assertive. Miriam fights for gender equality and advocates for freedom of expression through her tattoos. She is a talented artist and a true force to be reckoned with.",
-      // "skills": [
-        // "Realism",
-        // "Floral",
-        // "Japanese traditional"
-      // ],
-      
-      // "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-      // "isAdmin": true,
-      // "id": 4
-    // },
-    // {
-      // "email": "miriamfr@mail.com",
-      // "password": "$2a$10$E3XpZ.voylNvH/j0C2vE3O72zGkDgsOWkumajeWtFV8RLbcm2GTa6",
-      // "name": "Miriam F",
-      // "surname": "Fraga",
-      // "color": "#baf1e5",
-      // "birthday": "1999-12-30",
-      // "bio": "Miriam is a young tattoo artist from Cádiz who has gained recognition for her innovative work and feminist activism. Her tattoos are known for their deep meaning and unique style. She has become an inspiration for many women in the city who are looking to empower themselves and be assertive. Miriam fights for gender equality and advocates for freedom of expression through her tattoos. She is a talented artist and a true force to be reckoned with.",
-      // "skills": [
-        // "Realism",
-        // "Floral",
-        // "Japanese traditional"
-      // ],
-      // "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-      // "isAdmin": true,
-      // "id": 4
-    // },
+    {
+      "email": "miriamfr@mail.com",
+      "password": "$2a$10$E3XpZ.voylNvH/j0C2vE3O72zGkDgsOWkumajeWtFV8RLbcm2GTa6",
+      "name": "Miriam F",
+      "surname": "Fraga",
+      "color": "#baf1e5",
+      "birthday": "1999-12-30",
+      "bio": "Miriam is a young tattoo artist from Cádiz who has gained recognition for her innovative work and feminist activism. Her tattoos are known for their deep meaning and unique style. She has become an inspiration for many women in the city who are looking to empower themselves and be assertive. Miriam fights for gender equality and advocates for freedom of expression through her tattoos. She is a talented artist and a true force to be reckoned with.",
+      "skills": [
+        "Realism",
+        "Floral",
+        "Japanese traditional"
+      ],
+      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
+      "isAdmin": true,
+      "id": 4
+    },
     {
       "email": "nachoe@mail.com",
       "password": "$2a$10$u3LTLENeE7iGhgWxPP/2U.n5O5ySVnQFXvmwSkSnFxqYeilGU5tOC",
@@ -693,6 +675,40 @@
       "email": "laura0r@mail.com",
       "password": "$2a$10$1PuPAOTEKIJH2ofU3/Gbdu/BbP3QDyTkeUwsscmnQzHWfJd9IsEeC",
       "id": 25
+    },
+    {
+      "email": "miriamf@mail.com",
+      "password": "$2a$10$oz/uGa6s5FojJNuL.Cs.v.tzLJzLY18SQ8oeS87szCUfpCOQHHK/O",
+      "name": "Miriam F",
+      "surname": "Fraga",
+      "birthday": "1989--12-19",
+      "skills": [
+        [
+          "Realism",
+          "Floral",
+          "Japanese Trade"
+        ]
+      ],
+      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
+      "isAdmin": true,
+      "id": 26
+    },
+    {
+      "email": "miriamfraga@mail.com",
+      "password": "$2a$10$GziCoe59ooX1SOkIFiz3Rezwv6qrWilCW0vV3Ic61noJmXKOSJAfW",
+      "name": "Miriam",
+      "surname": "F",
+      "birthday": "1989-12-19",
+      "skills": [
+        [
+          "Realism",
+          "Floral",
+          "Japanese Trade"
+        ]
+      ],
+      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
+      "isAdmin": true,
+      "id": 27
     }
   ],
   "discounts": [
