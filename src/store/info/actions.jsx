@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { GET_INFO, GET_INFO_OK, GET_INFO_FAIL } from "./actionTypes";
 
-const backInfo = "http://localhost:3000/results";
+const backInfo = "https://vercel.com/feminink/back-user/results";
 
 /* FUNCTION TO RENDER INFO */
 

@@ -17,9 +17,9 @@ import {
 
 
 
-const backGallery = "http://localhost:3000/gallery";
-const backUsers = "http://localhost:3000/users";
-const backDiscounts = "http://localhost:3000/discounts"
+const backGallery = "https://vercel.com/feminink/back-user/gallery";
+const backUsers = "https://vercel.com/feminink/back-user/users";
+const backDiscounts = "https://vercel.com/feminink/back-user/discounts"
 
 /* FUNCTION TO RENDER GALLERY */
 export function actionGetGallery() {
