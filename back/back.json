@@ -504,6 +504,22 @@
       "description": "Hola soy Miriam",
       "isUser": true,
       "id": 14
+    },
+    {
+      "artist": "Miriam F",
+      "name": "Jean Paul",
+      "email": "miriamfr@mail.com",
+      "date": "2023-05-15",
+      "description": "Encantada de ofrecerte una cita!",
+      "id": 15
+    },
+    {
+      "name": "Charles",
+      "email": "charles@tercero.com",
+      "description": "Hola! Me gustaría tatuarme una corona en el pecho!",
+      "artist": "Ignacio E",
+      "color": "#ee9191",
+      "id": 16
     }
   ],
   "users": [
@@ -559,14 +575,6 @@
       "id": 11
     },
     {
-      "email": "manolo@yahoo.es",
-      "password": "$2a$10$d69w/k8QcTw3idpvOG.PfuQvgXphMnv5.j4Ge8yAmL3IofAkDX8Ce",
-      "name": "Manolo",
-      "surname": "Pérez",
-      "birthday": "1998-02-15",
-      "id": 12
-    },
-    {
       "email": "rosalia@tratra.es",
       "password": "$2a$10$/5x3sECxot8STh5p3t00Mu0TU1yoJPAOrSXOrixmsS11fm1kcB59m",
       "name": "Rosalía",
@@ -576,207 +584,12 @@
       "id": 13
     },
     {
-      "email": "gustavino@frufru.it",
-      "password": "$2a$10$MYKtKu3JZ9yXJt3KEC.DCOP9MuYM3iC7IqXdGwjfdH48rKl7zPvwK",
-      "name": "Gustavino",
-      "surname": "FruFru",
-      "birthday": "2023-04-23",
-      "id": 14
-    },
-    {
-      "email": "gustavo@frufru.it",
-      "password": "$2a$10$YmTxhyQZ37jkgG9Y/v8cme7cH/AuvP4JS.paIvZ2xxVWQ.7v33H.C",
-      "name": "Gustavo",
-      "surname": "FruFru",
-      "birthday": "2023-04-20",
-      "id": 15
-    },
-    {
-      "email": "gustav@fru.it",
-      "password": "$2a$10$hTjGvSvsNOa/mtwQUwkIZ.iIYmVZ5Znusv51J6ldsyluhq7gO.ku2",
-      "name": "Gustav",
-      "surname": "Fru",
-      "birthday": "2023-04-13",
-      "id": 16
-    },
-    {
-      "email": "gust@fru.it",
-      "password": "$2a$10$iHIpPk.QAoHxEI.4sS5JOu0NX6zH.Gw/Qlg40M7ws.Gwj6Kxl/67y",
-      "name": "Gustav",
-      "surname": "Fru",
-      "birthday": "2023-04-27",
-      "id": 17
-    },
-    {
-      "email": "laurao@mail.com",
-      "password": "$2a$10$HT0zKpE8McBP12HgFnidD.b1AV6iiIQgCIM5NZJhT8K1p42n3rJ2e",
-      "name": "Lau",
-      "surname": "jkefnkejn",
-      "birthday": "2023-04-27",
-      "id": 18
-    },
-    {
-      "email": "laura.origa@bootcamp-upgrade.com",
-      "password": "$2a$10$HENaxsEQlbCqa6SDQBjMr.Q8fWSartVJUrBwbLfa77hHkP9M1XNqS",
-      "name": "Laura",
-      "surname": "ndfkjneknf",
-      "birthday": "2023-04-22",
-      "id": 19
-    },
-    {
-      "email": "gusto@frufru.com",
-      "password": "$2a$10$TG1LAK3J17tCfOVRLShtP../yZ7UQlyWivO1tNgGmy0SK3c0SYPOC",
-      "name": "Gusto",
-      "surname": "Giusti",
-      "birthday": "2023-03-28",
-      "id": 20
-    },
-    {
-      "email": "dhbajbhf@mail.com",
-      "password": "$2a$10$GOGtwyx7CaCikafYGVu9x.QQDkEBeUNH.wFHHUxKplxGilvyMW.UK",
-      "name": "fjhkejnkf",
-      "surname": "fjkebjk",
-      "birthday": "2023-04-12",
-      "id": 21
-    },
-    {
-      "email": "miriam@mail.com",
-      "password": "$2a$10$8q8/hYl2mqd/X8DIssAf8.JyV3Y.CE40zvDHY078QLpjKnH4DZN/a",
-      "id": 22
-    },
-    {
-      "email": "macarena@olona.es",
-      "password": "$2a$10$OvcqkMpA49UTZas3sKVQoe0mcpWiT9gS3/NeV4OAWWk8A0yga.Cli",
-      "name": "Macarena",
-      "surname": "Olona",
-      "birthday": "2000-10-10",
-      "id": 23
-    },
-    {
-      "email": "lauraOr@mail.com",
-      "password": "$2a$10$SulDtK5QKNslQQ5VMSsPtOl1TR2zMlgUIcecm4TW/EzyNCyp91gU6",
-      "name": "Laura Or",
-      "surname": "Origa",
-      "birthday": "1993-01-06",
-      "skills": [
-        [
-          "acuarela",
-          "blackwork",
-          "dotwork",
-          "x"
-        ]
-      ],
-      "image": "https://img.freepik.com/free-photo/beautiful-young-tattooed-person_23-2149563272.jpg",
-      "isAdmin": true,
-      "code": "",
-      "id": 24
-    },
-    {
-      "email": "laura0r@mail.com",
-      "password": "$2a$10$1PuPAOTEKIJH2ofU3/Gbdu/BbP3QDyTkeUwsscmnQzHWfJd9IsEeC",
-      "id": 25
-    },
-    {
-      "email": "miriamf@mail.com",
-      "password": "$2a$10$oz/uGa6s5FojJNuL.Cs.v.tzLJzLY18SQ8oeS87szCUfpCOQHHK/O",
-      "name": "Miriam F",
-      "surname": "Fraga",
-      "birthday": "1989--12-19",
-      "skills": [
-        [
-          "Realism",
-          "Floral",
-          "Japanese Trade"
-        ]
-      ],
-      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-      "isAdmin": true,
-      "id": 26
-    },
-    {
-      "email": "miriamfraga@mail.com",
-      "password": "$2a$10$GziCoe59ooX1SOkIFiz3Rezwv6qrWilCW0vV3Ic61noJmXKOSJAfW",
-      "name": "Miriam",
-      "surname": "F",
-      "birthday": "1989--12-19",
-      "skills": [
-        [
-          "Realism",
-          "Floral",
-          "Japanese Trade"
-        ]
-      ],
-      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-      "isAdmin": true,
-      "id": 27
-    },
-    {
-      "email": "CamiliaP@mail.com",
-      "password": "$2a$10$FDttG2qgHT3WFV4el.ejCOslTvfFbQV2aPbE5q4IQBFqMM5zfqtXO",
-      "name": "Camila ",
-      "surname": "P",
-      "birthday": "1989--12-19",
-      "skills": [
-        [
-          "Realism",
-          "Floral",
-          "Japanese Trade"
-        ]
-      ],
-      "image": "https://img.freepik.com/free-photo/lifestyle-tattooed-people_23-2149667360.jpg",
-      "isAdmin": true,
-      "id": 28
-    },
-    {
-      "email": "CamilaP@mail.com",
-      "password": "$2a$10$UabqbKuuiHR4qkrzn1TBa.y4REUe69monJMFHXIBnGfwlMNL81ULW",
-      "id": 29
-    },
-    {
-      "email": "camilaJ@mail.com",
-      "password": "$2a$10$cjkUz0HG43gFs.3cReyNIOIP76x7ZZo4HRGptHO5Ah5l23uvvuBhi",
-      "name": "Camila",
-      "surname": "Johanson",
-      "birthday": "2000-01-01",
-      "id": 30
-    },
-    {
-      "email": "CamilaJ@mail.com",
-      "password": "$2a$10$qk81FwE.dsV9EKAhUyuD4.lIYuokl3cO.PQ29tc6xKojftd5OeGlu",
-      "id": 31
-    },
-    {
-      "email": "laura0@mail.com",
-      "password": "$2a$10$Vcs/137ypOm7jCZkhtzcdOVO7kOssRdPX3T7WF12VgyqP9mmSHsnq",
-      "id": 32
-    },
-    {
-      "email": "laura=@mail.com",
-      "password": "$2a$10$1FXzTVFm4on.v5vi6Vpkyuoccu/lVuHLiWamyQSc.lQcOP/ZblN8q",
-      "id": 33
-    },
-    {
-      "email": "jkasdkuha@mail.com",
-      "password": "$2a$10$rwgULF4mTGe/tpG859q4duUG/jJUldYViSSXDBlNwqdzQHHuu/D5m",
-      "id": 34
-    },
-    {
-      "email": "ksajdnkajhe@mail.com",
-      "password": "$2a$10$vf0bVLhuWRdgzwWF9xO5quNn9JqBATCaBkEhENjxSZBJrhY25wXjW",
-      "id": 35
-    },
-    {
       "email": "charles@tercero.com",
       "password": "$2a$10$BUbCvb27FcveheqFrh21K.SsEr8Hpe407jaSRHg5aIc8BoT4zMSUC",
       "name": "Charles",
       "surname": "Tercero",
       "birthday": "2000-01-01",
       "id": 36
-    },
-    {
-      "email": "ajsbdjkar@mail.com",
-      "password": "$2a$10$mWU6RTv5duizjTAv9iXgFO9tNzdwEkoPFxYbbnAvFq4I0pVL4BJRK",
-      "id": 37
     }
   ],
   "discounts": [
@@ -791,6 +604,12 @@
       "user": "Rosalía",
       "userId": 13,
       "id": 2
+    },
+    {
+      "code": "hdlbpo",
+      "user": "Charles",
+      "userId": 36,
+      "id": 3
     }
   ]
 }
