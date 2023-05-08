@@ -10,6 +10,7 @@ import {
   DO_LOGOUT_FAIL,
 } from "./actionTypes";
 
+const backUser = "http://localhost:3000/users";
 export function actionDoLogin(loginData) {
   return {
     type: DO_LOGIN,
@@ -33,7 +34,7 @@ export function doLogin(userData) {
     dispatch(actionDoLogin(userData));
     try {
       const response = await axios.post(
-        "http://localhost:3000/users",
+        backUser,
         userData
       );
       dispatch(actionDoLoginOk(response.data));
