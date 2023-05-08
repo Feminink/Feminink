@@ -10,7 +10,7 @@ import {
   DO_LOGOUT_FAIL,
 } from "./actionTypes";
 // http://localhost:3000/login
-const backUser = "https://back-user.vercel.app/login";
+const backUser = "http://localhost:3000/login";
 export function actionDoLogin(loginData) {
   return {
     type: DO_LOGIN,
