@@ -22,10 +22,10 @@ import {
   
 } from "./actionTypes";
 
-// const backContact = "https://back-user-r91n4x7sc-feminink.vercel.app/contact";
-const backContact = "http://localhost:3000/contact";
-// const backDiscount = "https://back-user-r91n4x7sc-feminink.vercel.app//discounts"
-const backDiscount = "http://localhost:3000/discounts"
+const backContact = "https://back-user-r91n4x7sc-feminink.vercel.app/contact";
+// const backContact = "http://localhost:3000/contact";
+const backDiscount = "https://back-user-r91n4x7sc-feminink.vercel.app//discounts"
+// const backDiscount = "http://localhost:3000/discounts"
 
 // FUNCIÖN PARA POSTEAR DATA EN JSON: CONTACT
 export function actionDoContact(contactForm) {
