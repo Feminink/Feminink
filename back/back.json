@@ -520,6 +520,14 @@
       "artist": "Ignacio E",
       "color": "#ee9191",
       "id": 16
+    },
+    {
+      "name": "Anthony Zambrano",
+      "email": "anthony@mail.com",
+      "description": "I wanna cool tattoooooo!",
+      "artist": "Miriam F",
+      "color": "#f54242",
+      "id": 17
     }
   ],
   "users": [
